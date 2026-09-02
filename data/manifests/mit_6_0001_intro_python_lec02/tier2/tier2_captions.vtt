@@ -1,0 +1,2495 @@
+WEBVTT
+
+00:00:00.370 --> 00:00:02.990
+The following content is provided under a Creative
+
+00:00:02.990 --> 00:00:03.810
+Commons license.
+
+00:00:04.590 --> 00:00:07.570
+Your support will help MIT OpenCourseWare continue to
+
+00:00:07.570 --> 00:00:10.390
+offer high quality educational resources for free.
+
+00:00:11.230 --> 00:00:14.090
+To make a donation or view additional materials from
+
+00:00:14.090 --> 00:00:18.030
+hundreds of MIT courses, visit MIT OpenCourseWare at
+
+00:00:18.030 --> 00:00:20.490
+ocw.mit.edu.
+
+00:00:31.040 --> 00:00:34.240
+All right, let's get started everyone.
+
+00:00:35.040 --> 00:00:35.820
+So good afternoon.
+
+00:00:37.140 --> 00:00:39.920
+Welcome to the second lecture of 6.0001.
+
+00:00:39.920 --> 00:00:41.380
+And also of 600.
+
+00:00:42.100 --> 00:00:44.580
+So as always, if you'd like to follow along with the
+
+00:00:44.580 --> 00:00:46.600
+lecture, with the lectures, please go ahead and
+
+00:00:46.600 --> 00:00:50.360
+download the slides and the code that I'll provide at
+
+00:00:50.360 --> 00:00:52.420
+least an hour before class every day.
+
+00:00:53.400 --> 00:00:56.240
+All right, so quick recap of what we did last time.
+
+00:00:56.420 --> 00:00:59.180
+So last time we talked a little bit about what a
+
+00:00:59.180 --> 00:00:59.880
+computer is.
+
+00:01:00.380 --> 00:01:03.240
+And I think the main takeaway from the last lecture is
+
+00:01:03.240 --> 00:01:05.760
+really that a computer only does what it is told.
+
+00:01:06.300 --> 00:01:08.700
+So it's not going to spontaneously make
+
+00:01:08.700 --> 00:01:09.660
+decisions on its own.
+
+00:01:10.000 --> 00:01:13.260
+You, as the programmer, have to tell it what you want it to
+
+00:01:13.260 --> 00:01:14.820
+do by writing programs.
+
+00:01:15.800 --> 00:01:20.220
+OK, so we talked about simple objects, and these
+
+00:01:20.220 --> 00:01:21.900
+objects were of different types.
+
+00:01:22.020 --> 00:01:24.940
+So we saw integers, floats, and booleans.
+
+00:01:25.040 --> 00:01:26.960
+And then we did a couple of simple operations with them.
+
+00:01:28.340 --> 00:01:32.020
+Today, we're going to look at a different, a new type of
+
+00:01:32.020 --> 00:01:33.000
+object called a string.
+
+00:01:33.000 --> 00:01:37.320
+And then we're going to introduce some more powerful
+
+00:01:39.720 --> 00:01:41.840
+things in our programming toolbox.
+
+00:01:42.060 --> 00:01:44.760
+So we're going to look at how to branch within a program and
+
+00:01:44.760 --> 00:01:47.900
+how to make the computer repeat certain tasks
+
+00:01:47.900 --> 00:01:48.940
+within our program.
+
+00:01:50.120 --> 00:01:53.140
+All right, so let's begin by looking at strings.
+
+00:01:53.580 --> 00:01:56.080
+So strings are a new object type.
+
+00:01:56.440 --> 00:01:58.260
+We've seen so far integers, which were whole
+
+00:01:58.260 --> 00:02:01.560
+numbers, floats, which were decimal numbers.
+
+00:02:02.220 --> 00:02:05.560
+And we've seen booleans which were true and false.
+
+00:02:06.020 --> 00:02:08.960
+So strings are going to be sequences of characters.
+
+00:02:09.680 --> 00:02:11.140
+And these characters can be anything.
+
+00:02:11.600 --> 00:02:14.820
+They could be letters, digits, special characters, and
+
+00:02:14.820 --> 00:02:15.480
+also spaces.
+
+00:02:16.740 --> 00:02:20.060
+And you tell Python that you're talking about a string
+
+00:02:20.060 --> 00:02:22.080
+object by enclosing it in quotation marks.
+
+00:02:23.080 --> 00:02:28.780
+So in this case, I'm creating an object whose value is
+
+00:02:28.780 --> 00:02:31.700
+H-E-L-L-O space, T-H-E-R-E.
+
+00:02:32.920 --> 00:02:35.160
+And Python knows it's a string object because we're enclosing
+
+00:02:35.160 --> 00:02:35.920
+it in quotations.
+
+00:02:36.500 --> 00:02:38.520
+They could be either double quotes or single quotes, but
+
+00:02:38.520 --> 00:02:40.160
+as long as you're consistent, it doesn't matter.
+
+00:02:41.140 --> 00:02:45.240
+And this object, we're binding it to this variable
+
+00:02:45.240 --> 00:02:45.920
+named high.
+
+00:02:46.580 --> 00:02:49.360
+And we're using that using the equal sign, which is the
+
+00:02:49.360 --> 00:02:50.080
+assignment operator.
+
+00:02:51.340 --> 00:02:53.900
+OK, so from now on, whenever we refer to this
+
+00:02:54.380 --> 00:02:56.940
+variable high, Python's going to say, oh, I know what
+
+00:02:56.940 --> 00:02:59.480
+the value is, and it's that string of characters.
+
+00:03:00.940 --> 00:03:03.280
+So we're going to learn about two things that you can do on
+
+00:03:03.280 --> 00:03:04.720
+strings today, two operations.
+
+00:03:05.220 --> 00:03:06.560
+One is to concatenate them.
+
+00:03:07.100 --> 00:03:10.460
+And concatenation is really just a fancy word for using
+
+00:03:10.460 --> 00:03:12.640
+this plus operator, which means put the strings
+
+00:03:12.640 --> 00:03:13.020
+together.
+
+00:03:14.840 --> 00:03:18.320
+So I have this original variable named high.
+
+00:03:18.500 --> 00:03:20.160
+And I create a new variable called name.
+
+00:03:20.840 --> 00:03:23.560
+And in it, I'm going to assign the string
+
+00:03:24.440 --> 00:03:26.260
+ANA to the variable name.
+
+00:03:27.100 --> 00:03:30.860
+And when I use the plus operator in between high and name,
+
+00:03:31.060 --> 00:03:33.620
+those two variables, Python's going to look at the values
+
+00:03:33.620 --> 00:03:36.480
+of those two, and it's going to just put them together.
+
+00:03:39.300 --> 00:03:41.660
+I'm going to switch to spider.
+
+00:03:43.040 --> 00:03:49.020
+And this is just that example from the slides.
+
+00:03:49.580 --> 00:03:50.540
+So let's see what happens.
+
+00:03:50.880 --> 00:03:53.320
+So I have the variable high.
+
+00:03:53.320 --> 00:03:54.140
+The variable name.
+
+00:03:54.560 --> 00:03:56.400
+And I'm just concatenating those two together.
+
+00:03:56.980 --> 00:03:58.560
+And then I'm going to print that out.
+
+00:03:59.380 --> 00:04:04.000
+So if I run the code, notice it prints out hello there, Anna.
+
+00:04:05.120 --> 00:04:05.980
+There's no space.
+
+00:04:06.420 --> 00:04:09.140
+And there's no space because the concatenation operator,
+
+00:04:09.580 --> 00:04:13.360
+the plus, doesn't add any spaces implicitly.
+
+00:04:13.500 --> 00:04:17.040
+So again, another example of just doing what it's told.
+
+00:04:17.740 --> 00:04:20.400
+If we want to add a space, we'd have to actually insert
+
+00:04:20.400 --> 00:04:21.360
+the space manually.
+
+00:04:21.900 --> 00:04:24.060
+So that's this line here, line eight.
+
+00:04:24.860 --> 00:04:28.440
+And in this line, we're concatenating the value
+
+00:04:28.440 --> 00:04:30.860
+of the variable high with a space.
+
+00:04:31.240 --> 00:04:34.380
+Notice we're putting it in quotation marks, just a space.
+
+00:04:34.720 --> 00:04:35.480
+And then with name.
+
+00:04:36.960 --> 00:04:40.420
+So if we go ahead and print that value,
+
+00:04:41.220 --> 00:04:45.160
+notice this was that garbage greeting there.
+
+00:04:45.340 --> 00:04:46.700
+And now we have a proper greeting.
+
+00:04:52.110 --> 00:04:55.850
+So that's the concatenation between strings.
+
+00:04:56.470 --> 00:04:59.710
+And then the other thing we're going to look at related
+
+00:04:59.710 --> 00:05:01.970
+to strings is the star operator.
+
+00:05:03.890 --> 00:05:06.190
+So that's this one here on line 10.
+
+00:05:07.230 --> 00:05:09.830
+So Python allows you to use the star operator, which is
+
+00:05:09.830 --> 00:05:13.970
+stands for multiplication, between a string and a number.
+
+00:05:13.970 --> 00:05:18.950
+And when you do that, Python interprets it
+
+00:05:18.950 --> 00:05:23.830
+as repeat that string that many number of times.
+
+00:05:24.850 --> 00:05:28.030
+So in this case, I'm creating a silly greeting.
+
+00:05:28.830 --> 00:05:32.690
+And I'm concatenating the value of high, which is hello there,
+
+00:05:33.330 --> 00:05:36.170
+with the space plus the name.
+
+00:05:37.130 --> 00:05:39.410
+So notice here I'm using parentheses to tell Python
+
+00:05:39.410 --> 00:05:40.750
+do this operation first.
+
+00:05:40.750 --> 00:05:45.630
+And then multiply whatever the result of this is by three.
+
+00:05:47.610 --> 00:05:53.130
+So if I print that out, it's going to multiply the space
+
+00:05:53.130 --> 00:05:54.850
+with my name three times.
+
+00:05:55.050 --> 00:05:57.630
+And it's going to concatenate that with hello there.
+
+00:05:58.030 --> 00:06:00.690
+So that's exactly what it printed out there.
+
+00:06:02.370 --> 00:06:04.910
+Last lecture, we talked a little bit about print.
+
+00:06:05.150 --> 00:06:08.970
+Today I'm going to talk about some nuances related to print.
+
+00:06:08.970 --> 00:06:10.870
+So you use print to interact with the user.
+
+00:06:12.230 --> 00:06:15.010
+It's cool to write programs that print things out to the user.
+
+00:06:15.730 --> 00:06:17.990
+So the keyword here being print.
+
+00:06:18.990 --> 00:06:21.750
+And then you put parentheses after print.
+
+00:06:22.010 --> 00:06:25.690
+And in the parentheses, you put in whatever you want to show
+
+00:06:25.690 --> 00:06:26.050
+the user.
+
+00:06:27.270 --> 00:06:31.590
+So in this little program, I create a variable named x.
+
+00:06:31.870 --> 00:06:33.130
+I assign it the value one.
+
+00:06:33.210 --> 00:06:34.050
+And then I print one.
+
+00:06:35.710 --> 00:06:37.170
+Here I'm casting.
+
+00:06:37.970 --> 00:06:40.710
+So I'm taking the number one, the integer one,
+
+00:06:40.810 --> 00:06:42.110
+and I'm casting it to a string.
+
+00:06:43.190 --> 00:06:44.550
+And you'll see why in a moment.
+
+00:06:46.110 --> 00:06:48.430
+So I want to bring to your attention a couple things here.
+
+00:06:48.570 --> 00:06:53.470
+So in the first print, I'm using commas everywhere here.
+
+00:06:54.350 --> 00:06:56.270
+And in the second print, I'm using plus.
+
+00:07:00.970 --> 00:07:06.730
+So by definition, you can use commas inside the parentheses
+
+00:07:06.730 --> 00:07:07.330
+of print.
+
+00:07:09.530 --> 00:07:13.470
+And if you use a comma, Python's going to automatically
+
+00:07:13.470 --> 00:07:16.330
+add a space in between the two things
+
+00:07:16.910 --> 00:07:19.410
+that the comma is in between, the values.
+
+00:07:19.910 --> 00:07:22.890
+So my fav num is the first thing.
+
+00:07:23.330 --> 00:07:25.770
+And the second thing is whatever is after the comma.
+
+00:07:26.870 --> 00:07:27.910
+Let's take x.
+
+00:07:28.870 --> 00:07:31.530
+So if you use a comma, Python's going to automatically
+
+00:07:31.530 --> 00:07:32.810
+insert a space for you.
+
+00:07:34.230 --> 00:07:35.530
+Sometimes you might want that.
+
+00:07:35.650 --> 00:07:36.430
+Sometimes you might not.
+
+00:07:36.430 --> 00:07:39.190
+If you don't want that, you can use the concatenation
+
+00:07:39.790 --> 00:07:40.970
+operation, the plus.
+
+00:07:41.830 --> 00:07:44.690
+And you can add all of your little bits together
+
+00:07:44.690 --> 00:07:45.970
+to create one big string.
+
+00:07:47.870 --> 00:07:52.230
+If you're using commas, the objects in between the commas
+
+00:07:52.230 --> 00:07:53.630
+do not all have to be strings.
+
+00:07:54.170 --> 00:07:55.930
+That's the plus side of using commas.
+
+00:07:56.050 --> 00:07:58.850
+But the downside is you get spaces everywhere.
+
+00:07:59.890 --> 00:08:03.530
+If you use plus operator, the plus side
+
+00:08:03.530 --> 00:08:06.470
+is Python does exactly what you tell it to do.
+
+00:08:06.930 --> 00:08:09.110
+But everything has to be a string object.
+
+00:08:09.410 --> 00:08:12.090
+So my fav num is a string object.
+
+00:08:12.570 --> 00:08:15.130
+You have to convert all of your numbers to string objects
+
+00:08:15.590 --> 00:08:16.270
+and so on.
+
+00:08:18.010 --> 00:08:30.340
+So if we look at spider, this is almost the same code.
+
+00:08:30.940 --> 00:08:32.860
+So here I don't have spaces anywhere.
+
+00:08:33.820 --> 00:08:36.720
+So you can see that the first line here
+
+00:08:37.380 --> 00:08:38.720
+has commas everywhere.
+
+00:08:39.310 --> 00:08:42.980
+So I'm going to have spaces in between every one of the things
+
+00:08:42.980 --> 00:08:45.240
+that I'm printing out.
+
+00:08:46.860 --> 00:08:48.780
+This line here is sort of a combination
+
+00:08:48.780 --> 00:08:52.500
+between commas and concatenation.
+
+00:08:53.720 --> 00:08:56.460
+So depending on where I use the comma,
+
+00:08:56.580 --> 00:08:57.740
+I'm going to have an extra space.
+
+00:08:57.980 --> 00:09:00.960
+And this line here just has concatenation everywhere.
+
+00:09:01.860 --> 00:09:06.600
+So if I run this, notice this very first line
+
+00:09:07.140 --> 00:09:09.760
+added spaces everywhere in between all my objects.
+
+00:09:09.900 --> 00:09:11.520
+The second one added spaces somewhere.
+
+00:09:12.180 --> 00:09:14.160
+And you can sort of trace through and see exactly where
+
+00:09:14.160 --> 00:09:15.120
+the spaces were added.
+
+00:09:15.900 --> 00:09:20.360
+And the last line here didn't add spaces anywhere.
+
+00:09:33.100 --> 00:09:36.980
+So printing things out to the console is nice.
+
+00:09:37.340 --> 00:09:40.680
+But the second part of writing an interactive program
+
+00:09:40.680 --> 00:09:42.220
+is getting input from the user.
+
+00:09:42.920 --> 00:09:45.060
+And that's a more interesting part.
+
+00:09:45.500 --> 00:09:46.860
+So if you've done problem set zero,
+
+00:09:46.860 --> 00:09:49.220
+you might have sort of already tried
+
+00:09:49.220 --> 00:09:50.420
+to understand this on your own.
+
+00:09:50.580 --> 00:09:51.120
+But here we are.
+
+00:09:53.200 --> 00:09:55.480
+So the way you get input from the user
+
+00:09:55.480 --> 00:09:58.460
+is using this command function called input.
+
+00:09:59.860 --> 00:10:01.220
+And inside the parentheses,
+
+00:10:02.020 --> 00:10:06.300
+you type in whatever you'd like to prompt the user with.
+
+00:10:07.360 --> 00:10:09.680
+So in this case, in my example here,
+
+00:10:09.800 --> 00:10:12.760
+I have input and then here I said type anything.
+
+00:10:13.860 --> 00:10:15.980
+So the user is going to see this text here.
+
+00:10:16.540 --> 00:10:19.040
+And then the program is just going to stop.
+
+00:10:19.320 --> 00:10:21.540
+And it's going to wait for the user to type in something
+
+00:10:21.540 --> 00:10:22.360
+and hit Enter.
+
+00:10:23.420 --> 00:10:25.300
+As soon as the user types in Enter,
+
+00:10:26.880 --> 00:10:29.840
+whatever the user types in becomes a string.
+
+00:10:31.020 --> 00:10:33.260
+If the user types in a number, for example,
+
+00:10:33.660 --> 00:10:36.260
+that becomes the string, that number.
+
+00:10:36.700 --> 00:10:38.040
+So everything the user types in
+
+00:10:38.040 --> 00:10:39.780
+is going to be made as a string.
+
+00:10:43.120 --> 00:10:44.340
+In this line right here,
+
+00:10:44.980 --> 00:10:47.020
+whatever the user types in becomes a string.
+
+00:10:47.480 --> 00:10:50.400
+And we're going to bind that string object
+
+00:10:50.400 --> 00:10:52.880
+to this variable named called text.
+
+00:10:54.280 --> 00:10:55.820
+So now further in my program,
+
+00:10:55.920 --> 00:10:57.900
+I could do whatever I want with this variable text.
+
+00:10:58.200 --> 00:11:01.060
+In this case, I'm going to print five star text.
+
+00:11:03.280 --> 00:11:06.360
+So if the user, for example, gave me ha,
+
+00:11:06.960 --> 00:11:08.820
+I'm going to print ha five times.
+
+00:11:09.760 --> 00:11:11.940
+If the user gave me five,
+
+00:11:13.700 --> 00:11:14.600
+what do you think the user's,
+
+00:11:14.700 --> 00:11:15.860
+what do you think's going to be printed out?
+
+00:11:18.430 --> 00:11:20.590
+25 or five, five times?
+
+00:11:22.290 --> 00:11:24.510
+Great, yes, exactly, five, five times.
+
+00:11:28.100 --> 00:11:31.200
+Oftentimes, you don't want to work with numbers as strings.
+
+00:11:32.000 --> 00:11:33.560
+You want to work with numbers as numbers.
+
+00:11:34.340 --> 00:11:35.980
+So you have to cast.
+
+00:11:36.720 --> 00:11:37.860
+And we learned that last lecture.
+
+00:11:38.180 --> 00:11:40.780
+You cast by just putting in this little bit
+
+00:11:40.780 --> 00:11:41.920
+right in front of the input.
+
+00:11:43.040 --> 00:11:45.040
+And you can cast it to whatever type you want.
+
+00:11:45.200 --> 00:11:46.460
+Here, I cast it to an int,
+
+00:11:46.500 --> 00:11:47.960
+but you can also cast to a float.
+
+00:11:47.960 --> 00:11:49.200
+If you want to work with floats.
+
+00:11:50.660 --> 00:11:53.700
+And that converts whatever the user typed in,
+
+00:11:53.780 --> 00:11:55.740
+as long as it's some number that Python knows
+
+00:11:55.740 --> 00:11:58.140
+how to convert into the number itself.
+
+00:11:59.000 --> 00:12:00.900
+So in this case, if the user gives me five,
+
+00:12:01.200 --> 00:12:03.500
+I'm going to print out five times five,
+
+00:12:03.660 --> 00:12:05.600
+instead of five, five times.
+
+00:12:07.880 --> 00:12:12.130
+So that's the code here.
+
+00:12:14.560 --> 00:12:16.800
+So the first bit is I'm going to get the user
+
+00:12:16.800 --> 00:12:17.680
+to type in anything,
+
+00:12:18.080 --> 00:12:22.980
+and I'm going to put five, five, five.
+
+00:12:22.980 --> 00:12:24.240
+And then when I type in the number,
+
+00:12:24.620 --> 00:12:25.580
+since I'm casting it,
+
+00:12:25.660 --> 00:12:27.000
+I'm going to do operations with the number.
+
+00:12:27.720 --> 00:12:28.380
+Yeah, question.
+
+00:12:32.400 --> 00:12:33.400
+Why do you want to cast to?
+
+00:12:36.720 --> 00:12:39.300
+Oh, the question is why do you want to cast to a string?
+
+00:12:40.720 --> 00:12:42.680
+Why do you want to cast a string to a number?
+
+00:12:46.540 --> 00:12:51.820
+Oh, so Python always, whatever you type in,
+
+00:12:52.080 --> 00:12:54.840
+just by default, by definition of the input command,
+
+00:12:55.180 --> 00:12:56.520
+Python always makes it a string.
+
+00:12:57.880 --> 00:12:59.340
+So if you want to work with numbers,
+
+00:12:59.480 --> 00:13:00.700
+you have to explicitly tell it,
+
+00:13:00.700 --> 00:13:01.740
+I'm going to work with a number.
+
+00:13:02.880 --> 00:13:04.560
+So even if you give it the number five,
+
+00:13:04.740 --> 00:13:06.160
+it's going to think it's the string five.
+
+00:13:07.960 --> 00:13:10.340
+Yeah, that's just how input works.
+
+00:13:13.920 --> 00:13:17.480
+The next thing we're going to look at
+
+00:13:18.040 --> 00:13:24.220
+is ways that you can start adding tests in your code.
+
+00:13:25.280 --> 00:13:27.300
+And before you can start adding tests,
+
+00:13:27.600 --> 00:13:29.600
+before you can start adding tests in your code,
+
+00:13:29.660 --> 00:13:32.360
+you need to be able to do the actual tests.
+
+00:13:32.360 --> 00:13:37.360
+So this is where comparison operators come in.
+
+00:13:39.440 --> 00:13:42.080
+So here, let's assume that INJ are variables.
+
+00:13:44.180 --> 00:13:47.760
+The following comparisons are going to give you a boolean.
+
+00:13:48.020 --> 00:13:50.420
+So it's either going to say this is true or this is false.
+
+00:13:51.000 --> 00:13:52.580
+So that's going to be your test.
+
+00:13:54.710 --> 00:13:56.150
+So if INJ are variables,
+
+00:13:56.610 --> 00:13:58.830
+you're allowed to compare ints with ints,
+
+00:13:58.930 --> 00:14:00.910
+floats with floats, strings with strings,
+
+00:14:01.470 --> 00:14:03.790
+and you're allowed to compare ints and floats
+
+00:14:03.790 --> 00:14:05.610
+between themselves, but you're not allowed
+
+00:14:05.610 --> 00:14:07.770
+to compare a string with a number.
+
+00:14:09.110 --> 00:14:11.930
+In fact, if you even try to do that in Python,
+
+00:14:12.670 --> 00:14:14.410
+in spite here, if I try to say,
+
+00:14:14.530 --> 00:14:16.350
+is the letter A greater than five?
+
+00:14:17.930 --> 00:14:21.130
+I get some angry text right here.
+
+00:14:22.270 --> 00:14:23.310
+And this just tells me,
+
+00:14:23.590 --> 00:14:25.210
+Python doesn't understand the meaning
+
+00:14:25.210 --> 00:14:27.790
+of how do I compare a string with a number, right?
+
+00:14:33.100 --> 00:14:35.900
+So just like in math, we can do these usual comparisons.
+
+00:14:36.140 --> 00:14:38.040
+We can say if something's greater than something,
+
+00:14:38.240 --> 00:14:40.060
+greater or equal to, less than less than or equal to.
+
+00:14:40.940 --> 00:14:42.860
+I'd like to bring to your attention the equality.
+
+00:14:44.180 --> 00:14:46.700
+So the single equal sign is an assignment.
+
+00:14:46.860 --> 00:14:49.160
+So you're taking a value and you're signing it to a variable,
+
+00:14:49.280 --> 00:14:51.300
+but when you're doing the double equal sign,
+
+00:14:51.400 --> 00:14:52.760
+this is the test for equality.
+
+00:14:53.340 --> 00:14:55.740
+Is the value of variable i the same
+
+00:14:55.740 --> 00:14:57.220
+as the value of the variable j?
+
+00:14:57.220 --> 00:15:00.320
+And that's, again, also going to give you a Boolean,
+
+00:15:00.560 --> 00:15:01.400
+either true or false.
+
+00:15:01.960 --> 00:15:03.580
+And you can also test for inequality
+
+00:15:03.580 --> 00:15:05.660
+with the exclamation equal.
+
+00:15:06.340 --> 00:15:09.160
+So that means, is the value of the variable i
+
+00:15:09.160 --> 00:15:11.240
+not equal to the value of the variable j?
+
+00:15:11.900 --> 00:15:13.800
+True if, yes, false if, no.
+
+00:15:17.000 --> 00:15:18.560
+So those are comparison operators
+
+00:15:18.560 --> 00:15:20.300
+on integer, floats, and strings.
+
+00:15:21.080 --> 00:15:23.640
+On Booleans, you can do some logic operators.
+
+00:15:27.200 --> 00:15:29.520
+And the simplest is just inverting.
+
+00:15:30.800 --> 00:15:35.380
+So if a is a variable that has a Boolean value,
+
+00:15:35.820 --> 00:15:37.160
+not a is just going to invert it.
+
+00:15:37.360 --> 00:15:40.320
+So if a is true, then not a is false and vice versa.
+
+00:15:42.140 --> 00:15:45.820
+This is a table that sort of represents what I've said here
+
+00:15:45.820 --> 00:15:49.440
+so you can do, you can use and and or.
+
+00:15:49.680 --> 00:15:50.680
+These are keywords in Python.
+
+00:15:50.680 --> 00:15:55.460
+You can use those two keywords on Boolean variables.
+
+00:15:57.740 --> 00:16:01.780
+And you get the result a and b is only true
+
+00:16:01.780 --> 00:16:03.300
+if both a and b are true.
+
+00:16:04.440 --> 00:16:10.240
+And a or b is only false if a and b are false.
+
+00:16:10.880 --> 00:16:12.260
+And this is the complete table,
+
+00:16:12.400 --> 00:16:14.280
+just in case you need to reference it.
+
+00:16:17.460 --> 00:16:18.900
+All right, so now that we have ways
+
+00:16:18.900 --> 00:16:21.240
+to do logical test, yep, question right there.
+
+00:16:26.280 --> 00:16:27.280
+Yeah, great question.
+
+00:16:27.280 --> 00:16:28.800
+So what does it mean to compare a string
+
+00:16:28.800 --> 00:16:30.200
+with a string with a greater than?
+
+00:16:30.560 --> 00:16:33.440
+So that's just going to compare them lexicographically.
+
+00:16:34.040 --> 00:16:35.420
+So does it come first in the alphabet?
+
+00:16:36.980 --> 00:16:38.540
+So we can even test that out.
+
+00:16:39.300 --> 00:16:44.940
+We can say is a greater than b and it's false.
+
+00:16:47.950 --> 00:16:49.750
+So b becomes later in the alphabet than a.
+
+00:16:53.750 --> 00:16:55.850
+Okay, so now we have ways to do the tests.
+
+00:16:56.510 --> 00:17:01.170
+So we can add some branching
+
+00:17:01.170 --> 00:17:02.710
+to our programming toolbox now
+
+00:17:02.710 --> 00:17:04.130
+that we have ways to do tests.
+
+00:17:04.790 --> 00:17:05.950
+This is a map of MIT.
+
+00:17:06.710 --> 00:17:10.150
+I'm going to go through sort of a little example
+
+00:17:10.150 --> 00:17:14.830
+to motivate why we want to do branching in our code.
+
+00:17:15.430 --> 00:17:16.390
+And I think after this lecture
+
+00:17:16.390 --> 00:17:18.270
+you'll be able to sort of code up this algorithm
+
+00:17:18.270 --> 00:17:19.290
+that I'm going to explain.
+
+00:17:20.110 --> 00:17:21.690
+So most of us see MIT as a maze.
+
+00:17:21.910 --> 00:17:23.330
+I first did when I came here.
+
+00:17:26.470 --> 00:17:27.950
+When I first came here obviously
+
+00:17:27.950 --> 00:17:29.810
+I signed up for the free food mailing list.
+
+00:17:31.110 --> 00:17:34.150
+And MIT being a maze I had no idea where to go, right?
+
+00:17:34.310 --> 00:17:35.890
+What the shortest path was to free food.
+
+00:17:38.050 --> 00:17:40.930
+So one way to think about it is all I wanted to do
+
+00:17:40.930 --> 00:17:41.910
+was get to the free food.
+
+00:17:44.290 --> 00:17:46.390
+A very simple algorithm to get there
+
+00:17:46.910 --> 00:17:49.170
+would be to say, okay, I'm going to take my right hand
+
+00:17:49.170 --> 00:17:50.810
+and I'm going to make sure that my right hand
+
+00:17:50.810 --> 00:17:52.870
+is always on a wall, okay?
+
+00:17:53.150 --> 00:17:54.410
+And I'm going to go around campus
+
+00:17:54.410 --> 00:17:56.290
+with my right hand always being at a wall
+
+00:17:56.770 --> 00:17:59.010
+and eventually I'll get to where the free food is.
+
+00:17:59.510 --> 00:18:00.650
+There might not be any left, right?
+
+00:18:00.650 --> 00:18:02.330
+But I'll be there, okay.
+
+00:18:03.010 --> 00:18:04.950
+So the algorithm is as follows, okay?
+
+00:18:05.470 --> 00:18:07.250
+If my right hand always has to be on a wall
+
+00:18:07.250 --> 00:18:11.610
+then I'm going to say if there's no wall to my right side
+
+00:18:11.610 --> 00:18:15.270
+then I'm going to go right until I get to a wall, okay?
+
+00:18:18.480 --> 00:18:21.580
+Then if there's a wall to my right
+
+00:18:21.580 --> 00:18:23.740
+and I can go forward I'm just going to keep going forward,
+
+00:18:24.300 --> 00:18:24.660
+okay?
+
+00:18:25.900 --> 00:18:28.340
+If I keep going forward and there's a wall to my right
+
+00:18:28.340 --> 00:18:29.660
+and in front of me I'm going to turn around
+
+00:18:29.660 --> 00:18:31.040
+and go left, okay?
+
+00:18:31.560 --> 00:18:34.400
+And then if there's a wall to my right in front of me
+
+00:18:34.400 --> 00:18:36.200
+and to the left then I'm going to turn around and go back.
+
+00:18:36.760 --> 00:18:39.240
+So with this fairly simple algorithm
+
+00:18:40.140 --> 00:18:44.780
+I just follow the path always keeping the wall to my right
+
+00:18:46.480 --> 00:18:49.340
+and eventually I end up where I need to be, okay?
+
+00:18:49.960 --> 00:18:53.900
+So notice I used just in plain English a few keywords, okay?
+
+00:18:54.120 --> 00:18:56.780
+If, otherwise, things like that.
+
+00:18:57.460 --> 00:19:00.800
+So in programming we have those same constructs
+
+00:19:01.300 --> 00:19:03.680
+and those same sort of intuitive words
+
+00:19:03.680 --> 00:19:06.660
+can be used to tell Python to do something
+
+00:19:06.660 --> 00:19:08.160
+or to do something else
+
+00:19:08.160 --> 00:19:12.740
+or to choose from a different set of possibilities, okay?
+
+00:19:14.360 --> 00:19:16.260
+And this way we can get the computer
+
+00:19:16.260 --> 00:19:17.560
+to make decisions for us.
+
+00:19:18.380 --> 00:19:19.860
+And you might be thinking, well,
+
+00:19:19.960 --> 00:19:22.240
+you said that computers can't make decisions on their own.
+
+00:19:22.820 --> 00:19:23.500
+It's not.
+
+00:19:24.240 --> 00:19:26.460
+US programmers are going to build these decisions
+
+00:19:26.460 --> 00:19:29.020
+into the program and all the computer's going to do
+
+00:19:29.020 --> 00:19:31.320
+is going to reach the decision point and say,
+
+00:19:31.720 --> 00:19:33.420
+okay, this is a decision point.
+
+00:19:33.500 --> 00:19:34.740
+Should I go left or should I go right?
+
+00:19:35.120 --> 00:19:35.980
+Or which one do I pick?
+
+00:19:36.800 --> 00:19:40.000
+And these sort of decisions are created by you as a programmer
+
+00:19:40.000 --> 00:19:42.180
+and the computer just has to make the decision
+
+00:19:42.180 --> 00:19:44.180
+and choose a path, okay?
+
+00:19:44.880 --> 00:19:47.580
+So in programming there's three sort of simple ways
+
+00:19:47.580 --> 00:19:50.600
+that you can add control flow to your programs
+
+00:19:50.600 --> 00:19:52.260
+and that's making one decision
+
+00:19:52.750 --> 00:19:54.660
+and choosing whether to execute something
+
+00:19:55.080 --> 00:19:56.340
+or execute something else.
+
+00:19:57.460 --> 00:20:00.480
+The first is the simple if, okay?
+
+00:20:01.720 --> 00:20:05.140
+And given a program that just linearly has statements
+
+00:20:05.140 --> 00:20:06.100
+that get executed,
+
+00:20:07.140 --> 00:20:09.640
+whenever I reach an if statement,
+
+00:20:11.440 --> 00:20:12.960
+you're going to check the condition.
+
+00:20:13.720 --> 00:20:15.260
+The condition's going to be something
+
+00:20:15.260 --> 00:20:18.580
+that's going to get evaluated to either true or false.
+
+00:20:20.460 --> 00:20:23.140
+Okay, so I've reached the condition here.
+
+00:20:24.660 --> 00:20:26.400
+And if the condition's true,
+
+00:20:26.540 --> 00:20:28.460
+then I'm going to additionally execute
+
+00:20:28.460 --> 00:20:30.080
+this extra set of expressions,
+
+00:20:31.000 --> 00:20:32.680
+but if the condition's false,
+
+00:20:32.880 --> 00:20:35.300
+then I'm just gonna keep going through the program
+
+00:20:35.300 --> 00:20:38.640
+and not execute that extra set of instructions, okay?
+
+00:20:41.460 --> 00:20:43.500
+How does Python know which instructions to execute?
+
+00:20:44.240 --> 00:20:45.740
+They're going to be inside this,
+
+00:20:45.820 --> 00:20:46.960
+what we call code block
+
+00:20:48.040 --> 00:20:51.060
+and the code blocks denoted by indentation.
+
+00:20:51.360 --> 00:20:53.740
+So it's going to be everything that's indented
+
+00:20:53.740 --> 00:20:56.360
+is part of that if code block.
+
+00:20:57.820 --> 00:20:59.700
+Typically four spaces indentation.
+
+00:21:01.140 --> 00:21:06.200
+Okay, so that's how you'd write code
+
+00:21:06.200 --> 00:21:09.420
+that decides whether to execute this extra thing or not.
+
+00:21:10.740 --> 00:21:13.540
+Now let's say I don't just want to execute
+
+00:21:13.540 --> 00:21:15.400
+an extra thing, I want to reach a condition,
+
+00:21:15.740 --> 00:21:17.100
+I want to reach a point where I say,
+
+00:21:17.160 --> 00:21:18.680
+I'll either go down this path
+
+00:21:19.310 --> 00:21:21.740
+or I'll do something else, okay?
+
+00:21:22.500 --> 00:21:26.180
+That's this right here.
+
+00:21:27.520 --> 00:21:31.620
+So this if else construct says,
+
+00:21:32.220 --> 00:21:35.720
+this is my code, I've reached my decision point here.
+
+00:21:36.660 --> 00:21:40.440
+If the condition inside this if is true,
+
+00:21:41.580 --> 00:21:44.900
+then I'm going to execute maybe this set of statements here.
+
+00:21:48.240 --> 00:21:50.260
+But if the condition's not true,
+
+00:21:50.640 --> 00:21:53.640
+then I'm not going to execute that set of statements
+
+00:21:53.640 --> 00:21:55.140
+and instead I'm going to execute
+
+00:21:55.140 --> 00:21:58.440
+under whatever else is.
+
+00:22:00.340 --> 00:22:01.800
+So using this construct,
+
+00:22:01.960 --> 00:22:04.020
+I'm either going to do one set of expressions
+
+00:22:04.020 --> 00:22:06.400
+or the other, but never both, okay?
+
+00:22:06.780 --> 00:22:08.460
+And after I've executed one or the other,
+
+00:22:08.580 --> 00:22:09.660
+I'm going to continue on
+
+00:22:09.660 --> 00:22:11.780
+with just the regular execution of the program.
+
+00:22:17.010 --> 00:22:17.370
+All right?
+
+00:22:19.940 --> 00:22:22.140
+Okay, so we're able to either choose one thing,
+
+00:22:22.240 --> 00:22:23.040
+choose one thing or another,
+
+00:22:23.160 --> 00:22:26.740
+but what if we want to have more than one choice?
+
+00:22:28.320 --> 00:22:30.840
+So if some number is equal to zero,
+
+00:22:30.840 --> 00:22:31.540
+I want to do this.
+
+00:22:31.640 --> 00:22:33.000
+If it's equal to one, I want to do this.
+
+00:22:33.080 --> 00:22:34.320
+Otherwise, if it's equal to two,
+
+00:22:34.360 --> 00:22:35.400
+I want to do this and so on.
+
+00:22:36.000 --> 00:22:37.820
+That's where this last one comes in.
+
+00:22:38.800 --> 00:22:43.480
+And we introduce this other keyword here called L if.
+
+00:22:45.400 --> 00:22:47.840
+So that stands for short form for else if.
+
+00:22:49.020 --> 00:22:52.060
+So first we check if this condition is true.
+
+00:22:52.780 --> 00:22:54.200
+So we're going through our program.
+
+00:22:54.740 --> 00:22:56.000
+We've reached our decision point.
+
+00:22:56.800 --> 00:22:58.160
+If the condition's true,
+
+00:22:58.160 --> 00:23:00.800
+we're going to execute maybe this set of instructions.
+
+00:23:03.940 --> 00:23:06.660
+If the condition's not true, maybe we'll check.
+
+00:23:08.060 --> 00:23:09.380
+If the condition's not true,
+
+00:23:09.440 --> 00:23:11.560
+we will check this next condition.
+
+00:23:11.960 --> 00:23:14.080
+That's part of the L if right here.
+
+00:23:14.840 --> 00:23:15.880
+And if that one's true,
+
+00:23:15.960 --> 00:23:17.760
+we're going to execute a different set of instructions.
+
+00:23:18.500 --> 00:23:20.480
+You can have more than one L if.
+
+00:23:21.060 --> 00:23:22.620
+And depending on which one's true,
+
+00:23:22.660 --> 00:23:24.600
+you're going to execute a different set of instructions.
+
+00:23:25.560 --> 00:23:28.300
+And then this last else is sort of a catch all
+
+00:23:28.300 --> 00:23:31.260
+where if none of the previous conditions were true,
+
+00:23:31.380 --> 00:23:34.200
+then just do this last set of expressions.
+
+00:23:35.060 --> 00:23:36.780
+So in this case, you're going to choose
+
+00:23:37.320 --> 00:23:38.840
+between one of these three,
+
+00:23:39.220 --> 00:23:41.820
+one of these four roots or however many you have.
+
+00:23:43.160 --> 00:23:44.920
+And then when you're done making your choice,
+
+00:23:44.980 --> 00:23:47.140
+you're going to execute the remaining set of instructions.
+
+00:23:51.180 --> 00:23:53.660
+So the way this works is if more than one condition
+
+00:23:53.660 --> 00:23:57.340
+is true, you're actually just going to enter one of them
+
+00:23:57.760 --> 00:23:59.600
+and you're going to enter the very first one
+
+00:23:59.600 --> 00:24:00.180
+that's true.
+
+00:24:00.840 --> 00:24:02.120
+So you're never going to enter
+
+00:24:02.120 --> 00:24:05.080
+more than one of these code blocks.
+
+00:24:05.520 --> 00:24:08.120
+You always enter one and you enter the first one
+
+00:24:08.120 --> 00:24:09.840
+that evaluates to true.
+
+00:24:15.700 --> 00:24:18.940
+So notice that we denoted code blocks using indentation.
+
+00:24:19.500 --> 00:24:21.020
+And that's actually one of the things
+
+00:24:21.020 --> 00:24:22.220
+that I really like about Python.
+
+00:24:22.860 --> 00:24:25.000
+It sort of forces you to write pretty code
+
+00:24:25.540 --> 00:24:29.580
+and nice looking code and just code that's very readable.
+
+00:24:31.460 --> 00:24:33.340
+And that enforces you to indent
+
+00:24:33.340 --> 00:24:34.840
+everything that's a code block.
+
+00:24:35.640 --> 00:24:38.940
+So you can easily see sort of where the flow of control is
+
+00:24:38.940 --> 00:24:40.520
+and where decision making points are
+
+00:24:41.220 --> 00:24:42.320
+and things like that.
+
+00:24:44.320 --> 00:24:46.460
+So in this particular example,
+
+00:24:46.600 --> 00:24:48.540
+we have one if statement here
+
+00:24:49.280 --> 00:24:51.480
+and it checks if two variables are equal
+
+00:24:55.060 --> 00:24:57.060
+and we have an if, L, if, else.
+
+00:24:58.400 --> 00:25:00.320
+And in this example, we're going to enter
+
+00:25:00.320 --> 00:25:03.620
+either this code block or this one or this one
+
+00:25:03.620 --> 00:25:05.500
+depending on the variables of X and Y
+
+00:25:05.860 --> 00:25:07.940
+and we're only going to enter one code block
+
+00:25:08.420 --> 00:25:11.060
+and we'll enter the first one that's true.
+
+00:25:13.340 --> 00:25:15.880
+Notice you can have nested conditionals.
+
+00:25:16.040 --> 00:25:18.880
+So inside this first if, we have another if here
+
+00:25:22.850 --> 00:25:26.590
+and this inner if is only going to be checked
+
+00:25:27.450 --> 00:25:30.350
+when we enter the first, this outer if.
+
+00:25:31.710 --> 00:25:37.820
+I do want to make one point though.
+
+00:25:38.700 --> 00:25:41.740
+So sometimes you might forget to do the double equal side
+
+00:25:41.740 --> 00:25:44.200
+when you check, when you're checking for equality
+
+00:25:44.200 --> 00:25:44.840
+and that's okay.
+
+00:25:45.880 --> 00:25:47.620
+If you just use one equal sign,
+
+00:25:47.720 --> 00:25:49.640
+Python's going to give you an error
+
+00:25:50.760 --> 00:25:53.000
+and it's going to say syntax error
+
+00:25:53.480 --> 00:25:55.020
+and it's going to highlight this line
+
+00:25:55.600 --> 00:25:56.660
+and then you're going to know that
+
+00:25:56.660 --> 00:25:58.640
+there's a mistake there.
+
+00:25:58.760 --> 00:25:59.660
+You should be using equality
+
+00:26:00.220 --> 00:26:04.320
+because it doesn't make sense to be making an assignment
+
+00:26:04.320 --> 00:26:05.240
+inside the if.
+
+00:26:06.900 --> 00:26:11.090
+Okay, all right.
+
+00:26:12.230 --> 00:26:13.790
+So we've learned about branching
+
+00:26:13.790 --> 00:26:14.890
+and we know about conditionals.
+
+00:26:16.930 --> 00:26:21.150
+Let's try to apply this to a little game
+
+00:26:22.890 --> 00:26:24.710
+and spoiler, we won't be able to.
+
+00:26:24.930 --> 00:26:26.150
+We'll have to learn about a new thing.
+
+00:26:26.850 --> 00:26:29.570
+But back in 1980s, there was the Legend of Zelda
+
+00:26:29.570 --> 00:26:33.770
+cool graphics where there was a scene with
+
+00:26:33.770 --> 00:26:37.270
+the Lost Woods over simplification
+
+00:26:37.270 --> 00:26:40.270
+if anyone's a Zelda die hard fan
+
+00:26:40.750 --> 00:26:44.070
+but the basic idea was if you entered the woods
+
+00:26:44.590 --> 00:26:46.570
+you entered from the left to the right
+
+00:26:47.110 --> 00:26:49.710
+and then as long as you kept going right
+
+00:26:49.710 --> 00:26:51.630
+it would show you the same screen over and over again.
+
+00:26:53.050 --> 00:26:55.510
+And the trick was you just had to go backward
+
+00:26:55.510 --> 00:26:57.670
+and then you'd exit the woods.
+
+00:26:58.190 --> 00:26:59.070
+So very simple.
+
+00:27:00.050 --> 00:27:03.050
+Using what we know so far we could sort of code this up
+
+00:27:04.230 --> 00:27:05.910
+and we'd say something like this.
+
+00:27:06.070 --> 00:27:07.470
+If the user exits right
+
+00:27:07.470 --> 00:27:09.870
+then set the background to the woods background.
+
+00:27:11.430 --> 00:27:13.730
+Otherwise set the background to the exit background.
+
+00:27:15.270 --> 00:27:18.290
+Now let's say the user and then in the else were done.
+
+00:27:18.850 --> 00:27:20.350
+Let's say the user went right
+
+00:27:20.830 --> 00:27:22.650
+while you'd show them the woods background
+
+00:27:22.650 --> 00:27:24.730
+and now ask them again where do they want to go
+
+00:27:25.150 --> 00:27:26.050
+if they exit right,
+
+00:27:26.310 --> 00:27:27.730
+set the background to the woods background
+
+00:27:27.730 --> 00:27:29.670
+otherwise set the background to the exit background.
+
+00:27:30.470 --> 00:27:30.890
+And so on.
+
+00:27:30.950 --> 00:27:34.470
+So you notice that there's sort of no end to this, right?
+
+00:27:35.050 --> 00:27:36.430
+How many times do you know?
+
+00:27:36.970 --> 00:27:39.270
+Do you know how many times the user might keep going right?
+
+00:27:39.390 --> 00:27:40.770
+They might be really persistent right?
+
+00:27:41.290 --> 00:27:43.990
+And they'll be like maybe if I go a thousand times
+
+00:27:43.990 --> 00:27:44.930
+I'll get out of the woods.
+
+00:27:45.590 --> 00:27:46.510
+Or maybe a thousand and one.
+
+00:27:47.290 --> 00:27:47.770
+Maybe.
+
+00:27:48.650 --> 00:27:54.250
+So this would probably be who knows how deep
+
+00:27:55.730 --> 00:27:57.050
+these nested ifs.
+
+00:27:57.390 --> 00:27:58.110
+So we don't know.
+
+00:28:00.730 --> 00:28:01.970
+So with what we know so far
+
+00:28:01.970 --> 00:28:04.110
+we can't really code this cute little game.
+
+00:28:04.680 --> 00:28:06.730
+But enter loops.
+
+00:28:07.630 --> 00:28:09.290
+And specifically a while loop.
+
+00:28:10.910 --> 00:28:14.490
+So this code here that could be infinitely
+
+00:28:14.960 --> 00:28:17.250
+number of nested if statements deep
+
+00:28:17.760 --> 00:28:19.670
+can be rewritten using these three lines.
+
+00:28:21.250 --> 00:28:24.230
+So we say while the user exits right
+
+00:28:24.230 --> 00:28:25.830
+set the background to the woods background
+
+00:28:26.550 --> 00:28:27.810
+and with a while loop
+
+00:28:27.810 --> 00:28:29.990
+it's going to do what we tell it to do inside the loop
+
+00:28:29.990 --> 00:28:31.610
+and then it's going to check the condition again
+
+00:28:31.610 --> 00:28:34.490
+and then it's going to do what we say
+
+00:28:34.490 --> 00:28:36.710
+it should do inside the code block
+
+00:28:36.710 --> 00:28:38.870
+and then it's going to check the condition again.
+
+00:28:39.690 --> 00:28:40.590
+And then when the condition,
+
+00:28:41.050 --> 00:28:42.450
+as long as the condition is true
+
+00:28:42.450 --> 00:28:44.670
+it's going to keep doing that little loop there.
+
+00:28:45.250 --> 00:28:46.970
+And as soon as the condition becomes false
+
+00:28:46.970 --> 00:28:48.210
+it's going to stop doing the loop
+
+00:28:48.210 --> 00:28:50.330
+and do whatever is right after the while.
+
+00:28:52.870 --> 00:28:56.690
+So that's basically how a while loop works.
+
+00:28:57.290 --> 00:28:59.090
+We have while, that's the keyword.
+
+00:29:00.030 --> 00:29:02.050
+The condition is something that gets evaluated
+
+00:29:02.050 --> 00:29:02.990
+to true or false
+
+00:29:03.470 --> 00:29:06.170
+and once again we have a code block that's indented
+
+00:29:06.690 --> 00:29:09.330
+and it tells Python these are the expressions I want to do
+
+00:29:09.330 --> 00:29:11.030
+as long as the condition is true.
+
+00:29:16.060 --> 00:29:17.340
+So the condition is true
+
+00:29:17.340 --> 00:29:19.340
+you evaluate every expression in the code block
+
+00:29:19.340 --> 00:29:20.920
+when you reach the end of the expression
+
+00:29:20.920 --> 00:29:23.420
+end of the code block you check the condition again
+
+00:29:24.000 --> 00:29:26.620
+if it's true still you keep doing the expressions
+
+00:29:27.100 --> 00:29:28.720
+check it again and so on.
+
+00:29:32.620 --> 00:29:33.840
+So here's a little game
+
+00:29:35.840 --> 00:29:38.240
+and with these lines of code we were able
+
+00:29:38.240 --> 00:29:42.200
+we can code up the last words of Zelda.
+
+00:29:43.020 --> 00:29:44.940
+Even worse graphics by the way
+
+00:29:44.940 --> 00:29:48.220
+than the original Zelda is this one that I coded up here.
+
+00:29:48.980 --> 00:29:50.920
+So I print out the following things
+
+00:29:50.920 --> 00:29:52.700
+you're in the last forest go left or right.
+
+00:29:54.140 --> 00:29:55.920
+And my program is going to say
+
+00:29:55.920 --> 00:29:57.740
+you're in the last forest go left or right
+
+00:29:57.740 --> 00:29:59.100
+it's going to get user input
+
+00:29:59.100 --> 00:30:02.560
+it's going to say while the user keeps typing in right
+
+00:30:03.560 --> 00:30:06.560
+show them this text and ask them again.
+
+00:30:07.040 --> 00:30:09.360
+So I'm asking them again by just saying input here again
+
+00:30:10.620 --> 00:30:13.500
+and that's it that's going to just keep getting input
+
+00:30:13.500 --> 00:30:16.520
+from the user and if the user doesn't type in right
+
+00:30:16.520 --> 00:30:19.840
+and maybe types in left you're going to exit
+
+00:30:19.840 --> 00:30:21.140
+out of this loop and print out
+
+00:30:21.140 --> 00:30:22.280
+you got out of the last forest.
+
+00:30:24.580 --> 00:30:26.020
+So I have to show you this
+
+00:30:26.020 --> 00:30:28.880
+because I spent too much time on it
+
+00:30:30.440 --> 00:30:35.800
+but I decided to improve on the code
+
+00:30:35.800 --> 00:30:36.540
+that's in the slides
+
+00:30:36.540 --> 00:30:40.780
+and I've written here ways that you guys can also improve it.
+
+00:30:41.840 --> 00:30:45.100
+So if I run my code you're in the last forest
+
+00:30:45.100 --> 00:30:46.700
+go left or right so if I say left
+
+00:30:46.700 --> 00:30:49.320
+then yay I got out of the last forest
+
+00:30:51.340 --> 00:30:55.220
+but if I go right then I'm stuck right.
+
+00:30:56.080 --> 00:30:57.480
+I took down some trees
+
+00:30:57.480 --> 00:30:59.280
+you can see there's no more trees here
+
+00:30:59.280 --> 00:31:01.500
+I made a table and then I flipped it over.
+
+00:31:04.620 --> 00:31:07.540
+So the expansion to this if you want to try it out
+
+00:31:07.540 --> 00:31:10.980
+I put this in the comments here is try to use a counter.
+
+00:31:11.900 --> 00:31:14.640
+If the user types in right the first two times
+
+00:31:14.640 --> 00:31:16.020
+just make that a sad face
+
+00:31:17.160 --> 00:31:19.220
+but if the user types in more than two times
+
+00:31:19.220 --> 00:31:22.200
+make them cut down some trees and build a table and flip it.
+
+00:31:24.260 --> 00:31:26.600
+That's a cute little expansion if you want to test yourself
+
+00:31:26.600 --> 00:31:28.220
+to make sure you're getting loops.
+
+00:31:28.900 --> 00:31:33.040
+Okay so so far we've used while loops
+
+00:31:33.040 --> 00:31:34.380
+to ask for user input
+
+00:31:34.380 --> 00:31:37.280
+and that's actually somewhere where it makes sense
+
+00:31:37.280 --> 00:31:39.260
+to use while loops because you don't actually know
+
+00:31:39.260 --> 00:31:41.220
+how many times the user's going to type in something.
+
+00:31:42.920 --> 00:31:46.620
+You can use while loops to keep sort of a counter
+
+00:31:46.620 --> 00:31:49.500
+and to write code that counts something.
+
+00:31:52.080 --> 00:31:54.940
+If you do that though there's two things
+
+00:31:54.940 --> 00:31:56.060
+you need to take care of.
+
+00:31:56.280 --> 00:31:58.200
+The first is this first line here
+
+00:31:58.200 --> 00:32:04.050
+which is sort of an initialization of this loop counter
+
+00:32:06.610 --> 00:32:08.410
+and the second is this line here
+
+00:32:09.130 --> 00:32:11.890
+which is incrementing your loop counter.
+
+00:32:15.380 --> 00:32:17.680
+The reason why the second one's important
+
+00:32:17.680 --> 00:32:20.160
+is because let's look at our condition here.
+
+00:32:20.700 --> 00:32:22.180
+So while n is less than five.
+
+00:32:23.740 --> 00:32:25.740
+If you didn't have this line here
+
+00:32:26.540 --> 00:32:28.160
+you would never increment n.
+
+00:32:28.760 --> 00:32:30.960
+So every time through the loop you'd just keep
+
+00:32:30.960 --> 00:32:34.100
+printing zeros okay and you'd have an infinite loop.
+
+00:32:34.820 --> 00:32:37.680
+I do want to show though what if you do have
+
+00:32:37.680 --> 00:32:39.500
+an infinite loop it's not the end of the world.
+
+00:32:40.320 --> 00:32:52.080
+So I can say something like so while true print zero.
+
+00:32:52.620 --> 00:32:54.860
+So this is going to give me an infinite loop
+
+00:32:54.860 --> 00:33:07.030
+in my program and whoop, okay.
+
+00:33:08.150 --> 00:33:10.910
+So notice it's just printing the letter p
+
+00:33:10.910 --> 00:33:13.670
+over and over again and if I let it go any longer
+
+00:33:13.670 --> 00:33:14.650
+it's gonna slow down the computer.
+
+00:33:14.990 --> 00:33:17.450
+So I'm gonna hit control C or command C maybe
+
+00:33:18.390 --> 00:33:22.150
+and it's going to stop the program from printing okay.
+
+00:33:22.510 --> 00:33:24.590
+So just in case you ever enter infinite loops
+
+00:33:24.590 --> 00:33:26.950
+in your programs just go to the console
+
+00:33:26.950 --> 00:33:29.490
+and hit control C and that's going to stop it
+
+00:33:29.490 --> 00:33:32.610
+from sort of slowing down the computer.
+
+00:33:34.470 --> 00:33:36.330
+Okay so going back to this example
+
+00:33:36.330 --> 00:33:37.890
+I was saying that if you're using
+
+00:33:38.370 --> 00:33:41.450
+counters or variables in order to sort of count up
+
+00:33:41.450 --> 00:33:43.250
+inside the while loop you have to take care
+
+00:33:43.250 --> 00:33:45.850
+to initialize a counter variable first
+
+00:33:46.550 --> 00:33:48.450
+and then to increment it.
+
+00:33:48.550 --> 00:33:49.970
+Otherwise you'll enter an infinite loop.
+
+00:33:50.990 --> 00:33:52.450
+That feels a little bit tedious
+
+00:33:53.310 --> 00:33:57.570
+and so there's a shortcut for doing that exact same thing.
+
+00:33:57.690 --> 00:34:00.130
+So these four lines you can rewrite those
+
+00:34:00.130 --> 00:34:01.790
+into these two lines right here
+
+00:34:02.310 --> 00:34:04.990
+using this new type of loop called a for loop.
+
+00:34:07.120 --> 00:34:10.100
+So the for loop says for some loop variable
+
+00:34:10.100 --> 00:34:13.040
+in this case I named it n you can name it whatever you want.
+
+00:34:13.720 --> 00:34:15.440
+In range five we're going to come back
+
+00:34:15.440 --> 00:34:18.260
+to what range means in a little bit print n.
+
+00:34:21.680 --> 00:34:24.180
+So every time through the loop you're going to print out
+
+00:34:24.180 --> 00:34:25.480
+what the value of n is.
+
+00:34:26.600 --> 00:34:30.980
+Range five actually creates internally
+
+00:34:30.980 --> 00:34:33.720
+a sequence of numbers starting from zero
+
+00:34:33.720 --> 00:34:36.220
+and going to that number five minus one.
+
+00:34:36.740 --> 00:34:40.060
+So the sequence is going to be zero, one, two, three and four.
+
+00:34:41.580 --> 00:34:43.860
+The first time through the loop you're going to say
+
+00:34:43.860 --> 00:34:46.920
+n is equal to zero or internally this is what happens
+
+00:34:46.920 --> 00:34:49.560
+n gets the value zero you're going to print n.
+
+00:34:50.740 --> 00:34:53.440
+Then you're going to go back to the top
+
+00:34:53.440 --> 00:34:55.920
+n gets the value one then you're going to go
+
+00:34:55.920 --> 00:34:58.920
+execute whatever's inside so you're going to print one.
+
+00:35:00.360 --> 00:35:01.620
+Then you're going to increment that
+
+00:35:01.620 --> 00:35:03.040
+to the next value in the sequence
+
+00:35:03.040 --> 00:35:05.260
+you're going to print out two and so on.
+
+00:35:07.480 --> 00:35:11.840
+So this is the general look of a for loop.
+
+00:35:12.040 --> 00:35:15.800
+So we have for some loop variable again
+
+00:35:15.800 --> 00:35:19.840
+can be named whatever you want in range some number
+
+00:35:21.020 --> 00:35:24.760
+do a bunch of stuff and again
+
+00:35:24.760 --> 00:35:26.720
+these are part of this for loop code block
+
+00:35:26.720 --> 00:35:28.980
+so you should indent them to tell Python
+
+00:35:28.980 --> 00:35:30.580
+that these are the things that you should do.
+
+00:35:32.160 --> 00:35:34.220
+So when you're using range some number
+
+00:35:34.220 --> 00:35:38.840
+you start out with variable getting the value zero.
+
+00:35:41.780 --> 00:35:44.120
+With variable having value zero
+
+00:35:44.120 --> 00:35:46.060
+you're going to execute all of these expressions.
+
+00:35:47.580 --> 00:35:50.280
+After all the expressions in the code block are done
+
+00:35:50.280 --> 00:35:54.460
+you're going to go on to the next value so one.
+
+00:35:55.480 --> 00:35:57.620
+You're going to execute all these expressions
+
+00:35:57.620 --> 00:36:02.460
+with variable being value one and then so on and so on
+
+00:36:02.460 --> 00:36:05.260
+until you go to sum num minus one.
+
+00:36:11.180 --> 00:36:14.680
+So using range in that way is a little bit constraining
+
+00:36:15.400 --> 00:36:17.980
+because you're always going to get values starting from zero
+
+00:36:17.980 --> 00:36:20.640
+and ending at sum num minus one.
+
+00:36:21.240 --> 00:36:23.160
+Whatever's in the parentheses in range.
+
+00:36:23.980 --> 00:36:25.380
+Sometimes you might want to write programs
+
+00:36:25.380 --> 00:36:27.200
+that maybe start at a custom value.
+
+00:36:27.480 --> 00:36:29.100
+Don't start at zero maybe they start at five
+
+00:36:29.680 --> 00:36:31.020
+maybe it started minus ten.
+
+00:36:32.360 --> 00:36:34.020
+And sometimes you might want to write programs
+
+00:36:34.020 --> 00:36:36.300
+that don't go with don't increment
+
+00:36:36.300 --> 00:36:39.000
+the numbers by one but maybe skip every other number
+
+00:36:39.000 --> 00:36:41.420
+or go every two numbers every three numbers and so on.
+
+00:36:41.940 --> 00:36:45.680
+So you can customize range to your needs.
+
+00:36:47.020 --> 00:36:49.440
+The one thing you do need to give it is the stop.
+
+00:36:50.040 --> 00:36:52.120
+So if you give it only one value in the parentheses
+
+00:36:52.120 --> 00:36:53.800
+that stands for stop.
+
+00:36:54.700 --> 00:36:57.360
+And by default start is going to have the value zero
+
+00:36:57.360 --> 00:36:59.260
+and step is going to have the value one.
+
+00:37:01.240 --> 00:37:03.420
+If you give it two things in the parentheses
+
+00:37:03.880 --> 00:37:05.540
+you're giving it start and stop.
+
+00:37:06.040 --> 00:37:08.220
+So the first being start the second being stop
+
+00:37:08.740 --> 00:37:12.020
+and step gets this value of one by default.
+
+00:37:12.680 --> 00:37:14.740
+And if you give it three things in the parentheses
+
+00:37:14.740 --> 00:37:18.360
+you're giving it start stop and step in that order.
+
+00:37:22.090 --> 00:37:25.710
+And you're always going to start at the start value
+
+00:37:25.710 --> 00:37:29.890
+and stop at or so you're going to start at the start value
+
+00:37:29.890 --> 00:37:32.150
+and you're going to go until stop minus one.
+
+00:37:32.270 --> 00:37:34.050
+So those are the sequences of numbers.
+
+00:37:36.390 --> 00:37:38.130
+So in this first code right here
+
+00:37:38.710 --> 00:37:40.750
+my sum is going to get the value zero
+
+00:37:40.750 --> 00:37:42.030
+and you're going to have a for loop.
+
+00:37:43.790 --> 00:37:46.230
+We're going to start from seven right
+
+00:37:46.230 --> 00:37:47.610
+because we're giving it two numbers
+
+00:37:48.050 --> 00:37:49.170
+and when you give it two numbers
+
+00:37:49.170 --> 00:37:52.390
+it represents start and stop with step being one.
+
+00:37:53.330 --> 00:37:54.650
+So you're starting at seven.
+
+00:37:55.750 --> 00:37:58.170
+If step is one the next value is eight.
+
+00:37:59.850 --> 00:38:01.270
+What's the value after that?
+
+00:38:04.800 --> 00:38:09.420
+If we're incrementing by one nine.
+
+00:38:12.360 --> 00:38:15.040
+And since we're going until stop minus one
+
+00:38:17.000 --> 00:38:18.940
+we're not actually going to pick up on 10.
+
+00:38:20.900 --> 00:38:23.780
+So this loop variable I the very first time
+
+00:38:23.780 --> 00:38:25.880
+through the loop is going to have the value seven.
+
+00:38:28.770 --> 00:38:33.510
+So my sum is going to be zero plus seven.
+
+00:38:37.300 --> 00:38:39.220
+That's everything that's inside the code block.
+
+00:38:40.160 --> 00:38:44.140
+The next time through the loop I gets the value eight.
+
+00:38:45.460 --> 00:38:53.060
+So inside the for loop my sum gets whatever
+
+00:38:53.460 --> 00:38:56.420
+the previous value was which was seven plus eight.
+
+00:38:59.860 --> 00:39:02.420
+The next time through the loop my sum
+
+00:39:04.120 --> 00:39:07.400
+gets the value seven plus eight plus nine.
+
+00:39:08.060 --> 00:39:10.400
+Obviously replacing that with the previous value.
+
+00:39:10.660 --> 00:39:11.020
+So 15.
+
+00:39:12.820 --> 00:39:15.440
+Since we're not going through 10 that's where we stop
+
+00:39:15.870 --> 00:39:17.340
+and we're going to print out my sum
+
+00:39:17.340 --> 00:39:19.720
+which is going to be the value of seven plus eight plus nine.
+
+00:39:22.370 --> 00:39:22.610
+Oh yeah.
+
+00:39:24.810 --> 00:39:25.390
+Oh okay yeah.
+
+00:39:25.390 --> 00:39:29.260
+Do they have to be integers?
+
+00:39:32.380 --> 00:39:33.400
+That's a great question.
+
+00:39:33.580 --> 00:39:34.340
+We can try that out.
+
+00:39:34.720 --> 00:39:37.660
+I'm not actually sure right off just off the top of my head.
+
+00:39:38.340 --> 00:39:40.540
+So you can go in spider and say
+
+00:39:45.430 --> 00:39:46.970
+let's say in this example here.
+
+00:39:47.110 --> 00:39:48.230
+In this example here.
+
+00:39:51.830 --> 00:39:55.310
+So we can say seven point one 10.3.
+
+00:39:58.220 --> 00:39:59.740
+Yeah so they have to be integers.
+
+00:40:08.550 --> 00:40:10.690
+Okay so that's that's that example
+
+00:40:10.690 --> 00:40:12.670
+and let's erase that.
+
+00:40:13.230 --> 00:40:16.310
+In this particular example we have start stop and step
+
+00:40:16.310 --> 00:40:19.110
+and here we're going every other value.
+
+00:40:19.910 --> 00:40:21.230
+So we're starting at five.
+
+00:40:22.050 --> 00:40:23.810
+Tell me what the next value is supposed to be.
+
+00:40:25.030 --> 00:40:26.590
+If we're taking every other one.
+
+00:40:27.750 --> 00:40:33.970
+Seven and then nine and then are we doing 11 or not?
+
+00:40:35.010 --> 00:40:36.550
+Excellent nice yeah.
+
+00:40:37.430 --> 00:40:38.930
+So we're going to the end minus one.
+
+00:40:40.850 --> 00:40:43.950
+Okay so it's possible that sometimes you write code
+
+00:40:43.950 --> 00:40:46.270
+where you might want to exit out of the loop early.
+
+00:40:46.910 --> 00:40:49.190
+You don't want to go through all of the sequences
+
+00:40:49.190 --> 00:40:50.550
+of your numbers.
+
+00:40:50.910 --> 00:40:52.570
+Maybe there's a condition inside there
+
+00:40:52.570 --> 00:40:54.670
+where you just want to exit the loop early.
+
+00:40:55.390 --> 00:40:57.610
+Inside the Y loop maybe you want to exit the loop
+
+00:40:57.610 --> 00:40:59.270
+before the condition becomes false.
+
+00:41:00.190 --> 00:41:01.950
+So that's where the break statement comes in.
+
+00:41:02.890 --> 00:41:04.990
+So the break works like this.
+
+00:41:05.770 --> 00:41:09.450
+It's going to as soon as Python sees this break statement
+
+00:41:10.550 --> 00:41:13.550
+it's going to say okay I'm going to look
+
+00:41:13.550 --> 00:41:16.170
+at whatever loop I'm currently in.
+
+00:41:17.690 --> 00:41:20.850
+I'm not evaluating any expression after it
+
+00:41:20.850 --> 00:41:22.290
+that comes within my loop
+
+00:41:23.290 --> 00:41:25.610
+and I'm going to immediately exit the loop.
+
+00:41:25.870 --> 00:41:28.210
+So I'm going inside this while this while
+
+00:41:28.690 --> 00:41:30.290
+I'm evaluating this one expression
+
+00:41:30.290 --> 00:41:31.830
+and then I suddenly see a break.
+
+00:41:33.190 --> 00:41:35.730
+Expression B does not get evaluated
+
+00:41:37.670 --> 00:41:40.190
+and break is going to immediately exit
+
+00:41:40.190 --> 00:41:42.230
+out of the innermost loop that it's in.
+
+00:41:42.990 --> 00:41:45.730
+So this Y loop that has condition two
+
+00:41:45.730 --> 00:41:47.230
+that's the innermost loop
+
+00:41:47.230 --> 00:41:49.510
+that the break is found in.
+
+00:41:50.470 --> 00:41:53.850
+So we're going to exit out of this innermost loop here
+
+00:41:54.530 --> 00:41:56.450
+and we're evaluating expression C
+
+00:41:56.770 --> 00:41:58.810
+and notice we're evaluating expression C
+
+00:41:58.810 --> 00:42:03.150
+because its expression C is part of the outer Y loop.
+
+00:42:04.850 --> 00:42:07.630
+It's at the same level as this one
+
+00:42:08.130 --> 00:42:11.310
+and these ones are part of the inner Y loop.
+
+00:42:11.990 --> 00:42:15.290
+Okay, last thing I want to say
+
+00:42:15.290 --> 00:42:16.510
+is just a little bit of a comparison
+
+00:42:16.510 --> 00:42:17.810
+between foreign Y loops.
+
+00:42:18.270 --> 00:42:20.430
+So when would you use one or the other?
+
+00:42:20.950 --> 00:42:22.490
+This might be useful in your problem sets.
+
+00:42:23.070 --> 00:42:24.350
+So for loops you usually use
+
+00:42:24.350 --> 00:42:25.790
+when you know the number of iterations.
+
+00:42:26.330 --> 00:42:28.750
+Okay, Y loops are very useful
+
+00:42:28.750 --> 00:42:30.610
+when for example you're getting user input
+
+00:42:30.610 --> 00:42:32.610
+and user input is unpredictable, right?
+
+00:42:32.670 --> 00:42:33.750
+You don't know how many times
+
+00:42:33.750 --> 00:42:35.530
+they're gonna do a certain task.
+
+00:42:36.430 --> 00:42:37.850
+For both foreign Y loops
+
+00:42:37.850 --> 00:42:39.990
+you can end out of the loop early using the break.
+
+00:42:40.610 --> 00:42:41.950
+The for loop uses this counter.
+
+00:42:42.470 --> 00:42:43.950
+It's inherent inside the for loop.
+
+00:42:45.310 --> 00:42:47.290
+A Y loop, you can use a counter
+
+00:42:47.290 --> 00:42:49.710
+in order you can use a Y loop to count things
+
+00:42:50.490 --> 00:42:53.330
+but you must initialize the counter before the Y loop
+
+00:42:53.730 --> 00:42:55.930
+and you have to remember to increment it within the loop
+
+00:42:55.930 --> 00:42:58.070
+otherwise you may be lead to an infinite loop.
+
+00:43:00.720 --> 00:43:04.080
+We've seen as the very first example of a for loop
+
+00:43:04.080 --> 00:43:08.040
+that the for loop could be rewritten as a Y loop
+
+00:43:08.040 --> 00:43:09.940
+but the vice versa is not necessarily true.
+
+00:43:10.900 --> 00:43:14.100
+And the counter example to that is just user input.
+
+00:43:14.340 --> 00:43:15.980
+So you might not know how many times
+
+00:43:15.980 --> 00:43:17.420
+you might do a certain task.
+
+00:43:18.520 --> 00:43:21.000
+All right, great, that's all for today.
+

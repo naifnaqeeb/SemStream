@@ -1,0 +1,2963 @@
+WEBVTT
+
+00:00:00.180 --> 00:00:02.820
+The following content is provided under a Creative
+
+00:00:02.820 --> 00:00:03.640
+Commons license.
+
+00:00:04.440 --> 00:00:07.400
+Your support will help MIT OpenCourseWare continue to
+
+00:00:07.400 --> 00:00:10.220
+offer high quality educational resources for free.
+
+00:00:11.080 --> 00:00:13.920
+To make a donation or view additional materials from
+
+00:00:13.920 --> 00:00:17.860
+hundreds of MIT courses, visit MIT OpenCourseWare at
+
+00:00:17.860 --> 00:00:20.340
+ocw.mit.edu.
+
+00:00:23.950 --> 00:00:25.290
+Who can tell me what a proof is?
+
+00:00:26.450 --> 00:00:29.090
+Any ideas of what is a proof anyway?
+
+00:00:29.350 --> 00:00:29.830
+Any thoughts?
+
+00:00:30.030 --> 00:00:30.130
+Yeah?
+
+00:00:40.600 --> 00:00:41.500
+Very good.
+
+00:00:41.500 --> 00:00:42.280
+I like that.
+
+00:00:42.640 --> 00:00:44.900
+That's very close to what we're going to do here.
+
+00:00:45.400 --> 00:00:45.660
+Yeah?
+
+00:00:46.620 --> 00:00:48.880
+Now that's a special kind of proof, though.
+
+00:00:49.960 --> 00:00:51.340
+That's a mathematical proof.
+
+00:00:52.180 --> 00:00:54.660
+And I'm going to write a definition very close to that
+
+00:00:54.660 --> 00:00:55.220
+in a few minutes.
+
+00:00:56.620 --> 00:00:59.000
+But proofs exist beyond mathematics.
+
+00:01:00.560 --> 00:01:04.520
+Can anybody think of a higher level notion of what a
+
+00:01:04.520 --> 00:01:05.040
+proof is?
+
+00:01:05.340 --> 00:01:07.420
+That's correct what you said, but there's a higher metal
+
+00:01:07.420 --> 00:01:08.900
+level notion of what a proof is.
+
+00:01:09.960 --> 00:01:14.780
+Beyond that, may have no logical deductions potentially.
+
+00:01:15.640 --> 00:01:17.040
+May have no assumptions.
+
+00:01:18.440 --> 00:01:18.920
+Any thoughts?
+
+00:01:20.140 --> 00:01:20.680
+Got a proof?
+
+00:01:22.420 --> 00:01:28.480
+Well, I think generally a proof is considered across
+
+00:01:28.480 --> 00:01:30.100
+multiple fields as a method for
+
+00:01:30.100 --> 00:01:31.120
+ascertaining the truth.
+
+00:01:36.580 --> 00:01:38.060
+And you described one method.
+
+00:01:51.320 --> 00:01:53.780
+Now by ascertaining, I mean establishing truth,
+
+00:01:53.780 --> 00:01:54.920
+verifying truth.
+
+00:01:55.780 --> 00:01:59.960
+And there's lots of ways to ascertain truth in society and
+
+00:01:59.960 --> 00:02:00.940
+even within science.
+
+00:02:02.080 --> 00:02:04.960
+What are some examples of ways that we
+
+00:02:04.960 --> 00:02:07.460
+ascertain truth in society?
+
+00:02:10.200 --> 00:02:10.320
+Yeah?
+
+00:02:15.490 --> 00:02:16.170
+Observation.
+
+00:02:16.850 --> 00:02:17.850
+Experiment and observation.
+
+00:02:18.190 --> 00:02:18.390
+Excellent.
+
+00:02:18.630 --> 00:02:21.150
+That's the bedrock of physics.
+
+00:02:23.440 --> 00:02:25.460
+I mean, who really knows if there's gravity out there?
+
+00:02:27.450 --> 00:02:28.590
+Well, we observe it.
+
+00:02:29.330 --> 00:02:31.590
+And so we then conclude that's the truth.
+
+00:02:31.710 --> 00:02:33.310
+There's gravity and we have laws about it.
+
+00:02:33.570 --> 00:02:34.330
+That's one good way.
+
+00:02:34.450 --> 00:02:37.490
+What's another way of ascertaining truth across
+
+00:02:39.990 --> 00:02:43.070
+scientific disciplines or in science, beyond
+
+00:02:43.070 --> 00:02:44.270
+science just in society?
+
+00:02:44.990 --> 00:02:45.970
+How is truth established?
+
+00:02:47.910 --> 00:02:48.330
+What are the ways?
+
+00:02:52.260 --> 00:02:55.280
+What things aren't true and that helps you narrow
+
+00:02:55.280 --> 00:02:56.000
+down what is true?
+
+00:02:56.340 --> 00:02:57.040
+Yes, truth?
+
+00:02:57.320 --> 00:02:57.760
+Yeah, that's great.
+
+00:02:57.860 --> 00:02:59.420
+Truth is the opposite of falsehood.
+
+00:02:59.940 --> 00:03:01.100
+How do we establish falsehood?
+
+00:03:02.180 --> 00:03:03.680
+What are the ways of doing that?
+
+00:03:04.360 --> 00:03:05.820
+How do you decide something is not true?
+
+00:03:07.160 --> 00:03:07.740
+In everyday life, yeah.
+
+00:03:09.900 --> 00:03:10.980
+Find counter examples.
+
+00:03:11.860 --> 00:03:12.780
+Yeah, that's good.
+
+00:03:13.900 --> 00:03:16.980
+So in fact, even a step more general sampling,
+
+00:03:19.740 --> 00:03:21.480
+counter examples are ways.
+
+00:03:26.020 --> 00:03:28.260
+You know, if you do something and experiment 10 times
+
+00:03:28.260 --> 00:03:30.040
+and every time it comes out one way,
+
+00:03:30.740 --> 00:03:32.300
+that's truth, maybe.
+
+00:03:33.200 --> 00:03:34.580
+But there's fields where that becomes truth.
+
+00:03:36.040 --> 00:03:37.160
+What about other ways?
+
+00:03:40.780 --> 00:03:44.420
+How are we going to decide if Roger Clemens
+
+00:03:44.420 --> 00:03:47.440
+is guilty of perjury for lying about
+
+00:03:47.440 --> 00:03:48.360
+steroids to Congress?
+
+00:03:51.130 --> 00:03:52.090
+He did it or he didn't.
+
+00:03:52.230 --> 00:03:53.190
+How are we going to decide that?
+
+00:03:53.330 --> 00:03:54.090
+What's the truth behind it?
+
+00:03:54.090 --> 00:03:55.590
+How is that truth going to be ascertained?
+
+00:03:56.250 --> 00:03:56.410
+Yeah?
+
+00:04:00.370 --> 00:04:02.730
+Examining evidence and who makes the conclusion there?
+
+00:04:03.790 --> 00:04:04.570
+The jury.
+
+00:04:05.410 --> 00:04:07.590
+Truth is established by juries or judges.
+
+00:04:13.950 --> 00:04:16.290
+You know, Blago, I can never pronounce his name.
+
+00:04:16.290 --> 00:04:19.530
+Illinois Governor, Blago Djavic, he's guilty.
+
+00:04:20.830 --> 00:04:21.510
+That's the truth.
+
+00:04:22.330 --> 00:04:22.770
+Okay?
+
+00:04:23.070 --> 00:04:25.250
+Of, you know, not of conspiracy,
+
+00:04:25.830 --> 00:04:27.330
+trying to sell Obama's Senate seat,
+
+00:04:27.750 --> 00:04:29.970
+but of lying to the authorities about campaign financing.
+
+00:04:30.650 --> 00:04:34.450
+O.J. is guilty, not of killing his wife,
+
+00:04:35.310 --> 00:04:37.750
+but of breaking into an apartment
+
+00:04:37.750 --> 00:04:39.230
+to steal back some of his merchandise.
+
+00:04:40.310 --> 00:04:40.890
+Okay?
+
+00:04:40.950 --> 00:04:42.950
+So judges and juries make decisions on truth.
+
+00:04:43.610 --> 00:04:45.690
+What are other truths, bigger truths even
+
+00:04:45.690 --> 00:04:48.170
+than judges and juries in society?
+
+00:04:51.360 --> 00:04:54.860
+There's one really big one that causes a lot of issues, yeah?
+
+00:04:55.120 --> 00:04:55.300
+Religion.
+
+00:04:55.520 --> 00:04:56.160
+What is it?
+
+00:04:56.600 --> 00:04:58.040
+Religion, the word of God.
+
+00:04:59.780 --> 00:05:00.860
+Broadly construed here.
+
+00:05:01.800 --> 00:05:02.360
+Or religion.
+
+00:05:04.160 --> 00:05:04.680
+You know?
+
+00:05:05.300 --> 00:05:07.100
+Now that one's really hard to argue about.
+
+00:05:07.680 --> 00:05:09.260
+You know, because you believe it.
+
+00:05:10.680 --> 00:05:10.980
+You know?
+
+00:05:11.100 --> 00:05:13.200
+And especially if you're not talking to God regularly
+
+00:05:13.200 --> 00:05:16.000
+and somebody is, well, it's hard to argue about,
+
+00:05:16.000 --> 00:05:17.060
+you know, the truth.
+
+00:05:17.900 --> 00:05:20.000
+So you rely on others to interpret it for you often.
+
+00:05:20.520 --> 00:05:22.220
+You know, a priest or minister or rabbi.
+
+00:05:23.220 --> 00:05:23.620
+Okay?
+
+00:05:23.660 --> 00:05:25.580
+And it gets complicated because you can end up
+
+00:05:25.580 --> 00:05:28.420
+with conflicting truths based on, you know,
+
+00:05:28.460 --> 00:05:29.780
+who you think you're talking to
+
+00:05:29.780 --> 00:05:31.560
+or who your translator is for you.
+
+00:05:32.640 --> 00:05:34.640
+You know, another one is the word of your boss.
+
+00:05:36.810 --> 00:05:38.330
+Whatever the boss says is right.
+
+00:05:39.730 --> 00:05:42.010
+Often in business, the customer is always right.
+
+00:05:42.510 --> 00:05:44.110
+That's the truth, whatever the customer says.
+
+00:05:45.270 --> 00:05:45.850
+All right?
+
+00:05:45.850 --> 00:05:48.110
+You know, with Donald Trump as your boss,
+
+00:05:48.270 --> 00:05:49.790
+you better agree or you're fired, right?
+
+00:05:53.360 --> 00:05:56.400
+Often in classes, the professor says it is true
+
+00:05:56.400 --> 00:05:58.840
+because the authority said it.
+
+00:05:58.920 --> 00:05:59.600
+That's not true here.
+
+00:06:00.120 --> 00:06:00.320
+All right?
+
+00:06:00.360 --> 00:06:00.940
+That will not hold.
+
+00:06:01.580 --> 00:06:04.160
+And one of the nicest things about math that I like a lot
+
+00:06:05.040 --> 00:06:09.420
+is that the youngest student can stand up against
+
+00:06:09.420 --> 00:06:11.440
+the most, oldest, most experienced professor
+
+00:06:11.440 --> 00:06:14.880
+and win an argument on mathematics.
+
+00:06:15.300 --> 00:06:18.200
+In fact, I really do get pleasure
+
+00:06:18.200 --> 00:06:19.720
+when a student comes up and proves me wrong.
+
+00:06:19.800 --> 00:06:21.960
+I loved it when that student came in and she showed me
+
+00:06:21.960 --> 00:06:23.780
+what I said really wasn't right
+
+00:06:23.780 --> 00:06:25.800
+when you looked at it carefully or in a different light.
+
+00:06:27.120 --> 00:06:29.580
+You know, now, sometimes if I do it on the board here
+
+00:06:29.580 --> 00:06:31.520
+and it's in class, well, you know, that's fun.
+
+00:06:31.920 --> 00:06:33.360
+I feel a little embarrassed afterwards,
+
+00:06:33.360 --> 00:06:35.980
+but it's a good thing about mathematics
+
+00:06:36.420 --> 00:06:39.260
+is that you can have that kind of dialogue.
+
+00:06:41.440 --> 00:06:41.760
+Okay.
+
+00:06:42.580 --> 00:06:45.400
+Another one, which is related to the word of God sometimes,
+
+00:06:45.400 --> 00:06:47.000
+is inner conviction.
+
+00:06:49.480 --> 00:06:51.700
+Very popular in computer science, believe it or not.
+
+00:06:52.460 --> 00:06:53.600
+You know, with the mantra,
+
+00:06:54.040 --> 00:06:56.280
+there are no bugs in my program.
+
+00:06:57.520 --> 00:06:59.880
+Can't tell you how many times, you know, you hear that.
+
+00:07:00.680 --> 00:07:04.320
+Closely related is I don't see why not.
+
+00:07:05.100 --> 00:07:05.980
+Something is true.
+
+00:07:06.760 --> 00:07:10.180
+And that's a good one because that transfers the burden
+
+00:07:10.180 --> 00:07:12.700
+of proof to anybody who disagrees with you.
+
+00:07:13.780 --> 00:07:15.060
+You don't have to prove it to say,
+
+00:07:15.060 --> 00:07:16.180
+I don't see why it's not true.
+
+00:07:16.740 --> 00:07:18.300
+All of a sudden, the other person who's questioning you
+
+00:07:18.300 --> 00:07:20.640
+becomes their job to disprove you,
+
+00:07:20.660 --> 00:07:22.000
+which is not so good.
+
+00:07:23.900 --> 00:07:24.180
+Okay.
+
+00:07:24.280 --> 00:07:26.320
+Now, in mathematics, there's this higher level
+
+00:07:26.320 --> 00:07:28.900
+and someone stated it very clearly up there.
+
+00:07:28.980 --> 00:07:30.440
+Let me write it up here.
+
+00:07:31.340 --> 00:07:34.460
+In mathematics, we have a mathematical proof,
+
+00:07:39.040 --> 00:07:45.700
+is a verification of a proposition
+
+00:07:57.450 --> 00:08:03.120
+by a chain of logical deductions
+
+00:08:03.120 --> 00:08:16.510
+from a set of axioms.
+
+00:08:21.840 --> 00:08:23.420
+Now, that's a bit of a mouthful.
+
+00:08:24.040 --> 00:08:26.660
+There's three important components here.
+
+00:08:29.380 --> 00:08:33.140
+Propositions, logical deductions, and axioms.
+
+00:08:34.200 --> 00:08:37.300
+And we're going to spend the rest of the class today
+
+00:08:37.300 --> 00:08:38.500
+talking about each of these
+
+00:08:38.500 --> 00:08:39.760
+and then give an example of a proof.
+
+00:08:41.120 --> 00:08:42.540
+We'll start with propositions.
+
+00:08:46.880 --> 00:08:52.890
+A proposition is a statement
+
+00:08:57.650 --> 00:09:03.930
+that is either true or false.
+
+00:09:06.920 --> 00:09:08.300
+You may not know which one,
+
+00:09:08.840 --> 00:09:09.880
+but it's one or the other.
+
+00:09:10.840 --> 00:09:14.440
+Simple example, 2 plus 3 equals 5.
+
+00:09:15.200 --> 00:09:16.720
+Now, that's a true proposition.
+
+00:09:18.320 --> 00:09:20.100
+Here's one that's a little more interesting.
+
+00:09:27.450 --> 00:09:31.490
+For all n in the set of natural numbers,
+
+00:09:32.530 --> 00:09:38.550
+n squared plus n plus 41 is a prime number.
+
+00:09:43.710 --> 00:09:45.510
+Now, I've used some notation here.
+
+00:09:46.550 --> 00:09:50.290
+This is the upside down a is the for all symbol.
+
+00:09:53.120 --> 00:09:55.060
+How many people have not seen that symbol before?
+
+00:09:56.220 --> 00:09:57.020
+I had a bunch of you.
+
+00:09:57.140 --> 00:09:59.460
+You're going to see a bunch of symbols here first week.
+
+00:09:59.940 --> 00:10:02.860
+And that means for every possible choice of n,
+
+00:10:03.320 --> 00:10:05.100
+and this is in the natural numbers,
+
+00:10:05.100 --> 00:10:11.280
+which is the set, 0, 1, 2, 3, and so forth.
+
+00:10:11.880 --> 00:10:12.920
+It's the natural numbers.
+
+00:10:13.820 --> 00:10:15.520
+It's basically the integers, but not negative.
+
+00:10:19.470 --> 00:10:21.690
+So we're saying for every natural number,
+
+00:10:21.810 --> 00:10:24.490
+i.e. for 0, for 1, for 2, for 3, and so forth,
+
+00:10:25.490 --> 00:10:27.310
+this expression is a prime.
+
+00:10:27.510 --> 00:10:31.890
+Now, a prime number is a number that is not divisible
+
+00:10:32.610 --> 00:10:35.090
+by any other number besides itself in one.
+
+00:10:35.090 --> 00:10:40.510
+So 2, 3, 5, 7, or prime, 9 is not because it's 3 times 3.
+
+00:10:41.530 --> 00:10:45.630
+Now, this part here is called the predicate.
+
+00:10:49.120 --> 00:11:00.810
+And a predicate is a proposition whose truth depends
+
+00:11:02.670 --> 00:11:10.970
+on the value of a variable, in this case n.
+
+00:11:16.760 --> 00:11:20.500
+This is referred to as the universe of discourse.
+
+00:11:21.420 --> 00:11:23.740
+It's the space of all things we're talking about.
+
+00:11:23.740 --> 00:11:26.720
+We're only talking about natural numbers here.
+
+00:11:27.740 --> 00:11:29.560
+This is called a quantifier.
+
+00:11:30.100 --> 00:11:31.640
+We'll see more quantifiers later.
+
+00:11:34.450 --> 00:11:38.530
+All right, now to see if this proposition is true,
+
+00:11:39.230 --> 00:11:42.830
+we need to make sure that this predicate
+
+00:11:42.830 --> 00:11:45.230
+is true for every natural number n.
+
+00:11:46.210 --> 00:11:49.250
+So let's see if we can check that.
+
+00:11:50.590 --> 00:11:52.010
+Let's try some values.
+
+00:11:52.570 --> 00:11:57.650
+So we'll try n is 1, 2, 3, and so forth.
+
+00:11:58.330 --> 00:12:01.390
+And we'll compute n squared plus n plus 41.
+
+00:12:02.110 --> 00:12:03.490
+And then we'll check, is it prime?
+
+00:12:05.800 --> 00:12:10.920
+So for n equals 0, n squared plus n plus 41 is 41.
+
+00:12:12.120 --> 00:12:13.260
+Is 41 prime?
+
+00:12:16.030 --> 00:12:19.250
+Yeah, nothing divides 41 but itself in one.
+
+00:12:21.820 --> 00:12:22.720
+All right, let's try 1.
+
+00:12:23.060 --> 00:12:25.180
+1 squared plus 1 plus 41 is 43.
+
+00:12:26.020 --> 00:12:26.860
+43 prime.
+
+00:12:28.120 --> 00:12:28.380
+Yes.
+
+00:12:29.780 --> 00:12:31.280
+Let's try 2.
+
+00:12:32.240 --> 00:12:35.100
+We've got 4 plus 2 is 6 plus 41.
+
+00:12:35.180 --> 00:12:35.680
+47.
+
+00:12:36.320 --> 00:12:37.620
+Is 47 prime?
+
+00:12:38.240 --> 00:12:38.460
+Yes.
+
+00:12:38.960 --> 00:12:39.240
+Yes.
+
+00:12:40.080 --> 00:12:40.960
+Looking good.
+
+00:12:41.220 --> 00:12:45.420
+3, I got 9, 12, 53.
+
+00:12:46.200 --> 00:12:47.260
+53 prime?
+
+00:12:48.060 --> 00:12:48.820
+Yeah.
+
+00:12:49.860 --> 00:12:51.640
+And I could keep on going here.
+
+00:12:51.780 --> 00:12:52.800
+I could go down to 20.
+
+00:12:52.800 --> 00:12:56.820
+I get 420, 461.
+
+00:12:57.340 --> 00:12:58.720
+In fact, that is a prime.
+
+00:12:59.840 --> 00:13:01.520
+And I could just keep on going here.
+
+00:13:02.360 --> 00:13:03.220
+Go down to 39.
+
+00:13:03.440 --> 00:13:05.080
+I get 1,601.
+
+00:13:06.580 --> 00:13:08.220
+You can check that as a prime.
+
+00:13:09.700 --> 00:13:13.040
+The first 40 values of n, the proposition is true.
+
+00:13:13.120 --> 00:13:13.820
+The predicate is true.
+
+00:13:14.660 --> 00:13:15.260
+It is prime.
+
+00:13:16.960 --> 00:13:20.200
+Now, this is a great example because in a lot of fields,
+
+00:13:20.200 --> 00:13:22.640
+physics, for example, statistics often,
+
+00:13:24.100 --> 00:13:26.580
+if it's true, you checked 40 examples.
+
+00:13:26.660 --> 00:13:28.260
+That's above and beyond the call of duty.
+
+00:13:28.960 --> 00:13:29.780
+It's always true.
+
+00:13:30.780 --> 00:13:32.660
+So yeah, this must be true, right?
+
+00:13:35.050 --> 00:13:35.530
+No.
+
+00:13:36.370 --> 00:13:36.770
+Wrong.
+
+00:13:37.570 --> 00:13:40.370
+Often you'll see this in a lot of scientific fields.
+
+00:13:40.890 --> 00:13:41.570
+It is not true.
+
+00:13:41.670 --> 00:13:43.090
+Can anybody give me an example of n
+
+00:13:43.090 --> 00:13:46.410
+for which n squared plus n plus 41 is not prime?
+
+00:13:46.750 --> 00:13:46.850
+Yeah.
+
+00:13:47.310 --> 00:13:47.510
+40.
+
+00:13:48.350 --> 00:13:48.830
+40.
+
+00:13:48.830 --> 00:13:49.510
+Good.
+
+00:13:49.690 --> 00:13:50.650
+Let's see about 40.
+
+00:13:51.610 --> 00:13:57.850
+40 squared plus 40 plus 41 is 1681.
+
+00:13:59.510 --> 00:14:00.430
+What's that equal?
+
+00:14:02.720 --> 00:14:03.680
+41 squared.
+
+00:14:05.780 --> 00:14:06.980
+So it is not prime.
+
+00:14:07.700 --> 00:14:10.400
+Somebody give me an obvious example where it's not prime.
+
+00:14:11.200 --> 00:14:11.800
+41.
+
+00:14:12.340 --> 00:14:13.180
+Yeah, 41 squared.
+
+00:14:13.420 --> 00:14:14.880
+Everything is divided by 41.
+
+00:14:15.460 --> 00:14:16.940
+But 40 is the first break point.
+
+00:14:17.580 --> 00:14:21.360
+So the first 40 examples work and then it fails.
+
+00:14:22.040 --> 00:14:24.420
+So this proposition is false,
+
+00:14:25.740 --> 00:14:27.740
+even though it was looking pretty good.
+
+00:14:28.580 --> 00:14:30.040
+There's a reason I'm doing this effect.
+
+00:14:30.120 --> 00:14:31.080
+I'm going to do it some more here.
+
+00:14:31.860 --> 00:14:33.140
+I'm going to beat you over the head with it.
+
+00:14:34.800 --> 00:14:39.200
+Here's a famous in mathematics statement.
+
+00:14:41.560 --> 00:14:44.220
+A to the fourth plus B to the fourth
+
+00:14:44.220 --> 00:14:48.600
+plus C to the fourth equals D to the fourth
+
+00:14:50.160 --> 00:14:57.360
+has no positive integer solutions.
+
+00:15:00.670 --> 00:15:02.010
+That is a proposition.
+
+00:15:02.950 --> 00:15:05.810
+Now, this proposition was conjectured to be true
+
+00:15:05.810 --> 00:15:08.470
+by Euler in 1769.
+
+00:15:09.410 --> 00:15:11.010
+Euler's a big honcho in math.
+
+00:15:11.570 --> 00:15:12.810
+We still talk about him a lot,
+
+00:15:12.910 --> 00:15:14.790
+even though he's been dead for centuries.
+
+00:15:15.650 --> 00:15:19.070
+It was unsolved for over two centuries.
+
+00:15:19.970 --> 00:15:21.170
+Mathematicians worked on it.
+
+00:15:21.810 --> 00:15:25.130
+It was finally disproved by a very clever fellow
+
+00:15:25.130 --> 00:15:26.170
+named Noam Elkes.
+
+00:15:27.430 --> 00:15:29.770
+218 years later, after it was conjectured,
+
+00:15:30.170 --> 00:15:32.790
+he works at that other school down the street.
+
+00:15:34.010 --> 00:15:36.230
+And he came up with this.
+
+00:15:37.110 --> 00:15:39.990
+A equals 95,800.
+
+00:15:41.790 --> 00:15:45.210
+B equals 217,519.
+
+00:15:46.190 --> 00:15:49.810
+C equals 414,560.
+
+00:15:50.150 --> 00:15:51.490
+You don't have to remember these numbers.
+
+00:15:51.590 --> 00:15:53.550
+We're not going to quiz you on that.
+
+00:15:54.950 --> 00:15:55.910
+422,481.
+
+00:15:57.150 --> 00:15:59.310
+Now, he claims I've never personally checked it,
+
+00:15:59.330 --> 00:16:00.150
+but presumably people have.
+
+00:16:00.590 --> 00:16:03.190
+You plug those in here and you have an equality.
+
+00:16:04.350 --> 00:16:04.910
+So he says.
+
+00:16:05.790 --> 00:16:08.550
+So in fact, the correct true proposition is
+
+00:16:08.550 --> 00:16:13.090
+there do exist A, B, C, D
+
+00:16:13.910 --> 00:16:16.450
+in the positive natural numbers
+
+00:16:16.450 --> 00:16:19.510
+such that A to the fourth plus B to the fourth
+
+00:16:19.510 --> 00:16:21.910
+plus C to the fourth equals D to the fourth.
+
+00:16:22.850 --> 00:16:24.970
+All right, I used a new quantifier here
+
+00:16:25.850 --> 00:16:27.210
+called there exists.
+
+00:16:28.230 --> 00:16:30.510
+Instead of an upside down A, it's a backwards E.
+
+00:16:30.650 --> 00:16:31.670
+Don't ask me why.
+
+00:16:32.850 --> 00:16:33.650
+That's what it is.
+
+00:16:35.850 --> 00:16:38.230
+The plus means you can't have
+
+00:16:38.230 --> 00:16:39.710
+zero or negative numbers.
+
+00:16:40.090 --> 00:16:42.010
+So these are the positive natural numbers.
+
+00:16:45.410 --> 00:16:46.650
+And here's your predicate,
+
+00:16:49.210 --> 00:16:51.290
+which of course the truth of this depends
+
+00:16:51.290 --> 00:16:52.870
+on the values of A, B, C, and D.
+
+00:16:54.980 --> 00:16:56.540
+All right, it took a long time to figure out
+
+00:16:56.540 --> 00:16:58.280
+that actually there was a solution here.
+
+00:16:58.980 --> 00:17:00.720
+Obviously everything they tried to let time failed.
+
+00:17:01.100 --> 00:17:02.100
+Let me give you another one.
+
+00:17:10.010 --> 00:17:12.610
+313 x cubed plus y cubed
+
+00:17:13.770 --> 00:17:15.110
+equals z cubed
+
+00:17:16.450 --> 00:17:24.650
+has no positive integer solutions.
+
+00:17:29.300 --> 00:17:30.640
+This turns out to be false,
+
+00:17:31.300 --> 00:17:34.220
+but the shortest, smallest counter example
+
+00:17:34.220 --> 00:17:36.180
+has over a thousand digits.
+
+00:17:37.780 --> 00:17:38.580
+This one was easy.
+
+00:17:38.660 --> 00:17:39.500
+They only have six digits.
+
+00:17:40.360 --> 00:17:42.820
+So there's no way ever you'd use a computer
+
+00:17:43.320 --> 00:17:46.220
+to exhaustively search a thousand digit numbers here
+
+00:17:46.220 --> 00:17:47.240
+to show it's false.
+
+00:17:48.840 --> 00:17:50.700
+Now of course some of you are probably thinking
+
+00:17:52.420 --> 00:17:54.600
+why on earth would I care
+
+00:17:55.760 --> 00:17:59.280
+if 313 x cubed plus y cubed equals z cubed
+
+00:17:59.280 --> 00:18:01.220
+has a solution?
+
+00:18:02.280 --> 00:18:04.080
+Now that probably won't be the last time
+
+00:18:04.080 --> 00:18:05.960
+that thought occurs to you during the term.
+
+00:18:06.880 --> 00:18:08.840
+And why on earth would anybody
+
+00:18:08.840 --> 00:18:11.300
+ever try to even find a solution to that?
+
+00:18:12.240 --> 00:18:14.880
+You know, I mean mathematicians are sort of a rare breed.
+
+00:18:14.880 --> 00:18:17.160
+Now actually in this case
+
+00:18:17.880 --> 00:18:19.580
+that's really important in practice.
+
+00:18:21.920 --> 00:18:23.920
+This equation is an example
+
+00:18:23.920 --> 00:18:25.320
+of what's called an elliptic curve.
+
+00:18:25.580 --> 00:18:26.960
+Elliptic curve and you study these
+
+00:18:26.960 --> 00:18:29.540
+if you're really a specialist in mathematics
+
+00:18:29.540 --> 00:18:30.560
+in graduate school
+
+00:18:30.560 --> 00:18:33.680
+or if you work for certain three letter agencies
+
+00:18:34.620 --> 00:18:36.680
+because it's central to the understanding
+
+00:18:36.680 --> 00:18:38.280
+of how to factor large integers.
+
+00:18:39.280 --> 00:18:41.300
+That means factoring,
+
+00:18:41.300 --> 00:18:43.520
+showing that what was it?
+
+00:18:44.060 --> 00:18:46.000
+1681 is 41 x 41.
+
+00:18:46.700 --> 00:18:49.020
+And I said okay, who cares about factoring?
+
+00:18:50.200 --> 00:18:52.520
+Well factoring is the way
+
+00:18:52.520 --> 00:18:55.440
+to break crypto systems like RSA
+
+00:18:56.540 --> 00:18:58.560
+which are used for everything
+
+00:18:58.560 --> 00:19:00.280
+that we do electronically today.
+
+00:19:01.180 --> 00:19:03.000
+You have a PayPal account,
+
+00:19:03.120 --> 00:19:05.140
+you buy something online, you're using SSL.
+
+00:19:05.480 --> 00:19:07.120
+They're all using crypto systems
+
+00:19:07.120 --> 00:19:08.520
+most of which are almost all
+
+00:19:08.520 --> 00:19:09.680
+which are based on number theory.
+
+00:19:10.400 --> 00:19:12.280
+And in particular, they're based on factoring.
+
+00:19:13.020 --> 00:19:14.440
+And if you can find good solutions
+
+00:19:14.440 --> 00:19:15.680
+to things like this
+
+00:19:16.200 --> 00:19:18.060
+or solutions to things like this
+
+00:19:18.060 --> 00:19:19.600
+all of a sudden you can get
+
+00:19:19.600 --> 00:19:22.220
+an angle and a wedge on factoring.
+
+00:19:23.160 --> 00:19:24.220
+And it's because of that
+
+00:19:24.220 --> 00:19:26.720
+that now RSA uses
+
+00:19:26.720 --> 00:19:27.900
+thousand digit
+
+00:19:28.840 --> 00:19:30.240
+modelluses instead of
+
+00:19:30.240 --> 00:19:32.620
+hundred digit modelluses like they used to use
+
+00:19:32.620 --> 00:19:34.540
+because people figured out how to factor them
+
+00:19:34.540 --> 00:19:35.940
+and how to break the crypto system.
+
+00:19:35.940 --> 00:19:38.340
+If you can break those crypto systems
+
+00:19:39.120 --> 00:19:40.420
+you can't rule the world
+
+00:19:40.420 --> 00:19:40.920
+but it's close.
+
+00:19:42.420 --> 00:19:44.520
+So you'll learn, we'll talk more about this
+
+00:19:44.520 --> 00:19:46.660
+the week after next when we do number theory
+
+00:19:46.660 --> 00:19:48.520
+and we work up to RSA
+
+00:19:48.520 --> 00:19:49.880
+and how that crypto system works
+
+00:19:49.880 --> 00:19:51.300
+and why factoring is so important.
+
+00:19:53.140 --> 00:19:54.600
+So you all don't have to
+
+00:19:54.600 --> 00:19:56.220
+really have to worry about this
+
+00:19:56.220 --> 00:19:57.380
+but these things are important.
+
+00:19:57.680 --> 00:19:59.740
+And the bigger message is
+
+00:19:59.740 --> 00:20:01.600
+that you don't just try a few cases
+
+00:20:01.600 --> 00:20:03.320
+and if it works you think it's done.
+
+00:20:04.240 --> 00:20:04.960
+That's not
+
+00:20:04.960 --> 00:20:06.820
+how the game works in mathematics.
+
+00:20:07.000 --> 00:20:08.500
+You can get an idea of maybe it's true
+
+00:20:08.500 --> 00:20:11.000
+but it doesn't tell you the answer.
+
+00:20:13.000 --> 00:20:14.340
+All right, let me give it another one.
+
+00:20:15.140 --> 00:20:16.820
+This is another very famous one
+
+00:20:16.820 --> 00:20:18.200
+that probably most of you have heard of.
+
+00:20:19.380 --> 00:20:20.380
+The regions
+
+00:20:22.460 --> 00:20:23.740
+in any map
+
+00:20:26.520 --> 00:20:28.180
+can be colored
+
+00:20:30.890 --> 00:20:32.390
+in four colors
+
+00:20:34.560 --> 00:20:35.500
+so that
+
+00:20:37.260 --> 00:20:38.300
+adjacent regions
+
+00:20:45.220 --> 00:20:46.540
+have different colors.
+
+00:20:47.400 --> 00:20:48.960
+Like a map of the United States
+
+00:20:48.960 --> 00:20:50.240
+every state gets a color
+
+00:20:50.240 --> 00:20:52.200
+two states share a border
+
+00:20:52.200 --> 00:20:53.740
+they have different colors
+
+00:20:54.560 --> 00:20:56.000
+as you can distinguish them.
+
+00:20:56.960 --> 00:20:59.020
+This is known as the four color theorem
+
+00:20:59.020 --> 00:21:00.740
+and it's very famous
+
+00:21:00.740 --> 00:21:01.660
+in the popular literature.
+
+00:21:02.160 --> 00:21:04.220
+How many people have heard of this theorem before?
+
+00:21:04.960 --> 00:21:06.580
+Yeah, okay, so you've all heard of it.
+
+00:21:07.160 --> 00:21:08.080
+As a long history
+
+00:21:08.080 --> 00:21:10.700
+it was conjectured by somebody named Guthrie
+
+00:21:10.700 --> 00:21:11.560
+in 1853.
+
+00:21:11.560 --> 00:21:14.080
+He's the first person to say this ought to be possible.
+
+00:21:14.640 --> 00:21:15.740
+And there were many
+
+00:21:15.740 --> 00:21:17.620
+false proofs
+
+00:21:17.620 --> 00:21:19.860
+over the ensuing century.
+
+00:21:20.480 --> 00:21:21.140
+One of the most
+
+00:21:21.140 --> 00:21:23.240
+convincing was a proof using pictures
+
+00:21:23.240 --> 00:21:26.040
+by Kempe in 1879.
+
+00:21:26.560 --> 00:21:27.840
+You know, 26 years later.
+
+00:21:28.540 --> 00:21:29.460
+And this proof was
+
+00:21:29.460 --> 00:21:30.860
+believed for over a decade.
+
+00:21:31.400 --> 00:21:32.900
+Mathematicians thought the proof was right
+
+00:21:33.560 --> 00:21:35.740
+until another mathematician named He-Wood
+
+00:21:35.740 --> 00:21:37.340
+found a fatal flaw
+
+00:21:37.340 --> 00:21:38.100
+in the argument.
+
+00:21:38.720 --> 00:21:39.900
+Now this proof
+
+00:21:39.900 --> 00:21:42.340
+by Kempe consisted of drawing pictures
+
+00:21:42.340 --> 00:21:44.260
+of what maps have to look like.
+
+00:21:45.020 --> 00:21:46.020
+You start by saying a map
+
+00:21:46.020 --> 00:21:47.680
+has to look like one of these types.
+
+00:21:47.780 --> 00:21:49.040
+And he would draw pictures of them.
+
+00:21:49.440 --> 00:21:51.840
+And then he argued that those types
+
+00:21:51.840 --> 00:21:53.480
+that he drew pictures of it worked for it.
+
+00:21:55.480 --> 00:21:56.460
+Proofs by picture
+
+00:21:56.960 --> 00:21:58.700
+are often very convincing
+
+00:21:58.700 --> 00:22:00.280
+and very wrong.
+
+00:22:00.920 --> 00:22:02.040
+And I'm going to give you one
+
+00:22:02.040 --> 00:22:03.340
+to start lecture next time.
+
+00:22:03.740 --> 00:22:05.480
+Be proof by PowerPoint, which is even worse
+
+00:22:05.480 --> 00:22:06.260
+than proof by picture.
+
+00:22:07.820 --> 00:22:09.060
+And it is compelling.
+
+00:22:10.160 --> 00:22:10.320
+You know.
+
+00:22:10.780 --> 00:22:13.060
+The point will be to show you proofs by picture
+
+00:22:13.060 --> 00:22:14.880
+are generally not a good thing.
+
+00:22:15.260 --> 00:22:16.780
+Because your brain just locks in.
+
+00:22:16.940 --> 00:22:17.900
+That's what it has to look like.
+
+00:22:18.740 --> 00:22:20.520
+And you don't think about other ways
+
+00:22:20.520 --> 00:22:21.680
+that it might look like.
+
+00:22:22.420 --> 00:22:24.600
+Now the four color theorem was finally proved
+
+00:22:24.600 --> 00:22:26.740
+by Oppel and Hocken
+
+00:22:26.740 --> 00:22:27.940
+in 1977.
+
+00:22:28.940 --> 00:22:30.360
+But they had to use a computer
+
+00:22:30.360 --> 00:22:32.640
+to check thousands of cases.
+
+00:22:34.540 --> 00:22:35.020
+Now
+
+00:22:35.020 --> 00:22:36.480
+this was a little disturbing
+
+00:22:36.480 --> 00:22:37.760
+to mathematicians because
+
+00:22:38.520 --> 00:22:40.780
+how do they know the computer did the right thing?
+
+00:22:42.120 --> 00:22:42.640
+You know
+
+00:22:42.640 --> 00:22:44.660
+your colleague writes a proof on the board.
+
+00:22:44.780 --> 00:22:46.000
+You can check it. But how do you know
+
+00:22:46.000 --> 00:22:48.100
+the computer didn't mess up or not do some cases?
+
+00:22:49.800 --> 00:22:50.280
+Now
+
+00:22:50.280 --> 00:22:51.800
+everybody believes it's true now.
+
+00:22:52.300 --> 00:22:54.020
+But it's unsatisfying.
+
+00:22:54.680 --> 00:22:55.600
+A few years ago
+
+00:22:55.600 --> 00:22:58.480
+a 12 page human proof was discovered.
+
+00:22:59.980 --> 00:23:01.300
+But it's not been verified.
+
+00:23:01.300 --> 00:23:03.640
+And people are very suspicious of it
+
+00:23:03.640 --> 00:23:05.560
+because the proof of the main lemma
+
+00:23:05.560 --> 00:23:06.980
+says, quote
+
+00:23:07.700 --> 00:23:09.360
+details of this lemma
+
+00:23:09.360 --> 00:23:11.520
+is left to the reader, C figure 7.
+
+00:23:12.140 --> 00:23:13.280
+That's what the main lemma
+
+00:23:13.280 --> 00:23:14.800
+of the proof is. But people think
+
+00:23:14.800 --> 00:23:16.180
+there maybe were some good ideas there.
+
+00:23:16.260 --> 00:23:17.660
+But very suspicious proof.
+
+00:23:19.060 --> 00:23:19.380
+Alright.
+
+00:23:20.820 --> 00:23:22.200
+Let's do another one.
+
+00:23:22.620 --> 00:23:23.440
+Another proposition.
+
+00:23:24.120 --> 00:23:25.340
+Also very famous.
+
+00:23:27.620 --> 00:23:28.820
+Every even integer
+
+00:23:28.820 --> 00:23:33.270
+but 2
+
+00:23:34.610 --> 00:23:36.090
+actually positive integer
+
+00:23:36.090 --> 00:23:36.570
+but 2
+
+00:23:36.570 --> 00:23:38.470
+is the sum
+
+00:23:40.010 --> 00:23:42.010
+of 2 primes.
+
+00:23:45.160 --> 00:23:46.120
+For example
+
+00:23:49.310 --> 00:23:51.540
+24 is the sum of 11 and 13
+
+00:23:51.540 --> 00:23:52.900
+which are prime.
+
+00:23:56.960 --> 00:23:58.540
+Anybody know is this true or false?
+
+00:23:59.440 --> 00:24:00.460
+This proposition.
+
+00:24:04.040 --> 00:24:04.180
+Yeah?
+
+00:24:04.920 --> 00:24:07.040
+Yeah, that's right. Me too.
+
+00:24:07.800 --> 00:24:08.880
+Nobody knows
+
+00:24:08.880 --> 00:24:10.460
+if this is true or false.
+
+00:24:10.460 --> 00:24:11.700
+This is called
+
+00:24:12.380 --> 00:24:13.200
+Golbach's conjecture.
+
+00:24:14.220 --> 00:24:15.860
+It was conjectured by
+
+00:24:15.860 --> 00:24:18.200
+Christian Golbach in 1742.
+
+00:24:19.040 --> 00:24:20.280
+This is a really
+
+00:24:20.280 --> 00:24:21.320
+simple proposition.
+
+00:24:22.520 --> 00:24:24.040
+And it's amazing
+
+00:24:24.040 --> 00:24:25.500
+it's not known. In fact I spent
+
+00:24:26.240 --> 00:24:28.280
+a couple of years working on
+
+00:24:28.280 --> 00:24:30.000
+I thought this has to be easy enough to prove
+
+00:24:30.000 --> 00:24:30.980
+when I was younger.
+
+00:24:31.820 --> 00:24:33.460
+And didn't get very far.
+
+00:24:34.220 --> 00:24:36.400
+So people still don't know if it's true.
+
+00:24:36.900 --> 00:24:38.400
+And in fact it was listed
+
+00:24:38.400 --> 00:24:39.080
+by the globe
+
+00:24:40.220 --> 00:24:41.940
+as one of the great unsolved mysteries.
+
+00:24:42.340 --> 00:24:43.980
+So if you get out this globe article here
+
+00:24:44.740 --> 00:24:46.420
+on the handout. Does everybody have this handout?
+
+00:24:48.060 --> 00:24:48.680
+If you don't
+
+00:24:48.680 --> 00:24:50.340
+we'll get it passed out. Somebody missing that handout
+
+00:24:50.340 --> 00:24:51.700
+up over there and over here.
+
+00:24:52.920 --> 00:24:54.340
+If we get those passed out.
+
+00:24:56.740 --> 00:24:58.360
+Now it lists the three conjectures.
+
+00:24:58.960 --> 00:25:00.980
+Do you see Golbach's conjecture there?
+
+00:25:03.500 --> 00:25:04.240
+Now can anybody
+
+00:25:05.080 --> 00:25:06.060
+point out something
+
+00:25:06.060 --> 00:25:07.500
+that's a little disturbing about
+
+00:25:07.500 --> 00:25:09.920
+what the globe says about
+
+00:25:09.920 --> 00:25:10.820
+Golbach's conjecture?
+
+00:25:14.730 --> 00:25:16.710
+Yeah. It gives the example
+
+00:25:16.710 --> 00:25:18.990
+instead of 24 is 11 plus 13
+
+00:25:18.990 --> 00:25:19.810
+it says 20
+
+00:25:20.690 --> 00:25:22.210
+is the sum of 9 and 11.
+
+00:25:24.150 --> 00:25:24.590
+Now
+
+00:25:25.250 --> 00:25:26.770
+if we're allowed to use things like
+
+00:25:26.770 --> 00:25:28.550
+9 as primes, Golbach's conjecture
+
+00:25:28.550 --> 00:25:29.870
+is pretty easy to prove. It's true.
+
+00:25:33.170 --> 00:25:34.530
+This won't be the last time
+
+00:25:34.530 --> 00:25:36.170
+we get examples from the literature.
+
+00:25:36.350 --> 00:25:37.230
+In fact we're going to do this a lot.
+
+00:25:37.690 --> 00:25:39.710
+Along this theme of you cannot believe
+
+00:25:39.710 --> 00:25:40.730
+everything you read.
+
+00:25:41.470 --> 00:25:43.170
+Now the globe is easy pickings but we'll do
+
+00:25:43.170 --> 00:25:44.130
+some more interesting ones later.
+
+00:25:45.070 --> 00:25:47.630
+Now this article lists two other famous conjectures
+
+00:25:47.630 --> 00:25:49.450
+which most people believe to be true.
+
+00:25:51.550 --> 00:25:53.550
+The Riemann Hypothesis
+
+00:25:55.150 --> 00:25:57.270
+after a 1859 paper
+
+00:25:57.270 --> 00:25:59.650
+written by Bernard Riemann
+
+00:25:59.650 --> 00:26:01.070
+suggests that zeros
+
+00:26:01.070 --> 00:26:03.470
+in an infinite series of numbers known as a zeta function
+
+00:26:03.470 --> 00:26:05.890
+form along a straight line in the complex plane.
+
+00:26:06.510 --> 00:26:07.910
+The hypothesis has been proved
+
+00:26:07.910 --> 00:26:09.770
+to 1.5 billion zeros.
+
+00:26:10.610 --> 00:26:11.890
+Not far enough to prove it
+
+00:26:11.890 --> 00:26:12.270
+completely.
+
+00:26:13.590 --> 00:26:15.510
+If they did 1.5 trillion zeros
+
+00:26:15.510 --> 00:26:17.590
+it wouldn't be far enough to prove it completely, of course.
+
+00:26:19.190 --> 00:26:19.530
+And then
+
+00:26:21.670 --> 00:26:22.150
+the
+
+00:26:22.150 --> 00:26:24.350
+the Riemann Hypothesis
+
+00:26:24.350 --> 00:26:25.230
+a couple of years ago
+
+00:26:25.850 --> 00:26:27.690
+somebody credible claimed to have proved it
+
+00:26:27.690 --> 00:26:29.330
+proved turned out not to be right.
+
+00:26:29.950 --> 00:26:32.010
+Then there's the Poincare conjecture.
+
+00:26:32.610 --> 00:26:34.050
+Now this one was
+
+00:26:34.050 --> 00:26:35.170
+finished off.
+
+00:26:35.170 --> 00:26:37.390
+It was proved to be true in 2003
+
+00:26:37.390 --> 00:26:40.170
+by a Russian named Grigor Perlman.
+
+00:26:41.030 --> 00:26:42.250
+The conjecture says
+
+00:26:42.250 --> 00:26:43.570
+roughly speaking that
+
+00:26:43.570 --> 00:26:45.630
+3D objects without
+
+00:26:45.630 --> 00:26:47.070
+holes, like not a donut
+
+00:26:47.790 --> 00:26:48.830
+are equivalent
+
+00:26:48.830 --> 00:26:51.210
+to the sphere. They can sort of be deformed
+
+00:26:51.210 --> 00:26:52.290
+into a sphere.
+
+00:26:52.930 --> 00:26:55.030
+This is known to be true in four dimensions
+
+00:26:55.030 --> 00:26:57.150
+and higher but nobody could prove it for three dimensions
+
+00:26:57.150 --> 00:26:58.350
+until Perlman came along.
+
+00:26:59.210 --> 00:27:01.650
+Now there's a bit of a controversy around this guy.
+
+00:27:02.490 --> 00:27:03.990
+He had an 80 page proof
+
+00:27:03.990 --> 00:27:05.150
+but didn't have all the details.
+
+00:27:06.090 --> 00:27:08.370
+So then other teams of mathematicians got together
+
+00:27:08.370 --> 00:27:10.070
+and wrote 350 pages
+
+00:27:10.630 --> 00:27:11.330
+of details
+
+00:27:12.350 --> 00:27:14.010
+and then most people believe now
+
+00:27:14.010 --> 00:27:16.270
+that it's right and that his original proof
+
+00:27:16.270 --> 00:27:17.690
+might not have had all the details
+
+00:27:17.690 --> 00:27:19.710
+but he had the right structure of the proof.
+
+00:27:20.550 --> 00:27:22.250
+So he won prizes
+
+00:27:22.250 --> 00:27:23.950
+for this. He won the highest prize
+
+00:27:23.950 --> 00:27:25.250
+in mathematics, the Fields Medal
+
+00:27:25.970 --> 00:27:27.810
+and just earlier this year
+
+00:27:27.810 --> 00:27:29.870
+he was awarded the 1 million dollar
+
+00:27:29.870 --> 00:27:31.910
+Millennium Prize and there's about
+
+00:27:31.910 --> 00:27:34.010
+six problems or so that if you solve one
+
+00:27:34.010 --> 00:27:35.990
+of them the Clay Institute gives you a million
+
+00:27:35.990 --> 00:27:37.490
+dollars and he's the first one
+
+00:27:37.490 --> 00:27:39.010
+to win the million dollars.
+
+00:27:39.610 --> 00:27:40.970
+Now the guy's a little strange.
+
+00:27:41.670 --> 00:27:43.590
+He rejected the Fields Medal and refused
+
+00:27:43.590 --> 00:27:45.870
+to go to the ceremony where he was being honored
+
+00:27:45.870 --> 00:27:48.430
+and he's recently rejected the Millennium Prize.
+
+00:27:50.530 --> 00:27:51.330
+In any way
+
+00:27:51.890 --> 00:27:53.910
+this area is murky and we have an expert
+
+00:27:54.770 --> 00:27:55.990
+to explain it all
+
+00:27:55.990 --> 00:27:57.750
+for us on video which I thought I'd show.
+
+00:28:06.160 --> 00:28:07.360
+Alright let's do
+
+00:28:07.360 --> 00:28:09.320
+a simpler one here.
+
+00:28:13.120 --> 00:28:14.320
+For all n
+
+00:28:14.320 --> 00:28:15.240
+in z
+
+00:28:16.740 --> 00:28:18.600
+n greater than or equal to 2
+
+00:28:19.340 --> 00:28:20.040
+implies
+
+00:28:20.620 --> 00:28:23.240
+n squared greater than or equal to 4.
+
+00:28:24.060 --> 00:28:24.660
+Now z
+
+00:28:24.660 --> 00:28:26.040
+we use for the integers
+
+00:28:29.730 --> 00:28:31.350
+and so that would be
+
+00:28:31.350 --> 00:28:33.870
+0, 1, minus 1, 2,
+
+00:28:34.090 --> 00:28:36.130
+minus 2 and so forth
+
+00:28:36.850 --> 00:28:38.070
+and this symbol
+
+00:28:38.070 --> 00:28:39.950
+here is
+
+00:28:39.950 --> 00:28:40.630
+implies.
+
+00:28:45.040 --> 00:28:45.960
+Alright in fact
+
+00:28:45.960 --> 00:28:47.940
+one thing you can notice when you read the text
+
+00:28:47.940 --> 00:28:50.320
+is we use different notation
+
+00:28:50.920 --> 00:28:52.200
+there as the standard
+
+00:28:52.200 --> 00:28:53.300
+that I will use in lecture
+
+00:28:53.300 --> 00:28:55.900
+and there's lots of ways of doing it.
+
+00:28:55.960 --> 00:28:57.920
+You could have a double arrow, a single arrow
+
+00:28:57.920 --> 00:28:59.880
+you could write out implies every time
+
+00:28:59.880 --> 00:29:01.740
+as done in the text and it doesn't really
+
+00:29:01.740 --> 00:29:03.160
+matter which one you want to use
+
+00:29:03.160 --> 00:29:05.180
+as long as you use one of the conventions
+
+00:29:05.180 --> 00:29:05.960
+for implies.
+
+00:29:07.260 --> 00:29:08.600
+And let me define what
+
+00:29:09.580 --> 00:29:10.460
+implies means.
+
+00:29:10.460 --> 00:29:27.690
+An implication
+
+00:29:27.690 --> 00:29:35.470
+p implies q
+
+00:29:36.850 --> 00:29:37.510
+is
+
+00:29:37.510 --> 00:29:38.610
+said to be true
+
+00:29:39.970 --> 00:29:40.630
+if
+
+00:29:40.630 --> 00:29:42.610
+p is false
+
+00:29:43.570 --> 00:29:44.890
+or q
+
+00:29:44.890 --> 00:29:45.910
+is true
+
+00:29:46.770 --> 00:29:47.770
+either one.
+
+00:29:48.290 --> 00:29:51.030
+So we can write this down in terms of a truth table
+
+00:29:51.030 --> 00:29:56.000
+as follows
+
+00:29:56.670 --> 00:29:58.440
+we have the values of p and q
+
+00:29:58.440 --> 00:30:01.380
+and I'll give the value of p implies q
+
+00:30:02.560 --> 00:30:03.900
+if p is q
+
+00:30:03.900 --> 00:30:05.120
+and q is true
+
+00:30:05.120 --> 00:30:06.860
+sorry p is true and q is true
+
+00:30:07.380 --> 00:30:08.800
+what about p implies q?
+
+00:30:11.700 --> 00:30:13.860
+It's true because q is true
+
+00:30:13.860 --> 00:30:14.880
+the definition
+
+00:30:15.860 --> 00:30:18.100
+if p is true and q is false
+
+00:30:19.880 --> 00:30:20.480
+false
+
+00:30:22.420 --> 00:30:23.640
+p is false
+
+00:30:23.640 --> 00:30:24.480
+q is true
+
+00:30:24.480 --> 00:30:30.360
+what about false and false
+
+00:30:31.940 --> 00:30:32.980
+is true
+
+00:30:33.720 --> 00:30:34.640
+even though
+
+00:30:34.640 --> 00:30:36.600
+this is false as long as p is false
+
+00:30:36.600 --> 00:30:38.420
+p implies q is true
+
+00:30:40.560 --> 00:30:42.660
+so this is important to remember
+
+00:30:43.320 --> 00:30:45.100
+false implies anything
+
+00:30:46.120 --> 00:30:47.180
+is true
+
+00:30:47.840 --> 00:30:48.840
+which is a little
+
+00:30:48.840 --> 00:30:50.740
+strange there's a famous expression
+
+00:30:51.360 --> 00:30:52.840
+if pigs could fly
+
+00:30:52.840 --> 00:30:53.740
+I would be king
+
+00:30:53.740 --> 00:30:56.400
+is that true?
+
+00:31:00.080 --> 00:31:02.580
+In fact this statement
+
+00:31:04.360 --> 00:31:05.440
+pigs fly
+
+00:31:07.610 --> 00:31:08.130
+implies
+
+00:31:09.390 --> 00:31:10.230
+I'm king
+
+00:31:13.120 --> 00:31:13.880
+that's true
+
+00:31:15.980 --> 00:31:17.240
+because pigs don't fly
+
+00:31:17.240 --> 00:31:19.740
+it doesn't matter whether or not I'm king
+
+00:31:19.740 --> 00:31:20.760
+which I'm not
+
+00:31:20.760 --> 00:31:22.320
+since pigs don't fly
+
+00:31:22.320 --> 00:31:23.760
+even though that's false
+
+00:31:23.760 --> 00:31:26.120
+the implication is true
+
+00:31:27.020 --> 00:31:29.200
+now some of you have worked on these things before
+
+00:31:29.200 --> 00:31:31.200
+second nature if you haven't
+
+00:31:31.200 --> 00:31:32.620
+want to start getting familiar
+
+00:31:33.320 --> 00:31:34.060
+with that
+
+00:31:36.180 --> 00:31:37.520
+alright let's do another example
+
+00:31:37.520 --> 00:31:50.690
+what about this proposition
+
+00:31:52.310 --> 00:31:54.390
+for all n for all integers
+
+00:31:54.390 --> 00:31:55.170
+n and z
+
+00:31:56.330 --> 00:31:58.350
+n greater than or equal to 2
+
+00:31:58.350 --> 00:32:01.880
+this is if and only if
+
+00:32:01.880 --> 00:32:05.960
+n squared greater than or equal to 4
+
+00:32:07.380 --> 00:32:08.340
+is that true
+
+00:32:08.340 --> 00:32:15.530
+is n bigger than 2 if and only
+
+00:32:15.530 --> 00:32:16.570
+if n squared is bigger than 4
+
+00:32:17.830 --> 00:32:18.770
+it's false
+
+00:32:18.770 --> 00:32:20.870
+what's an example of n for which that's false
+
+00:32:22.250 --> 00:32:22.810
+negative
+
+00:32:22.810 --> 00:32:24.470
+alright so it's false
+
+00:32:25.650 --> 00:32:26.790
+n equals negative
+
+00:32:26.790 --> 00:32:27.310
+3
+
+00:32:28.670 --> 00:32:29.150
+alright
+
+00:32:30.270 --> 00:32:32.510
+negative 3 squared is bigger than or equal to 4
+
+00:32:32.510 --> 00:32:34.390
+but negative 3 is not bigger than or equal to 2
+
+00:32:34.390 --> 00:32:34.990
+and in fact
+
+00:32:35.810 --> 00:32:37.430
+this if and only if means
+
+00:32:39.130 --> 00:32:40.770
+you have to have an implication
+
+00:32:40.770 --> 00:32:41.450
+both ways
+
+00:32:43.250 --> 00:32:44.950
+so you got to check both ways
+
+00:32:44.950 --> 00:32:46.750
+for it so let's do the truth table
+
+00:32:46.750 --> 00:32:48.170
+extend this truth table out here
+
+00:32:50.970 --> 00:32:52.710
+to do the truth table for p
+
+00:32:53.890 --> 00:32:55.070
+if and only if q
+
+00:32:55.070 --> 00:33:05.030
+alright so here
+
+00:33:05.030 --> 00:33:05.830
+p and q
+
+00:33:08.010 --> 00:33:09.570
+is q implies p
+
+00:33:09.570 --> 00:33:10.930
+true for this row
+
+00:33:12.250 --> 00:33:13.590
+does q imply
+
+00:33:13.590 --> 00:33:14.490
+true imply true
+
+00:33:16.210 --> 00:33:16.850
+yeah
+
+00:33:17.590 --> 00:33:19.150
+false implies true
+
+00:33:19.150 --> 00:33:21.620
+that's true
+
+00:33:21.620 --> 00:33:24.040
+true does not imply false that's false
+
+00:33:24.040 --> 00:33:26.180
+and false implies false
+
+00:33:27.080 --> 00:33:28.740
+and so now we can see
+
+00:33:28.740 --> 00:33:29.940
+where p
+
+00:33:29.940 --> 00:33:31.800
+is if and only if q
+
+00:33:33.100 --> 00:33:34.160
+if they're both
+
+00:33:34.900 --> 00:33:35.380
+true
+
+00:33:35.720 --> 00:33:36.640
+then it's true here
+
+00:33:37.440 --> 00:33:40.400
+what about here is p true if and only if q is true
+
+00:33:40.400 --> 00:33:41.420
+in this case
+
+00:33:44.080 --> 00:33:44.560
+no
+
+00:33:45.080 --> 00:33:47.060
+because p implies q is false
+
+00:33:47.060 --> 00:33:48.960
+but q implies p is true
+
+00:33:48.960 --> 00:33:49.640
+so it's false
+
+00:33:50.680 --> 00:33:51.600
+false here
+
+00:33:54.100 --> 00:33:55.860
+I made a mistake there right
+
+00:33:55.860 --> 00:33:56.960
+that was true
+
+00:33:59.420 --> 00:34:00.380
+and true
+
+00:34:00.380 --> 00:34:01.260
+if and only if true
+
+00:34:01.260 --> 00:34:03.760
+they're both true so we're okay
+
+00:34:04.820 --> 00:34:06.420
+so p if and only if q
+
+00:34:06.420 --> 00:34:07.800
+is true when they're both true
+
+00:34:07.800 --> 00:34:08.920
+or both false
+
+00:34:09.540 --> 00:34:10.220
+that's it
+
+00:34:10.220 --> 00:34:12.460
+they're different then it's not true
+
+00:34:13.400 --> 00:34:15.700
+the key here is to always check
+
+00:34:15.700 --> 00:34:16.800
+both ways
+
+00:34:17.400 --> 00:34:19.620
+so if you're asked to prove an if and only if
+
+00:34:19.620 --> 00:34:21.480
+you got to prove that way
+
+00:34:21.480 --> 00:34:22.700
+and that way
+
+00:34:25.710 --> 00:34:28.710
+alright we've just done about 15 propositions
+
+00:34:29.850 --> 00:34:31.130
+is every sentence
+
+00:34:31.130 --> 00:34:31.730
+a proposition?
+
+00:34:36.040 --> 00:34:36.700
+yes? no?
+
+00:34:37.680 --> 00:34:39.960
+no what's an example of something that's not a proposition
+
+00:34:42.610 --> 00:34:43.210
+a what?
+
+00:34:43.810 --> 00:34:44.810
+this statement is false
+
+00:34:44.810 --> 00:34:46.630
+this statement is false
+
+00:34:47.450 --> 00:34:48.130
+that's true
+
+00:34:49.850 --> 00:34:51.070
+it's not a proposition
+
+00:34:51.730 --> 00:34:53.010
+because if it were true
+
+00:34:53.010 --> 00:34:54.890
+it wouldn't be false and if it was false
+
+00:34:54.890 --> 00:34:56.090
+then it would be true and you have a contradiction
+
+00:34:56.510 --> 00:34:58.330
+so it's neither true nor false
+
+00:34:58.330 --> 00:35:01.330
+what's a more simple example of something that's not a proposition
+
+00:35:06.700 --> 00:35:08.480
+boy I would have said that's true
+
+00:35:08.480 --> 00:35:10.380
+in some some world
+
+00:35:10.380 --> 00:35:12.500
+you know because that yeah that's a tissue
+
+00:35:12.500 --> 00:35:14.220
+so it's a true statement
+
+00:35:17.420 --> 00:35:17.940
+hello
+
+00:35:18.480 --> 00:35:20.100
+that's good that's neither true nor false
+
+00:35:20.100 --> 00:35:22.100
+yeah a question
+
+00:35:22.100 --> 00:35:23.140
+who are you?
+
+00:35:23.880 --> 00:35:25.620
+neither true nor false so not everything
+
+00:35:25.620 --> 00:35:28.720
+is a proposition but this course pretty much everything we deal with
+
+00:35:28.720 --> 00:35:30.140
+will be a proposition
+
+00:35:31.260 --> 00:35:32.260
+alright so
+
+00:35:32.840 --> 00:35:34.160
+that's it for propositions
+
+00:35:34.160 --> 00:35:35.520
+any questions on propositions?
+
+00:35:35.520 --> 00:35:39.620
+alright next we're going to talk about
+
+00:35:40.840 --> 00:35:41.440
+axioms
+
+00:35:41.440 --> 00:35:42.600
+now
+
+00:35:48.180 --> 00:35:50.540
+the good news is that axioms are the same thing
+
+00:35:50.540 --> 00:35:51.640
+really is propositions
+
+00:35:52.380 --> 00:35:54.000
+the only difference is that
+
+00:35:54.000 --> 00:35:55.940
+axioms are propositions
+
+00:35:55.940 --> 00:35:57.380
+that we just assume are true
+
+00:36:01.720 --> 00:36:02.580
+an axiom
+
+00:36:03.660 --> 00:36:05.020
+is a proposition
+
+00:36:10.200 --> 00:36:11.720
+that is assumed
+
+00:36:15.280 --> 00:36:16.260
+to be true
+
+00:36:19.870 --> 00:36:20.890
+there's no proof
+
+00:36:20.890 --> 00:36:22.350
+that an axiom is true
+
+00:36:23.110 --> 00:36:24.310
+you just assume it
+
+00:36:24.310 --> 00:36:25.530
+because you think it's reasonable
+
+00:36:26.290 --> 00:36:28.470
+in fact the word axiom comes from
+
+00:36:28.470 --> 00:36:30.190
+greek it doesn't mean
+
+00:36:30.990 --> 00:36:31.910
+to be true
+
+00:36:31.910 --> 00:36:33.450
+it means to think worthy
+
+00:36:34.530 --> 00:36:36.690
+something you think is worthy enough to be assumed
+
+00:36:36.690 --> 00:36:37.190
+to be true
+
+00:36:37.190 --> 00:36:39.750
+now a lot of times you hear people say
+
+00:36:40.200 --> 00:36:41.650
+sometimes we'll even say it to you
+
+00:36:41.650 --> 00:36:44.650
+you know don't make assumptions when you're doing math
+
+00:36:45.730 --> 00:36:46.230
+no
+
+00:36:46.230 --> 00:36:47.110
+that's not true
+
+00:36:47.110 --> 00:36:49.470
+you have to make assumptions when you do math
+
+00:36:49.470 --> 00:36:50.790
+otherwise you can't do anything
+
+00:36:50.790 --> 00:36:52.770
+because you got to start with some axioms
+
+00:36:53.470 --> 00:36:54.670
+the key in math
+
+00:36:54.670 --> 00:36:55.730
+is to identify
+
+00:36:56.630 --> 00:36:59.210
+what your assumptions are so people can see them
+
+00:37:00.010 --> 00:37:01.370
+and the idea is
+
+00:37:01.370 --> 00:37:02.410
+that when you do a proof
+
+00:37:03.010 --> 00:37:04.890
+anybody who agrees with your assumptions
+
+00:37:04.890 --> 00:37:05.850
+or your axioms
+
+00:37:05.850 --> 00:37:09.070
+can follow your proof and they have to agree with your conclusion
+
+00:37:09.570 --> 00:37:10.830
+now they might disagree
+
+00:37:11.270 --> 00:37:13.710
+with your axioms in which case they're not going to buy your
+
+00:37:13.710 --> 00:37:14.530
+proof
+
+00:37:15.390 --> 00:37:17.850
+now there are lots of axioms used in math
+
+00:37:17.850 --> 00:37:19.550
+for example
+
+00:37:21.630 --> 00:37:23.730
+if a equals
+
+00:37:23.730 --> 00:37:24.210
+b
+
+00:37:24.210 --> 00:37:26.870
+and b equals c
+
+00:37:27.850 --> 00:37:28.250
+then
+
+00:37:28.250 --> 00:37:30.130
+a equals c
+
+00:37:30.970 --> 00:37:32.850
+there is no proof of that
+
+00:37:33.910 --> 00:37:35.410
+but it seems pretty good
+
+00:37:35.770 --> 00:37:38.110
+and so we just throw it in the bucket of
+
+00:37:38.110 --> 00:37:39.450
+axioms and use it
+
+00:37:40.800 --> 00:37:41.740
+now
+
+00:37:43.120 --> 00:37:45.420
+axioms can be contradictory in different
+
+00:37:45.420 --> 00:37:46.300
+context
+
+00:37:46.980 --> 00:37:48.280
+here's a good example
+
+00:37:48.280 --> 00:37:50.660
+in Euclidean geometry
+
+00:37:53.890 --> 00:37:55.900
+there's a central axiom
+
+00:37:56.030 --> 00:37:56.630
+that says
+
+00:37:57.510 --> 00:37:58.110
+given
+
+00:37:59.210 --> 00:38:00.610
+a line
+
+00:38:01.590 --> 00:38:02.530
+l
+
+00:38:03.280 --> 00:38:04.350
+and a point
+
+00:38:05.510 --> 00:38:06.150
+p
+
+00:38:06.150 --> 00:38:07.550
+not on l
+
+00:38:10.140 --> 00:38:11.700
+there is
+
+00:38:11.700 --> 00:38:18.810
+exactly one line
+
+00:38:19.910 --> 00:38:21.530
+through p
+
+00:38:21.530 --> 00:38:22.310
+parallel to l
+
+00:38:22.310 --> 00:38:29.970
+you all saw this in geometry
+
+00:38:29.970 --> 00:38:31.390
+in middle school right
+
+00:38:31.840 --> 00:38:33.930
+at a point in a line there's exactly one line
+
+00:38:33.930 --> 00:38:36.030
+another line through the point that's parallel to the line
+
+00:38:37.400 --> 00:38:39.380
+now there's also a field
+
+00:38:39.380 --> 00:38:40.740
+called spherical geometry
+
+00:38:44.430 --> 00:38:46.050
+and there you have an axiom
+
+00:38:46.050 --> 00:38:47.670
+that contradicts this
+
+00:38:47.670 --> 00:38:50.410
+it says given a line l and a point p
+
+00:38:50.410 --> 00:38:51.190
+not on l
+
+00:38:52.010 --> 00:38:53.730
+there is no
+
+00:38:55.550 --> 00:38:56.050
+line
+
+00:38:56.050 --> 00:38:58.110
+through p parallel to l
+
+00:38:58.850 --> 00:38:59.750
+on the sphere
+
+00:39:01.470 --> 00:39:02.850
+there's a field called
+
+00:39:04.230 --> 00:39:04.690
+hyperbolic
+
+00:39:06.250 --> 00:39:06.710
+geometry
+
+00:39:08.880 --> 00:39:09.660
+and there
+
+00:39:09.660 --> 00:39:11.920
+there's an axiom that says given a line l
+
+00:39:11.920 --> 00:39:13.100
+and a point p not on l
+
+00:39:13.680 --> 00:39:14.600
+there are
+
+00:39:15.940 --> 00:39:16.860
+infinitely many
+
+00:39:22.960 --> 00:39:25.020
+lines through p parallel to l
+
+00:39:26.220 --> 00:39:27.500
+so how can this be
+
+00:39:27.500 --> 00:39:29.720
+does that mean one of these fields is totally bogus
+
+00:39:29.720 --> 00:39:30.480
+or two of them are
+
+00:39:31.240 --> 00:39:33.300
+because they've got contradictory axioms
+
+00:39:34.200 --> 00:39:34.900
+that's okay
+
+00:39:35.480 --> 00:39:37.020
+just whatever field you're in
+
+00:39:37.020 --> 00:39:38.040
+state your axioms
+
+00:39:38.740 --> 00:39:40.100
+and they do make sense
+
+00:39:40.100 --> 00:39:41.480
+in their various fields
+
+00:39:42.100 --> 00:39:43.660
+you know this is planar geometry
+
+00:39:43.660 --> 00:39:45.200
+this is on the sphere and this is on
+
+00:39:46.280 --> 00:39:47.300
+hyperbolic geometry
+
+00:39:47.300 --> 00:39:49.040
+they make sense in those contexts
+
+00:39:49.760 --> 00:39:51.280
+so you can have
+
+00:39:51.280 --> 00:39:54.120
+more or less whatever axioms you want
+
+00:39:54.120 --> 00:39:56.440
+there are sort of two guiding principles
+
+00:39:56.440 --> 00:39:57.160
+to axioms
+
+00:40:15.370 --> 00:40:16.510
+axioms should be
+
+00:40:16.510 --> 00:40:18.490
+it's called consistent
+
+00:40:21.380 --> 00:40:22.420
+and complete
+
+00:40:22.420 --> 00:40:23.440
+now
+
+00:40:28.080 --> 00:40:29.420
+a set of axioms
+
+00:40:33.720 --> 00:40:34.840
+is consistent
+
+00:40:39.790 --> 00:40:41.130
+if no proposition
+
+00:40:45.320 --> 00:40:47.380
+can be proved to be both
+
+00:40:47.380 --> 00:40:48.080
+true and false
+
+00:40:48.080 --> 00:40:56.520
+and you can see why that's important
+
+00:40:56.520 --> 00:40:59.300
+you know if you spend three weeks
+
+00:40:59.300 --> 00:41:01.020
+proving something's true
+
+00:41:01.760 --> 00:41:03.660
+and the next day somebody proves it's also
+
+00:41:03.660 --> 00:41:04.360
+false
+
+00:41:04.360 --> 00:41:06.020
+I mean the whole thing was pointless
+
+00:41:06.020 --> 00:41:09.140
+so it only makes sense if your axioms as a group
+
+00:41:09.140 --> 00:41:10.200
+are consistent
+
+00:41:10.200 --> 00:41:12.940
+a set of axioms
+
+00:41:12.940 --> 00:41:14.060
+is said to be complete
+
+00:41:25.710 --> 00:41:28.030
+if it can be used
+
+00:41:28.030 --> 00:41:32.710
+to prove
+
+00:41:34.150 --> 00:41:35.270
+every proposition
+
+00:41:35.270 --> 00:41:36.850
+is either true or false
+
+00:41:36.850 --> 00:41:37.690
+alright
+
+00:41:48.060 --> 00:41:50.480
+now this is desirable because it means
+
+00:41:51.260 --> 00:41:52.920
+well you can solve every problem
+
+00:41:53.800 --> 00:41:54.900
+alright everything is
+
+00:41:54.900 --> 00:41:56.520
+you can prove it's true
+
+00:41:56.520 --> 00:41:57.340
+or you can prove it's false
+
+00:41:57.340 --> 00:41:59.300
+you can get to the end
+
+00:41:59.300 --> 00:42:05.600
+now you'd think it shouldn't be too hard
+
+00:42:05.600 --> 00:42:07.540
+to get a set of axioms that satisfies
+
+00:42:07.540 --> 00:42:08.940
+these two basic properties
+
+00:42:09.600 --> 00:42:11.380
+you're allowed to choose whatever you want
+
+00:42:11.380 --> 00:42:13.340
+really just you don't want to
+
+00:42:13.340 --> 00:42:14.600
+be creating contradictions
+
+00:42:14.600 --> 00:42:16.760
+and you want a set that's powerful enough
+
+00:42:16.760 --> 00:42:18.800
+that allows you to prove everything is true or false
+
+00:42:18.800 --> 00:42:19.440
+one of the two
+
+00:42:20.360 --> 00:42:22.560
+turned out not to be so easy to do this
+
+00:42:22.560 --> 00:42:23.760
+in fact
+
+00:42:24.600 --> 00:42:26.840
+many logicians spent their careers
+
+00:42:27.580 --> 00:42:29.340
+famous logicians trying to
+
+00:42:29.340 --> 00:42:30.480
+find a set of axioms
+
+00:42:30.480 --> 00:42:32.220
+just one set that was
+
+00:42:32.220 --> 00:42:34.160
+consistent and complete
+
+00:42:34.160 --> 00:42:36.240
+in fact Russell and Whitehead are probably
+
+00:42:36.240 --> 00:42:37.080
+the two most famous
+
+00:42:37.080 --> 00:42:39.960
+they spent their entire careers doing this
+
+00:42:39.960 --> 00:42:41.200
+and they never got there
+
+00:42:41.880 --> 00:42:43.980
+then one day this guy named Kurt Gertl
+
+00:42:43.980 --> 00:42:44.460
+showed up
+
+00:42:45.260 --> 00:42:46.960
+and in the 1930s
+
+00:42:46.960 --> 00:42:49.300
+he proved it's not possible
+
+00:42:49.300 --> 00:42:51.700
+that there exist any set of axioms
+
+00:42:51.700 --> 00:42:53.600
+that are both consistent
+
+00:42:54.170 --> 00:42:54.840
+and complete
+
+00:42:56.000 --> 00:42:57.980
+now this discovery devastated
+
+00:42:57.980 --> 00:42:59.100
+the field
+
+00:42:59.100 --> 00:43:00.860
+it was a huge discovery
+
+00:43:01.600 --> 00:43:02.500
+you know imagine
+
+00:43:02.500 --> 00:43:03.940
+poor Russell and Whitehead
+
+00:43:03.940 --> 00:43:05.900
+they spent their entire careers
+
+00:43:05.900 --> 00:43:07.660
+going after this holy grail
+
+00:43:07.660 --> 00:43:10.320
+then Kurt shows up and said hey guys there's no grail
+
+00:43:10.320 --> 00:43:11.340
+doesn't exist
+
+00:43:11.340 --> 00:43:13.300
+and that's a little depressing
+
+00:43:13.300 --> 00:43:15.080
+pretty bad day when that happened
+
+00:43:15.080 --> 00:43:17.460
+now it's an amazing result
+
+00:43:17.460 --> 00:43:19.320
+because it says if you want consistency
+
+00:43:19.320 --> 00:43:20.400
+and that's a must
+
+00:43:21.100 --> 00:43:23.080
+there will be true facts
+
+00:43:23.080 --> 00:43:25.400
+that you will never be able to prove
+
+00:43:26.240 --> 00:43:27.400
+we're not going to prove that here
+
+00:43:27.400 --> 00:43:28.380
+it's proved in a logic course
+
+00:43:28.840 --> 00:43:31.080
+for example maybe Goldback's conjecture
+
+00:43:31.080 --> 00:43:31.720
+is true
+
+00:43:32.440 --> 00:43:34.100
+and it is impossible to prove
+
+00:43:35.600 --> 00:43:36.760
+now we're going to try
+
+00:43:36.760 --> 00:43:38.800
+not to assign any of those problems for homework
+
+00:43:39.820 --> 00:43:40.800
+and in fact people
+
+00:43:40.800 --> 00:43:42.860
+they do exist it's complicated
+
+00:43:42.860 --> 00:43:43.880
+you can state a problem
+
+00:43:43.880 --> 00:43:46.260
+that you can't prove is true or false
+
+00:43:47.260 --> 00:43:49.280
+and you may be thinking that from time to time
+
+00:43:49.280 --> 00:43:50.100
+hey it's one of those
+
+00:43:50.100 --> 00:43:52.760
+you remember
+
+00:43:52.760 --> 00:43:54.700
+what your parents told you
+
+00:43:54.700 --> 00:43:56.380
+if you work hard enough
+
+00:43:56.380 --> 00:43:57.800
+you can do anything
+
+00:43:58.840 --> 00:43:59.880
+they were wrong
+
+00:44:01.700 --> 00:44:03.120
+alright that's enough for now
+
+00:44:03.120 --> 00:44:04.480
+we'll do more of this next time
+

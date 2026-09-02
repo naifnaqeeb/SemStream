@@ -1,0 +1,5626 @@
+{
+  "lecture_id": "nptel_dsa_iitd_lec01",
+  "segments": [
+    {
+      "index": 0,
+      "frame_diff": 0.0046,
+      "face_count": 0,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 1,
+      "frame_diff": 0.1858,
+      "face_count": 0,
+      "ocr_text_density": 0.0309,
+      "code_marker_count": 0
+    },
+    {
+      "index": 2,
+      "frame_diff": 0.0,
+      "face_count": 0,
+      "ocr_text_density": 0.0309,
+      "code_marker_count": 0
+    },
+    {
+      "index": 3,
+      "frame_diff": 0.0762,
+      "face_count": 0,
+      "ocr_text_density": 0.1417,
+      "code_marker_count": 0
+    },
+    {
+      "index": 4,
+      "frame_diff": 0.2698,
+      "face_count": 0,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 5,
+      "frame_diff": 0.091,
+      "face_count": 0,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 6,
+      "frame_diff": 0.1684,
+      "face_count": 0,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 7,
+      "frame_diff": 0.125,
+      "face_count": 0,
+      "ocr_text_density": 0.1694,
+      "code_marker_count": 0
+    },
+    {
+      "index": 8,
+      "frame_diff": 0.1616,
+      "face_count": 0,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 9,
+      "frame_diff": 0.1608,
+      "face_count": 0,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 10,
+      "frame_diff": 0.1795,
+      "face_count": 0,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 11,
+      "frame_diff": 0.1394,
+      "face_count": 0,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 12,
+      "frame_diff": 0.21,
+      "face_count": 0,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 13,
+      "frame_diff": 0.2038,
+      "face_count": 0,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 14,
+      "frame_diff": 0.0042,
+      "face_count": 0,
+      "ocr_text_density": 0.1401,
+      "code_marker_count": 0
+    },
+    {
+      "index": 15,
+      "frame_diff": 0.0534,
+      "face_count": 0,
+      "ocr_text_density": 0.0434,
+      "code_marker_count": 0
+    },
+    {
+      "index": 16,
+      "frame_diff": 0.0463,
+      "face_count": 0,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 17,
+      "frame_diff": 0.0024,
+      "face_count": 0,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 18,
+      "frame_diff": 0.0329,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 19,
+      "frame_diff": 0.0196,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 20,
+      "frame_diff": 0.0882,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 21,
+      "frame_diff": 0.3168,
+      "face_count": 0,
+      "ocr_text_density": 0.1889,
+      "code_marker_count": 0
+    },
+    {
+      "index": 22,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.1889,
+      "code_marker_count": 0
+    },
+    {
+      "index": 23,
+      "frame_diff": 0.0063,
+      "face_count": 0,
+      "ocr_text_density": 0.198,
+      "code_marker_count": 0
+    },
+    {
+      "index": 24,
+      "frame_diff": 0.0059,
+      "face_count": 0,
+      "ocr_text_density": 0.1985,
+      "code_marker_count": 0
+    },
+    {
+      "index": 25,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.1891,
+      "code_marker_count": 0
+    },
+    {
+      "index": 26,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.1878,
+      "code_marker_count": 0
+    },
+    {
+      "index": 27,
+      "frame_diff": 0.0059,
+      "face_count": 0,
+      "ocr_text_density": 0.1891,
+      "code_marker_count": 0
+    },
+    {
+      "index": 28,
+      "frame_diff": 0.0002,
+      "face_count": 0,
+      "ocr_text_density": 0.1894,
+      "code_marker_count": 0
+    },
+    {
+      "index": 29,
+      "frame_diff": 0.0055,
+      "face_count": 0,
+      "ocr_text_density": 0.1998,
+      "code_marker_count": 0
+    },
+    {
+      "index": 30,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.1984,
+      "code_marker_count": 0
+    },
+    {
+      "index": 31,
+      "frame_diff": 0.0392,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 32,
+      "frame_diff": 0.0428,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 33,
+      "frame_diff": 0.0504,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 34,
+      "frame_diff": 0.0289,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 35,
+      "frame_diff": 0.0407,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 36,
+      "frame_diff": 0.0997,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 37,
+      "frame_diff": 0.0013,
+      "face_count": 0,
+      "ocr_text_density": 0.1,
+      "code_marker_count": 0
+    },
+    {
+      "index": 38,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.0959,
+      "code_marker_count": 0
+    },
+    {
+      "index": 39,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1065,
+      "code_marker_count": 0
+    },
+    {
+      "index": 40,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1183,
+      "code_marker_count": 0
+    },
+    {
+      "index": 41,
+      "frame_diff": 0.0057,
+      "face_count": 0,
+      "ocr_text_density": 0.1039,
+      "code_marker_count": 0
+    },
+    {
+      "index": 42,
+      "frame_diff": 0.0058,
+      "face_count": 0,
+      "ocr_text_density": 0.1252,
+      "code_marker_count": 0
+    },
+    {
+      "index": 43,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.1252,
+      "code_marker_count": 0
+    },
+    {
+      "index": 44,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1287,
+      "code_marker_count": 0
+    },
+    {
+      "index": 45,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1291,
+      "code_marker_count": 0
+    },
+    {
+      "index": 46,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.1072,
+      "code_marker_count": 0
+    },
+    {
+      "index": 47,
+      "frame_diff": 0.0056,
+      "face_count": 0,
+      "ocr_text_density": 0.1074,
+      "code_marker_count": 0
+    },
+    {
+      "index": 48,
+      "frame_diff": 0.0056,
+      "face_count": 0,
+      "ocr_text_density": 0.1284,
+      "code_marker_count": 0
+    },
+    {
+      "index": 49,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1214,
+      "code_marker_count": 0
+    },
+    {
+      "index": 50,
+      "frame_diff": 0.0207,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 51,
+      "frame_diff": 0.0446,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 52,
+      "frame_diff": 0.0214,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 53,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.1111,
+      "code_marker_count": 1
+    },
+    {
+      "index": 54,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1341,
+      "code_marker_count": 1
+    },
+    {
+      "index": 55,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.105,
+      "code_marker_count": 1
+    },
+    {
+      "index": 56,
+      "frame_diff": 0.0054,
+      "face_count": 0,
+      "ocr_text_density": 0.0852,
+      "code_marker_count": 1
+    },
+    {
+      "index": 57,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.0769,
+      "code_marker_count": 1
+    },
+    {
+      "index": 58,
+      "frame_diff": 0.0003,
+      "face_count": 0,
+      "ocr_text_density": 0.1065,
+      "code_marker_count": 0
+    },
+    {
+      "index": 59,
+      "frame_diff": 0.0044,
+      "face_count": 0,
+      "ocr_text_density": 0.1037,
+      "code_marker_count": 0
+    },
+    {
+      "index": 60,
+      "frame_diff": 0.3117,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 61,
+      "frame_diff": 0.0384,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 62,
+      "frame_diff": 0.0002,
+      "face_count": 0,
+      "ocr_text_density": 0.1025,
+      "code_marker_count": 0
+    },
+    {
+      "index": 63,
+      "frame_diff": 0.0,
+      "face_count": 0,
+      "ocr_text_density": 0.1031,
+      "code_marker_count": 0
+    },
+    {
+      "index": 64,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.1023,
+      "code_marker_count": 0
+    },
+    {
+      "index": 65,
+      "frame_diff": 0.3068,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 66,
+      "frame_diff": 0.0379,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 67,
+      "frame_diff": 0.3117,
+      "face_count": 0,
+      "ocr_text_density": 0.113,
+      "code_marker_count": 0
+    },
+    {
+      "index": 68,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1129,
+      "code_marker_count": 0
+    },
+    {
+      "index": 69,
+      "frame_diff": 0.0043,
+      "face_count": 0,
+      "ocr_text_density": 0.0981,
+      "code_marker_count": 0
+    },
+    {
+      "index": 70,
+      "frame_diff": 0.0,
+      "face_count": 0,
+      "ocr_text_density": 0.0983,
+      "code_marker_count": 0
+    },
+    {
+      "index": 71,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.1019,
+      "code_marker_count": 0
+    },
+    {
+      "index": 72,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1035,
+      "code_marker_count": 0
+    },
+    {
+      "index": 73,
+      "frame_diff": 0.314,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 74,
+      "frame_diff": 0.0738,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 75,
+      "frame_diff": 0.0901,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 76,
+      "frame_diff": 0.0953,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 77,
+      "frame_diff": 0.0309,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 78,
+      "frame_diff": 0.0365,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 79,
+      "frame_diff": 0.0638,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 80,
+      "frame_diff": 0.0458,
+      "face_count": 0,
+      "ocr_text_density": 0.1252,
+      "code_marker_count": 0
+    },
+    {
+      "index": 81,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.1253,
+      "code_marker_count": 0
+    },
+    {
+      "index": 82,
+      "frame_diff": 0.006,
+      "face_count": 0,
+      "ocr_text_density": 0.1246,
+      "code_marker_count": 0
+    },
+    {
+      "index": 83,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1264,
+      "code_marker_count": 0
+    },
+    {
+      "index": 84,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.1257,
+      "code_marker_count": 0
+    },
+    {
+      "index": 85,
+      "frame_diff": 0.0061,
+      "face_count": 0,
+      "ocr_text_density": 0.1379,
+      "code_marker_count": 0
+    },
+    {
+      "index": 86,
+      "frame_diff": 0.0064,
+      "face_count": 0,
+      "ocr_text_density": 0.119,
+      "code_marker_count": 0
+    },
+    {
+      "index": 87,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.128,
+      "code_marker_count": 0
+    },
+    {
+      "index": 88,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1286,
+      "code_marker_count": 0
+    },
+    {
+      "index": 89,
+      "frame_diff": 0.0016,
+      "face_count": 0,
+      "ocr_text_density": 0.1268,
+      "code_marker_count": 0
+    },
+    {
+      "index": 90,
+      "frame_diff": 0.006,
+      "face_count": 0,
+      "ocr_text_density": 0.1252,
+      "code_marker_count": 0
+    },
+    {
+      "index": 91,
+      "frame_diff": 0.3135,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 92,
+      "frame_diff": 0.0447,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 93,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1276,
+      "code_marker_count": 0
+    },
+    {
+      "index": 94,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.1325,
+      "code_marker_count": 0
+    },
+    {
+      "index": 95,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.1406,
+      "code_marker_count": 0
+    },
+    {
+      "index": 96,
+      "frame_diff": 0.007,
+      "face_count": 0,
+      "ocr_text_density": 0.1366,
+      "code_marker_count": 0
+    },
+    {
+      "index": 97,
+      "frame_diff": 0.0064,
+      "face_count": 0,
+      "ocr_text_density": 0.1426,
+      "code_marker_count": 1
+    },
+    {
+      "index": 98,
+      "frame_diff": 0.0011,
+      "face_count": 0,
+      "ocr_text_density": 0.1411,
+      "code_marker_count": 0
+    },
+    {
+      "index": 99,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1642,
+      "code_marker_count": 0
+    },
+    {
+      "index": 100,
+      "frame_diff": 0.0011,
+      "face_count": 0,
+      "ocr_text_density": 0.1463,
+      "code_marker_count": 0
+    },
+    {
+      "index": 101,
+      "frame_diff": 0.0066,
+      "face_count": 0,
+      "ocr_text_density": 0.1445,
+      "code_marker_count": 0
+    },
+    {
+      "index": 102,
+      "frame_diff": 0.0067,
+      "face_count": 0,
+      "ocr_text_density": 0.1489,
+      "code_marker_count": 0
+    },
+    {
+      "index": 103,
+      "frame_diff": 0.0011,
+      "face_count": 0,
+      "ocr_text_density": 0.1415,
+      "code_marker_count": 0
+    },
+    {
+      "index": 104,
+      "frame_diff": 0.3207,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 105,
+      "frame_diff": 0.0126,
+      "face_count": 1,
+      "ocr_text_density": 0.0141,
+      "code_marker_count": 0
+    },
+    {
+      "index": 106,
+      "frame_diff": 0.0655,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 107,
+      "frame_diff": 0.0298,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 108,
+      "frame_diff": 0.3202,
+      "face_count": 0,
+      "ocr_text_density": 0.1573,
+      "code_marker_count": 0
+    },
+    {
+      "index": 109,
+      "frame_diff": 0.0063,
+      "face_count": 0,
+      "ocr_text_density": 0.1685,
+      "code_marker_count": 0
+    },
+    {
+      "index": 110,
+      "frame_diff": 0.3188,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 111,
+      "frame_diff": 0.04,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 112,
+      "frame_diff": 0.0433,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 113,
+      "frame_diff": 0.0502,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 114,
+      "frame_diff": 0.3167,
+      "face_count": 0,
+      "ocr_text_density": 0.155,
+      "code_marker_count": 1
+    },
+    {
+      "index": 115,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1837,
+      "code_marker_count": 1
+    },
+    {
+      "index": 116,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.1507,
+      "code_marker_count": 1
+    },
+    {
+      "index": 117,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1514,
+      "code_marker_count": 1
+    },
+    {
+      "index": 118,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.1586,
+      "code_marker_count": 1
+    },
+    {
+      "index": 119,
+      "frame_diff": 0.0067,
+      "face_count": 0,
+      "ocr_text_density": 0.1534,
+      "code_marker_count": 1
+    },
+    {
+      "index": 120,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.149,
+      "code_marker_count": 0
+    },
+    {
+      "index": 121,
+      "frame_diff": 0.0013,
+      "face_count": 0,
+      "ocr_text_density": 0.1394,
+      "code_marker_count": 0
+    },
+    {
+      "index": 122,
+      "frame_diff": 0.0069,
+      "face_count": 0,
+      "ocr_text_density": 0.175,
+      "code_marker_count": 1
+    },
+    {
+      "index": 123,
+      "frame_diff": 0.0002,
+      "face_count": 0,
+      "ocr_text_density": 0.175,
+      "code_marker_count": 1
+    },
+    {
+      "index": 124,
+      "frame_diff": 0.0013,
+      "face_count": 0,
+      "ocr_text_density": 0.1643,
+      "code_marker_count": 1
+    },
+    {
+      "index": 125,
+      "frame_diff": 0.0498,
+      "face_count": 0,
+      "ocr_text_density": 0.1465,
+      "code_marker_count": 2
+    },
+    {
+      "index": 126,
+      "frame_diff": 0.05,
+      "face_count": 0,
+      "ocr_text_density": 0.1387,
+      "code_marker_count": 1
+    },
+    {
+      "index": 127,
+      "frame_diff": 0.0491,
+      "face_count": 0,
+      "ocr_text_density": 0.1502,
+      "code_marker_count": 2
+    },
+    {
+      "index": 128,
+      "frame_diff": 0.0069,
+      "face_count": 0,
+      "ocr_text_density": 0.1356,
+      "code_marker_count": 2
+    },
+    {
+      "index": 129,
+      "frame_diff": 0.0174,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 130,
+      "frame_diff": 0.0423,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 131,
+      "frame_diff": 0.0349,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 132,
+      "frame_diff": 0.0014,
+      "face_count": 0,
+      "ocr_text_density": 0.1456,
+      "code_marker_count": 2
+    },
+    {
+      "index": 133,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1536,
+      "code_marker_count": 2
+    },
+    {
+      "index": 134,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1526,
+      "code_marker_count": 2
+    },
+    {
+      "index": 135,
+      "frame_diff": 0.0063,
+      "face_count": 0,
+      "ocr_text_density": 0.1554,
+      "code_marker_count": 2
+    },
+    {
+      "index": 136,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1553,
+      "code_marker_count": 2
+    },
+    {
+      "index": 137,
+      "frame_diff": 0.0012,
+      "face_count": 0,
+      "ocr_text_density": 0.1499,
+      "code_marker_count": 2
+    },
+    {
+      "index": 138,
+      "frame_diff": 0.0067,
+      "face_count": 0,
+      "ocr_text_density": 0.145,
+      "code_marker_count": 0
+    },
+    {
+      "index": 139,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1455,
+      "code_marker_count": 1
+    },
+    {
+      "index": 140,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.1587,
+      "code_marker_count": 2
+    },
+    {
+      "index": 141,
+      "frame_diff": 0.0058,
+      "face_count": 0,
+      "ocr_text_density": 0.1599,
+      "code_marker_count": 2
+    },
+    {
+      "index": 142,
+      "frame_diff": 0.006,
+      "face_count": 0,
+      "ocr_text_density": 0.1498,
+      "code_marker_count": 2
+    },
+    {
+      "index": 143,
+      "frame_diff": 0.0002,
+      "face_count": 0,
+      "ocr_text_density": 0.1505,
+      "code_marker_count": 2
+    },
+    {
+      "index": 144,
+      "frame_diff": 0.0016,
+      "face_count": 0,
+      "ocr_text_density": 0.1514,
+      "code_marker_count": 2
+    },
+    {
+      "index": 145,
+      "frame_diff": 0.0061,
+      "face_count": 0,
+      "ocr_text_density": 0.1399,
+      "code_marker_count": 0
+    },
+    {
+      "index": 146,
+      "frame_diff": 0.006,
+      "face_count": 0,
+      "ocr_text_density": 0.1579,
+      "code_marker_count": 2
+    },
+    {
+      "index": 147,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.1589,
+      "code_marker_count": 2
+    },
+    {
+      "index": 148,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1619,
+      "code_marker_count": 2
+    },
+    {
+      "index": 149,
+      "frame_diff": 0.0062,
+      "face_count": 0,
+      "ocr_text_density": 0.1473,
+      "code_marker_count": 1
+    },
+    {
+      "index": 150,
+      "frame_diff": 0.0066,
+      "face_count": 0,
+      "ocr_text_density": 0.1469,
+      "code_marker_count": 2
+    },
+    {
+      "index": 151,
+      "frame_diff": 0.0011,
+      "face_count": 0,
+      "ocr_text_density": 0.141,
+      "code_marker_count": 2
+    },
+    {
+      "index": 152,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.1423,
+      "code_marker_count": 2
+    },
+    {
+      "index": 153,
+      "frame_diff": 0.0067,
+      "face_count": 0,
+      "ocr_text_density": 0.1465,
+      "code_marker_count": 2
+    },
+    {
+      "index": 154,
+      "frame_diff": 0.0065,
+      "face_count": 0,
+      "ocr_text_density": 0.1543,
+      "code_marker_count": 2
+    },
+    {
+      "index": 155,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.1469,
+      "code_marker_count": 2
+    },
+    {
+      "index": 156,
+      "frame_diff": 0.0014,
+      "face_count": 0,
+      "ocr_text_density": 0.1453,
+      "code_marker_count": 2
+    },
+    {
+      "index": 157,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.1549,
+      "code_marker_count": 2
+    },
+    {
+      "index": 158,
+      "frame_diff": 0.05,
+      "face_count": 0,
+      "ocr_text_density": 0.192,
+      "code_marker_count": 2
+    },
+    {
+      "index": 159,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.186,
+      "code_marker_count": 2
+    },
+    {
+      "index": 160,
+      "frame_diff": 0.0045,
+      "face_count": 0,
+      "ocr_text_density": 0.1916,
+      "code_marker_count": 2
+    },
+    {
+      "index": 161,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.1814,
+      "code_marker_count": 1
+    },
+    {
+      "index": 162,
+      "frame_diff": 0.0003,
+      "face_count": 0,
+      "ocr_text_density": 0.1718,
+      "code_marker_count": 1
+    },
+    {
+      "index": 163,
+      "frame_diff": 0.0061,
+      "face_count": 0,
+      "ocr_text_density": 0.1921,
+      "code_marker_count": 1
+    },
+    {
+      "index": 164,
+      "frame_diff": 0.3134,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 165,
+      "frame_diff": 0.017,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 166,
+      "frame_diff": 0.0408,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 167,
+      "frame_diff": 0.3136,
+      "face_count": 0,
+      "ocr_text_density": 0.1918,
+      "code_marker_count": 2
+    },
+    {
+      "index": 168,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1939,
+      "code_marker_count": 2
+    },
+    {
+      "index": 169,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.1837,
+      "code_marker_count": 2
+    },
+    {
+      "index": 170,
+      "frame_diff": 0.0472,
+      "face_count": 0,
+      "ocr_text_density": 0.128,
+      "code_marker_count": 3
+    },
+    {
+      "index": 171,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1178,
+      "code_marker_count": 3
+    },
+    {
+      "index": 172,
+      "frame_diff": 0.005,
+      "face_count": 0,
+      "ocr_text_density": 0.1309,
+      "code_marker_count": 3
+    },
+    {
+      "index": 173,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.123,
+      "code_marker_count": 3
+    },
+    {
+      "index": 174,
+      "frame_diff": 0.0016,
+      "face_count": 0,
+      "ocr_text_density": 0.1212,
+      "code_marker_count": 3
+    },
+    {
+      "index": 175,
+      "frame_diff": 0.0047,
+      "face_count": 0,
+      "ocr_text_density": 0.1291,
+      "code_marker_count": 3
+    },
+    {
+      "index": 176,
+      "frame_diff": 0.0,
+      "face_count": 0,
+      "ocr_text_density": 0.1257,
+      "code_marker_count": 3
+    },
+    {
+      "index": 177,
+      "frame_diff": 0.0017,
+      "face_count": 0,
+      "ocr_text_density": 0.1264,
+      "code_marker_count": 3
+    },
+    {
+      "index": 178,
+      "frame_diff": 0.0048,
+      "face_count": 0,
+      "ocr_text_density": 0.1136,
+      "code_marker_count": 3
+    },
+    {
+      "index": 179,
+      "frame_diff": 0.0,
+      "face_count": 0,
+      "ocr_text_density": 0.1266,
+      "code_marker_count": 3
+    },
+    {
+      "index": 180,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.2258,
+      "code_marker_count": 1
+    },
+    {
+      "index": 181,
+      "frame_diff": 0.0024,
+      "face_count": 0,
+      "ocr_text_density": 0.2279,
+      "code_marker_count": 0
+    },
+    {
+      "index": 182,
+      "frame_diff": 0.0055,
+      "face_count": 0,
+      "ocr_text_density": 0.1276,
+      "code_marker_count": 3
+    },
+    {
+      "index": 183,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.1313,
+      "code_marker_count": 3
+    },
+    {
+      "index": 184,
+      "frame_diff": 0.0014,
+      "face_count": 0,
+      "ocr_text_density": 0.1318,
+      "code_marker_count": 3
+    },
+    {
+      "index": 185,
+      "frame_diff": 0.3087,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 186,
+      "frame_diff": 0.0246,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 187,
+      "frame_diff": 0.0318,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 188,
+      "frame_diff": 0.0219,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 189,
+      "frame_diff": 0.3196,
+      "face_count": 0,
+      "ocr_text_density": 0.231,
+      "code_marker_count": 1
+    },
+    {
+      "index": 190,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.2354,
+      "code_marker_count": 1
+    },
+    {
+      "index": 191,
+      "frame_diff": 0.0011,
+      "face_count": 0,
+      "ocr_text_density": 0.2359,
+      "code_marker_count": 1
+    },
+    {
+      "index": 192,
+      "frame_diff": 0.0022,
+      "face_count": 0,
+      "ocr_text_density": 0.2278,
+      "code_marker_count": 1
+    },
+    {
+      "index": 193,
+      "frame_diff": 0.0074,
+      "face_count": 0,
+      "ocr_text_density": 0.2261,
+      "code_marker_count": 1
+    },
+    {
+      "index": 194,
+      "frame_diff": 0.0076,
+      "face_count": 0,
+      "ocr_text_density": 0.2188,
+      "code_marker_count": 1
+    },
+    {
+      "index": 195,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.225,
+      "code_marker_count": 1
+    },
+    {
+      "index": 196,
+      "frame_diff": 0.0014,
+      "face_count": 0,
+      "ocr_text_density": 0.2322,
+      "code_marker_count": 1
+    },
+    {
+      "index": 197,
+      "frame_diff": 0.0498,
+      "face_count": 0,
+      "ocr_text_density": 0.0292,
+      "code_marker_count": 0
+    },
+    {
+      "index": 198,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.0292,
+      "code_marker_count": 0
+    },
+    {
+      "index": 199,
+      "frame_diff": 0.0035,
+      "face_count": 0,
+      "ocr_text_density": 0.0251,
+      "code_marker_count": 0
+    },
+    {
+      "index": 200,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.0387,
+      "code_marker_count": 0
+    },
+    {
+      "index": 201,
+      "frame_diff": 0.0,
+      "face_count": 0,
+      "ocr_text_density": 0.0387,
+      "code_marker_count": 0
+    },
+    {
+      "index": 202,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.0293,
+      "code_marker_count": 0
+    },
+    {
+      "index": 203,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0295,
+      "code_marker_count": 0
+    },
+    {
+      "index": 204,
+      "frame_diff": 0.0046,
+      "face_count": 0,
+      "ocr_text_density": 0.0252,
+      "code_marker_count": 0
+    },
+    {
+      "index": 205,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.0311,
+      "code_marker_count": 1
+    },
+    {
+      "index": 206,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.0319,
+      "code_marker_count": 0
+    },
+    {
+      "index": 207,
+      "frame_diff": 0.0048,
+      "face_count": 0,
+      "ocr_text_density": 0.0349,
+      "code_marker_count": 1
+    },
+    {
+      "index": 208,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.0295,
+      "code_marker_count": 0
+    },
+    {
+      "index": 209,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.0414,
+      "code_marker_count": 0
+    },
+    {
+      "index": 210,
+      "frame_diff": 0.0152,
+      "face_count": 0,
+      "ocr_text_density": 0.0435,
+      "code_marker_count": 1
+    },
+    {
+      "index": 211,
+      "frame_diff": 0.0056,
+      "face_count": 0,
+      "ocr_text_density": 0.0298,
+      "code_marker_count": 0
+    },
+    {
+      "index": 212,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.0298,
+      "code_marker_count": 0
+    },
+    {
+      "index": 213,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.0433,
+      "code_marker_count": 1
+    },
+    {
+      "index": 214,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.0347,
+      "code_marker_count": 0
+    },
+    {
+      "index": 215,
+      "frame_diff": 0.0055,
+      "face_count": 0,
+      "ocr_text_density": 0.03,
+      "code_marker_count": 0
+    },
+    {
+      "index": 216,
+      "frame_diff": 0.0056,
+      "face_count": 0,
+      "ocr_text_density": 0.0379,
+      "code_marker_count": 0
+    },
+    {
+      "index": 217,
+      "frame_diff": 0.0055,
+      "face_count": 0,
+      "ocr_text_density": 0.0377,
+      "code_marker_count": 0
+    },
+    {
+      "index": 218,
+      "frame_diff": 0.0003,
+      "face_count": 0,
+      "ocr_text_density": 0.0434,
+      "code_marker_count": 0
+    },
+    {
+      "index": 219,
+      "frame_diff": 0.006,
+      "face_count": 0,
+      "ocr_text_density": 0.0407,
+      "code_marker_count": 1
+    },
+    {
+      "index": 220,
+      "frame_diff": 0.0003,
+      "face_count": 0,
+      "ocr_text_density": 0.0396,
+      "code_marker_count": 1
+    },
+    {
+      "index": 221,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 222,
+      "frame_diff": 0.0054,
+      "face_count": 0,
+      "ocr_text_density": 0.0141,
+      "code_marker_count": 0
+    },
+    {
+      "index": 223,
+      "frame_diff": 0.0053,
+      "face_count": 0,
+      "ocr_text_density": 0.0242,
+      "code_marker_count": 0
+    },
+    {
+      "index": 224,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.0242,
+      "code_marker_count": 0
+    },
+    {
+      "index": 225,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.0141,
+      "code_marker_count": 0
+    },
+    {
+      "index": 226,
+      "frame_diff": 0.3185,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 227,
+      "frame_diff": 0.0433,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 228,
+      "frame_diff": 0.0472,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 229,
+      "frame_diff": 0.0245,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 230,
+      "frame_diff": 0.0459,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 231,
+      "frame_diff": 0.3127,
+      "face_count": 0,
+      "ocr_text_density": 0.0141,
+      "code_marker_count": 0
+    },
+    {
+      "index": 232,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.0141,
+      "code_marker_count": 0
+    },
+    {
+      "index": 233,
+      "frame_diff": 0.3178,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 234,
+      "frame_diff": 0.0306,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 235,
+      "frame_diff": 0.3161,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 236,
+      "frame_diff": 0.002,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 237,
+      "frame_diff": 0.0055,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 238,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 239,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 240,
+      "frame_diff": 0.0053,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 241,
+      "frame_diff": 0.0053,
+      "face_count": 0,
+      "ocr_text_density": 0.0241,
+      "code_marker_count": 0
+    },
+    {
+      "index": 242,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0241,
+      "code_marker_count": 0
+    },
+    {
+      "index": 243,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.0141,
+      "code_marker_count": 0
+    },
+    {
+      "index": 244,
+      "frame_diff": 0.0055,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 245,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.0239,
+      "code_marker_count": 0
+    },
+    {
+      "index": 246,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0141,
+      "code_marker_count": 0
+    },
+    {
+      "index": 247,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 248,
+      "frame_diff": 0.0014,
+      "face_count": 0,
+      "ocr_text_density": 0.0237,
+      "code_marker_count": 0
+    },
+    {
+      "index": 249,
+      "frame_diff": 0.0053,
+      "face_count": 0,
+      "ocr_text_density": 0.0242,
+      "code_marker_count": 0
+    },
+    {
+      "index": 250,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.0242,
+      "code_marker_count": 0
+    },
+    {
+      "index": 251,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.024,
+      "code_marker_count": 0
+    },
+    {
+      "index": 252,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 253,
+      "frame_diff": 0.0055,
+      "face_count": 0,
+      "ocr_text_density": 0.023,
+      "code_marker_count": 0
+    },
+    {
+      "index": 254,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.023,
+      "code_marker_count": 0
+    },
+    {
+      "index": 255,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.014,
+      "code_marker_count": 0
+    },
+    {
+      "index": 256,
+      "frame_diff": 0.0054,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 257,
+      "frame_diff": 0.0002,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 258,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.0141,
+      "code_marker_count": 0
+    },
+    {
+      "index": 259,
+      "frame_diff": 0.0051,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 260,
+      "frame_diff": 0.3134,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 261,
+      "frame_diff": 0.0255,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 262,
+      "frame_diff": 0.0012,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 263,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 264,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 265,
+      "frame_diff": 0.0053,
+      "face_count": 0,
+      "ocr_text_density": 0.0237,
+      "code_marker_count": 0
+    },
+    {
+      "index": 266,
+      "frame_diff": 0.0055,
+      "face_count": 0,
+      "ocr_text_density": 0.0237,
+      "code_marker_count": 0
+    },
+    {
+      "index": 267,
+      "frame_diff": 0.0051,
+      "face_count": 0,
+      "ocr_text_density": 0.0141,
+      "code_marker_count": 0
+    },
+    {
+      "index": 268,
+      "frame_diff": 0.0055,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 269,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 270,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0141,
+      "code_marker_count": 0
+    },
+    {
+      "index": 271,
+      "frame_diff": 0.0053,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 272,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 273,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.0223,
+      "code_marker_count": 0
+    },
+    {
+      "index": 274,
+      "frame_diff": 0.0053,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 275,
+      "frame_diff": 0.0054,
+      "face_count": 0,
+      "ocr_text_density": 0.0134,
+      "code_marker_count": 0
+    },
+    {
+      "index": 276,
+      "frame_diff": 0.0056,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 277,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 278,
+      "frame_diff": 0.0012,
+      "face_count": 0,
+      "ocr_text_density": 0.0141,
+      "code_marker_count": 0
+    },
+    {
+      "index": 279,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.0141,
+      "code_marker_count": 0
+    },
+    {
+      "index": 280,
+      "frame_diff": 0.0055,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 281,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 282,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.0134,
+      "code_marker_count": 0
+    },
+    {
+      "index": 283,
+      "frame_diff": 0.0053,
+      "face_count": 0,
+      "ocr_text_density": 0.024,
+      "code_marker_count": 0
+    },
+    {
+      "index": 284,
+      "frame_diff": 0.0055,
+      "face_count": 0,
+      "ocr_text_density": 0.0143,
+      "code_marker_count": 0
+    },
+    {
+      "index": 285,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.0239,
+      "code_marker_count": 0
+    },
+    {
+      "index": 286,
+      "frame_diff": 0.0011,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 287,
+      "frame_diff": 0.3111,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 288,
+      "frame_diff": 0.0363,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 289,
+      "frame_diff": 0.0558,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 290,
+      "frame_diff": 0.0242,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 291,
+      "frame_diff": 0.0288,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 292,
+      "frame_diff": 0.0245,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 293,
+      "frame_diff": 0.3128,
+      "face_count": 0,
+      "ocr_text_density": 0.0345,
+      "code_marker_count": 0
+    },
+    {
+      "index": 294,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.0329,
+      "code_marker_count": 0
+    },
+    {
+      "index": 295,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.0421,
+      "code_marker_count": 0
+    },
+    {
+      "index": 296,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.033,
+      "code_marker_count": 0
+    },
+    {
+      "index": 297,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.035,
+      "code_marker_count": 0
+    },
+    {
+      "index": 298,
+      "frame_diff": 0.0052,
+      "face_count": 0,
+      "ocr_text_density": 0.0321,
+      "code_marker_count": 0
+    },
+    {
+      "index": 299,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0321,
+      "code_marker_count": 0
+    },
+    {
+      "index": 300,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.035,
+      "code_marker_count": 0
+    },
+    {
+      "index": 301,
+      "frame_diff": 0.005,
+      "face_count": 0,
+      "ocr_text_density": 0.0395,
+      "code_marker_count": 0
+    },
+    {
+      "index": 302,
+      "frame_diff": 0.0049,
+      "face_count": 0,
+      "ocr_text_density": 0.0401,
+      "code_marker_count": 0
+    },
+    {
+      "index": 303,
+      "frame_diff": 0.0053,
+      "face_count": 0,
+      "ocr_text_density": 0.0362,
+      "code_marker_count": 0
+    },
+    {
+      "index": 304,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0447,
+      "code_marker_count": 0
+    },
+    {
+      "index": 305,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.0347,
+      "code_marker_count": 0
+    },
+    {
+      "index": 306,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.0492,
+      "code_marker_count": 0
+    },
+    {
+      "index": 307,
+      "frame_diff": 0.0048,
+      "face_count": 0,
+      "ocr_text_density": 0.0379,
+      "code_marker_count": 0
+    },
+    {
+      "index": 308,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.0394,
+      "code_marker_count": 0
+    },
+    {
+      "index": 309,
+      "frame_diff": 0.0002,
+      "face_count": 0,
+      "ocr_text_density": 0.0438,
+      "code_marker_count": 0
+    },
+    {
+      "index": 310,
+      "frame_diff": 0.0048,
+      "face_count": 0,
+      "ocr_text_density": 0.0479,
+      "code_marker_count": 1
+    },
+    {
+      "index": 311,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.0467,
+      "code_marker_count": 0
+    },
+    {
+      "index": 312,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.0376,
+      "code_marker_count": 0
+    },
+    {
+      "index": 313,
+      "frame_diff": 0.0051,
+      "face_count": 0,
+      "ocr_text_density": 0.0474,
+      "code_marker_count": 0
+    },
+    {
+      "index": 314,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0471,
+      "code_marker_count": 0
+    },
+    {
+      "index": 315,
+      "frame_diff": 0.0003,
+      "face_count": 0,
+      "ocr_text_density": 0.0339,
+      "code_marker_count": 0
+    },
+    {
+      "index": 316,
+      "frame_diff": 0.0002,
+      "face_count": 0,
+      "ocr_text_density": 0.0381,
+      "code_marker_count": 0
+    },
+    {
+      "index": 317,
+      "frame_diff": 0.028,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 318,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.0419,
+      "code_marker_count": 0
+    },
+    {
+      "index": 319,
+      "frame_diff": 0.0053,
+      "face_count": 0,
+      "ocr_text_density": 0.0512,
+      "code_marker_count": 0
+    },
+    {
+      "index": 320,
+      "frame_diff": 0.0051,
+      "face_count": 0,
+      "ocr_text_density": 0.0386,
+      "code_marker_count": 0
+    },
+    {
+      "index": 321,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.0374,
+      "code_marker_count": 0
+    },
+    {
+      "index": 322,
+      "frame_diff": 0.0003,
+      "face_count": 0,
+      "ocr_text_density": 0.0379,
+      "code_marker_count": 0
+    },
+    {
+      "index": 323,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0396,
+      "code_marker_count": 0
+    },
+    {
+      "index": 324,
+      "frame_diff": 0.005,
+      "face_count": 0,
+      "ocr_text_density": 0.0469,
+      "code_marker_count": 0
+    },
+    {
+      "index": 325,
+      "frame_diff": 0.0048,
+      "face_count": 0,
+      "ocr_text_density": 0.0395,
+      "code_marker_count": 0
+    },
+    {
+      "index": 326,
+      "frame_diff": 0.0049,
+      "face_count": 0,
+      "ocr_text_density": 0.034,
+      "code_marker_count": 0
+    },
+    {
+      "index": 327,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.034,
+      "code_marker_count": 0
+    },
+    {
+      "index": 328,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.034,
+      "code_marker_count": 0
+    },
+    {
+      "index": 329,
+      "frame_diff": 0.0049,
+      "face_count": 0,
+      "ocr_text_density": 0.0383,
+      "code_marker_count": 0
+    },
+    {
+      "index": 330,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.0375,
+      "code_marker_count": 0
+    },
+    {
+      "index": 331,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.0359,
+      "code_marker_count": 0
+    },
+    {
+      "index": 332,
+      "frame_diff": 0.0489,
+      "face_count": 0,
+      "ocr_text_density": 0.0142,
+      "code_marker_count": 0
+    },
+    {
+      "index": 333,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0143,
+      "code_marker_count": 0
+    },
+    {
+      "index": 334,
+      "frame_diff": 0.0055,
+      "face_count": 0,
+      "ocr_text_density": 0.0239,
+      "code_marker_count": 0
+    },
+    {
+      "index": 335,
+      "frame_diff": 0.0493,
+      "face_count": 0,
+      "ocr_text_density": 0.0384,
+      "code_marker_count": 0
+    },
+    {
+      "index": 336,
+      "frame_diff": 0.0011,
+      "face_count": 0,
+      "ocr_text_density": 0.0388,
+      "code_marker_count": 0
+    },
+    {
+      "index": 337,
+      "frame_diff": 0.005,
+      "face_count": 0,
+      "ocr_text_density": 0.046,
+      "code_marker_count": 1
+    },
+    {
+      "index": 338,
+      "frame_diff": 0.0051,
+      "face_count": 0,
+      "ocr_text_density": 0.0374,
+      "code_marker_count": 0
+    },
+    {
+      "index": 339,
+      "frame_diff": 0.0052,
+      "face_count": 0,
+      "ocr_text_density": 0.031,
+      "code_marker_count": 0
+    },
+    {
+      "index": 340,
+      "frame_diff": 0.0051,
+      "face_count": 0,
+      "ocr_text_density": 0.0399,
+      "code_marker_count": 0
+    },
+    {
+      "index": 341,
+      "frame_diff": 0.0052,
+      "face_count": 0,
+      "ocr_text_density": 0.0347,
+      "code_marker_count": 0
+    },
+    {
+      "index": 342,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.0433,
+      "code_marker_count": 0
+    },
+    {
+      "index": 343,
+      "frame_diff": 0.0013,
+      "face_count": 0,
+      "ocr_text_density": 0.0414,
+      "code_marker_count": 0
+    },
+    {
+      "index": 344,
+      "frame_diff": 0.0052,
+      "face_count": 0,
+      "ocr_text_density": 0.0338,
+      "code_marker_count": 0
+    },
+    {
+      "index": 345,
+      "frame_diff": 0.0047,
+      "face_count": 0,
+      "ocr_text_density": 0.0347,
+      "code_marker_count": 0
+    },
+    {
+      "index": 346,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.0372,
+      "code_marker_count": 0
+    },
+    {
+      "index": 347,
+      "frame_diff": 0.0014,
+      "face_count": 0,
+      "ocr_text_density": 0.0356,
+      "code_marker_count": 0
+    },
+    {
+      "index": 348,
+      "frame_diff": 0.0051,
+      "face_count": 0,
+      "ocr_text_density": 0.0473,
+      "code_marker_count": 0
+    },
+    {
+      "index": 349,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.047,
+      "code_marker_count": 0
+    },
+    {
+      "index": 350,
+      "frame_diff": 0.0051,
+      "face_count": 0,
+      "ocr_text_density": 0.0395,
+      "code_marker_count": 0
+    },
+    {
+      "index": 351,
+      "frame_diff": 0.0052,
+      "face_count": 0,
+      "ocr_text_density": 0.0417,
+      "code_marker_count": 1
+    },
+    {
+      "index": 352,
+      "frame_diff": 0.0051,
+      "face_count": 0,
+      "ocr_text_density": 0.0341,
+      "code_marker_count": 0
+    },
+    {
+      "index": 353,
+      "frame_diff": 0.0052,
+      "face_count": 0,
+      "ocr_text_density": 0.0403,
+      "code_marker_count": 0
+    },
+    {
+      "index": 354,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0392,
+      "code_marker_count": 0
+    },
+    {
+      "index": 355,
+      "frame_diff": 0.0011,
+      "face_count": 0,
+      "ocr_text_density": 0.0418,
+      "code_marker_count": 1
+    },
+    {
+      "index": 356,
+      "frame_diff": 0.0049,
+      "face_count": 0,
+      "ocr_text_density": 0.0404,
+      "code_marker_count": 0
+    },
+    {
+      "index": 357,
+      "frame_diff": 0.0003,
+      "face_count": 0,
+      "ocr_text_density": 0.0339,
+      "code_marker_count": 0
+    },
+    {
+      "index": 358,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.0399,
+      "code_marker_count": 0
+    },
+    {
+      "index": 359,
+      "frame_diff": 0.005,
+      "face_count": 0,
+      "ocr_text_density": 0.0342,
+      "code_marker_count": 0
+    },
+    {
+      "index": 360,
+      "frame_diff": 0.0052,
+      "face_count": 0,
+      "ocr_text_density": 0.0457,
+      "code_marker_count": 0
+    },
+    {
+      "index": 361,
+      "frame_diff": 0.3145,
+      "face_count": 0,
+      "ocr_text_density": 0.0357,
+      "code_marker_count": 0
+    },
+    {
+      "index": 362,
+      "frame_diff": 0.0025,
+      "face_count": 0,
+      "ocr_text_density": 0.1775,
+      "code_marker_count": 0
+    },
+    {
+      "index": 363,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.169,
+      "code_marker_count": 0
+    },
+    {
+      "index": 364,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1893,
+      "code_marker_count": 0
+    },
+    {
+      "index": 365,
+      "frame_diff": 0.0067,
+      "face_count": 0,
+      "ocr_text_density": 0.1854,
+      "code_marker_count": 0
+    },
+    {
+      "index": 366,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.187,
+      "code_marker_count": 0
+    },
+    {
+      "index": 367,
+      "frame_diff": 0.0356,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 368,
+      "frame_diff": 0.0499,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 369,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1673,
+      "code_marker_count": 0
+    },
+    {
+      "index": 370,
+      "frame_diff": 0.0071,
+      "face_count": 0,
+      "ocr_text_density": 0.182,
+      "code_marker_count": 0
+    },
+    {
+      "index": 371,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.1755,
+      "code_marker_count": 0
+    },
+    {
+      "index": 372,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.1795,
+      "code_marker_count": 0
+    },
+    {
+      "index": 373,
+      "frame_diff": 0.0064,
+      "face_count": 0,
+      "ocr_text_density": 0.1699,
+      "code_marker_count": 0
+    },
+    {
+      "index": 374,
+      "frame_diff": 0.0066,
+      "face_count": 0,
+      "ocr_text_density": 0.1897,
+      "code_marker_count": 0
+    },
+    {
+      "index": 375,
+      "frame_diff": 0.0003,
+      "face_count": 0,
+      "ocr_text_density": 0.1858,
+      "code_marker_count": 0
+    },
+    {
+      "index": 376,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1823,
+      "code_marker_count": 0
+    },
+    {
+      "index": 377,
+      "frame_diff": 0.0063,
+      "face_count": 0,
+      "ocr_text_density": 0.1824,
+      "code_marker_count": 0
+    },
+    {
+      "index": 378,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.1744,
+      "code_marker_count": 0
+    },
+    {
+      "index": 379,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.179,
+      "code_marker_count": 0
+    },
+    {
+      "index": 380,
+      "frame_diff": 0.0066,
+      "face_count": 0,
+      "ocr_text_density": 0.1843,
+      "code_marker_count": 0
+    },
+    {
+      "index": 381,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.1759,
+      "code_marker_count": 0
+    },
+    {
+      "index": 382,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.192,
+      "code_marker_count": 0
+    },
+    {
+      "index": 383,
+      "frame_diff": 0.0064,
+      "face_count": 0,
+      "ocr_text_density": 0.1882,
+      "code_marker_count": 0
+    },
+    {
+      "index": 384,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1831,
+      "code_marker_count": 0
+    },
+    {
+      "index": 385,
+      "frame_diff": 0.0011,
+      "face_count": 0,
+      "ocr_text_density": 0.1828,
+      "code_marker_count": 0
+    },
+    {
+      "index": 386,
+      "frame_diff": 0.0067,
+      "face_count": 0,
+      "ocr_text_density": 0.1761,
+      "code_marker_count": 0
+    },
+    {
+      "index": 387,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1791,
+      "code_marker_count": 0
+    },
+    {
+      "index": 388,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.1737,
+      "code_marker_count": 0
+    },
+    {
+      "index": 389,
+      "frame_diff": 0.0064,
+      "face_count": 0,
+      "ocr_text_density": 0.1835,
+      "code_marker_count": 0
+    },
+    {
+      "index": 390,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1702,
+      "code_marker_count": 0
+    },
+    {
+      "index": 391,
+      "frame_diff": 0.0013,
+      "face_count": 0,
+      "ocr_text_density": 0.1848,
+      "code_marker_count": 0
+    },
+    {
+      "index": 392,
+      "frame_diff": 0.0067,
+      "face_count": 0,
+      "ocr_text_density": 0.1953,
+      "code_marker_count": 0
+    },
+    {
+      "index": 393,
+      "frame_diff": 0.0069,
+      "face_count": 0,
+      "ocr_text_density": 0.1802,
+      "code_marker_count": 0
+    },
+    {
+      "index": 394,
+      "frame_diff": 0.0026,
+      "face_count": 0,
+      "ocr_text_density": 0.0841,
+      "code_marker_count": 1
+    },
+    {
+      "index": 395,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.1783,
+      "code_marker_count": 0
+    },
+    {
+      "index": 396,
+      "frame_diff": 0.3156,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 397,
+      "frame_diff": 0.0394,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 398,
+      "frame_diff": 0.0344,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 399,
+      "frame_diff": 0.0785,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 400,
+      "frame_diff": 0.0568,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 401,
+      "frame_diff": 0.3172,
+      "face_count": 0,
+      "ocr_text_density": 0.1866,
+      "code_marker_count": 0
+    },
+    {
+      "index": 402,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.1953,
+      "code_marker_count": 0
+    },
+    {
+      "index": 403,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1905,
+      "code_marker_count": 0
+    },
+    {
+      "index": 404,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.1807,
+      "code_marker_count": 0
+    },
+    {
+      "index": 405,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1825,
+      "code_marker_count": 0
+    },
+    {
+      "index": 406,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.0859,
+      "code_marker_count": 1
+    },
+    {
+      "index": 407,
+      "frame_diff": 0.0052,
+      "face_count": 0,
+      "ocr_text_density": 0.083,
+      "code_marker_count": 1
+    },
+    {
+      "index": 408,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.0833,
+      "code_marker_count": 1
+    },
+    {
+      "index": 409,
+      "frame_diff": 0.323,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 410,
+      "frame_diff": 0.0338,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 411,
+      "frame_diff": 0.3193,
+      "face_count": 0,
+      "ocr_text_density": 0.0879,
+      "code_marker_count": 1
+    },
+    {
+      "index": 412,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0879,
+      "code_marker_count": 1
+    },
+    {
+      "index": 413,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.0865,
+      "code_marker_count": 1
+    },
+    {
+      "index": 414,
+      "frame_diff": 0.0049,
+      "face_count": 0,
+      "ocr_text_density": 0.09,
+      "code_marker_count": 1
+    },
+    {
+      "index": 415,
+      "frame_diff": 0.0048,
+      "face_count": 0,
+      "ocr_text_density": 0.0824,
+      "code_marker_count": 1
+    },
+    {
+      "index": 416,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.0825,
+      "code_marker_count": 1
+    },
+    {
+      "index": 417,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.0831,
+      "code_marker_count": 1
+    },
+    {
+      "index": 418,
+      "frame_diff": 0.0049,
+      "face_count": 0,
+      "ocr_text_density": 0.0826,
+      "code_marker_count": 1
+    },
+    {
+      "index": 419,
+      "frame_diff": 0.3194,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 420,
+      "frame_diff": 0.0518,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 421,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.0832,
+      "code_marker_count": 1
+    },
+    {
+      "index": 422,
+      "frame_diff": 0.3181,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 423,
+      "frame_diff": 0.3191,
+      "face_count": 0,
+      "ocr_text_density": 0.0881,
+      "code_marker_count": 1
+    },
+    {
+      "index": 424,
+      "frame_diff": 0.0396,
+      "face_count": 0,
+      "ocr_text_density": 0.0489,
+      "code_marker_count": 0
+    },
+    {
+      "index": 425,
+      "frame_diff": 0.0042,
+      "face_count": 0,
+      "ocr_text_density": 0.0579,
+      "code_marker_count": 0
+    },
+    {
+      "index": 426,
+      "frame_diff": 0.0039,
+      "face_count": 0,
+      "ocr_text_density": 0.0576,
+      "code_marker_count": 0
+    },
+    {
+      "index": 427,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0576,
+      "code_marker_count": 0
+    },
+    {
+      "index": 428,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0484,
+      "code_marker_count": 0
+    },
+    {
+      "index": 429,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.0484,
+      "code_marker_count": 0
+    },
+    {
+      "index": 430,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.0486,
+      "code_marker_count": 0
+    },
+    {
+      "index": 431,
+      "frame_diff": 0.0039,
+      "face_count": 0,
+      "ocr_text_density": 0.0482,
+      "code_marker_count": 0
+    },
+    {
+      "index": 432,
+      "frame_diff": 0.0383,
+      "face_count": 0,
+      "ocr_text_density": 0.1738,
+      "code_marker_count": 0
+    },
+    {
+      "index": 433,
+      "frame_diff": 0.0002,
+      "face_count": 0,
+      "ocr_text_density": 0.1735,
+      "code_marker_count": 0
+    },
+    {
+      "index": 434,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1827,
+      "code_marker_count": 0
+    },
+    {
+      "index": 435,
+      "frame_diff": 0.3158,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 436,
+      "frame_diff": 0.0189,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 437,
+      "frame_diff": 0.0205,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 438,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1863,
+      "code_marker_count": 0
+    },
+    {
+      "index": 439,
+      "frame_diff": 0.0062,
+      "face_count": 0,
+      "ocr_text_density": 0.1776,
+      "code_marker_count": 0
+    },
+    {
+      "index": 440,
+      "frame_diff": 0.0002,
+      "face_count": 0,
+      "ocr_text_density": 0.1882,
+      "code_marker_count": 0
+    },
+    {
+      "index": 441,
+      "frame_diff": 0.0061,
+      "face_count": 0,
+      "ocr_text_density": 0.1763,
+      "code_marker_count": 0
+    },
+    {
+      "index": 442,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1761,
+      "code_marker_count": 0
+    },
+    {
+      "index": 443,
+      "frame_diff": 0.0011,
+      "face_count": 0,
+      "ocr_text_density": 0.1738,
+      "code_marker_count": 0
+    },
+    {
+      "index": 444,
+      "frame_diff": 0.0059,
+      "face_count": 0,
+      "ocr_text_density": 0.1734,
+      "code_marker_count": 0
+    },
+    {
+      "index": 445,
+      "frame_diff": 0.0059,
+      "face_count": 0,
+      "ocr_text_density": 0.1719,
+      "code_marker_count": 0
+    },
+    {
+      "index": 446,
+      "frame_diff": 0.0003,
+      "face_count": 0,
+      "ocr_text_density": 0.174,
+      "code_marker_count": 0
+    },
+    {
+      "index": 447,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.1714,
+      "code_marker_count": 0
+    },
+    {
+      "index": 448,
+      "frame_diff": 0.0003,
+      "face_count": 0,
+      "ocr_text_density": 0.1741,
+      "code_marker_count": 0
+    },
+    {
+      "index": 449,
+      "frame_diff": 0.0013,
+      "face_count": 0,
+      "ocr_text_density": 0.1743,
+      "code_marker_count": 0
+    },
+    {
+      "index": 450,
+      "frame_diff": 0.3181,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 451,
+      "frame_diff": 0.0275,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 452,
+      "frame_diff": 0.0378,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 453,
+      "frame_diff": 0.0274,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 454,
+      "frame_diff": 0.0224,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 455,
+      "frame_diff": 0.0341,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 456,
+      "frame_diff": 0.0258,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 457,
+      "frame_diff": 0.0399,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 458,
+      "frame_diff": 0.0392,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 459,
+      "frame_diff": 0.0013,
+      "face_count": 0,
+      "ocr_text_density": 0.1565,
+      "code_marker_count": 0
+    },
+    {
+      "index": 460,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.1567,
+      "code_marker_count": 0
+    },
+    {
+      "index": 461,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.157,
+      "code_marker_count": 0
+    },
+    {
+      "index": 462,
+      "frame_diff": 0.0063,
+      "face_count": 0,
+      "ocr_text_density": 0.1679,
+      "code_marker_count": 1
+    },
+    {
+      "index": 463,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.1624,
+      "code_marker_count": 1
+    },
+    {
+      "index": 464,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1555,
+      "code_marker_count": 1
+    },
+    {
+      "index": 465,
+      "frame_diff": 0.0058,
+      "face_count": 0,
+      "ocr_text_density": 0.1677,
+      "code_marker_count": 0
+    },
+    {
+      "index": 466,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1584,
+      "code_marker_count": 0
+    },
+    {
+      "index": 467,
+      "frame_diff": 0.0459,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 468,
+      "frame_diff": 0.0392,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 469,
+      "frame_diff": 0.0335,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 470,
+      "frame_diff": 0.3163,
+      "face_count": 0,
+      "ocr_text_density": 0.1635,
+      "code_marker_count": 1
+    },
+    {
+      "index": 471,
+      "frame_diff": 0.0003,
+      "face_count": 0,
+      "ocr_text_density": 0.163,
+      "code_marker_count": 1
+    },
+    {
+      "index": 472,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.1663,
+      "code_marker_count": 1
+    },
+    {
+      "index": 473,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.1606,
+      "code_marker_count": 0
+    },
+    {
+      "index": 474,
+      "frame_diff": 0.0062,
+      "face_count": 0,
+      "ocr_text_density": 0.1711,
+      "code_marker_count": 1
+    },
+    {
+      "index": 475,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.1719,
+      "code_marker_count": 1
+    },
+    {
+      "index": 476,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.158,
+      "code_marker_count": 0
+    },
+    {
+      "index": 477,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.1591,
+      "code_marker_count": 0
+    },
+    {
+      "index": 478,
+      "frame_diff": 0.0003,
+      "face_count": 0,
+      "ocr_text_density": 0.1605,
+      "code_marker_count": 0
+    },
+    {
+      "index": 479,
+      "frame_diff": 0.0064,
+      "face_count": 0,
+      "ocr_text_density": 0.1516,
+      "code_marker_count": 1
+    },
+    {
+      "index": 480,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.1592,
+      "code_marker_count": 0
+    },
+    {
+      "index": 481,
+      "frame_diff": 0.3102,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 482,
+      "frame_diff": 0.021,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 483,
+      "frame_diff": 0.0337,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 484,
+      "frame_diff": 0.3151,
+      "face_count": 0,
+      "ocr_text_density": 0.12,
+      "code_marker_count": 1
+    },
+    {
+      "index": 485,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.1175,
+      "code_marker_count": 1
+    },
+    {
+      "index": 486,
+      "frame_diff": 0.0057,
+      "face_count": 0,
+      "ocr_text_density": 0.1217,
+      "code_marker_count": 1
+    },
+    {
+      "index": 487,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1191,
+      "code_marker_count": 1
+    },
+    {
+      "index": 488,
+      "frame_diff": 0.0056,
+      "face_count": 0,
+      "ocr_text_density": 0.1267,
+      "code_marker_count": 1
+    },
+    {
+      "index": 489,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.1312,
+      "code_marker_count": 1
+    },
+    {
+      "index": 490,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.1211,
+      "code_marker_count": 1
+    },
+    {
+      "index": 491,
+      "frame_diff": 0.0056,
+      "face_count": 0,
+      "ocr_text_density": 0.1175,
+      "code_marker_count": 1
+    },
+    {
+      "index": 492,
+      "frame_diff": 0.0054,
+      "face_count": 0,
+      "ocr_text_density": 0.1205,
+      "code_marker_count": 1
+    },
+    {
+      "index": 493,
+      "frame_diff": 0.0053,
+      "face_count": 0,
+      "ocr_text_density": 0.1191,
+      "code_marker_count": 1
+    },
+    {
+      "index": 494,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.1212,
+      "code_marker_count": 1
+    },
+    {
+      "index": 495,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1298,
+      "code_marker_count": 1
+    },
+    {
+      "index": 496,
+      "frame_diff": 0.0056,
+      "face_count": 0,
+      "ocr_text_density": 0.1205,
+      "code_marker_count": 1
+    },
+    {
+      "index": 497,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1183,
+      "code_marker_count": 1
+    },
+    {
+      "index": 498,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.1294,
+      "code_marker_count": 1
+    },
+    {
+      "index": 499,
+      "frame_diff": 0.0056,
+      "face_count": 0,
+      "ocr_text_density": 0.1202,
+      "code_marker_count": 1
+    },
+    {
+      "index": 500,
+      "frame_diff": 0.0056,
+      "face_count": 0,
+      "ocr_text_density": 0.1187,
+      "code_marker_count": 1
+    },
+    {
+      "index": 501,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.119,
+      "code_marker_count": 1
+    },
+    {
+      "index": 502,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.1226,
+      "code_marker_count": 1
+    },
+    {
+      "index": 503,
+      "frame_diff": 0.0058,
+      "face_count": 0,
+      "ocr_text_density": 0.1294,
+      "code_marker_count": 1
+    },
+    {
+      "index": 504,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1304,
+      "code_marker_count": 1
+    },
+    {
+      "index": 505,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1291,
+      "code_marker_count": 1
+    },
+    {
+      "index": 506,
+      "frame_diff": 0.0054,
+      "face_count": 0,
+      "ocr_text_density": 0.1218,
+      "code_marker_count": 1
+    },
+    {
+      "index": 507,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.1206,
+      "code_marker_count": 1
+    },
+    {
+      "index": 508,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.0301,
+      "code_marker_count": 0
+    },
+    {
+      "index": 509,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.0261,
+      "code_marker_count": 0
+    },
+    {
+      "index": 510,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0118,
+      "code_marker_count": 0
+    },
+    {
+      "index": 511,
+      "frame_diff": 0.0041,
+      "face_count": 0,
+      "ocr_text_density": 0.0256,
+      "code_marker_count": 0
+    },
+    {
+      "index": 512,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0277,
+      "code_marker_count": 0
+    },
+    {
+      "index": 513,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.0171,
+      "code_marker_count": 0
+    },
+    {
+      "index": 514,
+      "frame_diff": 0.0041,
+      "face_count": 0,
+      "ocr_text_density": 0.0185,
+      "code_marker_count": 0
+    },
+    {
+      "index": 515,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0278,
+      "code_marker_count": 0
+    },
+    {
+      "index": 516,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0221,
+      "code_marker_count": 0
+    },
+    {
+      "index": 517,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.0348,
+      "code_marker_count": 0
+    },
+    {
+      "index": 518,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.0169,
+      "code_marker_count": 0
+    },
+    {
+      "index": 519,
+      "frame_diff": 0.0043,
+      "face_count": 0,
+      "ocr_text_density": 0.0335,
+      "code_marker_count": 0
+    },
+    {
+      "index": 520,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.0368,
+      "code_marker_count": 0
+    },
+    {
+      "index": 521,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.0422,
+      "code_marker_count": 0
+    },
+    {
+      "index": 522,
+      "frame_diff": 0.004,
+      "face_count": 0,
+      "ocr_text_density": 0.0259,
+      "code_marker_count": 0
+    },
+    {
+      "index": 523,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.0258,
+      "code_marker_count": 0
+    },
+    {
+      "index": 524,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.0343,
+      "code_marker_count": 0
+    },
+    {
+      "index": 525,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.0218,
+      "code_marker_count": 0
+    },
+    {
+      "index": 526,
+      "frame_diff": 0.004,
+      "face_count": 0,
+      "ocr_text_density": 0.0351,
+      "code_marker_count": 0
+    },
+    {
+      "index": 527,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.0256,
+      "code_marker_count": 0
+    },
+    {
+      "index": 528,
+      "frame_diff": 0.0003,
+      "face_count": 0,
+      "ocr_text_density": 0.0358,
+      "code_marker_count": 0
+    },
+    {
+      "index": 529,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.012,
+      "code_marker_count": 0
+    },
+    {
+      "index": 530,
+      "frame_diff": 0.0038,
+      "face_count": 0,
+      "ocr_text_density": 0.0368,
+      "code_marker_count": 0
+    },
+    {
+      "index": 531,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0335,
+      "code_marker_count": 0
+    },
+    {
+      "index": 532,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.0205,
+      "code_marker_count": 0
+    },
+    {
+      "index": 533,
+      "frame_diff": 0.004,
+      "face_count": 0,
+      "ocr_text_density": 0.0275,
+      "code_marker_count": 0
+    },
+    {
+      "index": 534,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.0295,
+      "code_marker_count": 0
+    },
+    {
+      "index": 535,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.0314,
+      "code_marker_count": 0
+    },
+    {
+      "index": 536,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.0346,
+      "code_marker_count": 0
+    },
+    {
+      "index": 537,
+      "frame_diff": 0.0003,
+      "face_count": 0,
+      "ocr_text_density": 0.0118,
+      "code_marker_count": 0
+    },
+    {
+      "index": 538,
+      "frame_diff": 0.0339,
+      "face_count": 0,
+      "ocr_text_density": 0.0288,
+      "code_marker_count": 0
+    },
+    {
+      "index": 539,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.0288,
+      "code_marker_count": 0
+    },
+    {
+      "index": 540,
+      "frame_diff": 0.0018,
+      "face_count": 0,
+      "ocr_text_density": 0.0198,
+      "code_marker_count": 0
+    },
+    {
+      "index": 541,
+      "frame_diff": 0.0049,
+      "face_count": 0,
+      "ocr_text_density": 0.0198,
+      "code_marker_count": 0
+    },
+    {
+      "index": 542,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.0198,
+      "code_marker_count": 0
+    },
+    {
+      "index": 543,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0198,
+      "code_marker_count": 0
+    },
+    {
+      "index": 544,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0202,
+      "code_marker_count": 0
+    },
+    {
+      "index": 545,
+      "frame_diff": 0.0049,
+      "face_count": 0,
+      "ocr_text_density": 0.0198,
+      "code_marker_count": 0
+    },
+    {
+      "index": 546,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0198,
+      "code_marker_count": 0
+    },
+    {
+      "index": 547,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0293,
+      "code_marker_count": 0
+    },
+    {
+      "index": 548,
+      "frame_diff": 0.0011,
+      "face_count": 0,
+      "ocr_text_density": 0.0293,
+      "code_marker_count": 0
+    },
+    {
+      "index": 549,
+      "frame_diff": 0.005,
+      "face_count": 0,
+      "ocr_text_density": 0.0278,
+      "code_marker_count": 0
+    },
+    {
+      "index": 550,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.0278,
+      "code_marker_count": 0
+    },
+    {
+      "index": 551,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.0293,
+      "code_marker_count": 0
+    },
+    {
+      "index": 552,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.0293,
+      "code_marker_count": 0
+    },
+    {
+      "index": 553,
+      "frame_diff": 0.005,
+      "face_count": 0,
+      "ocr_text_density": 0.0198,
+      "code_marker_count": 0
+    },
+    {
+      "index": 554,
+      "frame_diff": 0.0459,
+      "face_count": 0,
+      "ocr_text_density": 0.1483,
+      "code_marker_count": 0
+    },
+    {
+      "index": 555,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.1508,
+      "code_marker_count": 0
+    },
+    {
+      "index": 556,
+      "frame_diff": 0.0057,
+      "face_count": 0,
+      "ocr_text_density": 0.148,
+      "code_marker_count": 0
+    },
+    {
+      "index": 557,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.1552,
+      "code_marker_count": 0
+    },
+    {
+      "index": 558,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.1572,
+      "code_marker_count": 0
+    },
+    {
+      "index": 559,
+      "frame_diff": 0.0056,
+      "face_count": 0,
+      "ocr_text_density": 0.1524,
+      "code_marker_count": 0
+    },
+    {
+      "index": 560,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1494,
+      "code_marker_count": 0
+    },
+    {
+      "index": 561,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.1506,
+      "code_marker_count": 0
+    },
+    {
+      "index": 562,
+      "frame_diff": 0.0056,
+      "face_count": 0,
+      "ocr_text_density": 0.1485,
+      "code_marker_count": 0
+    },
+    {
+      "index": 563,
+      "frame_diff": 0.0056,
+      "face_count": 0,
+      "ocr_text_density": 0.1621,
+      "code_marker_count": 0
+    },
+    {
+      "index": 564,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1524,
+      "code_marker_count": 0
+    },
+    {
+      "index": 565,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1669,
+      "code_marker_count": 0
+    },
+    {
+      "index": 566,
+      "frame_diff": 0.0054,
+      "face_count": 0,
+      "ocr_text_density": 0.1506,
+      "code_marker_count": 0
+    },
+    {
+      "index": 567,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.1542,
+      "code_marker_count": 0
+    },
+    {
+      "index": 568,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.1519,
+      "code_marker_count": 0
+    },
+    {
+      "index": 569,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.1589,
+      "code_marker_count": 0
+    },
+    {
+      "index": 570,
+      "frame_diff": 0.0057,
+      "face_count": 0,
+      "ocr_text_density": 0.1493,
+      "code_marker_count": 0
+    },
+    {
+      "index": 571,
+      "frame_diff": 0.0055,
+      "face_count": 0,
+      "ocr_text_density": 0.162,
+      "code_marker_count": 0
+    },
+    {
+      "index": 572,
+      "frame_diff": 0.0011,
+      "face_count": 0,
+      "ocr_text_density": 0.1475,
+      "code_marker_count": 0
+    },
+    {
+      "index": 573,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.1573,
+      "code_marker_count": 0
+    },
+    {
+      "index": 574,
+      "frame_diff": 0.0057,
+      "face_count": 0,
+      "ocr_text_density": 0.1499,
+      "code_marker_count": 0
+    },
+    {
+      "index": 575,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.1559,
+      "code_marker_count": 0
+    },
+    {
+      "index": 576,
+      "frame_diff": 0.0012,
+      "face_count": 0,
+      "ocr_text_density": 0.1499,
+      "code_marker_count": 0
+    },
+    {
+      "index": 577,
+      "frame_diff": 0.0054,
+      "face_count": 0,
+      "ocr_text_density": 0.158,
+      "code_marker_count": 0
+    },
+    {
+      "index": 578,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1536,
+      "code_marker_count": 0
+    },
+    {
+      "index": 579,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1498,
+      "code_marker_count": 0
+    },
+    {
+      "index": 580,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.1429,
+      "code_marker_count": 0
+    },
+    {
+      "index": 581,
+      "frame_diff": 0.0055,
+      "face_count": 0,
+      "ocr_text_density": 0.1621,
+      "code_marker_count": 0
+    },
+    {
+      "index": 582,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1657,
+      "code_marker_count": 0
+    },
+    {
+      "index": 583,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1551,
+      "code_marker_count": 0
+    },
+    {
+      "index": 584,
+      "frame_diff": 0.0055,
+      "face_count": 0,
+      "ocr_text_density": 0.1507,
+      "code_marker_count": 0
+    },
+    {
+      "index": 585,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.1515,
+      "code_marker_count": 0
+    },
+    {
+      "index": 586,
+      "frame_diff": 0.0003,
+      "face_count": 0,
+      "ocr_text_density": 0.1516,
+      "code_marker_count": 0
+    },
+    {
+      "index": 587,
+      "frame_diff": 0.0545,
+      "face_count": 0,
+      "ocr_text_density": 0.2404,
+      "code_marker_count": 0
+    },
+    {
+      "index": 588,
+      "frame_diff": 0.0,
+      "face_count": 0,
+      "ocr_text_density": 0.2394,
+      "code_marker_count": 0
+    },
+    {
+      "index": 589,
+      "frame_diff": 0.0011,
+      "face_count": 0,
+      "ocr_text_density": 0.231,
+      "code_marker_count": 0
+    },
+    {
+      "index": 590,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.2269,
+      "code_marker_count": 0
+    },
+    {
+      "index": 591,
+      "frame_diff": 0.0081,
+      "face_count": 0,
+      "ocr_text_density": 0.2352,
+      "code_marker_count": 0
+    },
+    {
+      "index": 592,
+      "frame_diff": 0.0011,
+      "face_count": 0,
+      "ocr_text_density": 0.2381,
+      "code_marker_count": 0
+    },
+    {
+      "index": 593,
+      "frame_diff": 0.0015,
+      "face_count": 0,
+      "ocr_text_density": 0.234,
+      "code_marker_count": 0
+    },
+    {
+      "index": 594,
+      "frame_diff": 0.0076,
+      "face_count": 0,
+      "ocr_text_density": 0.2213,
+      "code_marker_count": 0
+    },
+    {
+      "index": 595,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.2288,
+      "code_marker_count": 0
+    },
+    {
+      "index": 596,
+      "frame_diff": 0.0015,
+      "face_count": 0,
+      "ocr_text_density": 0.2337,
+      "code_marker_count": 0
+    },
+    {
+      "index": 597,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.2426,
+      "code_marker_count": 0
+    },
+    {
+      "index": 598,
+      "frame_diff": 0.0077,
+      "face_count": 0,
+      "ocr_text_density": 0.2217,
+      "code_marker_count": 0
+    },
+    {
+      "index": 599,
+      "frame_diff": 0.0077,
+      "face_count": 0,
+      "ocr_text_density": 0.2402,
+      "code_marker_count": 0
+    },
+    {
+      "index": 600,
+      "frame_diff": 0.0013,
+      "face_count": 0,
+      "ocr_text_density": 0.2497,
+      "code_marker_count": 0
+    },
+    {
+      "index": 601,
+      "frame_diff": 0.0014,
+      "face_count": 0,
+      "ocr_text_density": 0.2292,
+      "code_marker_count": 0
+    },
+    {
+      "index": 602,
+      "frame_diff": 0.0019,
+      "face_count": 0,
+      "ocr_text_density": 0.2337,
+      "code_marker_count": 0
+    },
+    {
+      "index": 603,
+      "frame_diff": 0.0077,
+      "face_count": 0,
+      "ocr_text_density": 0.2407,
+      "code_marker_count": 0
+    },
+    {
+      "index": 604,
+      "frame_diff": 0.0012,
+      "face_count": 0,
+      "ocr_text_density": 0.2386,
+      "code_marker_count": 0
+    },
+    {
+      "index": 605,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.2425,
+      "code_marker_count": 0
+    },
+    {
+      "index": 606,
+      "frame_diff": 0.0081,
+      "face_count": 0,
+      "ocr_text_density": 0.24,
+      "code_marker_count": 0
+    },
+    {
+      "index": 607,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.2277,
+      "code_marker_count": 0
+    },
+    {
+      "index": 608,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.229,
+      "code_marker_count": 0
+    },
+    {
+      "index": 609,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.2288,
+      "code_marker_count": 0
+    },
+    {
+      "index": 610,
+      "frame_diff": 0.0078,
+      "face_count": 0,
+      "ocr_text_density": 0.2353,
+      "code_marker_count": 0
+    },
+    {
+      "index": 611,
+      "frame_diff": 0.0078,
+      "face_count": 0,
+      "ocr_text_density": 0.2422,
+      "code_marker_count": 0
+    },
+    {
+      "index": 612,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.2448,
+      "code_marker_count": 0
+    },
+    {
+      "index": 613,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.2468,
+      "code_marker_count": 0
+    },
+    {
+      "index": 614,
+      "frame_diff": 0.0003,
+      "face_count": 0,
+      "ocr_text_density": 0.2356,
+      "code_marker_count": 0
+    },
+    {
+      "index": 615,
+      "frame_diff": 0.0079,
+      "face_count": 0,
+      "ocr_text_density": 0.2296,
+      "code_marker_count": 0
+    },
+    {
+      "index": 616,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.2296,
+      "code_marker_count": 0
+    },
+    {
+      "index": 617,
+      "frame_diff": 0.0337,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 618,
+      "frame_diff": 0.3174,
+      "face_count": 0,
+      "ocr_text_density": 0.235,
+      "code_marker_count": 0
+    },
+    {
+      "index": 619,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.2349,
+      "code_marker_count": 0
+    },
+    {
+      "index": 620,
+      "frame_diff": 0.004,
+      "face_count": 0,
+      "ocr_text_density": 0.2319,
+      "code_marker_count": 0
+    },
+    {
+      "index": 621,
+      "frame_diff": 0.0543,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 622,
+      "frame_diff": 0.0198,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 623,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1125,
+      "code_marker_count": 2
+    },
+    {
+      "index": 624,
+      "frame_diff": 0.0052,
+      "face_count": 0,
+      "ocr_text_density": 0.1017,
+      "code_marker_count": 1
+    },
+    {
+      "index": 625,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1059,
+      "code_marker_count": 1
+    },
+    {
+      "index": 626,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.119,
+      "code_marker_count": 2
+    },
+    {
+      "index": 627,
+      "frame_diff": 0.0012,
+      "face_count": 0,
+      "ocr_text_density": 0.0949,
+      "code_marker_count": 2
+    },
+    {
+      "index": 628,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1088,
+      "code_marker_count": 1
+    },
+    {
+      "index": 629,
+      "frame_diff": 0.0049,
+      "face_count": 0,
+      "ocr_text_density": 0.0939,
+      "code_marker_count": 2
+    },
+    {
+      "index": 630,
+      "frame_diff": 0.0051,
+      "face_count": 0,
+      "ocr_text_density": 0.1242,
+      "code_marker_count": 2
+    },
+    {
+      "index": 631,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.1135,
+      "code_marker_count": 2
+    },
+    {
+      "index": 632,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.092,
+      "code_marker_count": 2
+    },
+    {
+      "index": 633,
+      "frame_diff": 0.0049,
+      "face_count": 0,
+      "ocr_text_density": 0.1013,
+      "code_marker_count": 2
+    },
+    {
+      "index": 634,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.1093,
+      "code_marker_count": 2
+    },
+    {
+      "index": 635,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1096,
+      "code_marker_count": 2
+    },
+    {
+      "index": 636,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.086,
+      "code_marker_count": 2
+    },
+    {
+      "index": 637,
+      "frame_diff": 0.0052,
+      "face_count": 0,
+      "ocr_text_density": 0.1072,
+      "code_marker_count": 1
+    },
+    {
+      "index": 638,
+      "frame_diff": 0.0051,
+      "face_count": 0,
+      "ocr_text_density": 0.1094,
+      "code_marker_count": 2
+    },
+    {
+      "index": 639,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1077,
+      "code_marker_count": 2
+    },
+    {
+      "index": 640,
+      "frame_diff": 0.0013,
+      "face_count": 0,
+      "ocr_text_density": 0.1257,
+      "code_marker_count": 2
+    },
+    {
+      "index": 641,
+      "frame_diff": 0.0053,
+      "face_count": 0,
+      "ocr_text_density": 0.0946,
+      "code_marker_count": 2
+    },
+    {
+      "index": 642,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1185,
+      "code_marker_count": 2
+    },
+    {
+      "index": 643,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.0967,
+      "code_marker_count": 2
+    },
+    {
+      "index": 644,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1117,
+      "code_marker_count": 2
+    },
+    {
+      "index": 645,
+      "frame_diff": 0.0052,
+      "face_count": 0,
+      "ocr_text_density": 0.1195,
+      "code_marker_count": 2
+    },
+    {
+      "index": 646,
+      "frame_diff": 0.3182,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 647,
+      "frame_diff": 0.0196,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 648,
+      "frame_diff": 0.0344,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 649,
+      "frame_diff": 0.3156,
+      "face_count": 0,
+      "ocr_text_density": 0.1213,
+      "code_marker_count": 1
+    },
+    {
+      "index": 650,
+      "frame_diff": 0.0013,
+      "face_count": 0,
+      "ocr_text_density": 0.1127,
+      "code_marker_count": 1
+    },
+    {
+      "index": 651,
+      "frame_diff": 0.0058,
+      "face_count": 0,
+      "ocr_text_density": 0.1084,
+      "code_marker_count": 2
+    },
+    {
+      "index": 652,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1185,
+      "code_marker_count": 1
+    },
+    {
+      "index": 653,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.1352,
+      "code_marker_count": 2
+    },
+    {
+      "index": 654,
+      "frame_diff": 0.0053,
+      "face_count": 0,
+      "ocr_text_density": 0.1245,
+      "code_marker_count": 2
+    },
+    {
+      "index": 655,
+      "frame_diff": 0.0059,
+      "face_count": 0,
+      "ocr_text_density": 0.1359,
+      "code_marker_count": 2
+    },
+    {
+      "index": 656,
+      "frame_diff": 0.0002,
+      "face_count": 0,
+      "ocr_text_density": 0.1246,
+      "code_marker_count": 2
+    },
+    {
+      "index": 657,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1125,
+      "code_marker_count": 2
+    },
+    {
+      "index": 658,
+      "frame_diff": 0.006,
+      "face_count": 0,
+      "ocr_text_density": 0.126,
+      "code_marker_count": 2
+    },
+    {
+      "index": 659,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1266,
+      "code_marker_count": 2
+    },
+    {
+      "index": 660,
+      "frame_diff": 0.0002,
+      "face_count": 0,
+      "ocr_text_density": 0.1196,
+      "code_marker_count": 2
+    },
+    {
+      "index": 661,
+      "frame_diff": 0.0061,
+      "face_count": 0,
+      "ocr_text_density": 0.1224,
+      "code_marker_count": 2
+    },
+    {
+      "index": 662,
+      "frame_diff": 0.0003,
+      "face_count": 0,
+      "ocr_text_density": 0.1255,
+      "code_marker_count": 2
+    },
+    {
+      "index": 663,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.1342,
+      "code_marker_count": 1
+    },
+    {
+      "index": 664,
+      "frame_diff": 0.0059,
+      "face_count": 0,
+      "ocr_text_density": 0.1275,
+      "code_marker_count": 1
+    },
+    {
+      "index": 665,
+      "frame_diff": 0.0058,
+      "face_count": 0,
+      "ocr_text_density": 0.1285,
+      "code_marker_count": 1
+    },
+    {
+      "index": 666,
+      "frame_diff": 0.0,
+      "face_count": 0,
+      "ocr_text_density": 0.1121,
+      "code_marker_count": 1
+    },
+    {
+      "index": 667,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.1113,
+      "code_marker_count": 1
+    },
+    {
+      "index": 668,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1142,
+      "code_marker_count": 1
+    },
+    {
+      "index": 669,
+      "frame_diff": 0.0056,
+      "face_count": 0,
+      "ocr_text_density": 0.1165,
+      "code_marker_count": 1
+    },
+    {
+      "index": 670,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1227,
+      "code_marker_count": 1
+    },
+    {
+      "index": 671,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1264,
+      "code_marker_count": 1
+    },
+    {
+      "index": 672,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.1051,
+      "code_marker_count": 2
+    },
+    {
+      "index": 673,
+      "frame_diff": 0.0378,
+      "face_count": 0,
+      "ocr_text_density": 0.1032,
+      "code_marker_count": 2
+    },
+    {
+      "index": 674,
+      "frame_diff": 0.0065,
+      "face_count": 0,
+      "ocr_text_density": 0.1227,
+      "code_marker_count": 2
+    },
+    {
+      "index": 675,
+      "frame_diff": 0.0002,
+      "face_count": 0,
+      "ocr_text_density": 0.1229,
+      "code_marker_count": 2
+    },
+    {
+      "index": 676,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.1383,
+      "code_marker_count": 2
+    },
+    {
+      "index": 677,
+      "frame_diff": 0.0002,
+      "face_count": 0,
+      "ocr_text_density": 0.1009,
+      "code_marker_count": 2
+    },
+    {
+      "index": 678,
+      "frame_diff": 0.0053,
+      "face_count": 0,
+      "ocr_text_density": 0.1224,
+      "code_marker_count": 1
+    },
+    {
+      "index": 679,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1204,
+      "code_marker_count": 1
+    },
+    {
+      "index": 680,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.1336,
+      "code_marker_count": 2
+    },
+    {
+      "index": 681,
+      "frame_diff": 0.0053,
+      "face_count": 0,
+      "ocr_text_density": 0.1213,
+      "code_marker_count": 1
+    },
+    {
+      "index": 682,
+      "frame_diff": 0.0052,
+      "face_count": 0,
+      "ocr_text_density": 0.1052,
+      "code_marker_count": 1
+    },
+    {
+      "index": 683,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.109,
+      "code_marker_count": 1
+    },
+    {
+      "index": 684,
+      "frame_diff": 0.0055,
+      "face_count": 0,
+      "ocr_text_density": 0.0968,
+      "code_marker_count": 1
+    },
+    {
+      "index": 685,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1189,
+      "code_marker_count": 1
+    },
+    {
+      "index": 686,
+      "frame_diff": 0.0002,
+      "face_count": 0,
+      "ocr_text_density": 0.1421,
+      "code_marker_count": 1
+    },
+    {
+      "index": 687,
+      "frame_diff": 0.0291,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 688,
+      "frame_diff": 0.0277,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 689,
+      "frame_diff": 0.0204,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 690,
+      "frame_diff": 0.3126,
+      "face_count": 0,
+      "ocr_text_density": 0.1227,
+      "code_marker_count": 2
+    },
+    {
+      "index": 691,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1261,
+      "code_marker_count": 2
+    },
+    {
+      "index": 692,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1001,
+      "code_marker_count": 1
+    },
+    {
+      "index": 693,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.0687,
+      "code_marker_count": 0
+    },
+    {
+      "index": 694,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0662,
+      "code_marker_count": 0
+    },
+    {
+      "index": 695,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.076,
+      "code_marker_count": 0
+    },
+    {
+      "index": 696,
+      "frame_diff": 0.0052,
+      "face_count": 0,
+      "ocr_text_density": 0.0728,
+      "code_marker_count": 0
+    },
+    {
+      "index": 697,
+      "frame_diff": 0.0052,
+      "face_count": 0,
+      "ocr_text_density": 0.07,
+      "code_marker_count": 0
+    },
+    {
+      "index": 698,
+      "frame_diff": 0.0056,
+      "face_count": 0,
+      "ocr_text_density": 0.0717,
+      "code_marker_count": 0
+    },
+    {
+      "index": 699,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.0699,
+      "code_marker_count": 0
+    },
+    {
+      "index": 700,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0772,
+      "code_marker_count": 0
+    },
+    {
+      "index": 701,
+      "frame_diff": 0.0053,
+      "face_count": 0,
+      "ocr_text_density": 0.0571,
+      "code_marker_count": 0
+    },
+    {
+      "index": 702,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0798,
+      "code_marker_count": 0
+    },
+    {
+      "index": 703,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.0716,
+      "code_marker_count": 0
+    },
+    {
+      "index": 704,
+      "frame_diff": 0.0011,
+      "face_count": 0,
+      "ocr_text_density": 0.0808,
+      "code_marker_count": 0
+    },
+    {
+      "index": 705,
+      "frame_diff": 0.0053,
+      "face_count": 0,
+      "ocr_text_density": 0.0673,
+      "code_marker_count": 0
+    },
+    {
+      "index": 706,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.074,
+      "code_marker_count": 0
+    },
+    {
+      "index": 707,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.0943,
+      "code_marker_count": 0
+    },
+    {
+      "index": 708,
+      "frame_diff": 0.0003,
+      "face_count": 0,
+      "ocr_text_density": 0.1124,
+      "code_marker_count": 0
+    },
+    {
+      "index": 709,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1085,
+      "code_marker_count": 0
+    },
+    {
+      "index": 710,
+      "frame_diff": 0.0056,
+      "face_count": 0,
+      "ocr_text_density": 0.1096,
+      "code_marker_count": 0
+    },
+    {
+      "index": 711,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.11,
+      "code_marker_count": 0
+    },
+    {
+      "index": 712,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.1123,
+      "code_marker_count": 0
+    },
+    {
+      "index": 713,
+      "frame_diff": 0.0057,
+      "face_count": 0,
+      "ocr_text_density": 0.1037,
+      "code_marker_count": 1
+    },
+    {
+      "index": 714,
+      "frame_diff": 0.0058,
+      "face_count": 0,
+      "ocr_text_density": 0.1059,
+      "code_marker_count": 0
+    },
+    {
+      "index": 715,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.11,
+      "code_marker_count": 0
+    },
+    {
+      "index": 716,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.1249,
+      "code_marker_count": 0
+    },
+    {
+      "index": 717,
+      "frame_diff": 0.0465,
+      "face_count": 0,
+      "ocr_text_density": 0.0814,
+      "code_marker_count": 0
+    },
+    {
+      "index": 718,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0914,
+      "code_marker_count": 1
+    },
+    {
+      "index": 719,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.1183,
+      "code_marker_count": 0
+    },
+    {
+      "index": 720,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1001,
+      "code_marker_count": 0
+    },
+    {
+      "index": 721,
+      "frame_diff": 0.0058,
+      "face_count": 0,
+      "ocr_text_density": 0.0962,
+      "code_marker_count": 1
+    },
+    {
+      "index": 722,
+      "frame_diff": 0.0006,
+      "face_count": 0,
+      "ocr_text_density": 0.0961,
+      "code_marker_count": 1
+    },
+    {
+      "index": 723,
+      "frame_diff": 0.0003,
+      "face_count": 0,
+      "ocr_text_density": 0.1,
+      "code_marker_count": 1
+    },
+    {
+      "index": 724,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.0948,
+      "code_marker_count": 1
+    },
+    {
+      "index": 725,
+      "frame_diff": 0.3116,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 726,
+      "frame_diff": 0.0494,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 727,
+      "frame_diff": 0.0012,
+      "face_count": 0,
+      "ocr_text_density": 0.0985,
+      "code_marker_count": 1
+    },
+    {
+      "index": 728,
+      "frame_diff": 0.0062,
+      "face_count": 0,
+      "ocr_text_density": 0.1186,
+      "code_marker_count": 1
+    },
+    {
+      "index": 729,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.1264,
+      "code_marker_count": 1
+    },
+    {
+      "index": 730,
+      "frame_diff": 0.0057,
+      "face_count": 0,
+      "ocr_text_density": 0.1015,
+      "code_marker_count": 0
+    },
+    {
+      "index": 731,
+      "frame_diff": 0.0482,
+      "face_count": 0,
+      "ocr_text_density": 0.2073,
+      "code_marker_count": 1
+    },
+    {
+      "index": 732,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1941,
+      "code_marker_count": 1
+    },
+    {
+      "index": 733,
+      "frame_diff": 0.0063,
+      "face_count": 0,
+      "ocr_text_density": 0.1994,
+      "code_marker_count": 1
+    },
+    {
+      "index": 734,
+      "frame_diff": 0.04,
+      "face_count": 0,
+      "ocr_text_density": 0.0949,
+      "code_marker_count": 0
+    },
+    {
+      "index": 735,
+      "frame_diff": 0.0337,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 736,
+      "frame_diff": 0.0008,
+      "face_count": 0,
+      "ocr_text_density": 0.1954,
+      "code_marker_count": 1
+    },
+    {
+      "index": 737,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.1138,
+      "code_marker_count": 0
+    },
+    {
+      "index": 738,
+      "frame_diff": 0.0056,
+      "face_count": 0,
+      "ocr_text_density": 0.1155,
+      "code_marker_count": 0
+    },
+    {
+      "index": 739,
+      "frame_diff": 0.0053,
+      "face_count": 0,
+      "ocr_text_density": 0.0952,
+      "code_marker_count": 0
+    },
+    {
+      "index": 740,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.1046,
+      "code_marker_count": 0
+    },
+    {
+      "index": 741,
+      "frame_diff": 0.0035,
+      "face_count": 0,
+      "ocr_text_density": 0.0995,
+      "code_marker_count": 0
+    },
+    {
+      "index": 742,
+      "frame_diff": 0.0053,
+      "face_count": 0,
+      "ocr_text_density": 0.1073,
+      "code_marker_count": 0
+    },
+    {
+      "index": 743,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.1021,
+      "code_marker_count": 0
+    },
+    {
+      "index": 744,
+      "frame_diff": 0.0033,
+      "face_count": 0,
+      "ocr_text_density": 0.103,
+      "code_marker_count": 0
+    },
+    {
+      "index": 745,
+      "frame_diff": 0.0057,
+      "face_count": 0,
+      "ocr_text_density": 0.092,
+      "code_marker_count": 0
+    },
+    {
+      "index": 746,
+      "frame_diff": 0.0056,
+      "face_count": 0,
+      "ocr_text_density": 0.096,
+      "code_marker_count": 0
+    },
+    {
+      "index": 747,
+      "frame_diff": 0.0055,
+      "face_count": 0,
+      "ocr_text_density": 0.1023,
+      "code_marker_count": 0
+    },
+    {
+      "index": 748,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.1213,
+      "code_marker_count": 0
+    },
+    {
+      "index": 749,
+      "frame_diff": 0.0038,
+      "face_count": 0,
+      "ocr_text_density": 0.0929,
+      "code_marker_count": 0
+    },
+    {
+      "index": 750,
+      "frame_diff": 0.0056,
+      "face_count": 0,
+      "ocr_text_density": 0.1017,
+      "code_marker_count": 0
+    },
+    {
+      "index": 751,
+      "frame_diff": 0.0053,
+      "face_count": 0,
+      "ocr_text_density": 0.1041,
+      "code_marker_count": 0
+    },
+    {
+      "index": 752,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.1001,
+      "code_marker_count": 0
+    },
+    {
+      "index": 753,
+      "frame_diff": 0.1303,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 754,
+      "frame_diff": 0.3111,
+      "face_count": 0,
+      "ocr_text_density": 0.2005,
+      "code_marker_count": 1
+    },
+    {
+      "index": 755,
+      "frame_diff": 0.0012,
+      "face_count": 0,
+      "ocr_text_density": 0.2125,
+      "code_marker_count": 1
+    },
+    {
+      "index": 756,
+      "frame_diff": 0.0023,
+      "face_count": 0,
+      "ocr_text_density": 0.1984,
+      "code_marker_count": 1
+    },
+    {
+      "index": 757,
+      "frame_diff": 0.0068,
+      "face_count": 0,
+      "ocr_text_density": 0.193,
+      "code_marker_count": 1
+    },
+    {
+      "index": 758,
+      "frame_diff": 0.0014,
+      "face_count": 0,
+      "ocr_text_density": 0.1935,
+      "code_marker_count": 1
+    },
+    {
+      "index": 759,
+      "frame_diff": 0.0043,
+      "face_count": 0,
+      "ocr_text_density": 0.2006,
+      "code_marker_count": 1
+    },
+    {
+      "index": 760,
+      "frame_diff": 0.0068,
+      "face_count": 0,
+      "ocr_text_density": 0.2033,
+      "code_marker_count": 1
+    },
+    {
+      "index": 761,
+      "frame_diff": 0.0004,
+      "face_count": 0,
+      "ocr_text_density": 0.2013,
+      "code_marker_count": 1
+    },
+    {
+      "index": 762,
+      "frame_diff": 0.3082,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 763,
+      "frame_diff": 0.024,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 764,
+      "frame_diff": 0.001,
+      "face_count": 0,
+      "ocr_text_density": 0.047,
+      "code_marker_count": 0
+    },
+    {
+      "index": 765,
+      "frame_diff": 0.0058,
+      "face_count": 0,
+      "ocr_text_density": 0.0524,
+      "code_marker_count": 0
+    },
+    {
+      "index": 766,
+      "frame_diff": 0.0059,
+      "face_count": 0,
+      "ocr_text_density": 0.0556,
+      "code_marker_count": 0
+    },
+    {
+      "index": 767,
+      "frame_diff": 0.0002,
+      "face_count": 0,
+      "ocr_text_density": 0.0449,
+      "code_marker_count": 0
+    },
+    {
+      "index": 768,
+      "frame_diff": 0.0032,
+      "face_count": 0,
+      "ocr_text_density": 0.0471,
+      "code_marker_count": 0
+    },
+    {
+      "index": 769,
+      "frame_diff": 0.0031,
+      "face_count": 0,
+      "ocr_text_density": 0.0472,
+      "code_marker_count": 0
+    },
+    {
+      "index": 770,
+      "frame_diff": 0.0061,
+      "face_count": 0,
+      "ocr_text_density": 0.0475,
+      "code_marker_count": 0
+    },
+    {
+      "index": 771,
+      "frame_diff": 0.0058,
+      "face_count": 0,
+      "ocr_text_density": 0.047,
+      "code_marker_count": 0
+    },
+    {
+      "index": 772,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.0582,
+      "code_marker_count": 0
+    },
+    {
+      "index": 773,
+      "frame_diff": 0.0039,
+      "face_count": 0,
+      "ocr_text_density": 0.0578,
+      "code_marker_count": 0
+    },
+    {
+      "index": 774,
+      "frame_diff": 0.0061,
+      "face_count": 0,
+      "ocr_text_density": 0.0575,
+      "code_marker_count": 0
+    },
+    {
+      "index": 775,
+      "frame_diff": 0.0009,
+      "face_count": 0,
+      "ocr_text_density": 0.0579,
+      "code_marker_count": 0
+    },
+    {
+      "index": 776,
+      "frame_diff": 0.004,
+      "face_count": 0,
+      "ocr_text_density": 0.0477,
+      "code_marker_count": 0
+    },
+    {
+      "index": 777,
+      "frame_diff": 0.006,
+      "face_count": 0,
+      "ocr_text_density": 0.0521,
+      "code_marker_count": 0
+    },
+    {
+      "index": 778,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.0592,
+      "code_marker_count": 0
+    },
+    {
+      "index": 779,
+      "frame_diff": 0.0035,
+      "face_count": 0,
+      "ocr_text_density": 0.0591,
+      "code_marker_count": 0
+    },
+    {
+      "index": 780,
+      "frame_diff": 0.0035,
+      "face_count": 0,
+      "ocr_text_density": 0.0523,
+      "code_marker_count": 0
+    },
+    {
+      "index": 781,
+      "frame_diff": 0.0036,
+      "face_count": 0,
+      "ocr_text_density": 0.05,
+      "code_marker_count": 0
+    },
+    {
+      "index": 782,
+      "frame_diff": 0.0059,
+      "face_count": 0,
+      "ocr_text_density": 0.0446,
+      "code_marker_count": 0
+    },
+    {
+      "index": 783,
+      "frame_diff": 0.0003,
+      "face_count": 0,
+      "ocr_text_density": 0.0455,
+      "code_marker_count": 0
+    },
+    {
+      "index": 784,
+      "frame_diff": 0.0025,
+      "face_count": 0,
+      "ocr_text_density": 0.0434,
+      "code_marker_count": 0
+    },
+    {
+      "index": 785,
+      "frame_diff": 0.0021,
+      "face_count": 0,
+      "ocr_text_density": 0.0541,
+      "code_marker_count": 0
+    },
+    {
+      "index": 786,
+      "frame_diff": 0.3159,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 787,
+      "frame_diff": 0.0246,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 788,
+      "frame_diff": 0.0247,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 789,
+      "frame_diff": 0.0688,
+      "face_count": 1,
+      "ocr_text_density": 0.0334,
+      "code_marker_count": 0
+    },
+    {
+      "index": 790,
+      "frame_diff": 0.0391,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 791,
+      "frame_diff": 0.022,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 792,
+      "frame_diff": 0.0219,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 793,
+      "frame_diff": 0.0179,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 794,
+      "frame_diff": 0.024,
+      "face_count": 1,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 795,
+      "frame_diff": 0.0132,
+      "face_count": 0,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 796,
+      "frame_diff": 0.0857,
+      "face_count": 0,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 797,
+      "frame_diff": 0.3534,
+      "face_count": 0,
+      "ocr_text_density": 0.2269,
+      "code_marker_count": 0
+    },
+    {
+      "index": 798,
+      "frame_diff": 0.0001,
+      "face_count": 0,
+      "ocr_text_density": 0.2812,
+      "code_marker_count": 0
+    },
+    {
+      "index": 799,
+      "frame_diff": 0.0106,
+      "face_count": 0,
+      "ocr_text_density": 0.039,
+      "code_marker_count": 0
+    },
+    {
+      "index": 800,
+      "frame_diff": 0.0005,
+      "face_count": 0,
+      "ocr_text_density": 0.0591,
+      "code_marker_count": 0
+    },
+    {
+      "index": 801,
+      "frame_diff": 0.0007,
+      "face_count": 0,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    },
+    {
+      "index": 802,
+      "frame_diff": 0.0,
+      "face_count": 0,
+      "ocr_text_density": 0.0,
+      "code_marker_count": 0
+    }
+  ]
+}

@@ -1,0 +1,530 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:25.820
+So, this course on Software Engineering. Now, we will just have a brief introduction to various
+
+00:00:25.820 --> 00:00:32.100
+issues in Software Engineering, motivation, why we need to study this course, what are
+
+00:00:32.100 --> 00:00:42.810
+the benefits that will accrue from here and so on. So, let us get started. First is about
+
+00:00:42.810 --> 00:00:54.000
+myself, I will be the instructor for this course. My name is Rajip Mal, completed all my
+
+00:00:54.000 --> 00:01:01.920
+education bachelors, masters, PhD from the Indian Institute of Science, Bangalore that
+
+00:01:01.920 --> 00:01:12.420
+is quite some years back. That is the institute where I graduated and then worked few years
+
+00:01:12.420 --> 00:01:23.220
+with Motorola India and then have been with IIT Kharagpur since 1994 and currently a professor
+
+00:01:23.220 --> 00:01:29.940
+at the CAC department. So, that is the institute Indian Institute of Technology Kharagpur.
+
+00:01:35.710 --> 00:01:45.530
+To start with any course, we need to know what the course deals with, we will also do the
+
+00:01:45.530 --> 00:01:53.030
+same thing, we will start with the basic definition of Software Engineering. If somebody asks that
+
+00:01:53.030 --> 00:02:04.270
+what is Software Engineering, we should be able to answer based on this. The simplest
+
+00:02:04.270 --> 00:02:11.190
+answer, what is Software Engineering is an engineering approach to develop software.
+
+00:02:13.680 --> 00:02:20.080
+But then the question arises that what exactly is the engineering approach to develop software,
+
+00:02:21.160 --> 00:02:31.520
+how is it different from traditional approach to develop software. To appreciate this distinction
+
+00:02:31.520 --> 00:02:39.820
+between the engineering approach to develop software and traditional novice approach to
+
+00:02:39.820 --> 00:02:45.880
+develop software, we will just look at a analogy with a building construction.
+
+00:02:46.680 --> 00:02:57.650
+Let us say you want to construct a building, what would you do? First let us consider that you
+
+00:02:57.650 --> 00:03:05.870
+want to build a small wall like this, that you will be very easily be able to do from your
+
+00:03:05.870 --> 00:03:16.620
+basic intuition that you need some bricks, cement, color and so on and you will succeed
+
+00:03:16.620 --> 00:03:24.460
+in developing a good small wall like this. But let us say you are now asked to build
+
+00:03:24.460 --> 00:03:36.590
+a large building like this having 30, 40 floors a complex. Your basic intuition about construction
+
+00:03:36.590 --> 00:03:46.050
+will not work here. If you actually get started building this with your basic intuition building
+
+00:03:46.690 --> 00:03:58.880
+may collapse, it will never complete, it will be of poor quality and so on. The same
+
+00:03:58.880 --> 00:04:07.040
+thing is with respect to software. If somebody is asked to write a small program let us
+
+00:04:07.040 --> 00:04:14.780
+say 10, 20, 50 lines of code, he will be able to do it based on his basic intuition. But
+
+00:04:14.780 --> 00:04:26.910
+let us consider developing a software which is 100,000 lines of code. Now if you wants
+
+00:04:26.910 --> 00:04:37.170
+to extend the intuition and develop a large software, again you will face the same fate
+
+00:04:37.170 --> 00:04:44.870
+as constructing a large building from the basic intuition. The engineering approach to develop
+
+00:04:44.870 --> 00:05:00.550
+software lets one to develop software based on some techniques and tools. So, we will look
+
+00:05:00.550 --> 00:05:08.980
+at those techniques and tools as part of the software engineering. So, an alternate
+
+00:05:08.980 --> 00:05:17.980
+definition of software engineering can be that it is a collection of past experience which has
+
+00:05:17.980 --> 00:05:26.380
+resulted in various techniques for development of large software, methodologies for development
+
+00:05:26.380 --> 00:05:41.840
+and some guidelines and tools. As we proceed with this course we will be clear about what
+
+00:05:41.840 --> 00:05:47.180
+are the techniques, what are the methodologies and guidelines, tools and so on.
+
+00:05:49.370 --> 00:05:57.460
+Now let us look at the IEEE definition of what software engineering is. The IEEE definition
+
+00:05:57.460 --> 00:06:05.860
+is software engineering is the application of systematic, disciplined, quantifiable approach
+
+00:06:05.860 --> 00:06:14.780
+to the development, operation and maintenance of software and that is the application of
+
+00:06:14.780 --> 00:06:21.940
+engineering to software. So, the IEEE definition also says that software
+
+00:06:21.940 --> 00:06:29.850
+engineering is the engineering approach to develop software and it further elaborates
+
+00:06:29.850 --> 00:06:46.230
+this by saying application of systematic, disciplined, quantifiable approach and all
+
+00:06:46.230 --> 00:06:57.960
+developed from experience of programmers over the last several years. To motivate the need
+
+00:06:57.960 --> 00:07:05.240
+for software engineering why it is important for the software developers to learn software
+
+00:07:05.240 --> 00:07:13.080
+engineering let us just understand what the software crisis is because everybody says
+
+00:07:13.080 --> 00:07:27.320
+that there is a software crisis. The software crisis the symptoms are that they fail to meet
+
+00:07:27.320 --> 00:07:40.260
+user requirements. Software is delivered and then the users feel that it is not what they
+
+00:07:40.260 --> 00:07:48.940
+wanted. Software is expensive, much more expensive than hardware and every year the
+
+00:07:48.940 --> 00:07:55.840
+difference between software and hardware prices have been increasing. It is difficult to make
+
+00:07:55.840 --> 00:08:04.260
+any changes to the software to debug. If there is a problem reported it takes long time to
+
+00:08:04.260 --> 00:08:15.630
+correct it sometimes the bugs cannot be corrected. Difficult to enhance add new features it
+
+00:08:15.630 --> 00:08:26.640
+is very usual for software to be delivered late and use resources non-optimally. For most
+
+00:08:26.640 --> 00:08:36.620
+of the software that you order or develop as part of project have these symptoms that
+
+00:08:36.620 --> 00:08:43.880
+they rarely meet the user requirements turn out to be very expensive, difficult to alter
+
+00:08:43.880 --> 00:08:49.080
+debug and enhance delivered late and use resources non-optimally.
+
+00:08:51.620 --> 00:09:04.400
+Just to explain how expensive is the software compared to hardware over the years if we compute
+
+00:09:05.440 --> 00:09:12.740
+how much a company spent on hardware and how much it spent on software. If we plot the
+
+00:09:12.740 --> 00:09:20.740
+ratio we will see that 1960s are and so the hardware was the major expense millions of
+
+00:09:20.740 --> 00:09:30.350
+dollars of hardware and then software was very inexpensive compared to the hardware.
+
+00:09:32.990 --> 00:09:49.230
+But then the hardware costs have dropped dramatically and software costs have risen. So now the
+
+00:09:49.230 --> 00:09:58.340
+hardware cost divided by software cost is almost nominal approaching 0. Just to give a feel just
+
+00:09:58.840 --> 00:10:05.200
+let us say that a laptop or test of costs 45000 rupees and let us say some software let us
+
+00:10:05.200 --> 00:10:14.280
+say rational. It costs 3 lakh rupees if it is not locked and floating license cost 6
+
+00:10:14.280 --> 00:10:25.100
+lakh rupees which runs on a desktop. So just see that the cost of one software is many times
+
+00:10:25.100 --> 00:10:30.420
+the cost of the hardware and then we need to run various types of software on the hardware.
+
+00:10:32.100 --> 00:10:43.180
+So now the software is much more expensive. Companies spend much more on software than
+
+00:10:43.180 --> 00:10:50.780
+on hardware. But then the question arises is that why is that the cost of hardware has dropped so
+
+00:10:50.780 --> 00:10:58.800
+much but then software has not really the cost has not dropped and actually increased.
+
+00:11:01.680 --> 00:11:09.140
+There are many reasons for this. We will examine the reasons but before that we just
+
+00:11:09.140 --> 00:11:18.980
+want to ask a very fundamental question that if hardware is so good it is delivered in time
+
+00:11:19.820 --> 00:11:29.620
+extremely reliable inexpensive then why not have everything in hardware because after all
+
+00:11:29.620 --> 00:11:38.220
+whatever can be done by software can also be done by hardware. There must be some reasons
+
+00:11:39.100 --> 00:11:45.560
+otherwise people would only be developing hardware and using it and there would be no software.
+
+00:11:46.860 --> 00:11:56.040
+Let us look at the reasons why software is indispensable and actually the use of software
+
+00:11:56.040 --> 00:12:07.700
+is increasing as compared to hardware. There are 2 or 3 major virtues or strong points of
+
+00:12:07.700 --> 00:12:23.360
+software which actually make it a preferred solution compared to hardware. One of the most
+
+00:12:23.360 --> 00:12:35.020
+important thing is that developing software is easy, faster and also if you find anything
+
+00:12:35.020 --> 00:12:46.060
+to be changed you can easily change it hardware development is a long drawn process. If it is
+
+00:12:46.060 --> 00:12:53.440
+a VLSI chip that you are considering then it is multi-year starting from requirements
+
+00:12:53.440 --> 00:13:03.160
+to fabrication it is a long process. And if you later want to make a small change
+
+00:13:03.420 --> 00:13:12.340
+again you have to make that long process change requirements change design mask and so on fabricate
+
+00:13:12.340 --> 00:13:22.360
+test. So, that is a long duration several years compared to software making a fix a
+
+00:13:22.360 --> 00:13:33.680
+small change may be just a few days and also software consumes no space weight or power.
+
+00:13:35.280 --> 00:13:44.040
+If you want to develop something that works in software let us say rational enterprise suit
+
+00:13:44.040 --> 00:13:50.940
+let us consider any software or maybe let us say the word processing software let us consider
+
+00:13:50.940 --> 00:14:02.120
+Microsoft word. It is possible to have this developed in hardware, but then the size of
+
+00:14:02.120 --> 00:14:09.840
+the hardware will be enormous. It will be extremely expensive and it will consume huge power,
+
+00:14:11.140 --> 00:14:18.180
+but then if you as software it just resides in your hard disk and just gets executed
+
+00:14:18.180 --> 00:14:24.640
+feature by feature and that is the reason why software is the preferred mode of solution for
+
+00:14:24.640 --> 00:14:39.700
+applications as compared to hardware. But then one thing we need to appreciate that software
+
+00:14:39.700 --> 00:14:50.220
+is becoming more complex and as we change software it also the complexity increases.
+
+00:14:55.850 --> 00:15:01.950
+But then what is the basic reason? We are trying to answer some fundamental questions here and as
+
+00:15:01.950 --> 00:15:09.090
+we proceed these questions are actually the basics based on which the other techniques are built up
+
+00:15:09.750 --> 00:15:18.170
+must understand these basic principles that the more complex is the software the harder it
+
+00:15:18.170 --> 00:15:24.910
+is to change and also if we change it the complexity of the software further increases.
+
+00:15:25.590 --> 00:15:35.990
+What is the reason? The main reason is that to change a software we must first understand it
+
+00:15:36.850 --> 00:15:42.510
+without understanding how it works where exactly we have to change we cannot change it
+
+00:15:44.140 --> 00:15:52.020
+and if it is very complex software will take lot of effort to understand and then make the
+
+00:15:52.020 --> 00:16:05.970
+change and also if we make a small change it changes the basic underlying design modularity
+
+00:16:05.970 --> 00:16:14.830
+and so on as we will see later that every change actually degrades the structure of
+
+00:16:14.830 --> 00:16:21.350
+the software and makes it much more complex for somebody else to understand as changes
+
+00:16:21.350 --> 00:16:27.790
+keep on happening to a software may be due to additional features to be supported may be
+
+00:16:27.790 --> 00:16:37.130
+to correct bugs and so on the software becomes more complex becomes much more difficult for
+
+00:16:37.130 --> 00:16:44.630
+somebody to understand and make further changes. This is one of the very basic principles as
+
+00:16:44.630 --> 00:16:52.790
+we proceed will need these principles and it will help us understand why some techniques
+
+00:16:53.290 --> 00:17:00.760
+are the way that they are. Now let us look at the large number of projects
+
+00:17:00.760 --> 00:17:12.440
+that are done what is the statistics about the success rate of the projects. The success
+
+00:17:12.440 --> 00:17:29.580
+rate is very surprising that only a quarter is successful just 28% is successful a quarter
+
+00:17:29.580 --> 00:17:39.940
+is never sees the light of the day they are cancelled and half of the projects they
+
+00:17:41.760 --> 00:17:55.090
+are delayed delivered run delivered late and also the cost overrun the price increases.
+
+00:17:57.040 --> 00:18:04.120
+But then why is it that only quarter of the software is actually successful half of the
+
+00:18:04.120 --> 00:18:09.960
+software is challenged and another quarter is actually failure they are to be cancelled.
+
+00:18:09.960 --> 00:18:30.400
+Let us try to understand what is the reason the reasons are that now there is a demand
+
+00:18:30.400 --> 00:18:39.400
+for more and more software. The hardware is simpler and the software is much more complex
+
+00:18:40.370 --> 00:18:45.440
+due to obvious reason that any complexity in the application has to be done in the software
+
+00:18:46.270 --> 00:18:52.500
+because otherwise hardware will be very difficult to develop it will be large it will consume
+
+00:18:52.500 --> 00:18:59.880
+lots of power volume and so on. So, the problem sizes of software is increasing
+
+00:18:59.880 --> 00:19:11.700
+year after year poor project management because these are after all entirely manual efforts
+
+00:19:12.400 --> 00:19:16.560
+the programmers have to develop they have to write the code test and so on.
+
+00:19:18.450 --> 00:19:25.430
+But surprisingly one of the major reasons that has been identified for the software crisis
+
+00:19:25.890 --> 00:19:34.080
+is the lack of adequate training in software engineering. The developers they are not
+
+00:19:34.900 --> 00:19:42.260
+very convergent with the latest software engineering techniques. When they graduate
+
+00:19:42.260 --> 00:19:48.080
+from a college they do not have proper background in software engineering they have studied
+
+00:19:48.580 --> 00:19:58.020
+some things that that do not really help in developing good quality software. There is a
+
+00:19:58.020 --> 00:20:04.140
+increasing skill shortage as far as software development software engineering principles
+
+00:20:04.140 --> 00:20:11.040
+are concerned and even with software engineering the skill improvements are not really very
+
+00:20:11.040 --> 00:20:19.880
+drastic it improves moderately very slowly over the years compared to the way the
+
+00:20:19.880 --> 00:20:24.940
+problem sizes are increasing the productivity development has not really kept pace.
+
+00:20:31.380 --> 00:20:40.500
+Let us just try to understand another very basic aspect might have heard that somebody
+
+00:20:40.500 --> 00:20:49.040
+saying programming is an art, but then we said software engineering and there is
+
+00:20:49.040 --> 00:20:55.620
+an engineering approach to develop software. So, is software an art or engineering let
+
+00:20:55.620 --> 00:21:05.230
+us just try to understand the issues concerned. Now let us look at how the technology develops
+
+00:21:05.850 --> 00:21:14.990
+for any specific domain whether it is steel making whether it is paper making let us see
+
+00:21:14.990 --> 00:21:24.400
+how the technology develops. If we look at the technology development pattern initially
+
+00:21:24.400 --> 00:21:34.760
+somebody comes up with some idea and then follows it comes up with solution. Let us say paper
+
+00:21:34.760 --> 00:21:43.840
+making was known to some people in China and only they could develop good quality paper.
+
+00:21:44.360 --> 00:21:51.350
+The others tried they do not know how to make paper possibly came up with some very bad
+
+00:21:51.350 --> 00:22:03.670
+quality paper and they thought that paper making is an art. And artist as you know that if you ask
+
+00:22:03.670 --> 00:22:11.970
+somebody that how come he paints so well let us say an artist is a draws a nice drawing and you
+
+00:22:11.970 --> 00:22:17.450
+ask him how did you come up with such a nice drawing you will say that ok it just comes
+
+00:22:17.450 --> 00:22:24.760
+to me I just draw it like that. Same thing with technology initially they say that we
+
+00:22:24.760 --> 00:22:33.140
+just know how to make it, but then slowly the art form in technology development graduates
+
+00:22:33.140 --> 00:22:43.960
+to a craft form. In a craft form there are some techniques they can identify how they make it
+
+00:22:44.780 --> 00:22:50.520
+and they do not share it actually with lot of people they share with only their apprentice.
+
+00:22:51.860 --> 00:22:59.380
+It is basically a hidden secret let us say paper making or steel making they would not like to
+
+00:22:59.380 --> 00:23:10.610
+share with many people they know the techniques, but they do not share it and there are craftsmen
+
+00:23:11.250 --> 00:23:18.250
+who know how to do it. So, they are basically the apprentices and then they also share with
+
+00:23:18.250 --> 00:23:29.090
+very less number of people. And slowly it transits to an engineering approach. In engineering the
+
+00:23:29.090 --> 00:23:39.720
+techniques are all investigated the past experience is analyzed and scientific basis is given to
+
+00:23:39.720 --> 00:23:51.680
+these techniques. These are well documented and this can be studied by anybody these are open
+
+00:23:51.680 --> 00:24:01.240
+knowledge and then it has graduated into engineering. But what about program writing? Yes it is same
+
+00:24:01.240 --> 00:24:11.100
+pattern the program writing has followed. In the 1960s there were good programmers and there were
+
+00:24:11.100 --> 00:24:21.840
+bad programmers. The good programmers they just wrote good programs and they do not know
+
+00:24:21.840 --> 00:24:27.260
+how they write good programs, but then they just wrote good programs and the other programmers
+
+00:24:27.260 --> 00:24:33.620
+they just struggled and could not come up with good programs. But then slowly the techniques
+
+00:24:33.620 --> 00:24:42.530
+that they were using in writing the good programs were identified and shared with few and that
+
+00:24:42.530 --> 00:24:48.990
+was the craft form that good programmers could train other programmers who can become
+
+00:24:48.990 --> 00:24:54.950
+good programmers. But later the techniques that they were using for writing good programs
+
+00:24:54.950 --> 00:25:04.010
+were all systematically investigated scientific basis given to them and published in the literature
+
+00:25:04.550 --> 00:25:10.370
+in the book form and so on. So, that anybody can read and then it has graduated to an
+
+00:25:10.370 --> 00:25:19.610
+engineering firm where somebody can read what are required to really develop good software
+
+00:25:19.610 --> 00:25:27.810
+large software the basic principles one need to know and so on and our focus is looking
+
+00:25:27.810 --> 00:25:38.440
+at this software engineering techniques. If we look at the engineering approach to
+
+00:25:38.440 --> 00:25:47.260
+develop software there is heavy use of past experience the past experience is systematically
+
+00:25:47.260 --> 00:26:01.500
+arranged and for this experience investigation has been made theoretical basis and quantifiable
+
+00:26:04.160 --> 00:26:10.900
+techniques quantitative techniques have been provided, but then for many of the techniques
+
+00:26:10.900 --> 00:26:20.620
+that has come from experience quantitative techniques have not been provided could not
+
+00:26:20.620 --> 00:26:32.010
+be provided and these are just thumb rules. There is tradeoff between alternatives because
+
+00:26:32.010 --> 00:26:40.520
+when we design a software we have to look at various kinds of tradeoff the complexity
+
+00:26:40.520 --> 00:26:49.610
+of the software the cost and so on. And because of the tradeoff between alternatives
+
+00:26:49.910 --> 00:27:01.120
+we have a pragmatic approach to cost effectiveness. Just to summarize our discussion software engineering
+
+00:27:01.120 --> 00:27:08.880
+is actually an engineering approach to develop software and this engineering approach has
+
+00:27:08.880 --> 00:27:18.220
+developed from past experience of large number of programmers. Over the years the programmers
+
+00:27:18.220 --> 00:27:25.360
+have innovated new ways of looking at how to write program good programs and so on. All
+
+00:27:25.360 --> 00:27:33.760
+these techniques have been systematically organized so that somebody can go through these topics
+
+00:27:34.260 --> 00:27:44.360
+and be a good programmer be able to write large programs in a team and so on. So, that
+
+00:27:44.360 --> 00:27:52.140
+is the focus of our discussion and over the next few lectures we will discuss various
+
+00:27:52.140 --> 00:27:57.580
+techniques issues and so on. Thank you.
+

@@ -1,0 +1,2900 @@
+WEBVTT
+
+00:00:48.820 --> 00:00:56.360
+course of IIT Kharagpur and I teach in the computer science engineering department. I
+
+00:00:56.360 --> 00:01:03.380
+will be taking this course on computer networks. So, we will be having about 40 lectures in
+
+00:01:03.980 --> 00:01:10.100
+the series. So, today we will start with an introductory lecture which is about the
+
+00:01:10.680 --> 00:01:18.120
+emergence of computer networks at brief history and a little bit about the protocols and
+
+00:01:18.120 --> 00:01:23.060
+reference models which is an abstract view of computer networks.
+
+00:01:26.810 --> 00:01:34.710
+The textbooks for the course will be these three computer networking, a top down approach
+
+00:01:34.710 --> 00:01:42.430
+featuring internet that is one by Kurov, data and computer communication by William
+
+00:01:42.430 --> 00:01:50.910
+Stolling and computer networks by A.S. Stanenbaum. So, some of the material that we will be covering
+
+00:01:50.910 --> 00:01:56.190
+here verbally as well as in the slide will be from these books.
+
+00:02:01.460 --> 00:02:09.260
+Now the first question is what is a computer network? So, a computer network is a number
+
+00:02:09.260 --> 00:02:16.060
+of computers also known as nodes connected by some communication lines. So, we have these
+
+00:02:16.060 --> 00:02:23.320
+computers which are connected by some communication lines. So, two computers connected to the
+
+00:02:23.320 --> 00:02:29.200
+network can communicate with each other through other nodes if they are not directly connected
+
+00:02:29.700 --> 00:02:36.660
+which means that computer does not have to be connected to all the other computers in
+
+00:02:36.660 --> 00:02:42.840
+the network in order to communicate with any of them. It may be an indirect communication
+
+00:02:42.840 --> 00:02:51.800
+via some other computer and the other point is that these nodes they are computers, but
+
+00:02:51.800 --> 00:02:57.860
+some of them are not computers, some of them are sort of network devices. Now there are
+
+00:02:57.860 --> 00:03:04.720
+various kinds of network devices like switches, routers, etcetera. So, they could also, so
+
+00:03:04.720 --> 00:03:09.360
+they facilitate the communication and running of this entire network. So, they are also
+
+00:03:09.360 --> 00:03:17.440
+taken as nodes in the network. So, finally we have some of the nodes, some nodes which
+
+00:03:17.440 --> 00:03:24.380
+may be either computers or there may be network devices like switches and routers and there
+
+00:03:24.380 --> 00:03:34.820
+is a communication between them. This communication of course can be of various types we will
+
+00:03:34.820 --> 00:03:42.420
+come to that presently. So, the computers can communicate with each other. Now what do they
+
+00:03:42.420 --> 00:03:48.300
+communicate? They exchange information between different computers. Now this information could
+
+00:03:48.300 --> 00:03:56.860
+be of any kind of information. They could be data used by a program or they could be
+
+00:03:57.680 --> 00:04:03.880
+some program itself or it could be any kind of information really. So, that is one
+
+00:04:03.880 --> 00:04:11.240
+of the basic and major use of computer network. Of course, there are other specialized uses
+
+00:04:11.240 --> 00:04:18.500
+of computer network. For example, interconnected small computers can replace a large computer.
+
+00:04:18.640 --> 00:04:25.960
+For example, you have a very large computation to perform and so further either you need
+
+00:04:25.960 --> 00:04:30.680
+a very powerful and very large computer which may be costly. The other option could
+
+00:04:30.680 --> 00:04:37.280
+be that you break up this work into very small pieces and assign them to the small computer.
+
+00:04:37.840 --> 00:04:45.180
+So, the small computers sort of do the computation on that small chunk of the problem and then
+
+00:04:45.180 --> 00:04:53.600
+they communicate with each other to form the final solution. Then the other uses computer
+
+00:04:54.120 --> 00:05:01.440
+network which is coming into Vogue very much these days is that you can use this network
+
+00:05:01.440 --> 00:05:09.240
+as a communication tool. We know the very basic say for example, you send emails to I mean
+
+00:05:09.240 --> 00:05:14.500
+you can send emails to almost anybody these days and that is really a very cheap and
+
+00:05:14.500 --> 00:05:20.000
+very fast mode of communication. Secondly, the computer network could also be used
+
+00:05:20.000 --> 00:05:28.640
+for direct communication like say you could have communicate through voice over a computer
+
+00:05:28.640 --> 00:05:34.180
+network, you can communicate through video over a computer network. So, all these different
+
+00:05:34.980 --> 00:05:40.900
+communication is converging into this computer network and as a matter of fact nowadays when
+
+00:05:40.900 --> 00:05:47.100
+we talk about the network we do not look upon it just as a computer network as a
+
+00:05:47.100 --> 00:05:54.900
+matter of fact it is the bedrock on which say all this computing communication all
+
+00:05:54.900 --> 00:06:02.820
+these are converging and then of course, you have some application which are necessarily
+
+00:06:03.480 --> 00:06:10.980
+of distributed nature. For example, let us say railway reservation system now obviously
+
+00:06:10.980 --> 00:06:18.220
+even if you had a large computer to handle all the railway reservations in the world
+
+00:06:18.220 --> 00:06:23.760
+in one place, but you would not want all the people to go to one place and sort
+
+00:06:23.760 --> 00:06:30.380
+of form a huge queue. So, you want to distribute this functionality that means, for that of booking
+
+00:06:30.380 --> 00:06:36.440
+ticket all over the country and that is what we do. So, these are sort of examples of
+
+00:06:36.440 --> 00:06:40.440
+distributed system. So, this is a distributed reservation system. Similarly, there could
+
+00:06:40.440 --> 00:06:44.940
+be other kinds of distributed system, there could be distributed databases and all
+
+00:06:44.940 --> 00:06:50.420
+kinds of applications. So, that is the other application of networks.
+
+00:06:51.920 --> 00:07:07.000
+Now, a quick look at the history of this computers first and then we will sort of focus on computer
+
+00:07:07.000 --> 00:07:14.000
+network. Well, in 1948 we have the first commercial computer installed it was an
+
+00:07:14.000 --> 00:07:23.360
+Univac that was a big company once upon a time and then in 1958 the first US communication
+
+00:07:23.360 --> 00:07:30.680
+satellite became operational. So, you see the network always has these two components
+
+00:07:30.680 --> 00:07:34.900
+one is that you have to have this computer and then you have to have this communication
+
+00:07:34.900 --> 00:07:42.760
+channel and satellite communication is of course, one of an important medium of communication
+
+00:07:43.580 --> 00:07:51.700
+then in 1964 we have an airline reservation system which uses some kind of a packet switching
+
+00:07:51.700 --> 00:08:01.160
+network it was proposed by the RAND Corporation and in 1969 ARPANET the first packet switching
+
+00:08:01.160 --> 00:08:08.200
+network began its operation. This was actually a watershed event as we will see this had
+
+00:08:08.200 --> 00:08:12.540
+very far reaching impact on the way computer networks developed.
+
+00:08:15.200 --> 00:08:21.860
+Then in 1971 we have the first computer chip previous computers were made through very low
+
+00:08:21.860 --> 00:08:29.800
+level gates and all, but the first 4 bit small computer chip with 2300 transistors and they
+
+00:08:29.800 --> 00:08:38.660
+became available in 1971. In 1972 Ethernet specifications were formulated. Now, this
+
+00:08:38.660 --> 00:08:47.840
+Ethernet is one protocol so to say. So, we will talk about protocols and different kinds
+
+00:08:47.840 --> 00:08:54.080
+of protocols and Ethernet remains one of the most important network protocols that we
+
+00:08:54.080 --> 00:09:03.360
+use. So, that was first formulated in 1972. In 1974 IBM introduced its own version of
+
+00:09:03.360 --> 00:09:12.720
+network in SNA. Then in 1975 Altair 8800 first commercial microcomputer that was sold as a
+
+00:09:12.720 --> 00:09:20.480
+kit. So, we are actually looking at the very brief history of computers in general. So, in
+
+00:09:20.480 --> 00:09:27.100
+1975 we had the Paul Allen and Bill Gates getting together which eventually formed the
+
+00:09:28.040 --> 00:09:36.640
+Microsoft. We all know about Microsoft. 1976 Woznik and Job built Apple one. So, Apple also
+
+00:09:36.640 --> 00:09:45.540
+had a lot of contribution to make in computers in various aspects and the window system that
+
+00:09:45.540 --> 00:09:51.580
+we see today almost everywhere. It was basically it started from Apple computers.
+
+00:09:52.380 --> 00:10:00.820
+In 1979 we had the VC calc as the first commercial spreadsheet. So, that is a very popular application
+
+00:10:00.820 --> 00:10:10.520
+of computer these days. In 1981 IBM introduced IBM PC on with one floppy drive. Later on they
+
+00:10:10.520 --> 00:10:19.200
+changed it with a drive and a hard drive also. And in 1983 TCP IP. So, this TCP IP
+
+00:10:19.200 --> 00:10:28.080
+is another network protocol that we are using. Actually we use both Ethernet and TCP IP. So,
+
+00:10:28.100 --> 00:10:32.780
+we actually we have different protocols which are running on the network we require and
+
+00:10:32.780 --> 00:10:38.280
+how these different protocols are arranged and how they are used that I will cover today
+
+00:10:38.280 --> 00:10:42.640
+in the second part of the lecture. So, this TCP IP is another important protocol
+
+00:10:42.640 --> 00:10:48.080
+that is still very much different today that became the official protocol of ARPANET.
+
+00:10:48.080 --> 00:10:55.600
+Remember ARPANET we talked about that is a network which was set up in USA under DRDO and
+
+00:10:55.600 --> 00:11:01.900
+which had a very far reaching impact on the way network developed. In 1984 Apple introduced
+
+00:11:01.900 --> 00:11:13.860
+GUI with Apple Macintosh and 1986 we see the first laptop PCs 88. So, IBM gives a multitasking
+
+00:11:13.860 --> 00:11:22.900
+OS for the PCs. 1989 Microsoft releases Windows which is another multitasking system in that
+
+00:11:22.900 --> 00:11:31.700
+is the Microsoft version. 1989 NSF that is the National Sound Foundation of USA. It replaces
+
+00:11:31.700 --> 00:11:40.200
+ARPANET as internet backbone and then WWW was invented by CERN physicist Tim Berners-Lee
+
+00:11:40.200 --> 00:11:52.580
+in 1991. So, this advent of WWW that means the worldwide web really made the network very
+
+00:11:52.580 --> 00:11:59.280
+very popular. So, there was this kind of positive feedback going on as it became more popular
+
+00:11:59.280 --> 00:12:05.000
+more and more people jumped into it as people showed their interest. So, commercial companies
+
+00:12:05.000 --> 00:12:10.320
+also then became interested because there would be a market for something in networks
+
+00:12:10.320 --> 00:12:15.160
+that they do and when the commercial companies developed something naturally it became more
+
+00:12:15.160 --> 00:12:20.540
+easier to use the network they had more functionalities. So, more people became interested. So, that
+
+00:12:20.540 --> 00:12:26.920
+was the positive loop which made this I mean actually then the growth of network
+
+00:12:26.920 --> 00:12:31.320
+in the past decade that means in the 90s let us say has been absolutely phenomenal
+
+00:12:32.100 --> 00:12:39.020
+and if the basic so called killer app that is the killer application the application which
+
+00:12:39.020 --> 00:12:49.490
+attracted so many people to network was this WWW which was invented in 1991. In 1992 Mosaic
+
+00:12:49.490 --> 00:12:53.930
+released first GUI web browser. So, that was a web browser the Netscape became the
+
+00:12:53.930 --> 00:13:00.390
+popular web browser. Microsoft of course had its own version of Microsoft Explorer.
+
+00:13:01.110 --> 00:13:08.790
+So, that was another browser and then it all built up into some kind of a frenzy and in
+
+00:13:08.790 --> 00:13:14.590
+2000 we had this dot com so called dot com meltdown that means I mean people became
+
+00:13:14.590 --> 00:13:20.570
+absolutely frenzied about the growth of computer and of course such a frenzy cannot
+
+00:13:20.570 --> 00:13:26.150
+go on forever. So, it has to come to a halt. So, it did in 2000, but the development
+
+00:13:26.150 --> 00:13:35.130
+of networks and its utility and important remains. So, now let us go to a brief history
+
+00:13:35.130 --> 00:13:40.250
+more focused on the network itself. So, that part so we were in general talking about the
+
+00:13:40.250 --> 00:13:46.790
+computing scene in general. So, in mid 1960s USA department of defense
+
+00:13:46.790 --> 00:13:52.650
+wanted a command and control network that could survive a nuclear attack. Now, if
+
+00:13:52.650 --> 00:13:57.370
+something had to survive a nuclear attack then you have to distribute it. So, that
+
+00:13:57.370 --> 00:14:02.710
+was one strong reason that we wanted distributed system and if you have a distributed
+
+00:14:03.230 --> 00:14:10.590
+system this system must be able to communicate. So, that was the seed of this project. The
+
+00:14:10.590 --> 00:14:16.610
+subnet should consist of some Honeywell 12kw intermediate message processors. So, there
+
+00:14:16.610 --> 00:14:23.350
+are some kind of early network devices you might say which are connected by 64 kbps
+
+00:14:23.350 --> 00:14:30.250
+line. These IMPs or intermediate message processors were connected to the various computers and
+
+00:14:30.250 --> 00:14:38.910
+IMPs themselves were connected by telephone lines from telephone companies. Later the
+
+00:14:38.910 --> 00:14:44.490
+IMP software was changed to terminal interface processors which allowed the connection
+
+00:14:44.490 --> 00:14:50.570
+of terminals. In 1970s NSF set up a machine connected to the ARPANET to which other
+
+00:14:50.570 --> 00:14:57.550
+universities could develop and connect. Now, this became very important in the sense that
+
+00:14:57.550 --> 00:15:03.810
+many people were interested in this. So, NSF upgraded their system in various ways and
+
+00:15:03.810 --> 00:15:09.850
+by mid 1980s NSF built a new backbone to connect with supercomputing centers to some
+
+00:15:09.850 --> 00:15:22.000
+regional network. So, this backbone was upgraded to 448 kbps and then to 1.5 mbps
+
+00:15:22.000 --> 00:15:27.100
+and once this fiber backbone was there communication was really fast. So, it allowed network
+
+00:15:27.100 --> 00:15:32.680
+connection to hundreds of thousands of universities, research labs, libraries, museums etcetera.
+
+00:15:33.820 --> 00:15:40.060
+So, as the growth continued now commercial houses began to take notice and to join
+
+00:15:40.060 --> 00:15:53.360
+the decentralized model began to take hold. And as I mean as I just described earlier
+
+00:15:53.360 --> 00:15:59.260
+that as the commercial people joined. So, there was a lot of innovation by a lot of
+
+00:15:59.260 --> 00:16:08.360
+people. One of the major driving force in the computing network in the past decades
+
+00:16:08.360 --> 00:16:14.560
+or even now may be has been the role of so called startup companies. By startup
+
+00:16:14.560 --> 00:16:20.320
+companies that means that some young engineers may be or some young people they had
+
+00:16:20.320 --> 00:16:27.420
+some very bright idea which they developed to a certain extent. And if when that was sort
+
+00:16:27.420 --> 00:16:33.160
+of proven then some big company would possibly buy up their company or give them money to
+
+00:16:33.160 --> 00:16:38.740
+get access to this kind of technology. And a lot of people and there were so many
+
+00:16:38.740 --> 00:16:43.920
+success stories that a lot of people got interested in it and when a lot of people
+
+00:16:43.920 --> 00:16:49.620
+think about a problem naturally there is a lot of innovation. So, that is how computer
+
+00:16:49.620 --> 00:16:56.560
+networks had an explosive growth in the whole of 90s and even in the this century there
+
+00:16:56.560 --> 00:17:05.140
+is a 21st century I mean the growth is going on. Although the frenzy in the stock
+
+00:17:05.140 --> 00:17:11.260
+exchanges etcetera about this dot com company that sort of crashed in 2000, but the
+
+00:17:11.260 --> 00:17:16.920
+growth in the field of networks and it used in various walks of life that is
+
+00:17:16.920 --> 00:17:25.270
+continuing. With this brief historical background now let us come to the networks
+
+00:17:25.270 --> 00:17:33.430
+and some kind of a structure or some kind of an abstract view of this computer network.
+
+00:17:35.390 --> 00:17:39.810
+We have I have already mentioned that computer network would be a number of nodes
+
+00:17:40.450 --> 00:17:48.070
+and nodes could be computer or nodes could be network devices also which are
+
+00:17:48.070 --> 00:17:55.030
+connected by some communication lines. Now, when I say that of course sometimes things
+
+00:17:55.030 --> 00:18:02.430
+are not so simple sometimes you do have a line between two nodes let us say. So, giving us
+
+00:18:02.430 --> 00:18:07.630
+the so called point to point communication that means one node A is communicating directly
+
+00:18:07.630 --> 00:18:14.850
+to one another node B where A and B are connected by a direct line let us say it
+
+00:18:14.850 --> 00:18:18.670
+could be a physically some copper line or some fiber line etcetera.
+
+00:18:20.210 --> 00:18:25.490
+So, but this point to point connection could be so in the simplest case they are actually
+
+00:18:25.490 --> 00:18:32.730
+dedicated, but in the dedicated case also we have some different cases for example you
+
+00:18:32.730 --> 00:18:38.750
+could have a simplex communication by simplex communication we mean that communication can
+
+00:18:38.750 --> 00:18:45.730
+go in only one direction in that line. It could be half duplex by half duplex that means
+
+00:18:45.730 --> 00:18:51.410
+that is the communication could go both ways either way either from A to B or from B to
+
+00:18:51.410 --> 00:18:58.670
+A, but only in one direction at a time and full duplex of course that A and B can communicate
+
+00:18:58.670 --> 00:19:04.650
+with each other simultaneously there is parallely at the same time. So, that means
+
+00:19:04.650 --> 00:19:10.570
+there is communication from A to B and from B to A at the same time. So, these are the
+
+00:19:10.570 --> 00:19:20.310
+different kinds of dedicated line then if the nodes are not say computer some network
+
+00:19:20.310 --> 00:19:27.570
+devices specifically if they are sort of multiplexer then we could share a point to
+
+00:19:27.570 --> 00:19:34.810
+point medium that means there is one line from A to B, but A is connected to a lot of other
+
+00:19:34.810 --> 00:19:40.550
+nodes let us say A 1, A 2 to A n and B is connected again to a lot of other nodes say
+
+00:19:40.550 --> 00:19:46.290
+B 1, B 2 to B n and they could all these A i's and B i's they could all communicate
+
+00:19:46.290 --> 00:19:53.230
+through this one single line which is between A and B. So, this we will see later how
+
+00:19:53.230 --> 00:20:01.810
+such a thing can be done. So, this business of sharing a link over time or whatever even
+
+00:20:01.810 --> 00:20:07.370
+parallely sometimes that is possible. So, sharing this link by multiple people that is called
+
+00:20:07.370 --> 00:20:12.950
+multiplexing. So, these are the different kinds of point to point links, but point
+
+00:20:12.950 --> 00:20:17.050
+to point links are not the only things we have. For example, we could have a broadcast
+
+00:20:17.050 --> 00:20:26.450
+kind of link. For example, if you have a satellite communication, a satellite sort of
+
+00:20:26.450 --> 00:20:33.410
+throws its signal all over the country or may be all over the region. So, that is something
+
+00:20:33.410 --> 00:20:37.030
+which is being broadcast everything. So, you cannot really put it down as a point
+
+00:20:37.030 --> 00:20:43.110
+to point link between something, but of course you could use that shared medium
+
+00:20:43.110 --> 00:20:51.610
+and a broadcast in some way to make temporary point to point links or your application may
+
+00:20:51.610 --> 00:20:56.470
+be such that you want to broadcast something. For example, we broadcast TV signal similarly
+
+00:20:56.470 --> 00:21:02.210
+there are things you might want to broadcast all over. So, there could be. So, this broadcast
+
+00:21:02.210 --> 00:21:08.290
+medium again could be dedicated to some user or it could be shared that means it is
+
+00:21:08.290 --> 00:21:14.490
+shared between multiple user. So, there the term that is used is multiple access a medium
+
+00:21:14.490 --> 00:21:21.250
+to which different users are connected at different point and it is a broadcast kind of medium.
+
+00:21:22.030 --> 00:21:27.530
+So, in a distributed fashion they have some protocol of deciding how to share this because
+
+00:21:27.870 --> 00:21:33.090
+if it is in the same place you can the business of sharing become somewhat easier.
+
+00:21:33.090 --> 00:21:38.810
+So, you can multiply it, but if it is if the nodes themselves are distributed over this broadcast
+
+00:21:38.810 --> 00:21:43.870
+medium physically distributed that is. So, you will have to have some kind of protocol
+
+00:21:43.870 --> 00:21:49.950
+so that is called multiple access. So, you can have a shared broadcast medium also that
+
+00:21:49.950 --> 00:21:57.270
+is also quite common. And then finally we have this something
+
+00:21:57.270 --> 00:22:03.010
+which is in between broadcasting and point to point which is called multicasting. This
+
+00:22:03.010 --> 00:22:09.490
+means that say we have a group I have say some friends and I want to send some things
+
+00:22:09.490 --> 00:22:14.110
+which not to one particular friend, but to my group of friends, but to know others.
+
+00:22:14.370 --> 00:22:20.130
+So, multicasting is basically giving a I mean communicating to a specified group.
+
+00:22:26.500 --> 00:22:34.880
+So, using such communication link we have this computer network and the network themselves
+
+00:22:34.880 --> 00:22:42.760
+are I mean quite often popularly they are sort of divided into local area network, metropolitan
+
+00:22:42.760 --> 00:22:51.560
+area network and wide area network. Local area network is just that which means that
+
+00:22:51.560 --> 00:22:59.220
+it is local that means it is sort of it is sort of limited to may be one building or may
+
+00:22:59.220 --> 00:23:04.580
+be to a small group of building. So, it is its size is small that is one thing.
+
+00:23:04.760 --> 00:23:10.700
+There are some other things about local area network which makes the issues of local
+
+00:23:10.700 --> 00:23:15.560
+area network somewhat different from a larger network. So, and that is that the local
+
+00:23:15.560 --> 00:23:21.340
+area network would usually be privately owned. Now, how does ownership come into picture?
+
+00:23:21.880 --> 00:23:28.920
+Ownership comes into picture because if you have a same owner for the entire network then
+
+00:23:28.920 --> 00:23:34.620
+you can have the same policy. So, which is not the case if it is a very
+
+00:23:34.620 --> 00:23:38.220
+wide area network, we will come to that wide area network that is the other case
+
+00:23:38.220 --> 00:23:43.200
+where there may be I mean the different parts of I mean there are various nodes
+
+00:23:43.200 --> 00:23:48.180
+which are connected to this wide area network. The nodes may belong to very different
+
+00:23:48.180 --> 00:23:52.280
+people and they may have very different ideas about what should be done and about
+
+00:23:52.280 --> 00:23:57.900
+all their policies. So, that makes that wide area networking somewhat different
+
+00:23:57.900 --> 00:24:04.180
+from local area networking and in between we have this metropolitan area
+
+00:24:04.180 --> 00:24:09.680
+network. Metropolitan area means say a network which is spread over a community
+
+00:24:09.680 --> 00:24:16.500
+or maybe even a city. So, there are bigger sizes than local area network and there
+
+00:24:16.500 --> 00:24:21.940
+one of the issues which is very important is the access issues which means that how
+
+00:24:21.940 --> 00:24:28.820
+do you connect for example, you want to make an entire community network. So, how
+
+00:24:28.820 --> 00:24:33.240
+do you connect each one of them because they are geographically more distributed
+
+00:24:33.240 --> 00:24:37.600
+than a local area network. Local area network maybe you would like to sometimes
+
+00:24:37.600 --> 00:24:42.820
+you would use welders sometimes you would just simply draw weld and the cost will not
+
+00:24:42.820 --> 00:24:48.420
+be very prohibitive, but in local area how we connect the people that becomes an
+
+00:24:48.420 --> 00:24:53.040
+issue. So, that is the access issue and we have talked about the wide area network.
+
+00:24:53.220 --> 00:24:58.960
+Wide area networks are costly that means naturally when you are talking
+
+00:24:58.960 --> 00:25:05.780
+about communicating over maybe hundreds or thousands of kilometers. The communication
+
+00:25:05.780 --> 00:25:10.720
+is costly the cost has come down and that is another thing which is historically
+
+00:25:10.720 --> 00:25:16.780
+happened as more and more people got interested in the network technology
+
+00:25:16.780 --> 00:25:20.240
+developed that is one side of the issue the other side of the issue is that the
+
+00:25:20.240 --> 00:25:24.620
+volumes went up which means that the number of people who used the
+
+00:25:24.620 --> 00:25:30.320
+network. So, the as the volumes went up the cost went down. So, the technology
+
+00:25:30.320 --> 00:25:35.840
+improved on in one direction. So, that was one input into bringing down the cost
+
+00:25:35.840 --> 00:25:42.040
+and the other issue was that more and more people started using it. So, the volume
+
+00:25:42.040 --> 00:25:47.040
+to a particular company let us say developing something in the network area.
+
+00:25:47.300 --> 00:25:51.600
+So, that went up. So, they could make it make things cheaper and as the
+
+00:25:51.600 --> 00:25:55.060
+whole thing becomes cheaper and cheaper more and more people wanted to get
+
+00:25:55.060 --> 00:26:01.280
+to join the network. But wide area network cost is still an issue and of course,
+
+00:26:01.340 --> 00:26:06.420
+wide area network as I said that it is a it may connect various local area
+
+00:26:06.420 --> 00:26:10.040
+networks. So, it is a network of networks or internet
+
+00:26:10.040 --> 00:26:16.720
+work in or I mean as we know it very popularly that is the internet.
+
+00:26:19.980 --> 00:26:31.820
+Now, let us look at abstract idea about the abstract idea about the network in
+
+00:26:31.820 --> 00:26:39.240
+general. So, in the formal framework we have what are known as protocols. Now,
+
+00:26:39.300 --> 00:26:43.860
+why do we need protocols in network? We need protocols in network because
+
+00:26:44.550 --> 00:26:50.360
+network by its very nature they may connect various different people and as I
+
+00:26:50.360 --> 00:26:55.340
+said various different people may have very different ideas about how things are
+
+00:26:55.340 --> 00:27:01.040
+to be done. Now, if people have very different ideas about how things are
+
+00:27:01.040 --> 00:27:07.840
+to be done then, but they have to agree on some common basis otherwise they cannot
+
+00:27:07.840 --> 00:27:14.660
+communicate and this common basis is the protocol. So, there are actually there are
+
+00:27:14.660 --> 00:27:19.900
+number of protocols which are used in any network and we will be getting into that,
+
+00:27:21.200 --> 00:27:25.580
+but so you and I may have very different ideas about how some particular
+
+00:27:25.580 --> 00:27:29.480
+thing may be done. So, I may be doing this in a certain way you may be doing
+
+00:27:29.480 --> 00:27:33.340
+the same thing may be in a completely different way, but if you want to
+
+00:27:33.340 --> 00:27:40.840
+communicate we have to agree on some minimum protocol that is the protocol. So,
+
+00:27:40.840 --> 00:27:46.100
+these protocols are the building blocks of this network architecture. So, each
+
+00:27:46.100 --> 00:27:50.500
+protocol object has two different interfaces. One is the service interface
+
+00:27:51.160 --> 00:27:56.080
+that defines operations on this protocol and peer to peer interface which
+
+00:27:56.080 --> 00:28:01.060
+defines messages exchanged with peer which means that for example, any
+
+00:28:01.060 --> 00:28:09.460
+protocol so a protocol is let us say between peer. So, if in this diagram so these
+
+00:28:09.460 --> 00:28:16.180
+allies so there are so these two boxes allies they are the these two allies
+
+00:28:16.180 --> 00:28:23.300
+they are the different I mean peers and they communicate with each other through
+
+00:28:23.300 --> 00:28:28.180
+this peer interface that is the protocol. Now, this protocol is supposed to
+
+00:28:28.180 --> 00:28:31.640
+achieve something is supposed to do something for this it requires something
+
+00:28:31.640 --> 00:28:38.000
+may be from some other so called layer. So, actually we have a layered
+
+00:28:38.000 --> 00:28:43.080
+architecture and I am coming to that in the next slide. So, how this protocol is
+
+00:28:43.080 --> 00:28:47.720
+to be invoked etcetera for this we have a service interface and between the
+
+00:28:47.720 --> 00:28:57.480
+peers we have a peer interface. So, this is a so we have all these different
+
+00:28:57.480 --> 00:29:02.000
+layers. So, we have this n plus 1th layer and nth layer and n minus 1th layer in
+
+00:29:02.000 --> 00:29:07.660
+general. So, actually these how they are to be layered about that also there are
+
+00:29:07.660 --> 00:29:12.720
+some standards and we will just look at two of them at this. So, let us say for
+
+00:29:12.720 --> 00:29:18.200
+example, this networking business is broken up into I mean whatever the
+
+00:29:18.200 --> 00:29:23.000
+jobs you have to do for achieving for smooth functioning of computer
+
+00:29:23.000 --> 00:29:29.000
+network we break them up into different functionalities and these
+
+00:29:29.000 --> 00:29:34.520
+functionalities are in different layers. Now, this is all in one place that
+
+00:29:34.520 --> 00:29:39.180
+means in one node similarly another node which is connected to the network
+
+00:29:39.180 --> 00:29:46.040
+will have its own layers and this at the same level let us say n and n
+
+00:29:46.040 --> 00:29:52.940
+here their peers. So, there will be a protocol between this n and n whereas
+
+00:29:52.940 --> 00:29:56.460
+there will be a service interface between the n plus 1th layer and nth layer
+
+00:29:56.460 --> 00:30:00.140
+similarly there may be a service interface between the nth layer and n minus
+
+00:30:00.140 --> 00:30:06.460
+1th layer and so on. So, let us see what they are like. So, as I said most
+
+00:30:06.460 --> 00:30:12.500
+networks are organized as series of layer the task of each layer is to
+
+00:30:12.500 --> 00:30:16.500
+give some service to the upper layer. So, that is the task of each
+
+00:30:16.500 --> 00:30:20.600
+layer and any layer maintains a virtual connection with the
+
+00:30:20.600 --> 00:30:25.180
+corresponding layer in a peer. So, this virtual connection any layer which
+
+00:30:25.180 --> 00:30:29.740
+maintains a virtual connection this virtual connection is used for
+
+00:30:29.740 --> 00:30:35.360
+running the peer to peer protocol whereas this is the service
+
+00:30:35.360 --> 00:30:39.340
+interface the task of each layer. So, each layer performs certain tasks
+
+00:30:39.940 --> 00:30:44.220
+of this whole networking business all right. So, each layer performs some task.
+
+00:30:44.840 --> 00:30:51.620
+So, this task is a service to the upper layer similarly for performing this
+
+00:30:51.620 --> 00:30:55.860
+task it may break it up into some sub task and some sub task may be
+
+00:30:55.860 --> 00:30:59.680
+delegated to a lower layer. So, this layer would have its own
+
+00:30:59.680 --> 00:31:03.900
+service interface to the lower layer whereas the its own task which
+
+00:31:03.900 --> 00:31:06.640
+are whatever I mean assuming that the sub task is done by the
+
+00:31:06.640 --> 00:31:10.260
+lower layer its own task is performed at the peer to peer level
+
+00:31:10.260 --> 00:31:19.060
+using the corresponding protocol. So, there is peer to peer protocol
+
+00:31:19.060 --> 00:31:22.060
+running between any two corresponding and communicating layer the
+
+00:31:22.720 --> 00:31:25.840
+interface between the layers in the same node is well defined.
+
+00:31:26.220 --> 00:31:29.120
+Well, another point is that the for this peer to peer protocol
+
+00:31:29.120 --> 00:31:34.320
+mostly they go through what is what I have just now called a
+
+00:31:34.320 --> 00:31:38.660
+virtual connection that means. So, what is a virtual connection
+
+00:31:38.660 --> 00:31:45.020
+virtual connection means that well physically physical connection we
+
+00:31:45.020 --> 00:31:47.840
+understand let us say two computers are connected by a wire.
+
+00:31:48.420 --> 00:31:55.240
+Now, as I mentioned earlier two computers may not I mean it is not
+
+00:31:55.240 --> 00:31:59.260
+necessary that the two computers need to be directly connected in
+
+00:31:59.260 --> 00:32:02.800
+order to communicate it may be an indirect connection also that
+
+00:32:02.800 --> 00:32:06.100
+means it is going through from one computer to another to
+
+00:32:06.100 --> 00:32:09.260
+another then it is hopping from node to node and then it reaches
+
+00:32:09.260 --> 00:32:14.600
+finally its destination. So, there is no direct physical
+
+00:32:14.600 --> 00:32:18.920
+communication although let us say when you are searching the
+
+00:32:18.920 --> 00:32:21.760
+internet let us say which is a very common experience these days.
+
+00:32:22.200 --> 00:32:26.080
+So, you have connected to some computer which may be in the
+
+00:32:26.080 --> 00:32:30.280
+opposite part of the globe. So, to you it appears that you
+
+00:32:30.280 --> 00:32:33.460
+are sort of directly connected to that computer. So, whenever
+
+00:32:33.460 --> 00:32:36.320
+you are clicking something over here something happens which
+
+00:32:36.320 --> 00:32:39.620
+something happens means of course something happens. So, that
+
+00:32:39.620 --> 00:32:44.600
+you are clicking of the mouse somehow that gets communicated to that
+
+00:32:44.600 --> 00:32:48.540
+remote server remote web server and it may be the page
+
+00:32:48.540 --> 00:32:52.620
+changes or something. So, there is there seem to be a direct
+
+00:32:52.620 --> 00:32:55.780
+communication, but this communication is only virtual the
+
+00:32:55.780 --> 00:32:58.700
+physical communication is only at the lowest layer where
+
+00:32:58.700 --> 00:33:02.540
+physically something may be communicated by connected by
+
+00:33:03.780 --> 00:33:06.760
+piece of wire or it may be connected by fiber optic
+
+00:33:06.760 --> 00:33:09.760
+links or it may be connected by may be satellite links
+
+00:33:09.760 --> 00:33:12.440
+whatever it is. So, that is a that is the physical
+
+00:33:12.440 --> 00:33:16.800
+connection. So, that is why this for running all these
+
+00:33:16.800 --> 00:33:20.120
+protocols these peers need to communicate and this
+
+00:33:20.120 --> 00:33:28.050
+communicate is through a virtual connection. Now, the
+
+00:33:28.050 --> 00:33:32.450
+implementation of each layer in each node is transparent to
+
+00:33:32.450 --> 00:33:39.350
+other nodes. Now, actually this is the main point of having
+
+00:33:39.350 --> 00:33:42.150
+this layered architecture that the implementation of each
+
+00:33:42.150 --> 00:33:49.090
+layer in each node is transparent to the to the
+
+00:33:49.090 --> 00:33:55.310
+other to other nodes. As I said that I may want to do this
+
+00:33:55.310 --> 00:33:59.510
+one particular sub task in some some particular way I
+
+00:33:59.510 --> 00:34:02.650
+means let us say some company X and then some company Y
+
+00:34:02.650 --> 00:34:05.930
+wants to do the same thing may be in a different way.
+
+00:34:06.430 --> 00:34:11.330
+Now, you need not stop any of them. So, long as they agree
+
+00:34:11.330 --> 00:34:16.450
+on the protocol so long as they agree on the service
+
+00:34:17.130 --> 00:34:20.390
+service layers as what is the service interface between
+
+00:34:20.390 --> 00:34:23.970
+the different layers because upper layer service may be
+
+00:34:23.970 --> 00:34:28.130
+given by some product of some company whereas the
+
+00:34:28.130 --> 00:34:33.370
+lower layer of the lower layer is may be developed by
+
+00:34:33.370 --> 00:34:36.490
+some other company. Now, once again if they can
+
+00:34:36.490 --> 00:34:39.710
+decide on the interface between these two layers it
+
+00:34:39.710 --> 00:34:42.170
+is all right. Now, then they are very free to do
+
+00:34:42.170 --> 00:34:46.210
+it in their own way the same thing applies to the
+
+00:34:46.210 --> 00:34:50.350
+peers. For example, say two nodes say two
+
+00:34:50.350 --> 00:34:52.650
+particular layers in two particular nodes may be
+
+00:34:52.650 --> 00:34:54.970
+peer and let us say these nodes are computer themselves.
+
+00:34:56.030 --> 00:34:59.170
+Now, one may be a may be an IBM machine another may be
+
+00:34:59.170 --> 00:35:02.530
+a Sun machine or something and they may have they
+
+00:35:02.530 --> 00:35:06.470
+will have different operating system they will
+
+00:35:06.470 --> 00:35:09.790
+have different processors etcetera. But so far as
+
+00:35:09.790 --> 00:35:13.190
+the peer to peer protocol is concerned they agree.
+
+00:35:13.710 --> 00:35:15.970
+So, these are the messages I will send and then
+
+00:35:15.970 --> 00:35:18.610
+if I am expecting this kind of answer and he
+
+00:35:18.610 --> 00:35:20.490
+said these are the kinds of messages that I
+
+00:35:20.490 --> 00:35:22.290
+will accept and this kind of answer will be
+
+00:35:22.290 --> 00:35:24.230
+given etcetera etcetera. So, that is how a
+
+00:35:24.230 --> 00:35:27.070
+protocol goes. So, so long as they agree on this
+
+00:35:27.070 --> 00:35:29.990
+protocol these two companies are free to develop
+
+00:35:29.990 --> 00:35:32.550
+their product in their own way and when you
+
+00:35:32.550 --> 00:35:35.310
+allow that naturally people can innovate
+
+00:35:35.310 --> 00:35:37.270
+people can put in different things. So, long
+
+00:35:37.270 --> 00:35:41.270
+as you are conforming to the standard of the
+
+00:35:41.270 --> 00:35:44.110
+protocol and the interfaces etcetera you
+
+00:35:44.110 --> 00:35:46.550
+can develop your own thing in a in your
+
+00:35:46.550 --> 00:35:49.010
+own way and that is very good for the
+
+00:35:49.010 --> 00:35:51.710
+development of the program of the of this
+
+00:35:51.710 --> 00:35:54.070
+entire network and the other point is that
+
+00:35:54.070 --> 00:35:59.230
+this is one way of abstracting out all
+
+00:35:59.230 --> 00:36:03.110
+these unnecessary details from the for
+
+00:36:03.110 --> 00:36:06.350
+example, any of these networking I mean
+
+00:36:06.350 --> 00:36:08.030
+say network operating system in a
+
+00:36:08.030 --> 00:36:11.010
+computer or a networking device they may
+
+00:36:11.010 --> 00:36:14.230
+be very very complex indeed and some of
+
+00:36:14.230 --> 00:36:16.630
+the complexity is special to the
+
+00:36:16.630 --> 00:36:20.710
+implementer one implementer has decided to
+
+00:36:20.710 --> 00:36:22.410
+implement something in a some particular
+
+00:36:22.410 --> 00:36:24.290
+way and that will have a whole lot of details
+
+00:36:24.290 --> 00:36:26.590
+now we are not really interested in that
+
+00:36:26.590 --> 00:36:28.410
+one we want to abstract out of that.
+
+00:36:29.050 --> 00:36:31.730
+So, we concentrate on these protocols and
+
+00:36:32.150 --> 00:36:34.250
+the interfaces and the functionalities.
+
+00:36:34.530 --> 00:36:36.390
+So, that gives us a fairly general
+
+00:36:36.390 --> 00:36:40.630
+picture about the entire networking I
+
+00:36:41.390 --> 00:36:43.550
+mean how networking is done and then
+
+00:36:43.550 --> 00:36:46.950
+if you are really if you go into business
+
+00:36:46.950 --> 00:36:48.850
+of developing some of these modules
+
+00:36:48.850 --> 00:36:51.550
+yourself then you have to go into some
+
+00:36:52.290 --> 00:36:54.550
+more nuts and bolts about how this service
+
+00:36:55.250 --> 00:37:03.080
+can be given. Now, the protocols between
+
+00:37:03.080 --> 00:37:05.140
+peer layers can be changed if the peers
+
+00:37:05.140 --> 00:37:06.860
+all agree naturally if you are changing
+
+00:37:06.860 --> 00:37:08.380
+the protocol all the peers have to
+
+00:37:08.380 --> 00:37:09.960
+agree otherwise the communication will
+
+00:37:09.960 --> 00:37:12.620
+break down. However, it need not be
+
+00:37:12.620 --> 00:37:14.240
+referred to other layer. So, that is
+
+00:37:14.240 --> 00:37:15.640
+another good thing about layering
+
+00:37:15.640 --> 00:37:16.920
+that means when I am changing
+
+00:37:16.920 --> 00:37:20.000
+something in this layer I may so long
+
+00:37:20.000 --> 00:37:21.820
+as I am not changing anything in the
+
+00:37:21.820 --> 00:37:24.220
+interface between the upper layer and
+
+00:37:24.220 --> 00:37:26.240
+this my layer or between myself and the
+
+00:37:26.240 --> 00:37:27.900
+lower layer so long as I am not changing
+
+00:37:27.900 --> 00:37:29.900
+anything in the interface internally
+
+00:37:29.900 --> 00:37:31.900
+whatever change I make will not matter.
+
+00:37:32.120 --> 00:37:34.280
+So, that is the good point of this
+
+00:37:34.280 --> 00:37:36.740
+layering and the service definition
+
+00:37:36.740 --> 00:37:38.800
+tells what the layer does and nothing
+
+00:37:38.800 --> 00:37:40.920
+else. That means nothing else means
+
+00:37:40.920 --> 00:37:42.920
+nothing about the specifics of
+
+00:37:42.920 --> 00:37:44.980
+implementation which may vary from
+
+00:37:44.980 --> 00:37:49.040
+one vendor to another vendor. The
+
+00:37:49.040 --> 00:37:51.180
+interface tells the process above it
+
+00:37:51.180 --> 00:37:53.760
+how to access it, it specifies what the
+
+00:37:53.760 --> 00:37:56.240
+parameters are and what results can be
+
+00:37:56.240 --> 00:38:02.280
+expected. So, we have two I mentioned
+
+00:38:02.280 --> 00:38:05.860
+here three models so three layered
+
+00:38:05.860 --> 00:38:08.380
+models the most famous is the OSI
+
+00:38:08.380 --> 00:38:09.880
+reference model which we will look
+
+00:38:09.880 --> 00:38:12.120
+into some of the details and then
+
+00:38:12.120 --> 00:38:14.020
+TCPIT reference model which is most
+
+00:38:14.020 --> 00:38:16.900
+widely used actually. So, OSI reference
+
+00:38:16.900 --> 00:38:19.400
+model I mean some part of it is
+
+00:38:19.400 --> 00:38:21.540
+somewhat theoretical because many
+
+00:38:21.540 --> 00:38:24.820
+people do not really do that and
+
+00:38:24.820 --> 00:38:26.860
+they do not consider that part to be
+
+00:38:26.860 --> 00:38:29.300
+very important. But TCPIT reference
+
+00:38:29.300 --> 00:38:30.700
+model is something which is almost
+
+00:38:30.700 --> 00:38:34.660
+ubiquitous and for ATM so the ATM is
+
+00:38:34.660 --> 00:38:37.140
+one networking technology which is
+
+00:38:37.140 --> 00:38:38.680
+rather complete technology I mentioned
+
+00:38:38.680 --> 00:38:41.160
+here this here just as an example
+
+00:38:41.160 --> 00:38:42.860
+so that is another kind of reference
+
+00:38:42.860 --> 00:38:44.260
+model. So, there are all kinds of
+
+00:38:44.260 --> 00:38:48.080
+different reference models sometimes
+
+00:38:48.080 --> 00:38:50.780
+these models so these models are
+
+00:38:50.780 --> 00:38:52.500
+basically a description of the
+
+00:38:52.500 --> 00:38:53.820
+different layers that are there
+
+00:38:53.820 --> 00:38:56.380
+and then naturally if you talk about
+
+00:38:56.380 --> 00:38:57.800
+the layers of what that layer is
+
+00:38:57.800 --> 00:39:00.580
+supposed to do that is what you say
+
+00:39:00.580 --> 00:39:02.120
+and then how it is to be
+
+00:39:02.120 --> 00:39:03.700
+interface with the layer above and
+
+00:39:03.700 --> 00:39:06.560
+the layer below. So, since this is
+
+00:39:06.560 --> 00:39:08.280
+just a number of layers one on top
+
+00:39:08.280 --> 00:39:09.660
+of the other they are also referred
+
+00:39:09.660 --> 00:39:11.600
+to as stacks sometimes. So, we call
+
+00:39:11.600 --> 00:39:14.140
+about the TCPIT stack and OSI stack
+
+00:39:14.140 --> 00:39:16.540
+and so on ATM stack. So, other
+
+00:39:16.540 --> 00:39:18.460
+protocol stacks exist and new ones
+
+00:39:18.460 --> 00:39:21.240
+are possible however to the extent
+
+00:39:21.240 --> 00:39:22.680
+to which a particular model is
+
+00:39:22.680 --> 00:39:24.760
+universally accepted is the key
+
+00:39:24.760 --> 00:39:26.820
+to its success as I said that a
+
+00:39:26.820 --> 00:39:28.300
+lot of thought went into OSI
+
+00:39:28.300 --> 00:39:30.260
+reference model but in practice
+
+00:39:30.260 --> 00:39:33.300
+TCPIT became much more prevalent.
+
+00:39:36.040 --> 00:39:38.780
+So, let us see the OSI reference
+
+00:39:38.780 --> 00:39:42.860
+model this has seven layers and
+
+00:39:42.860 --> 00:39:44.860
+these layers are application layer
+
+00:39:45.640 --> 00:39:47.880
+the presentation layer the
+
+00:39:47.880 --> 00:39:49.700
+session layer the network layer
+
+00:39:49.700 --> 00:39:51.440
+the data link layer and the physical
+
+00:39:51.440 --> 00:39:54.480
+layer which means that in order
+
+00:39:54.480 --> 00:39:58.600
+that people can communicate
+
+00:39:58.600 --> 00:40:00.620
+over this network in a very
+
+00:40:00.620 --> 00:40:03.040
+seamless manner the all the
+
+00:40:03.040 --> 00:40:05.880
+jobs that are involved that
+
+00:40:05.880 --> 00:40:08.180
+have been broken down into seven
+
+00:40:08.180 --> 00:40:09.460
+parts and they are the different
+
+00:40:09.460 --> 00:40:12.040
+seven layers. So, application layer
+
+00:40:12.040 --> 00:40:13.420
+is something and then presentation
+
+00:40:13.420 --> 00:40:15.460
+session network data link and physical
+
+00:40:15.460 --> 00:40:17.780
+layer. So, each layer has some kind
+
+00:40:17.780 --> 00:40:19.580
+of functionality and all these
+
+00:40:19.580 --> 00:40:21.760
+functionalities together gives you
+
+00:40:21.760 --> 00:40:24.240
+the network overall functionality
+
+00:40:24.240 --> 00:40:28.990
+in the network. So, just a little
+
+00:40:28.990 --> 00:40:30.970
+bit more about peer level
+
+00:40:30.970 --> 00:40:34.830
+communication messages sent from
+
+00:40:34.830 --> 00:40:36.130
+one application to another
+
+00:40:36.130 --> 00:40:38.070
+application on different host. So, it
+
+00:40:38.070 --> 00:40:39.650
+travels down the layers on the
+
+00:40:39.650 --> 00:40:42.230
+sending machine and each layer adds
+
+00:40:42.230 --> 00:40:43.890
+a header to be used by its
+
+00:40:43.890 --> 00:40:45.930
+corresponding peer level and the
+
+00:40:45.930 --> 00:40:47.290
+bottom layer which is the physical
+
+00:40:47.290 --> 00:40:48.890
+layer sends the message to the
+
+00:40:48.890 --> 00:40:51.170
+TCP machine. So, this is the
+
+00:40:51.990 --> 00:40:54.430
+general scheme the point is
+
+00:40:54.430 --> 00:40:56.990
+that suppose we start something
+
+00:40:56.990 --> 00:40:59.070
+at the very top let us say in the
+
+00:40:59.070 --> 00:41:00.990
+case of OSI we call it the
+
+00:41:00.990 --> 00:41:02.890
+application layer. So, something
+
+00:41:02.890 --> 00:41:04.930
+has something some communication has
+
+00:41:04.930 --> 00:41:08.530
+been initiated at the application
+
+00:41:08.530 --> 00:41:11.750
+layer. Now, this application layer
+
+00:41:11.750 --> 00:41:14.790
+mind you is really it has its peer
+
+00:41:14.790 --> 00:41:17.470
+let us say in the destination machine.
+
+00:41:18.190 --> 00:41:19.670
+So, in the destination machine also
+
+00:41:19.670 --> 00:41:21.690
+some application layer program is
+
+00:41:21.690 --> 00:41:24.110
+running for example let us say you
+
+00:41:24.110 --> 00:41:27.030
+are doing a telnet kind of thing
+
+00:41:27.030 --> 00:41:28.330
+that means you are sort of logging
+
+00:41:28.330 --> 00:41:29.530
+on to another machine. So, you are
+
+00:41:29.530 --> 00:41:31.950
+doing a telnet to another machine. So,
+
+00:41:32.210 --> 00:41:34.210
+you will start your telnet program
+
+00:41:34.210 --> 00:41:35.970
+which will be a telnet client program
+
+00:41:35.970 --> 00:41:38.170
+and the destination machine
+
+00:41:38.170 --> 00:41:40.990
+will have will now the who will
+
+00:41:41.970 --> 00:41:44.150
+sort of respond to a telnet client
+
+00:41:44.150 --> 00:41:45.990
+only a telnet server we can respond
+
+00:41:45.990 --> 00:41:48.090
+to a telnet client this telnet
+
+00:41:48.090 --> 00:41:49.970
+server is in the remote machine.
+
+00:41:50.530 --> 00:41:51.950
+So, these are the two modules
+
+00:41:51.950 --> 00:41:53.830
+both of which are in the application
+
+00:41:53.830 --> 00:41:56.210
+layer. Now, how telnet is an example
+
+00:41:56.210 --> 00:41:58.770
+of a protocol this is an
+
+00:41:58.770 --> 00:42:00.510
+application layer protocol and
+
+00:42:00.510 --> 00:42:02.050
+what this protocol does how the
+
+00:42:02.050 --> 00:42:04.870
+telnet client will request how the
+
+00:42:04.870 --> 00:42:07.030
+telnet server will respond etcetera
+
+00:42:07.030 --> 00:42:09.270
+these are the internals of this
+
+00:42:09.270 --> 00:42:10.790
+particular protocol namely the
+
+00:42:10.790 --> 00:42:14.310
+telnet protocol. Now, so far as the
+
+00:42:14.310 --> 00:42:15.790
+telnet client or any of these
+
+00:42:15.790 --> 00:42:17.210
+application program is concerned
+
+00:42:17.210 --> 00:42:19.130
+when it tries to communicate to
+
+00:42:19.130 --> 00:42:20.450
+another application program in
+
+00:42:20.450 --> 00:42:22.910
+another machine it just knows
+
+00:42:22.910 --> 00:42:24.770
+about this protocol and how things
+
+00:42:24.770 --> 00:42:26.490
+are to be done at that layer. But
+
+00:42:26.490 --> 00:42:28.490
+how is it how is this communication
+
+00:42:28.490 --> 00:42:30.310
+to go from this machine to another
+
+00:42:30.310 --> 00:42:32.470
+machine for this if you put the
+
+00:42:32.470 --> 00:42:34.090
+whole thing in the same program then
+
+00:42:34.090 --> 00:42:35.430
+that becomes very complicated that
+
+00:42:35.430 --> 00:42:36.950
+was the idea of layering that means
+
+00:42:36.950 --> 00:42:39.990
+so given a sort of virtual connection.
+
+00:42:40.630 --> 00:42:42.730
+So, he will sort of for
+
+00:42:42.730 --> 00:42:46.170
+communicating to the target
+
+00:42:46.170 --> 00:42:47.830
+machine he will have some
+
+00:42:47.830 --> 00:42:49.530
+data to sort of same. So, that
+
+00:42:49.530 --> 00:42:51.150
+will add up to may be other
+
+00:42:51.150 --> 00:42:52.790
+kinds of data and then
+
+00:42:52.790 --> 00:42:54.340
+hand it over to the
+
+00:42:54.990 --> 00:42:56.930
+lower layer in the same node.
+
+00:42:57.810 --> 00:42:59.390
+Now, the lower layer similarly
+
+00:42:59.390 --> 00:43:01.470
+may be running a protocol with the
+
+00:43:01.470 --> 00:43:03.090
+corresponding layer in the
+
+00:43:04.070 --> 00:43:06.370
+remote machine. So, for that
+
+00:43:06.370 --> 00:43:07.570
+protocol it needs to do some
+
+00:43:07.570 --> 00:43:09.270
+communication. So, for that
+
+00:43:09.270 --> 00:43:11.330
+communication whatever message is
+
+00:43:11.330 --> 00:43:12.990
+to be sent here that get added
+
+00:43:12.990 --> 00:43:15.330
+to the original data which
+
+00:43:15.330 --> 00:43:17.450
+was sent by the application
+
+00:43:17.450 --> 00:43:19.350
+layer. So, this way as
+
+00:43:19.350 --> 00:43:22.790
+the message to be sent
+
+00:43:23.390 --> 00:43:25.570
+moves down the stack from
+
+00:43:25.570 --> 00:43:27.510
+the originating machine at
+
+00:43:27.510 --> 00:43:29.390
+each layer each layer is running
+
+00:43:29.390 --> 00:43:31.270
+its own protocol which is here. So, it
+
+00:43:31.270 --> 00:43:33.110
+has some message to the sort of
+
+00:43:33.110 --> 00:43:35.610
+add give to his pair. So, they
+
+00:43:35.610 --> 00:43:37.430
+will keep on adding it to this. So,
+
+00:43:37.450 --> 00:43:39.230
+this becomes fatter and fatter as it
+
+00:43:39.230 --> 00:43:41.310
+goes down. Now, as it goes down
+
+00:43:41.310 --> 00:43:43.670
+to the physical layer
+
+00:43:43.670 --> 00:43:45.550
+there it can now communicate
+
+00:43:45.550 --> 00:43:47.470
+to the remote machine and in
+
+00:43:47.470 --> 00:43:49.070
+the remote machine this will now
+
+00:43:49.070 --> 00:43:50.950
+again move up the stack and at
+
+00:43:50.950 --> 00:43:52.830
+each layer that particular
+
+00:43:53.510 --> 00:43:55.450
+the program or whatever that
+
+00:43:55.450 --> 00:43:57.170
+module in that layer he will
+
+00:43:57.170 --> 00:43:58.990
+take out the message which has been
+
+00:43:58.990 --> 00:44:00.770
+sent by its peer in the
+
+00:44:01.950 --> 00:44:03.750
+source. So, that is how
+
+00:44:03.750 --> 00:44:05.430
+communication will go on for
+
+00:44:05.430 --> 00:44:11.910
+all these protocols. So,
+
+00:44:13.450 --> 00:44:13.970
+sending
+
+00:44:13.970 --> 00:44:16.690
+a message. So,
+
+00:44:16.710 --> 00:44:17.990
+received on the receiving side
+
+00:44:17.990 --> 00:44:19.610
+and it is passed up through each
+
+00:44:19.610 --> 00:44:21.430
+layer and each layer reads the
+
+00:44:21.430 --> 00:44:24.250
+corresponding header. That
+
+00:44:24.250 --> 00:44:25.570
+means the corresponding header which
+
+00:44:25.570 --> 00:44:27.130
+has been sent by
+
+00:44:27.130 --> 00:44:29.190
+the by its own peer
+
+00:44:29.190 --> 00:44:31.090
+on the from the source
+
+00:44:31.090 --> 00:44:35.410
+machine. So, this is an
+
+00:44:35.410 --> 00:44:37.030
+example. Let us say
+
+00:44:37.030 --> 00:44:38.670
+we have two machines
+
+00:44:38.670 --> 00:44:40.910
+and one machine is a DOS
+
+00:44:40.910 --> 00:44:42.810
+machine. That means it is
+
+00:44:42.810 --> 00:44:45.370
+some DOS is of course
+
+00:44:45.370 --> 00:44:46.830
+an old operating system which
+
+00:44:46.830 --> 00:44:48.410
+used to run on PCs and
+
+00:44:48.410 --> 00:44:49.950
+which was there from the
+
+00:44:49.950 --> 00:44:51.910
+Microsoft DOS and the PC DOS
+
+00:44:51.910 --> 00:44:53.990
+etc. IBM DOS was there and
+
+00:44:53.990 --> 00:44:55.550
+Macintosh was a different company
+
+00:44:55.550 --> 00:44:57.470
+as I mentioned. So, these two
+
+00:44:57.470 --> 00:44:59.270
+can still communicate that means
+
+00:44:59.270 --> 00:45:00.690
+they are two different machines.
+
+00:45:01.670 --> 00:45:03.650
+But this original data
+
+00:45:03.650 --> 00:45:05.090
+which was there which was
+
+00:45:05.090 --> 00:45:06.750
+which sort of originated from the
+
+00:45:06.750 --> 00:45:08.890
+application layer. Now, there is a
+
+00:45:08.890 --> 00:45:10.110
+presentation layer. Now, this
+
+00:45:10.110 --> 00:45:12.050
+presentation layer will add its
+
+00:45:12.050 --> 00:45:14.410
+own presentation header to this
+
+00:45:14.410 --> 00:45:16.530
+original data. Now, this whole
+
+00:45:16.530 --> 00:45:18.630
+thing becomes sort of data
+
+00:45:18.630 --> 00:45:20.310
+for the next layer namely the
+
+00:45:20.310 --> 00:45:21.510
+session layer. So, session layer
+
+00:45:21.510 --> 00:45:24.650
+will add its own header. So, as
+
+00:45:24.650 --> 00:45:26.070
+I said that the original data
+
+00:45:26.070 --> 00:45:28.030
+becomes fatter and fatter
+
+00:45:28.030 --> 00:45:29.850
+and fatter till it comes to
+
+00:45:29.850 --> 00:45:31.670
+the physical layer. Now, at the
+
+00:45:31.670 --> 00:45:34.490
+physical layer data is
+
+00:45:34.490 --> 00:45:36.090
+actually sent let us say in
+
+00:45:36.090 --> 00:45:37.790
+one hop to the destination
+
+00:45:38.570 --> 00:45:40.630
+machine. Now, here as
+
+00:45:40.630 --> 00:45:42.530
+this whole fat packet
+
+00:45:42.530 --> 00:45:44.850
+travels up each
+
+00:45:44.850 --> 00:45:46.110
+layer will strip
+
+00:45:46.110 --> 00:45:47.790
+off its corresponding header
+
+00:45:47.790 --> 00:45:49.110
+which is coming from its peer
+
+00:45:49.110 --> 00:45:50.970
+layer in the source. So, that is
+
+00:45:50.970 --> 00:45:53.230
+how each of the peers
+
+00:45:53.230 --> 00:45:54.990
+can communicate and each of
+
+00:45:54.990 --> 00:45:56.370
+them has a virtual connection
+
+00:45:56.370 --> 00:45:58.410
+with the destination
+
+00:45:58.410 --> 00:46:00.410
+machine although the actual
+
+00:46:00.410 --> 00:46:01.490
+connection is the physical
+
+00:46:01.490 --> 00:46:09.270
+connection. So, these are
+
+00:46:09.270 --> 00:46:11.010
+the seven protocol
+
+00:46:11.010 --> 00:46:12.130
+layers. Now, we are going
+
+00:46:12.130 --> 00:46:13.910
+bottom up and I will just tell
+
+00:46:13.910 --> 00:46:15.410
+you in brief later on I will
+
+00:46:15.410 --> 00:46:18.090
+just go down to how they are
+
+00:46:18.090 --> 00:46:19.690
+sort of some more details
+
+00:46:19.690 --> 00:46:21.550
+about each of these layer.
+
+00:46:22.310 --> 00:46:23.570
+So, first is the physical link
+
+00:46:23.570 --> 00:46:25.470
+which is how to
+
+00:46:27.290 --> 00:46:28.430
+transmit the bits
+
+00:46:31.270 --> 00:46:33.450
+and then we have
+
+00:46:33.450 --> 00:46:35.710
+the data link layer that is
+
+00:46:35.710 --> 00:46:37.550
+how to transmit frames. Now, what is
+
+00:46:37.550 --> 00:46:39.030
+the difference between transmitting bits
+
+00:46:39.030 --> 00:46:40.570
+and transmitting frames we will see
+
+00:46:40.570 --> 00:46:43.070
+to that, but a data link
+
+00:46:43.490 --> 00:46:45.710
+basically is a direct connection
+
+00:46:45.710 --> 00:46:47.590
+that means how two computers
+
+00:46:47.590 --> 00:46:49.670
+which are directly or two nodes which
+
+00:46:49.670 --> 00:46:51.130
+are directly connected to each other
+
+00:46:51.130 --> 00:46:52.850
+how they will communicate that is a
+
+00:46:52.850 --> 00:46:54.430
+matter of data link layer.
+
+00:46:55.570 --> 00:46:57.410
+Now, as mentioned earlier
+
+00:46:57.410 --> 00:46:59.310
+computers need not be directly
+
+00:46:59.310 --> 00:47:00.870
+connected to each other in order
+
+00:47:00.870 --> 00:47:02.250
+to communicate they have to be
+
+00:47:02.250 --> 00:47:03.850
+connected to the network somehow
+
+00:47:03.850 --> 00:47:06.450
+or other. So, if there is
+
+00:47:06.450 --> 00:47:08.110
+there are say two machines A and
+
+00:47:08.110 --> 00:47:09.670
+B or two nodes A and B which
+
+00:47:09.670 --> 00:47:11.510
+want to communicate and there is
+
+00:47:11.510 --> 00:47:13.130
+no direct link between A and
+
+00:47:13.130 --> 00:47:15.090
+B. So, it may go via C, D,
+
+00:47:15.290 --> 00:47:16.870
+E and then B all right.
+
+00:47:17.350 --> 00:47:18.770
+Now, how do you know
+
+00:47:18.770 --> 00:47:21.190
+that you have to go through
+
+00:47:21.190 --> 00:47:23.050
+C, D, E and then you will
+
+00:47:23.050 --> 00:47:25.110
+actually reach B. So, somebody has
+
+00:47:25.110 --> 00:47:27.170
+to keep track of the route
+
+00:47:27.170 --> 00:47:28.910
+how to route the packets over the
+
+00:47:28.910 --> 00:47:30.910
+entire network. So, that is the job
+
+00:47:30.910 --> 00:47:32.050
+of the network layer.
+
+00:47:33.010 --> 00:47:34.790
+Then there is a transport layer that
+
+00:47:34.790 --> 00:47:36.390
+means how to send packets to the
+
+00:47:36.390 --> 00:47:38.410
+application. Now, we have been talking
+
+00:47:38.410 --> 00:47:40.270
+about packets a packet is a
+
+00:47:40.270 --> 00:47:42.610
+sort of some data which is sort of
+
+00:47:42.610 --> 00:47:44.390
+has been segregated and put into
+
+00:47:44.390 --> 00:47:46.270
+a sort of package together.
+
+00:47:47.370 --> 00:47:48.010
+So, that is a packet,
+
+00:47:49.750 --> 00:47:50.770
+but the original
+
+00:47:50.770 --> 00:47:52.490
+application layer need not
+
+00:47:52.490 --> 00:47:54.170
+have any concept of any packet.
+
+00:47:54.330 --> 00:47:56.090
+So, somebody has to packetize all this
+
+00:47:56.090 --> 00:47:57.930
+data and there are may be other
+
+00:47:57.930 --> 00:47:59.370
+functions in the transport layer.
+
+00:47:59.490 --> 00:48:01.510
+So, that is the they make packets
+
+00:48:01.510 --> 00:48:03.210
+out of the data given by the
+
+00:48:03.210 --> 00:48:05.510
+upper layer. So, that is the
+
+00:48:05.510 --> 00:48:07.810
+transport layer. Then the session
+
+00:48:07.810 --> 00:48:09.910
+layer which manages the virtual
+
+00:48:09.910 --> 00:48:11.710
+connection between in the of the
+
+00:48:11.710 --> 00:48:13.370
+application layer which manages the
+
+00:48:13.370 --> 00:48:15.610
+virtual connection and some
+
+00:48:15.610 --> 00:48:17.230
+properties of this connection we
+
+00:48:17.230 --> 00:48:19.490
+will talk about it. The presentation
+
+00:48:19.490 --> 00:48:21.290
+layer that means how do you encode
+
+00:48:21.290 --> 00:48:23.150
+and decode messages that means two
+
+00:48:23.750 --> 00:48:25.670
+different machines may have
+
+00:48:25.670 --> 00:48:27.330
+two different ways of encoding
+
+00:48:27.330 --> 00:48:29.970
+things. So, there is that is
+
+00:48:29.970 --> 00:48:31.470
+the job of the presentation layer
+
+00:48:31.470 --> 00:48:33.250
+as well as the security comes
+
+00:48:33.250 --> 00:48:35.510
+here and application. So,
+
+00:48:35.510 --> 00:48:37.510
+whatever the actual job the user is
+
+00:48:37.510 --> 00:48:39.110
+interested in the human user that
+
+00:48:39.110 --> 00:48:41.110
+is. So, that comes in the
+
+00:48:41.110 --> 00:48:42.170
+application layer.
+
+00:48:43.970 --> 00:48:45.450
+So, the application layer
+
+00:48:45.450 --> 00:48:47.270
+contains a variety of protocols.
+
+00:48:47.610 --> 00:48:48.970
+So, it depends on what you are
+
+00:48:48.970 --> 00:48:51.110
+trying to do. So, the various
+
+00:48:51.110 --> 00:48:52.670
+users may want to do various things
+
+00:48:52.670 --> 00:48:55.210
+examples are FTP, Telnet,
+
+00:48:55.770 --> 00:48:57.510
+SMTP, HTTP, etcetera.
+
+00:48:57.730 --> 00:48:58.910
+So, these are the names of some
+
+00:48:58.910 --> 00:49:01.110
+protocols. By the FTP protocol
+
+00:49:01.110 --> 00:49:02.470
+what you can do is that you
+
+00:49:02.470 --> 00:49:05.190
+can download files from another
+
+00:49:05.190 --> 00:49:07.390
+machine. By HTTP you can
+
+00:49:07.390 --> 00:49:09.070
+look at web pages,
+
+00:49:09.510 --> 00:49:11.410
+surf, etcetera. There is a
+
+00:49:11.410 --> 00:49:13.010
+protocol called SMTP
+
+00:49:13.010 --> 00:49:14.750
+which you use for sending
+
+00:49:14.750 --> 00:49:16.610
+mails. Now, you may not
+
+00:49:16.610 --> 00:49:18.750
+be you may not have come
+
+00:49:18.750 --> 00:49:20.110
+across this protocol directly,
+
+00:49:20.110 --> 00:49:21.550
+but the point is that whenever
+
+00:49:21.550 --> 00:49:23.210
+let us say you are sending a mail
+
+00:49:24.430 --> 00:49:25.890
+from let us say an
+
+00:49:25.890 --> 00:49:27.850
+unique machine or something you
+
+00:49:27.850 --> 00:49:30.130
+are using the SMTP protocol
+
+00:49:30.130 --> 00:49:31.950
+whether or not you know it. So, SMTP
+
+00:49:31.950 --> 00:49:34.030
+protocol has been built into that.
+
+00:49:34.410 --> 00:49:36.170
+Similarly, when you
+
+00:49:36.170 --> 00:49:37.310
+are Telneting that means the
+
+00:49:37.310 --> 00:49:39.410
+Telnet server and the Telnet client,
+
+00:49:39.550 --> 00:49:40.950
+etcetera. They will be there in your
+
+00:49:40.950 --> 00:49:43.310
+machine as a part of the OS maybe.
+
+00:49:45.030 --> 00:49:46.090
+So, the application there
+
+00:49:46.090 --> 00:49:47.930
+usually requires reliable and cheap
+
+00:49:47.930 --> 00:49:49.330
+connection to its pier. That is
+
+00:49:49.330 --> 00:49:50.930
+what the application layer what it
+
+00:49:50.930 --> 00:49:52.370
+is concerned about that it must be
+
+00:49:52.370 --> 00:49:54.690
+connected reliably and cheaply to
+
+00:49:54.690 --> 00:49:56.990
+its pier. So, examples of pier
+
+00:49:56.990 --> 00:49:59.410
+we have. So, given some
+
+00:49:59.410 --> 00:50:00.870
+nodes, given service, etcetera.
+
+00:50:02.790 --> 00:50:03.790
+Now, application layer
+
+00:50:03.790 --> 00:50:06.630
+hence this whatever it
+
+00:50:06.630 --> 00:50:07.630
+has to send to the
+
+00:50:07.630 --> 00:50:09.370
+presentation layer which handles
+
+00:50:09.370 --> 00:50:10.930
+as I said the format of the
+
+00:50:10.930 --> 00:50:12.730
+data. Protocol conversion,
+
+00:50:13.330 --> 00:50:14.550
+data translation whether it is
+
+00:50:14.550 --> 00:50:16.210
+ASCII or maybe some other
+
+00:50:16.210 --> 00:50:18.250
+eBigBig or something to data
+
+00:50:18.250 --> 00:50:19.970
+compression, data encryption. These
+
+00:50:19.970 --> 00:50:21.550
+are handled in the presentation
+
+00:50:21.550 --> 00:50:24.610
+layer. In the session
+
+00:50:24.610 --> 00:50:26.450
+layer it allows applications and
+
+00:50:26.450 --> 00:50:28.290
+different computers to share a
+
+00:50:28.290 --> 00:50:29.550
+connection. Now, what do I mean by
+
+00:50:29.550 --> 00:50:31.250
+connection? The point is that later
+
+00:50:31.250 --> 00:50:33.350
+on just as I go to the next layer
+
+00:50:33.350 --> 00:50:35.090
+you will see that I will
+
+00:50:35.090 --> 00:50:38.550
+packetize this data. But then
+
+00:50:38.550 --> 00:50:40.390
+so far as the user is concerned
+
+00:50:40.390 --> 00:50:42.470
+he wants a continuous connection.
+
+00:50:42.950 --> 00:50:44.710
+So, this connection is handled
+
+00:50:44.710 --> 00:50:46.070
+in the session layer. So, it
+
+00:50:46.070 --> 00:50:47.370
+can provide checkpoints. That
+
+00:50:47.370 --> 00:50:48.710
+means if there is some disruption
+
+00:50:48.710 --> 00:50:50.590
+you may come back to it and
+
+00:50:50.590 --> 00:50:52.930
+sort of get the original
+
+00:50:52.930 --> 00:50:54.930
+something original state
+
+00:50:54.930 --> 00:50:56.270
+back and then you can
+
+00:50:56.270 --> 00:50:57.650
+retransmit if there is some
+
+00:50:57.650 --> 00:50:59.510
+dialogue control of who can
+
+00:50:59.510 --> 00:51:02.210
+transmit etcetera. The
+
+00:51:02.210 --> 00:51:03.650
+transport layer the basic function
+
+00:51:03.650 --> 00:51:05.270
+of the transport layer is to accept
+
+00:51:05.270 --> 00:51:07.370
+data from the layer above, split
+
+00:51:07.370 --> 00:51:09.250
+it into smaller units if necessary.
+
+00:51:09.450 --> 00:51:11.010
+Now, why we need to split that we
+
+00:51:11.010 --> 00:51:12.130
+will come to that later on.
+
+00:51:12.390 --> 00:51:14.390
+So, these are the packets so to
+
+00:51:14.390 --> 00:51:16.310
+say pass this to the network layer
+
+00:51:16.310 --> 00:51:18.770
+and ensure that the pieces
+
+00:51:18.770 --> 00:51:20.450
+all arrive correctly and in the
+
+00:51:20.450 --> 00:51:22.290
+right order at the other end. For
+
+00:51:22.290 --> 00:51:23.770
+example, you have chopped them into pieces
+
+00:51:23.770 --> 00:51:25.930
+now they may become out of order.
+
+00:51:26.130 --> 00:51:28.050
+So, that is the business of the transport layer.
+
+00:51:28.650 --> 00:51:29.890
+This should also be done in a
+
+00:51:29.890 --> 00:51:31.390
+cheap and efficient manner etcetera
+
+00:51:31.390 --> 00:51:33.150
+the same thing applies.
+
+00:51:34.390 --> 00:51:35.970
+So, the type or there may be
+
+00:51:35.970 --> 00:51:37.590
+different types of transport services.
+
+00:51:37.790 --> 00:51:39.570
+So, there may be multiple protocols
+
+00:51:39.570 --> 00:51:41.050
+here. One could be error free
+
+00:51:41.050 --> 00:51:43.410
+point to point channels or it
+
+00:51:43.410 --> 00:51:46.030
+could be a very cheap kind of channel
+
+00:51:46.030 --> 00:51:48.350
+or it may broadcasting of messages
+
+00:51:48.350 --> 00:51:49.670
+to multiple destinations.
+
+00:51:49.970 --> 00:51:50.990
+So, these are the different types
+
+00:51:50.990 --> 00:51:53.090
+of transport services which are
+
+00:51:53.090 --> 00:51:56.900
+possible. The network layer as I
+
+00:51:56.900 --> 00:51:58.660
+said it decides on what route
+
+00:51:58.660 --> 00:52:00.500
+to take locally. So, that the
+
+00:52:00.500 --> 00:52:02.400
+intended message ultimately reaches
+
+00:52:02.400 --> 00:52:04.800
+the destination. It controls
+
+00:52:04.800 --> 00:52:06.420
+broadcasting by essentially
+
+00:52:06.420 --> 00:52:08.740
+segregating the different networks etcetera
+
+00:52:08.740 --> 00:52:10.980
+it handles technological mismatches.
+
+00:52:11.540 --> 00:52:12.740
+So, we will get into the details
+
+00:52:12.740 --> 00:52:14.900
+of this later on. It does congestion
+
+00:52:14.900 --> 00:52:17.180
+control. It had the handles
+
+00:52:17.180 --> 00:52:19.060
+billing information etcetera.
+
+00:52:20.940 --> 00:52:21.920
+And the data link layer
+
+00:52:21.920 --> 00:52:23.360
+make the physical layer appear
+
+00:52:23.360 --> 00:52:25.060
+like a channel that is pure transmission
+
+00:52:25.060 --> 00:52:26.780
+errors. Actually in the physical
+
+00:52:26.780 --> 00:52:28.680
+layer there may be errors, but the
+
+00:52:28.680 --> 00:52:30.420
+data link layer handles this error
+
+00:52:30.420 --> 00:52:32.360
+correction etcetera at the very
+
+00:52:32.360 --> 00:52:34.580
+lowest level. And finally, at
+
+00:52:34.580 --> 00:52:36.120
+the lowest level we have the
+
+00:52:36.120 --> 00:52:37.560
+physical layer where data is
+
+00:52:37.560 --> 00:52:39.680
+actually transmitted as raw bits
+
+00:52:39.680 --> 00:52:40.120
+etcetera.
+
+00:52:41.980 --> 00:52:43.820
+The other layer is TCPIP reference
+
+00:52:43.820 --> 00:52:45.320
+model where the session and the
+
+00:52:45.320 --> 00:52:47.220
+presentation layer are not there. So,
+
+00:52:47.260 --> 00:52:48.400
+we have the application layer,
+
+00:52:48.560 --> 00:52:50.480
+transport layer, network layer and
+
+00:52:50.480 --> 00:52:52.000
+maybe something like the data link
+
+00:52:52.000 --> 00:52:53.720
+or the physical layer. So, the raw
+
+00:52:53.720 --> 00:52:55.360
+correspondence is something like
+
+00:52:55.360 --> 00:52:56.960
+this. We have the TCPIP model
+
+00:52:56.960 --> 00:52:59.360
+where we have just these two and
+
+00:52:59.360 --> 00:53:01.480
+you have the OSI reference model
+
+00:53:01.480 --> 00:53:03.500
+with so many. So, more or less
+
+00:53:03.500 --> 00:53:05.200
+they match the essential functions
+
+00:53:05.200 --> 00:53:08.200
+match. And there are other kinds
+
+00:53:08.200 --> 00:53:10.740
+of protocols which are also
+
+00:53:10.740 --> 00:53:11.880
+used, but the
+
+00:53:11.880 --> 00:53:13.780
+TCPIP and the OSI these are
+
+00:53:13.780 --> 00:53:14.680
+the most common.
+
+00:53:15.140 --> 00:53:17.160
+In the next class we will be
+
+00:53:17.160 --> 00:53:19.060
+discussing the different
+
+00:53:19.060 --> 00:53:21.280
+structures of network. So, today
+
+00:53:21.280 --> 00:53:22.840
+we just had an abstract view of
+
+00:53:22.840 --> 00:53:24.520
+network. In the next class we
+
+00:53:24.520 --> 00:53:26.380
+will handle the different structures.
+
+00:53:42.530 --> 00:53:44.430
+Good day. So,
+
+00:53:45.130 --> 00:53:46.350
+in this lecture
+
+00:53:46.350 --> 00:53:47.910
+we will discuss
+
+00:53:47.910 --> 00:53:49.690
+the network
+
+00:53:49.690 --> 00:53:50.710
+topology.
+
+00:53:52.530 --> 00:53:54.250
+Now, what do we
+
+00:53:54.250 --> 00:53:55.550
+mean by a network
+
+00:53:55.550 --> 00:54:07.790
+topology? So, let us
+
+00:54:08.160 --> 00:54:09.660
+just have a quick
+
+00:54:09.660 --> 00:54:11.280
+recap of
+
+00:54:11.280 --> 00:54:13.580
+what we had learned last
+
+00:54:13.580 --> 00:54:15.360
+time. Basically a
+
+00:54:15.360 --> 00:54:16.880
+computer network
+
+00:54:17.410 --> 00:54:19.360
+would be a number of nodes
+
+00:54:19.360 --> 00:54:21.260
+which are connected by some
+
+00:54:21.260 --> 00:54:22.320
+communication links.
+
+00:54:23.460 --> 00:54:25.560
+So, there is some kind
+
+00:54:25.560 --> 00:54:27.440
+of what we usually
+
+00:54:27.440 --> 00:54:28.260
+call a graph.
+
+00:54:29.260 --> 00:54:31.520
+So, this graph has certain structure.
+
+00:54:32.280 --> 00:54:33.480
+So, we talk about the structure.
+
+00:54:33.640 --> 00:54:35.640
+Now, this structure has an implication
+
+00:54:35.640 --> 00:54:37.560
+about how we will go
+
+00:54:37.560 --> 00:54:38.520
+about communicating.
+
+00:54:39.440 --> 00:54:41.320
+As I said that it is in general
+
+00:54:41.320 --> 00:54:43.560
+not feasible to have one to
+
+00:54:43.560 --> 00:54:45.280
+one communication between
+
+00:54:45.280 --> 00:54:47.520
+each pair of nodes. That is not
+
+00:54:47.520 --> 00:54:49.380
+possible at all. So, what kind
+
+00:54:49.380 --> 00:54:51.460
+of structure that means there
+
+00:54:51.460 --> 00:54:53.480
+is nodes connected in which manner
+
+00:54:53.480 --> 00:54:54.920
+that is the
+
+00:54:55.480 --> 00:54:57.260
+subject matter of discussion today.
+
+00:54:59.640 --> 00:55:00.440
+So,
+
+00:55:01.120 --> 00:55:01.960
+a network may be
+
+00:55:01.960 --> 00:55:03.660
+represented as a graph as I said
+
+00:55:03.660 --> 00:55:05.320
+nodes representing computers
+
+00:55:05.320 --> 00:55:07.100
+or network devices like switches
+
+00:55:07.100 --> 00:55:08.900
+routers etcetera
+
+00:55:09.480 --> 00:55:11.380
+and the links represent communication
+
+00:55:11.380 --> 00:55:12.000
+links.
+
+00:55:12.860 --> 00:55:15.120
+Modes of communication may be broadcast
+
+00:55:15.120 --> 00:55:17.140
+or point to point.
+
+00:55:17.360 --> 00:55:19.180
+We have discussed this.
+
+00:55:22.640 --> 00:55:23.100
+Now,
+
+00:55:25.460 --> 00:55:27.000
+there are various
+
+00:55:27.000 --> 00:55:28.400
+first let us talk
+
+00:55:28.400 --> 00:55:30.780
+about the so called LAN topologies.
+
+00:55:31.700 --> 00:55:32.300
+By
+
+00:55:32.300 --> 00:55:34.440
+LAN you remember is the
+
+00:55:34.440 --> 00:55:35.800
+local area network
+
+00:55:36.360 --> 00:55:38.700
+and local area network topologies
+
+00:55:38.700 --> 00:55:39.600
+are
+
+00:55:40.300 --> 00:55:41.980
+three are very common star,
+
+00:55:42.400 --> 00:55:43.520
+ring and a bus.
+
+00:55:44.920 --> 00:55:46.280
+So, we will just
+
+00:55:46.280 --> 00:55:47.640
+look at all of them.
+
+00:55:51.090 --> 00:55:51.670
+So,
+
+00:55:51.750 --> 00:55:54.030
+first of all we first
+
+00:55:54.030 --> 00:55:56.350
+take up this bus topology
+
+00:55:56.350 --> 00:55:58.470
+and why do we take up a bus topology.
+
+00:55:59.030 --> 00:56:00.110
+So, this is a very simple
+
+00:56:00.110 --> 00:56:01.010
+kind of network.
+
+00:56:01.850 --> 00:56:04.090
+So, this is based on
+
+00:56:04.090 --> 00:56:05.550
+a shared broadcast
+
+00:56:05.550 --> 00:56:06.270
+link.
+
+00:56:07.490 --> 00:56:07.810
+So, this
+
+00:56:09.090 --> 00:56:10.750
+we want to still want to do
+
+00:56:10.750 --> 00:56:13.230
+point to point communication. That means
+
+00:56:13.230 --> 00:56:15.770
+there may be so many nodes a,
+
+00:56:15.990 --> 00:56:17.030
+b, c, d etcetera
+
+00:56:17.870 --> 00:56:18.870
+which are
+
+00:56:20.510 --> 00:56:21.930
+which are connected to the
+
+00:56:21.930 --> 00:56:23.910
+network and a wants
+
+00:56:23.910 --> 00:56:25.010
+to communicate to b.
+
+00:56:25.610 --> 00:56:27.670
+So, c, d are connected
+
+00:56:27.670 --> 00:56:29.710
+that is all right, but a specifically wants
+
+00:56:29.710 --> 00:56:31.070
+to communicate to b.
+
+00:56:32.150 --> 00:56:33.870
+So, each pair of communicating nodes
+
+00:56:33.870 --> 00:56:35.830
+use the link for a short
+
+00:56:35.830 --> 00:56:37.770
+time. So, a uses the link
+
+00:56:37.770 --> 00:56:39.770
+for a short time to send this message to b.
+
+00:56:40.230 --> 00:56:41.450
+Then after that is over
+
+00:56:41.450 --> 00:56:43.730
+then maybe c might send
+
+00:56:43.730 --> 00:56:45.430
+something to d or something like that.
+
+00:56:46.570 --> 00:56:47.910
+So, other nodes ignore
+
+00:56:49.010 --> 00:56:50.050
+the communication.
+
+00:56:50.050 --> 00:56:52.230
+So, since this is shared broadcast
+
+00:56:52.230 --> 00:56:53.590
+link all the links
+
+00:56:53.590 --> 00:56:55.510
+all the nodes
+
+00:56:56.050 --> 00:56:58.250
+get the communication.
+
+00:56:58.570 --> 00:56:59.910
+So, that is not private in that
+
+00:56:59.910 --> 00:57:01.570
+sense. So, all the nodes get
+
+00:57:01.570 --> 00:57:04.070
+that communication, but they usually
+
+00:57:04.070 --> 00:57:05.870
+will ignore this communication.
+
+00:57:06.290 --> 00:57:08.670
+Whereas, a b will
+
+00:57:08.670 --> 00:57:10.310
+sort of copy this for
+
+00:57:10.310 --> 00:57:11.470
+its own purpose.
+
+00:57:12.850 --> 00:57:14.310
+Now, there has to be
+
+00:57:14.310 --> 00:57:16.230
+a distributed protocol to decide
+
+00:57:16.230 --> 00:57:18.210
+who gets to use the
+
+00:57:18.210 --> 00:57:20.550
+link. There has to be some protocol.
+
+00:57:20.770 --> 00:57:22.150
+Otherwise, if a
+
+00:57:22.150 --> 00:57:23.990
+wants to communicate with b
+
+00:57:23.990 --> 00:57:25.890
+and b wants to say c wants
+
+00:57:25.890 --> 00:57:27.010
+to communicate with d,
+
+00:57:27.870 --> 00:57:29.930
+their communications will go and collide
+
+00:57:29.930 --> 00:57:31.950
+in the shared broadcast
+
+00:57:31.950 --> 00:57:34.010
+medium. So, the communication of
+
+00:57:34.010 --> 00:57:36.110
+both the parties of that
+
+00:57:36.110 --> 00:57:37.570
+means both the pairs of nodes
+
+00:57:38.150 --> 00:57:39.170
+they will get garbled.
+
+00:57:40.310 --> 00:57:42.150
+So, that I mean and sometimes
+
+00:57:42.150 --> 00:57:44.350
+actually that will happen
+
+00:57:44.350 --> 00:57:45.970
+that the things will get garbled,
+
+00:57:45.970 --> 00:57:47.490
+but that is not what we
+
+00:57:48.070 --> 00:57:48.750
+want to.
+

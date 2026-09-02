@@ -1,0 +1,232 @@
+{
+  "lecture_id": "mit_6042j_math_for_cs_lec01",
+  "model": "llama3.1:8b",
+  "window_seconds": 60.0,
+  "summaries": [
+    {
+      "start": 0.0,
+      "end": 60.0,
+      "text": "The lecturer is introducing the concept of a proof, specifically a mathematical proof, and asking the students to consider their own ideas about what a proof is. Proofs are not limited to mathematics and exist in other areas as well."
+    },
+    {
+      "start": 60.0,
+      "end": 120.0,
+      "text": "A proof is considered a method for ascertaining the truth, establishing or verifying truth, across multiple fields. There are various ways to ascertain truth in society and science."
+    },
+    {
+      "start": 120.0,
+      "end": 180.0,
+      "text": "Observation is a key way to ascertain truth, as demonstrated by the study of physics, where observing gravity led to the establishment of laws. Establishing falsehood is also a way to determine truth, as knowing what isn't true helps narrow down what is."
+    },
+    {
+      "start": 180.0,
+      "end": 240.0,
+      "text": "To establish falsehood, you can use counter examples, such as sampling multiple outcomes or testing a hypothesis multiple times. Deciding guilt or innocence, like in Roger Clemens' case, requires ascertaining the truth through evidence and investigation."
+    },
+    {
+      "start": 240.0,
+      "end": 300.0,
+      "text": "Juries and judges establish the truth through evidence and investigation, making conclusions on guilt or innocence. Religion is considered a \"bigger truth\" in society, representing the \"word of God\" but causing issues when interpreted broadly."
+    },
+    {
+      "start": 300.0,
+      "end": 360.0,
+      "text": "The truth can be subjective and dependent on personal beliefs and interpretations, often relying on authority figures such as priests or bosses to provide guidance. In some cases, conflicting truths can arise due to differing interpretations of authority figures or the source of their guidance."
+    },
+    {
+      "start": 360.0,
+      "end": 420.0,
+      "text": "Math provides a unique platform where any student can challenge even the most experienced professor and have a valid argument, due to its objective nature. In mathematics, disagreements are seen as opportunities for dialogue and learning, unlike in other areas where differing opinions may be more entrenched."
+    },
+    {
+      "start": 420.0,
+      "end": 480.0,
+      "text": "The burden of proof shifts to those who disagree when saying \"I don't see why not\", making them responsible for disproving the argument. A mathematical proof is a chain of logical deductions that verifies a proposition."
+    },
+    {
+      "start": 480.0,
+      "end": 540.0,
+      "text": "A mathematical proof involves a chain of logical deductions from a set of axioms. A proposition is a statement that is either true or false."
+    },
+    {
+      "start": 540.0,
+      "end": 600.0,
+      "text": "The lecturer is explaining that a proposition is a statement that is true or false, providing examples such as 2 plus 3 equals 5. He is now discussing a more complex proposition, stating that for all natural numbers n, a certain equation is a prime number, using the notation \"for all\" symbol."
+    },
+    {
+      "start": 600.0,
+      "end": 660.0,
+      "text": "The lecturer is explaining that the expression is considered a prime number for every natural number n, as long as it is not divisible by any other number besides itself. The lecturer has introduced the term \"predicate\", which is a proposition whose truth depends on the values of variables."
+    },
+    {
+      "start": 660.0,
+      "end": 720.0,
+      "text": "The lecturer is explaining that the predicate's truth depends on the variable n, and the universe of discourse is the space of all natural numbers. The lecturer is now testing the proposition by computing n squared plus n plus 41 for various natural numbers."
+    },
+    {
+      "start": 720.0,
+      "end": 780.0,
+      "text": "The lecturer is testing the primality of n squared plus n plus 41 for various values of n, starting from 0. They have found that for n equals 0, 1, 2, and 3, the result is a prime number."
+    },
+    {
+      "start": 780.0,
+      "end": 840.0,
+      "text": "The lecturer has checked the primality of n squared plus n plus 41 for the first 40 values of n, and the proposition appears to hold true. However, the lecturer then surprisingly finds a counterexample, checking the value for n equals 40 and discovering that it is not prime."
+    },
+    {
+      "start": 840.0,
+      "end": 900.0,
+      "text": "The value of n squared plus n plus 41 is not prime for n equals 40. The proposition is false, but it appeared true for the first 40 values of n, with n equals 40 being the first break point."
+    },
+    {
+      "start": 900.0,
+      "end": 960.0,
+      "text": "Euler conjectured the proposition to be true in 1769. It remained unsolved for over two centuries before being disproved by Noam Elkies in recent years."
+    },
+    {
+      "start": 960.0,
+      "end": 1020.0,
+      "text": "A mathematician, presumably Euler, claims there exist four positive natural numbers A, B, C, and D such that A to the fourth, B to the fourth, and C to the fourth all equal D to the fourth. The truth of this proposition depends on the values of A, B, C, and D."
+    },
+    {
+      "start": 1020.0,
+      "end": 1080.0,
+      "text": "The claim that 313 to the third, plus y to the third, equals z to the third has no positive integer solutions has been shown to be false, although the smallest counterexample has over a thousand digits. A much smaller counterexample, with only six digits, has been found."
+    },
+    {
+      "start": 1080.0,
+      "end": 1140.0,
+      "text": "The equation 313 to the third, plus y to the third, equals z to the third is an example of an elliptic curve, which is a concept central to factoring large integers. Factoring large integers is crucial for breaking crypto systems like RSA, which are used for electronic transactions and communications."
+    },
+    {
+      "start": 1140.0,
+      "end": 1200.0,
+      "text": "Crypto systems like SSL and PayPal use number theory, specifically factoring, to secure transactions and communications, and breaking these systems is a major security threat. RSA, a widely used crypto system, has moved from hundred to thousand digit modulus to stay secure, highlighting the importance of factoring large integers."
+    },
+    {
+      "start": 1200.0,
+      "end": 1260.0,
+      "text": "The game of mathematics does not involve relying on a few lucky guesses, but rather requires a more thorough and systematic approach to finding the answer. The four colour theorem is a famous problem that states any map can be coloured with four colours so that adjacent regions have different colours."
+    },
+    {
+      "start": 1260.0,
+      "end": 1320.0,
+      "text": "Guthrie conjectured the four colour theorem in 1853, stating that any map can be coloured with four colours. A convincing proof by Kempe in 1879 using pictures was later found to be flawed by He-Wood."
+    },
+    {
+      "start": 1320.0,
+      "end": 1380.0,
+      "text": "The four colour theorem was finally proved by Oppen and Hocken in 1977 using a computer to check thousands of cases. However, this proof is unsatisfying as mathematicians don't know for certain that the computer correctly verified every case."
+    },
+    {
+      "start": 1380.0,
+      "end": 1440.0,
+      "text": "The proof of the four colour theorem is unsatisfying as it relies on a computer verification that hasn't been checked. The proof of a main lemma is also suspect, with some ideas thought to be potentially valuable but the overall proof being considered dubious."
+    },
+    {
+      "start": 1440.0,
+      "end": 1500.0,
+      "text": "Golbach's conjecture, proposed by Christian Golbach in 1742, is a simple proposition that remains unproven. It is considered one of the great unsolved mysteries and was listed as such by the Clay Mathematics Institute."
+    },
+    {
+      "start": 1500.0,
+      "end": 1560.0,
+      "text": "Golbach's conjecture is easy to prove if we use non-prime numbers as the examples given in the original statement. The lecturer is criticising the way Golbach's conjecture is presented in the literature, saying you can't always believe what you read."
+    },
+    {
+      "start": 1560.0,
+      "end": 1620.0,
+      "text": "Zeros in the zeta function are forming along a straight line in the complex plane, and the Riemann Hypothesis has been proved to 1.5 billion zeros but is still unproven."
+    },
+    {
+      "start": 1620.0,
+      "end": 1680.0,
+      "text": "A mathematician had a 80-page proof for the Riemann Hypothesis but lacked detailed explanations, leading others to fill in the gaps with 350 pages of additional work. This mathematician has since won the Fields Medal and the Millennium Prize, but has refused both honours."
+    },
+    {
+      "start": 1680.0,
+      "end": 1740.0,
+      "text": "The lecturer is introducing a simple mathematical statement: for any integer n greater than or equal to 2, n squared is greater than or equal to 4. The lecturer is also explaining the notation \"implies\", which can be written in different ways."
+    },
+    {
+      "start": 1740.0,
+      "end": 1800.0,
+      "text": "The lecturer explains that the notation \"implies\" can be written in different ways as long as one of the conventions is used. An implication p implies q is true if p is false or q is true."
+    },
+    {
+      "start": 1800.0,
+      "end": 1860.0,
+      "text": "The value of p implies q is true if both p and q are true, or if p is false. If p is false, then p implies q is true, regardless of the value of q."
+    },
+    {
+      "start": 1860.0,
+      "end": 1920.0,
+      "text": "The implication \"pigs fly implies I'm king\" is true because it's based on the false statement that pigs fly, which doesn't affect the truth value of the implication."
+    },
+    {
+      "start": 1920.0,
+      "end": 1980.0,
+      "text": "The statement \"n squared greater than or equal to 4 is that true is n bigger than 2\" is false because it doesn't have an implication both ways. We're now going to extend the truth table to examine the statement \"p if and only if q\"."
+    },
+    {
+      "start": 1980.0,
+      "end": 2040.0,
+      "text": "The row where both p and q are true, the statement \"p if and only if q\" is true because both implications are true. The row where p is true and q is false, the statement \"p if and only if q\" is false because p implies q is false."
+    },
+    {
+      "start": 2040.0,
+      "end": 2100.0,
+      "text": "The statement \"p if and only if q\" is true when p and q are both true or both false. A proposition must be true or false, and an example of something that is not a proposition is the statement \"this statement is false\" because it leads to a contradiction."
+    },
+    {
+      "start": 2100.0,
+      "end": 2160.0,
+      "text": "The lecturer uses the example of \"hello\" as a statement that is neither true nor false, to illustrate that not everything is a proposition. Axioms are essentially propositions that are assumed to be true."
+    },
+    {
+      "start": 2160.0,
+      "end": 2220.0,
+      "text": "Axioms are not necessarily proved to be true, but rather assumed to be true because they are thought to be reasonable. The word \"axiom\" comes from Greek, meaning \"to think worthy\", referring to assumptions that are considered worthy of being accepted as true."
+    },
+    {
+      "start": 2220.0,
+      "end": 2280.0,
+      "text": "A proof relies on the assumption that anyone who agrees with the axioms will accept the conclusion. Different axioms can be used in different contexts, as seen in Euclidean geometry where a central axiom may be contradictory in other situations."
+    },
+    {
+      "start": 2280.0,
+      "end": 2340.0,
+      "text": "In some geometries, such as the one used in middle school, there is exactly one line through a point that is parallel to a given line. However, in spherical geometry, no such parallel line exists through a given point."
+    },
+    {
+      "start": 2340.0,
+      "end": 2400.0,
+      "text": "Hyperbolic geometry has an axiom stating there are infinitely many lines through a point parallel to a given line. Axioms are field-dependent and make sense within their specific context."
+    },
+    {
+      "start": 2400.0,
+      "end": 2460.0,
+      "text": "A set of axioms is considered consistent if no statement can be proved to be both true and false simultaneously. If axioms are inconsistent, a proof of a statement's truth could be easily turned into a proof of its falsity."
+    },
+    {
+      "start": 2460.0,
+      "end": 2520.0,
+      "text": "A set of axioms is only useful if it's consistent, meaning it can't prove a statement's both true and false. A complete set of axioms is desirable because it allows you to prove every proposition as either true or false."
+    },
+    {
+      "start": 2520.0,
+      "end": 2580.0,
+      "text": "Many logicians, including Russell and Whitehead, attempted to create a set of axioms that is both consistent and complete. Kurt G\u00f6del then proved in the 1930s that it's impossible to have a set of axioms that satisfies both these conditions."
+    },
+    {
+      "start": 2580.0,
+      "end": 2640.0,
+      "text": "G\u00f6del's discovery was a significant setback for logicians like Russell and Whitehead, but it has also revealed the limitations of proof in mathematics, where certain true facts may be unprovable."
+    },
+    {
+      "start": 2640.0,
+      "end": 2644.48,
+      "text": "The lecturer has indicated that the discussion will continue next time. The lecture will be picking up where it left off."
+    }
+  ]
+}

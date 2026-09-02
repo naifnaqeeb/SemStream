@@ -1,0 +1,1325 @@
+WEBVTT
+
+00:01:13.740 --> 00:01:19.840
+data structures and algorithms, we are going to learn today some basic terminology regarding
+
+00:01:19.840 --> 00:01:25.480
+data structures and the notations that we would be following in the rest of this course.
+
+00:01:26.480 --> 00:01:33.020
+We will begin with just some very simple definitions, an algorithm which is an outline
+
+00:01:33.920 --> 00:01:39.520
+of the steps that a program has to take or any computational procedure has to take.
+
+00:01:40.520 --> 00:01:46.860
+A program on the other hand is an implementation of an algorithm, it could be in any programming
+
+00:01:46.860 --> 00:01:57.420
+language. A data structure is the way we need to organize the data so that it can be used
+
+00:01:57.420 --> 00:02:03.400
+effectively by the program. So you all are familiar with certain data structures, an
+
+00:02:03.400 --> 00:02:08.780
+array or a list for instance. So this course is about you will be seeing a lot more data
+
+00:02:08.780 --> 00:02:13.100
+structures in this course and you will see how to use them in various algorithms. So we
+
+00:02:13.100 --> 00:02:17.980
+will take a particular problem try to solve that problem and in the process develop data
+
+00:02:17.980 --> 00:02:22.680
+structures the best way of organizing the data associated with that problem.
+
+00:02:26.240 --> 00:02:30.680
+So what is an algorithmic problem? An algorithmic problem is essentially that you have a certain
+
+00:02:30.680 --> 00:02:36.800
+specification of an input as is given here and I use specify what the output should
+
+00:02:36.800 --> 00:02:42.900
+be like and the specification of an input could be well here is one specification assorted
+
+00:02:42.900 --> 00:02:50.360
+non-decreasing sequence of natural numbers of non-zero finite plane that is an input that
+
+00:02:50.360 --> 00:02:55.720
+is a completely specified input. I have given two examples here of inputs which meet the
+
+00:02:55.720 --> 00:03:00.960
+specification. I have not given any output specification yet here. Now what is an
+
+00:03:00.960 --> 00:03:08.820
+instance? These are two instances of the input. This is the specification for the input and
+
+00:03:08.820 --> 00:03:16.720
+you can have any possible instance. You can take any sequence of sorted non-decreasing numbers
+
+00:03:16.720 --> 00:03:21.720
+and that would form an input instance. So there are infinitely many input instances
+
+00:03:21.720 --> 00:03:30.960
+possible here. So an algorithm is essentially describing the actions that one should take
+
+00:03:30.960 --> 00:03:37.660
+on the input instance to get an output as is desired as is specified and again just as there
+
+00:03:37.660 --> 00:03:42.900
+can be infinitely many input instances there can be infinitely many algorithms for solving
+
+00:03:42.900 --> 00:03:53.610
+a certain problem. Each one of you could do it in a slightly different way. So that
+
+00:03:53.610 --> 00:03:57.030
+brings us to the notion of a good algorithm. If there are so many different algorithms
+
+00:03:57.030 --> 00:04:00.010
+for solving a certain problem what is a good algorithm?
+
+00:04:02.930 --> 00:04:10.060
+A good algorithm for us is an efficient algorithm. Anything that is efficient is good and what
+
+00:04:10.060 --> 00:04:15.860
+is efficient? Efficient is something which has small running time and takes less memory.
+
+00:04:16.840 --> 00:04:20.880
+These will be the two measures of efficiency that we will be working with. There could
+
+00:04:20.880 --> 00:04:24.280
+be other measures of efficiency but these are the only two we would be considering in
+
+00:04:24.280 --> 00:04:30.360
+this course and most of our time we would be spending with running time really. Space
+
+00:04:30.360 --> 00:04:34.760
+of course will also be analyzing the space but most of the time would be spent in worrying
+
+00:04:34.760 --> 00:04:40.430
+about the running time of our algorithm and we would be interested in the efficiency of
+
+00:04:40.430 --> 00:04:47.370
+algorithms as a function of the input size. So clearly you can imagine that if I have
+
+00:04:47.370 --> 00:04:53.410
+a small input and my algorithm running on that input will take or my program running
+
+00:04:53.410 --> 00:04:57.670
+on that input will take less amount of time. If the input becomes 10 times larger then
+
+00:04:57.670 --> 00:05:02.210
+the time taken by the program would also grow. May be it becomes 10 times, may be it becomes
+
+00:05:02.210 --> 00:05:08.410
+20 times, may be it becomes 100 times. I do not know. So it is this behavior of the increase
+
+00:05:08.410 --> 00:05:13.670
+in the running time with the increase in the size of the input that we would also
+
+00:05:13.670 --> 00:05:19.610
+be of interest to us. We will come to all of these in a short while as we go through
+
+00:05:19.610 --> 00:05:27.170
+these slides. Now how does one measure running time? I said efficiency, running
+
+00:05:27.170 --> 00:05:32.010
+time, very important first. So how does one measure the running time of an algorithm? So
+
+00:05:32.010 --> 00:05:38.370
+one way would be to what I have put down here as an experimental study. You have a certain
+
+00:05:38.370 --> 00:05:43.610
+algorithm, you implement that algorithm which means you write a program in a certain programming
+
+00:05:43.610 --> 00:05:50.590
+language. You run the program with varying data sets. So some smaller, some larger
+
+00:05:50.590 --> 00:05:54.130
+data sets, some would be of some kind, some would be of a different kind. So varying
+
+00:05:54.130 --> 00:06:00.770
+composition and then you clock the time that the program takes and clock does not mean that
+
+00:06:00.770 --> 00:06:04.810
+you sit down with a stopwatch, you would perhaps just use a system utility like let us say system
+
+00:06:04.810 --> 00:06:11.450
+current time may less to clock the time that the program takes and then from that you
+
+00:06:11.450 --> 00:06:18.250
+try and figure out how good your algorithm is. So that is what one would call an experimental
+
+00:06:18.250 --> 00:06:27.920
+study of the algorithm. Now this has certain limitations. So I have put them down, first
+
+00:06:27.920 --> 00:06:31.640
+you have to implement the algorithm. To be able to determine how good your algorithm is
+
+00:06:31.640 --> 00:06:38.940
+you have to implement it. Now that is already a huge overhead. Considerable amount of time
+
+00:06:38.940 --> 00:06:43.180
+has to be spent in doing this. Then your experiments can be done only on a limited
+
+00:06:43.180 --> 00:06:47.520
+set of inputs. After all I said the number of instances is infinitely large. You cannot
+
+00:06:47.520 --> 00:06:52.900
+be running, you can only run your experiment on a small set of instances and that might
+
+00:06:52.900 --> 00:06:57.540
+not really be indicative of the time that your algorithm is taking for other inputs which
+
+00:06:57.540 --> 00:07:05.150
+you have not considered in your experiment. Further if you have two algorithms and you
+
+00:07:05.150 --> 00:07:09.830
+have to decide which is better, you have to use exactly the same platforms to do
+
+00:07:09.830 --> 00:07:16.330
+the comparison. By platform I mean both the hardware and the software environments because
+
+00:07:16.330 --> 00:07:20.030
+as you can imagine different machines would make a difference not just different machines.
+
+00:07:20.630 --> 00:07:24.450
+In fact even the users who are working on that system at that particular point would make
+
+00:07:24.450 --> 00:07:29.890
+a difference on the running time of your algorithm. So it becomes very messy if you have to do
+
+00:07:29.890 --> 00:07:35.250
+it this way. So what we are going to do as part of this course and in fact in this
+
+00:07:35.250 --> 00:07:40.050
+very first lecture is to develop a general methodology which will help us analyze the
+
+00:07:40.050 --> 00:07:45.970
+running time of algorithms. We are going to do it as follows. We are going to first
+
+00:07:45.970 --> 00:07:52.710
+develop a high level description of an algorithm, a way of describing an algorithm and we are
+
+00:07:52.710 --> 00:07:59.650
+going to use this description to figure out the running time and not implement it or any
+
+00:07:59.650 --> 00:08:06.400
+such thing. Our methodology would help us take into account all possible input instances
+
+00:08:08.080 --> 00:08:15.200
+and it will allow us to evaluate the efficiency of the algorithm in a way that is independent
+
+00:08:15.200 --> 00:08:25.150
+of the environment, independent of the platform that we are using. I said we will give a high
+
+00:08:25.150 --> 00:08:28.410
+level description of the algorithm. This very first point here we will give a high level.
+
+00:08:28.510 --> 00:08:33.430
+What is this? This brings me to what we will call pseudocode and this is how we are
+
+00:08:33.430 --> 00:08:38.690
+going to be specifying all our algorithms for the purposes of this course.
+
+00:08:40.830 --> 00:08:44.270
+Here is an example of a pseudocode and you might have seen this in your earlier
+
+00:08:44.270 --> 00:08:53.350
+courses also. What is this algorithm doing? This algorithm takes an array A which stores
+
+00:08:53.350 --> 00:09:00.050
+an integer in it and it is trying to find the maximum element in this array. What I have
+
+00:09:00.050 --> 00:09:10.070
+written here is not a program because I think the syntax is all wrong but it is a pseudocode.
+
+00:09:10.070 --> 00:09:17.750
+It is a mixture of natural language and some high level programming constructs. I am going
+
+00:09:17.750 --> 00:09:22.290
+to come to all of that but I am going to be using like a for, do, loop. I am going to use
+
+00:09:22.290 --> 00:09:26.870
+an if then else statement. I am going to use a while loop. All of that I will use but
+
+00:09:26.870 --> 00:09:30.990
+I will not bother about there should be a semicolon here or there should be a colon
+
+00:09:30.990 --> 00:09:35.970
+here. I am not going to bother about those things that are required by a compiler but
+
+00:09:35.970 --> 00:09:40.790
+for our understanding this is completely clear what this program is doing. What is this doing?
+
+00:09:41.070 --> 00:09:48.770
+It is keeping track of the maximum variable in a variable called current max which is initialized
+
+00:09:48.770 --> 00:09:53.950
+to the first element of the array and then it is going to run through the remaining elements
+
+00:09:53.950 --> 00:09:58.470
+of the array, compare them with the current maximum element that we have seen. If the
+
+00:09:58.470 --> 00:10:04.810
+current maximum element that we have is less than the current element under consideration
+
+00:10:04.810 --> 00:10:13.570
+then it would update current max. AI becomes the new max and then when this loop terminates
+
+00:10:13.570 --> 00:10:19.850
+we would just return current max. So it is a very simple algorithm but just with this
+
+00:10:19.850 --> 00:10:23.550
+pseudocode you are able to understand what it is doing. This will not run on any computer
+
+00:10:24.110 --> 00:10:31.770
+it is pseudocode but it conveys the ideas, it conveys the concepts. Any questions to
+
+00:10:31.770 --> 00:10:38.940
+this point? So that is what I was saying it is more structured, pseudocode is more structured
+
+00:10:38.940 --> 00:10:45.980
+than usual prose but it is less formal than a programming language. What will our pseudocode
+
+00:10:45.980 --> 00:10:53.560
+look like? We will use standard numeric and Boolean expressions in it. Instead of the
+
+00:10:53.560 --> 00:11:03.900
+assignment operator which is equal to n java I will use this left arrow and instead
+
+00:11:03.900 --> 00:11:11.100
+of the equality operator, equality relationship in java which is 2 equals the same in C I will
+
+00:11:11.100 --> 00:11:21.040
+use just the single equal. I will declare methods in this manner. So algorithm name, what are
+
+00:11:21.040 --> 00:11:27.040
+the parameters it takes? I will use all kinds of programming constructs. I will use if then
+
+00:11:27.600 --> 00:11:35.220
+else statements while do repeat until for do to index arrays I will say a i, a i, j so on
+
+00:11:35.220 --> 00:11:42.980
+and on. It should be clear what this is doing and I will use return when the procedure terminates
+
+00:11:42.980 --> 00:11:46.900
+and return value will tell me what is the value returned by the particular procedure or
+
+00:11:46.900 --> 00:11:52.800
+a function and when I have to make a call to a method I will specify that with method
+
+00:11:52.800 --> 00:12:03.630
+name of the method, the argument and what is the object that it is reserving. Any questions
+
+00:12:03.630 --> 00:12:15.580
+to this point? This is specifying the type of the value returned by the particular method.
+
+00:12:20.150 --> 00:12:31.540
+You will see more of this when we come across more pseudocode. So how do we analyze algorithms?
+
+00:12:31.540 --> 00:12:39.080
+So we identify what are primitive operations in our pseudocode. So what is a primitive operation?
+
+00:12:39.260 --> 00:12:45.000
+It is a low level operation. Examples, data movement. I do an assignment from one to another.
+
+00:12:45.400 --> 00:12:50.980
+I do a control statement which is a branch if then else, a subroutine call, a return
+
+00:12:51.800 --> 00:12:57.400
+or I do arithmetic operations or logical operations. These are all we will call them primitive
+
+00:12:57.400 --> 00:13:02.000
+operations and in my pseudocode I just inspect the pseudocode and count the number of primitive
+
+00:13:02.000 --> 00:13:11.780
+operations that are executed by the algorithm. So we need to take an example now. I will take
+
+00:13:11.780 --> 00:13:16.860
+an example of sorting. You all know what sorting is. The input is some sequence of
+
+00:13:16.860 --> 00:13:29.090
+numbers. Output is a permutation of the sequence which is in non-decreasing order. So if
+
+00:13:29.090 --> 00:13:41.170
+this were my input this should be my output. What are the requirements of the output?
+
+00:13:41.170 --> 00:13:48.600
+We said it should be in non-decreasing order and it should be a permutation of the input.
+
+00:13:49.600 --> 00:13:54.860
+Any set of numbers which are in non-decreasing order does not make an output. Your algorithm
+
+00:13:54.860 --> 00:13:59.020
+should sort the numbers that were given to it not just produce a sequence of numbers
+
+00:13:59.020 --> 00:14:09.270
+in increasing order. Clearly the running time will depend upon how many elements are
+
+00:14:09.270 --> 00:14:16.310
+there and quite often it depends upon how sorted these numbers were.
+
+00:14:17.010 --> 00:14:22.590
+If they were already almost sorted then perhaps your algorithm is not going to take a long time.
+
+00:14:23.330 --> 00:14:28.690
+Of course it also depends upon what particular algorithm you are using. So the running time
+
+00:14:28.690 --> 00:14:35.370
+would depend upon all of these factors. The first sorting technique we are going
+
+00:14:35.370 --> 00:14:41.730
+to use is one that you have used very often. Let us say when you are playing a game of
+
+00:14:41.730 --> 00:14:51.410
+cards. So what is the strategy you follow when you are picking up set of cards that have
+
+00:14:51.410 --> 00:14:57.950
+been dealt out to you? You like to keep them in a sorted order in your hand. So you start
+
+00:14:57.950 --> 00:15:02.490
+with your empty hand, you pick up the first card then you take the next card and you
+
+00:15:02.490 --> 00:15:06.770
+insert it at the appropriate place. Suppose you have some 5 cards in your hand already
+
+00:15:06.770 --> 00:15:15.630
+let us say 2, 7, 9, Jack and Queen then I get an 8 so I am going to put it between 7 and
+
+00:15:15.630 --> 00:15:23.390
+9. That is the right place it has to be in. So I am inserting it at the appropriate place
+
+00:15:23.390 --> 00:15:29.880
+and that is why this technique is called insertion sorting and I keep doing this till
+
+00:15:29.880 --> 00:15:34.720
+I have picked up all the cards and inserted them appropriately in the hand that I have.
+
+00:15:38.540 --> 00:15:44.220
+So what is the idea? This is the pseudo code for insertion sort and we will just run through
+
+00:15:44.220 --> 00:15:52.040
+this so that you all understand. I give you as input an array of integers let us say A contains
+
+00:15:52.040 --> 00:15:59.680
+the input. The output is a permutation of the original numbers such that it is sorted.
+
+00:16:00.080 --> 00:16:03.660
+So my output is also going to be in the same array. This is the input output specification.
+
+00:16:06.190 --> 00:16:16.510
+I am going to have two variables or two indices i and j. The array is going to be sorted from
+
+00:16:16.510 --> 00:16:27.820
+A1 through Ai at any point in time. A1 through Aj minus 1 is going to be sorted. The jth location
+
+00:16:27.820 --> 00:16:34.240
+is the element which I have to insert appropriately at the right place. So clearly j then has
+
+00:16:34.240 --> 00:16:44.730
+to vary from 2 to n. So j has to vary from 2 to n. So I am going to look at the jth element.
+
+00:16:45.110 --> 00:16:52.110
+I put that in key and now this is what I have to do. I have to insert Aj or I have to insert
+
+00:16:52.110 --> 00:16:59.090
+the key into the sorted sequence which is A1 through Aj minus 1. A1 through Aj minus 1 is
+
+00:16:59.090 --> 00:17:07.950
+the sorted sequence and I am going to use the index i to help me do this. What is index
+
+00:17:07.950 --> 00:17:16.420
+i going to do? Index i is going to run down from j minus 1 down to 1. We are going to decrease
+
+00:17:16.420 --> 00:17:21.420
+index i which is what we are doing here in this while do loop. It starts with the value
+
+00:17:26.580 --> 00:17:33.490
+j minus 1 and what am I going to do? Let us see what am I going to do here? I have to insert
+
+00:17:33.490 --> 00:17:47.110
+7. I am going to move this 9 to this location. Why? Because 9 is more than 7. So 9 is more
+
+00:17:47.110 --> 00:17:56.400
+than 7 and I move it here. Then I compare 7 with 8. 7, 8 is still more than 7. So
+
+00:17:56.400 --> 00:18:03.480
+7 with 6. 6 is smaller than 7. So now I have found the right place for 7 and I would put
+
+00:18:03.480 --> 00:18:10.600
+7 in here. That is exactly what is happening in here. I run through this loop till I find
+
+00:18:11.080 --> 00:18:17.460
+an element which is less than key. Key is the element I am trying to insert. So this
+
+00:18:17.460 --> 00:18:21.660
+loop will continue while the element I am considering is more than key. This loop
+
+00:18:21.660 --> 00:18:25.840
+will terminate when I see an element which is less than key or the loop will terminate
+
+00:18:25.840 --> 00:18:32.860
+when I reach i equals 0. In which case that means that I have moved everything to the right
+
+00:18:32.860 --> 00:18:38.160
+and I should insert the element in the very first place. What am I doing here? I am just
+
+00:18:38.160 --> 00:18:44.400
+shifting the element one step to the right. Note that I have to insert this at the
+
+00:18:44.400 --> 00:18:49.980
+right place. I shift 9, right one step. Now this location becomes empty. So to say
+
+00:18:49.980 --> 00:18:56.440
+then I shift 8 one step. So this location now becomes empty and now I can come and put 7 in
+
+00:18:56.440 --> 00:19:02.800
+here which is what I do eventually. So i plus 1 would be the index where this location which
+
+00:19:02.800 --> 00:19:09.180
+would be the empty location eventually and I put in key there. So it is a very you can
+
+00:19:09.180 --> 00:19:13.360
+all implement it. Maybe you would have implemented it in a slightly different way that would
+
+00:19:13.360 --> 00:19:19.520
+give you a different program. But the algorithm is essentially the same. You are going to
+
+00:19:19.520 --> 00:19:32.550
+find the right place for the element and insert it there. And now let us try and analyze this
+
+00:19:32.550 --> 00:19:41.140
+algorithm. So I put down the algorithm here on the left. There is a small mistake here.
+
+00:19:41.220 --> 00:19:47.480
+This should be a left arrow. Please make a correction of that. What we are going to
+
+00:19:47.480 --> 00:19:55.000
+do is let us count. So these are all my primitive operations. This is a primitive operation.
+
+00:19:55.000 --> 00:19:59.140
+This is a primitive operation. Here I have two primitive operations really. Why? Because
+
+00:19:59.140 --> 00:20:07.760
+I am comparing i with 0 and I am comparing a i with key and actually I am also taking
+
+00:20:07.760 --> 00:20:13.380
+an and. So there are three primitive operations. So there are certain number of primitive operations
+
+00:20:13.380 --> 00:20:16.780
+here. This is also primitive. So all of these are primitive operations. And what I am
+
+00:20:16.780 --> 00:20:21.020
+doing here? So each of these operations take a certain amount of time depending upon the
+
+00:20:21.020 --> 00:20:28.380
+computer system you have. So c1, c2, c3, c4, c5, c5, c6 just reflect or just represent
+
+00:20:28.380 --> 00:20:36.460
+the amount of time that these operations take. In whatever units I do not care. And here
+
+00:20:36.460 --> 00:20:45.160
+I am counting the number of times each of these operations is executed is done in this
+
+00:20:45.160 --> 00:20:59.590
+entire program. Now why is this operation done n times? It says n times. So I start by assigning
+
+00:20:59.590 --> 00:21:06.850
+j equals 2 then assign 3, 4, 5, 6, 7. I go all the way up to n and then when I increment it
+
+00:21:06.850 --> 00:21:11.130
+may be once and I check that oh no it is now more. So I have counted it as n times.
+
+00:21:11.830 --> 00:21:17.310
+So there might be small errors in n and n plus 1. That is not very important. So this
+
+00:21:17.310 --> 00:21:22.130
+is roughly n times that we have to do this operation. How about this operation? I am going
+
+00:21:22.130 --> 00:21:28.250
+to do it exactly n minus 1 times. Once for 2, once for 3, once for 4 up to n. So that is
+
+00:21:28.250 --> 00:21:32.870
+why I have that this operation is being done n minus 1 times. Let us forget this is just
+
+00:21:32.870 --> 00:21:38.530
+a common statement. Again this operation will be done exactly n minus 1 times. Now
+
+00:21:38.530 --> 00:21:43.290
+we have to look at how many times this particular how many times do I come to this
+
+00:21:43.290 --> 00:22:00.060
+statement. T sub j reflects the accounts the number of times I have to shift an element to
+
+00:22:00.060 --> 00:22:11.520
+the right when I am inserting the jth card into my hand. So in the previous example when
+
+00:22:11.520 --> 00:22:20.320
+I am inserting 7 I had to shift 2 elements 8 and 9. So T sub j is going to be counting
+
+00:22:20.320 --> 00:22:31.230
+that quantity and that is the number of times I am going to reach this part of my while loop.
+
+00:22:32.270 --> 00:22:36.370
+I am going to be checking this condition. So first I come to this condition then maybe
+
+00:22:36.370 --> 00:22:45.150
+I come again to this condition. I come again over and over again to this condition. So
+
+00:22:45.150 --> 00:22:50.490
+the jth iteration of this for loop I am going to reach this condition T sub j times. So the
+
+00:22:50.490 --> 00:22:55.490
+total number of times I am seeing this condition is the sum of T sub j as j goes from 2 to n.
+
+00:22:57.690 --> 00:23:02.670
+So every time I see this condition I also come here. I am going to be seeing this condition.
+
+00:23:02.870 --> 00:23:06.870
+I am going to come to this statement one more time than I come here because the last
+
+00:23:06.870 --> 00:23:11.750
+time I see this statement I would exit out of here. So that is why this is T j minus
+
+00:23:11.750 --> 00:23:20.820
+1 and similarly for that same reason this is T j minus 1, j going from 2 to n. This statement
+
+00:23:20.820 --> 00:23:26.840
+here is not part of this while loop. This is an assignment operation. Please correct this.
+
+00:23:27.340 --> 00:23:31.800
+This is not part of the while loop and so this statement is part of the for loop and
+
+00:23:31.800 --> 00:23:34.380
+it is done exactly n minus 1 times as other statements.
+
+00:23:36.400 --> 00:23:40.480
+And so the total time that this procedure takes if you knew what these constants were
+
+00:23:40.480 --> 00:23:47.300
+can be computed in this manner. Of course you do not know what T sub j is. T sub j is a quantity
+
+00:23:47.300 --> 00:23:58.040
+which depends upon your instance. Not problem. There is a difference here. Problem is one
+
+00:23:58.040 --> 00:24:04.120
+of sorting. The instance is the set of numbers, the sequence of numbers that is given to
+
+00:24:04.120 --> 00:24:11.650
+you. So T sub j depends upon the instance and let us see what difference T sub j makes.
+
+00:24:15.420 --> 00:24:27.440
+So if the input was already sorted, T sub j is always 1. I just have to compare the element
+
+00:24:27.440 --> 00:24:31.500
+with the last element and I will immediately see that it is larger than the last element
+
+00:24:31.500 --> 00:24:36.780
+and so I would not have to do anything at all. So T sub j is always a 1 if the input
+
+00:24:36.780 --> 00:24:44.750
+is already in increasing order. What happens when the input is in decreasing order? If the
+
+00:24:44.750 --> 00:24:51.990
+input is in decreasing order then the number that I am trying to insert is going to be
+
+00:24:53.470 --> 00:25:02.280
+smaller than all the numbers that I already have because the input is in decreasing order.
+
+00:25:02.480 --> 00:25:06.220
+The number I am trying to insert is smaller than the numbers that I already have sorted
+
+00:25:06.220 --> 00:25:09.680
+in my array. So what am I going to do? I am going to compare it with the first
+
+00:25:09.680 --> 00:25:13.880
+element, the second element, the third element, the fourth element all the way up to the very
+
+00:25:13.880 --> 00:25:20.340
+first element. So when I am trying to insert the jth element I am actually going to end
+
+00:25:20.340 --> 00:25:25.880
+up comparing it with all the other j elements in the array and so in that case T sub j will
+
+00:25:25.880 --> 00:25:32.300
+be equal to j and when T sub j equals j, note what this quantity becomes. It is summation
+
+00:25:32.300 --> 00:25:38.920
+j, j going from 2 to n. You all know it is of the kind n squared and in that
+
+00:25:38.920 --> 00:25:43.200
+case the running time of this algorithm would be some constant times n squared plus some
+
+00:25:43.200 --> 00:25:49.080
+other constant times n minus some other constant. The behavior of this running time is more of
+
+00:25:49.580 --> 00:25:53.800
+more like n squared. We come to this point later when we are talking of a symptotic
+
+00:25:53.800 --> 00:25:59.460
+analysis but this is what I mean by f of n squared. It will behave more like n squared.
+
+00:26:00.180 --> 00:26:06.700
+Here on the other hand in the best case when Tj was 1, this sum here is just n or
+
+00:26:06.700 --> 00:26:12.720
+n minus 1 and in that case the total time is n times some constant plus n minus 1 times some
+
+00:26:12.720 --> 00:26:23.170
+constant minus some constant which is roughly n times some constant. So it is what we call
+
+00:26:23.170 --> 00:26:30.250
+the linear time algorithm. I come to these things again. On an average what would you
+
+00:26:30.250 --> 00:26:33.510
+expect? In the best case it is something like that you have to compare only against
+
+00:26:33.510 --> 00:26:37.750
+one element. In the worst case you have to compare about j elements. In the average
+
+00:26:37.750 --> 00:26:42.950
+case you would expect that you would compare against half of those elements. In the average
+
+00:26:42.950 --> 00:26:49.410
+case if you were to take it as you are comparing against j by 2, even then this quantity summation
+
+00:26:49.410 --> 00:26:54.510
+of j by 2, j going from 2 to n, what will this be? This will be roughly n squared by
+
+00:26:54.510 --> 00:27:03.110
+4 now. So its behavior is again like n squared and we come to these points in a minute.
+
+00:27:03.110 --> 00:27:12.710
+So this is what I mean by best, worst and average case. So I take the size of the input suppose
+
+00:27:12.710 --> 00:27:19.770
+I am interested in sorting n numbers and I look at all possible instances of these n numbers
+
+00:27:21.370 --> 00:27:26.710
+infinitely many. So again it is not clear how exactly one would do that. So what is
+
+00:27:26.710 --> 00:27:32.690
+worst case defined as? Worst case is defined as the maximum possible time that your algorithm
+
+00:27:32.690 --> 00:27:39.990
+would take for any instance of that size. So these are all instances of the same size.
+
+00:27:42.650 --> 00:27:48.590
+The best case would be the smallest time that your algorithm would take and the average would
+
+00:27:48.590 --> 00:28:07.270
+be the average of all of these infinitely many bars. So that was for inputs of one size
+
+00:28:08.390 --> 00:28:15.510
+n. That would give us the values of we can then therefore compute worst case, best case
+
+00:28:15.510 --> 00:28:22.370
+and average case. Now if I were to consider inputs of all sizes I can then create a plot
+
+00:28:22.370 --> 00:28:27.130
+of this kind. For each input size I can figure out, suppose I could figure out what the
+
+00:28:27.130 --> 00:28:31.590
+worst case, best case and average case were then I would get such monotonically increasing
+
+00:28:31.590 --> 00:28:40.630
+plots. Why is that? It is clear that as the size of the input increases the time taken with
+
+00:28:40.630 --> 00:28:45.750
+your algorithm will increase. It is not going to happen that your input size becomes larger
+
+00:28:45.750 --> 00:28:55.040
+and it takes lesser time. So which of these is of interest to us or which of this is
+
+00:28:55.040 --> 00:29:05.700
+easiest to work with? Worst case is the one that we will use most often and for
+
+00:29:05.700 --> 00:29:12.900
+why is that? First it provides an upper bound. It tells you how long your algorithm is going
+
+00:29:12.900 --> 00:29:20.200
+to take in the worst case. Many algorithms it occurs fairly often. Quite often it is
+
+00:29:20.200 --> 00:29:26.780
+the case that your worst case that for many instances the time taken by the algorithm
+
+00:29:26.780 --> 00:29:33.820
+is close to the worst case. So that average case essentially becomes as bad as the worst
+
+00:29:33.820 --> 00:29:41.340
+case. In fact for the previous example that we saw, average case was like n squared and
+
+00:29:41.340 --> 00:29:45.100
+worst case was also like n squared. Of course there were a difference in the constant but
+
+00:29:45.100 --> 00:29:52.840
+it was roughly the same. Now average case might be a very difficult quantity to compute
+
+00:29:52.840 --> 00:29:55.680
+because as I said average case if you have to compute you have to look at all possible
+
+00:29:55.680 --> 00:30:02.340
+instances and then take some kind of an average. Or you have to say my input instances
+
+00:30:02.340 --> 00:30:07.920
+are drawn from a certain distribution and so the expected time my algorithm will take
+
+00:30:07.920 --> 00:30:11.920
+if an input instance is drawn from this distribution is going to be similar. So it is typically
+
+00:30:11.920 --> 00:30:20.220
+a much harder quantity to work with and compute. So worst case is the measure of interest
+
+00:30:20.220 --> 00:30:21.820
+is what we will be working with.
+
+00:30:27.340 --> 00:30:33.460
+So asymptotic analysis is the kind of a thing that we have been doing so far when
+
+00:30:33.460 --> 00:30:40.040
+I said n squared and n and the goal of this is really to analyze the running time while
+
+00:30:40.040 --> 00:30:50.840
+getting rid of superficial details. We would like to say that an algorithm which has a running
+
+00:30:50.840 --> 00:30:56.100
+time of some constant times n squared is the same as an algorithm which has a running
+
+00:30:56.100 --> 00:31:01.420
+time of some other constant times n squared. Why? Because this constant is typically
+
+00:31:01.420 --> 00:31:07.080
+something which would be dependent upon the hardware that you are using. In the example
+
+00:31:07.080 --> 00:31:12.860
+that I showed you the C1, C2, C3 all of those times would depend upon the computer system
+
+00:31:12.860 --> 00:31:18.160
+that you are using. The hardware, the compiler, many many factors and so we would not like
+
+00:31:18.160 --> 00:31:22.420
+to distinguish or we are not interested or we are not bothered about distinguishing
+
+00:31:22.420 --> 00:31:27.280
+between such algorithms. Both of these algorithms one which has a running time of 3 n squared
+
+00:31:27.280 --> 00:31:33.620
+perhaps or another with the running time of n squared have a quadratic behavior as in when
+
+00:31:33.620 --> 00:31:42.920
+the input size doubles both of the algorithm their running time increases 4 fold and that
+
+00:31:42.920 --> 00:31:44.400
+is the thing that is of interest to us.
+
+00:31:45.980 --> 00:31:50.820
+We are interested in capturing how the running time of the algorithm increases with the size
+
+00:31:50.820 --> 00:31:59.080
+of the input in the limit. This is the crucial point here and that is what asymptotic
+
+00:31:59.080 --> 00:32:03.940
+analysis is all about. That is what the asymptotic here is. In the limit how does the running time
+
+00:32:03.940 --> 00:32:07.960
+of this algorithm increase with increase in input size.
+
+00:32:12.530 --> 00:32:17.650
+That brings us to something that some of you might have seen before the Bego notation.
+
+00:32:19.690 --> 00:32:26.830
+So if I have functions f of n and g of n, f of n and g of n, n here is typically representing
+
+00:32:26.830 --> 00:32:35.770
+the input size. f of n is measuring the time that your algorithm is taking. So f of n and
+
+00:32:35.770 --> 00:32:43.190
+g of n are both non-negative functions not just non-negative they are also non-decreasing
+
+00:32:43.910 --> 00:32:51.570
+because as input sizes increases the value of the running time, the time taken by your
+
+00:32:51.570 --> 00:32:52.730
+algorithm would also increase.
+
+00:32:54.990 --> 00:33:03.280
+So these are both non-decreasing functions of n and we say that f of n is Big O of g of n.
+
+00:33:04.220 --> 00:33:12.440
+If there exists constant c and n0 such that f of n is less than c times g of n for n larger
+
+00:33:12.440 --> 00:33:16.780
+than n0. So what does all of this mean? So I have drawn two functions here. The function
+
+00:33:16.780 --> 00:33:22.020
+in red is f of n and g of n is some other function. This function in green is some constant
+
+00:33:22.020 --> 00:33:30.560
+n times g of n. Now as you can see beyond this point n0, c times g of n is always larger than
+
+00:33:30.560 --> 00:33:39.020
+f of n. So suppose this is the way it continues even beyond this point. Then we would say that
+
+00:33:39.020 --> 00:33:51.680
+f of n is Big O of g of n or f of n is order g of n. So a few examples would clarify this
+
+00:33:51.680 --> 00:33:52.880
+and we come to that.
+
+00:33:56.340 --> 00:34:10.740
+My function f of n here is 2n plus 6 and g of n is n. It is the case, if you look at these
+
+00:34:10.740 --> 00:34:19.670
+two functions 2n plus 6 is always larger than n. So which is why this function 2n plus 6
+
+00:34:19.670 --> 00:34:24.410
+is always above n. Now you might be wondering why 2n plus 6 is a non-linear function
+
+00:34:24.410 --> 00:34:33.180
+here. That is because the scale here is an exponential scale. So it is 2 to the 0 to the
+
+00:34:33.180 --> 00:34:42.760
+1 to the 2 and so on and similarly on this axis. So this is n and this blue line here
+
+00:34:43.250 --> 00:34:56.110
+is 2n and this is 4n. Now as you can see beyond this point f of n is less than 4 times n.
+
+00:34:57.130 --> 00:35:06.150
+So what are our constant c and n0? The constant c is 4 and n0 would be this point of crossing
+
+00:35:07.210 --> 00:35:21.140
+beyond which 4n becomes larger than 2n plus 6. What is this point of crossing? At what
+
+00:35:21.140 --> 00:35:33.780
+point does 4n become larger than 2n plus 6? 3. So your n0 becomes 3 and then we say
+
+00:35:33.780 --> 00:35:46.450
+that f of n which is 2n plus 6 is big O of g of n. Not big O of 4n but big O of n. So f of
+
+00:35:46.450 --> 00:35:58.440
+n here is big O of n. So 2n plus 6 is big O of n. Another example, the function in red
+
+00:35:58.440 --> 00:36:04.540
+is g of n which is n and any constant time g of n, so it is the same scale as in the
+
+00:36:04.540 --> 00:36:09.940
+previous line. Any constant time g of n will just be the same straight line displaced by
+
+00:36:10.580 --> 00:36:17.400
+suitable amount. So this will be 4, this will be 4 times n, this will be whatever depends
+
+00:36:17.400 --> 00:36:24.240
+upon what the intercept here is. So it will just be like this but your n squared would
+
+00:36:24.240 --> 00:36:35.630
+be a line like this. So there is no constant c such that n square is less than c of n.
+
+00:36:35.790 --> 00:36:41.430
+Can you find out a constant c such that n square is less than c of n for n more than n0? No. Any
+
+00:36:41.430 --> 00:36:48.010
+constant that you choose I can pick a larger n. I can pick an n such that this is violated
+
+00:36:49.690 --> 00:37:01.590
+and so it is not the case that n square is big O of n. So how does one figure out these
+
+00:37:01.590 --> 00:37:09.010
+things? So there is a very simple rule. Suppose this is my function 50n log n. I just drop
+
+00:37:09.010 --> 00:37:17.710
+all constants and lower order terms. So forget the constant 50 here and I get n log n. So this
+
+00:37:17.710 --> 00:37:26.790
+is big O of n log n. This function 50n log n is big O of n log n. 7n minus 3 is I drop
+
+00:37:26.790 --> 00:37:32.230
+the constant and lower order terms I get 7n minus 3 is big O of n. I have some complicated
+
+00:37:32.230 --> 00:37:38.130
+function like 8n square log n plus 5n square plus n. I just drop all lower order terms.
+
+00:37:38.130 --> 00:37:44.170
+This is the fastest growing term because this has n square as well as log n in it. So I just
+
+00:37:44.170 --> 00:37:49.510
+drop the n square and n term and from here I drop my constant and I get n square log n.
+
+00:37:50.190 --> 00:37:58.290
+So this function is big O of n square log n. There is a constant c such that this quantity
+
+00:37:59.490 --> 00:38:07.210
+this large sum here is less than c times n square log n for n larger than some n0.
+
+00:38:07.210 --> 00:38:15.190
+In the limit this quantity will be less than some constant times this quantity and you can
+
+00:38:15.190 --> 00:38:19.930
+figure out what the value of c should be and what the value of n0 should be for that to
+
+00:38:19.930 --> 00:38:20.170
+happen.
+
+00:38:22.070 --> 00:38:32.990
+This is a common error. So this function 50n log n is also big O of n to the 5. Why?
+
+00:38:32.990 --> 00:38:41.530
+Because this quantity in fact is less than or equal to 50 times n to the 5 always for all
+
+00:38:41.530 --> 00:38:50.710
+n and that is just a constant. So this is big O of n to the 5. But when we use the big
+
+00:38:50.710 --> 00:38:55.730
+O notation we try and provide as strong a bound as possible. So instead of saying while
+
+00:38:55.730 --> 00:39:06.570
+this statement is true we will rather call this as big O of n log n. You will see more
+
+00:39:06.570 --> 00:39:17.630
+of this in subsequent slides. So how are we going to use the big O notation? So we are going
+
+00:39:17.630 --> 00:39:26.200
+to express the number of primitive operations that are executed during a run of the program
+
+00:39:26.200 --> 00:39:30.900
+as a function of the input set. We are going to use the big O notation for that. Now if
+
+00:39:30.900 --> 00:39:39.540
+I have an algorithm for which the number of primitive operations is big O of n and
+
+00:39:39.540 --> 00:39:42.900
+some other algorithm for which the number of primitive operations is big O of n square
+
+00:39:42.900 --> 00:39:47.960
+then clearly the first algorithm is better than the second. Why? Because as the input
+
+00:39:47.960 --> 00:39:53.080
+size grows, if the input size doubles then the running time of this algorithm is only
+
+00:39:53.080 --> 00:39:59.840
+going to double while the running time of this algorithm will increase fourfold. Similarly
+
+00:39:59.840 --> 00:40:04.640
+our algorithm which has a running time of big O of log n is better than one which has
+
+00:40:04.640 --> 00:40:08.720
+a running time of big O of n. And we have a hierarchy of functions of this kind log
+
+00:40:08.720 --> 00:40:13.640
+n n n square and an algorithm with the running time of big O of log n is better than one with
+
+00:40:13.640 --> 00:40:17.480
+the big O of n with better than one with the big O of running time of big O of n square
+
+00:40:18.120 --> 00:40:22.660
+running time of big O of n cube which is better than an algorithm with the running time of
+
+00:40:22.660 --> 00:40:28.660
+big O of 2 to the n. So there is a word of caution here. You might have an algorithm
+
+00:40:28.660 --> 00:40:35.560
+whose running time is a million times n because you are doing a whole lot of maybe
+
+00:40:35.560 --> 00:40:40.140
+some other operations. I cannot see how you would create such an algorithm but you might
+
+00:40:40.140 --> 00:40:46.460
+have an algorithm of this running time. So this is big O of n because this is less than or
+
+00:40:46.460 --> 00:40:50.300
+equal to some constant times n and you might have some other algorithm with the running
+
+00:40:50.300 --> 00:40:56.300
+time of 2 n square. So from what I have said before you would say that this algorithm
+
+00:40:56.300 --> 00:41:02.840
+is better than this. The one with the linear running time of big O of n running time is
+
+00:41:02.840 --> 00:41:09.240
+better than this. It is true but in the limit and the limit here is achieved very late when
+
+00:41:09.240 --> 00:41:15.500
+n is really really large. For small instances this 2 n square might actually take less time
+
+00:41:15.500 --> 00:41:22.100
+than your 1 million times n. So you have to be careful about the constants also.
+
+00:41:22.100 --> 00:41:35.060
+So we will do some examples of asymptotic analysis. So I have a pseudocode written here and what
+
+00:41:35.060 --> 00:41:44.020
+I am doing here is I have an array of numbers, n numbers sitting in an array called x and
+
+00:41:44.020 --> 00:41:56.730
+I have to output an array a in which each element in which the element ai is the average of the
+
+00:41:56.730 --> 00:42:07.050
+numbers x0 through xi. This is what I have to do. So what is one way of doing it? So I
+
+00:42:07.930 --> 00:42:17.570
+basically have a for loop in which I compute each element of the array a. So to compute
+
+00:42:17.570 --> 00:42:27.290
+a10 what should I do? I just have to sum up x0 through x10 which I am doing here. So what
+
+00:42:27.290 --> 00:42:35.050
+is this doing? When I am computing a10 i is taking the value 10 and I am running the
+
+00:42:35.050 --> 00:42:45.630
+index j from 0 to 10. I am summing up the value of x0 plus x1 up to x10 in this accumulator
+
+00:42:45.630 --> 00:42:53.070
+a and then I am eventually dividing the value of this accumulator with 11 because it is x0
+
+00:42:53.070 --> 00:43:02.790
+through x10 and that gives me the number that I should have in a10 and I am going to repeat
+
+00:43:02.790 --> 00:43:15.610
+this for 11, 12, 13, 14 all the elements essentially. Is this a good algorithm? It is not a good
+
+00:43:16.130 --> 00:43:24.530
+algorithm. This is one step. How many times is this step executed? It is executed i times
+
+00:43:25.390 --> 00:43:31.690
+and what are the values that i takes? Initially i takes a value 0 to 1, 2, 3 all the way up
+
+00:43:31.690 --> 00:43:40.980
+to n minus 1 and this entire thing is done n times. So what does that give you? That
+
+00:43:40.980 --> 00:43:46.780
+gives you total running time of roughly n square. This one step is getting executed n square
+
+00:43:46.780 --> 00:43:53.300
+times and this is the dominant thing. Of course how many times is this step getting executed?
+
+00:43:54.820 --> 00:43:59.720
+This step is getting executed n times and so is this step which is getting executed n times
+
+00:43:59.720 --> 00:44:04.860
+but this step is getting executed roughly n square times, some constant times n square
+
+00:44:04.860 --> 00:44:10.740
+times and so running time of your algorithm is bigger of n square. It is a very simple
+
+00:44:10.740 --> 00:44:16.220
+problem but you can have a better solution here and perhaps all of you can see what
+
+00:44:16.220 --> 00:44:22.480
+the better solution should be. What is the better solution? We will have a variable s in
+
+00:44:22.480 --> 00:44:49.360
+which we would keep accumulating the x i's. Initially s is just 0 and then when I am computing
+
+00:44:49.720 --> 00:44:55.140
+because I used that at the last step. That is the problem that is happening here. See every
+
+00:44:55.140 --> 00:45:00.460
+time we are computing x, so first we are computing x0 plus x1, then we are computing x0 plus x1
+
+00:45:00.460 --> 00:45:05.000
+plus x2, then we are computing x0 plus x1 plus x2 plus x3. We are kind of repeating
+
+00:45:05.000 --> 00:45:10.140
+computations over and over again. Why should we do that? We will have just the single
+
+00:45:10.140 --> 00:45:18.780
+variable which will keep track of the prefixes, the sum of the prefixes so far. So s at
+
+00:45:18.780 --> 00:45:24.720
+this point when I am in the ith run of this loop, s at that point already has the sum x0
+
+00:45:24.720 --> 00:45:31.200
+through x i minus 1 and then I sum x i in it and to compute the ith element I just need
+
+00:45:31.200 --> 00:45:37.780
+to divide this sum by i plus 1. I keep this accumulator round with me. Now when I finish
+
+00:45:37.780 --> 00:45:47.180
+the ith run, ith iteration of this loop I have in s x0 through x i, the sum x0
+
+00:45:47.180 --> 00:45:54.620
+through x i. I can reuse it for the next step. So how much time does this take now? In each
+
+00:45:54.620 --> 00:46:02.300
+run of this loop I am just doing two steps, two primitive operations. So that makes it
+
+00:46:02.300 --> 00:46:09.020
+order n time because this loop is executed n times.
+
+00:46:16.090 --> 00:46:21.930
+So I have been using this freely, linear and quadratic but here is a slide which just
+
+00:46:21.930 --> 00:46:27.750
+tells you the other terms that I might be using. So linear if an algorithm has a running
+
+00:46:27.750 --> 00:46:33.210
+time, I say an asymptotic running time of order n, then we call it a linear algorithm. If it
+
+00:46:33.210 --> 00:46:37.710
+has an asymptotic running time which is n squared, we call it quadratic. Logarithmic
+
+00:46:37.710 --> 00:46:44.630
+if it is log n, polynomial if it has n to the k for some constant k, k is a constant
+
+00:46:44.630 --> 00:46:50.250
+here. And an algorithm is called exponential if it has a running time of a to the n
+
+00:46:50.710 --> 00:46:59.870
+where a is some number more than 1. So till now I have only introduced to you the big o
+
+00:46:59.870 --> 00:47:12.040
+notation. We also have the big omega notation and the big theta notation. The big omega
+
+00:47:12.040 --> 00:47:19.780
+notation provides a lower bound. A function f of n is omega of g of n. So this is f of
+
+00:47:19.780 --> 00:47:27.000
+n, this is constant times g of n. If constant times g of n is always less than f of n,
+
+00:47:28.120 --> 00:47:33.840
+earlier this was more than f of n, less than f of n in the limit. So beyond a certain n0
+
+00:47:35.120 --> 00:47:45.280
+as this picture illustrates. So f of n is more than c times g of n beyond this point n0 and
+
+00:47:45.280 --> 00:47:53.960
+that case we will say that f of n is omega of g of n. The theta notation f of n is theta
+
+00:47:53.960 --> 00:48:00.240
+of g of n if there exist constant c1 and c2 such that f of n is sandwiched between
+
+00:48:00.240 --> 00:48:06.980
+c1 times g of n and c2 times g of n. That is beyond a certain point f of n lies between
+
+00:48:07.480 --> 00:48:12.120
+one constant times g of n and another constant times g of n. So then we say that f of n is
+
+00:48:12.120 --> 00:48:25.960
+theta of g of n. That is f of n grows like g of n in the limit. Another way of thinking
+
+00:48:25.960 --> 00:48:31.040
+of it is f of n is theta of g of n if f of n is big o of g of n and it is also
+
+00:48:31.040 --> 00:48:41.000
+omega of g of n. This part tells you that f of n is big o of g of n and this part tells
+
+00:48:41.000 --> 00:48:45.940
+you that f of n is omega of g of n and so we have that f of n is theta of g of n.
+
+00:48:48.150 --> 00:48:53.510
+There are two more related asymptotic notations. One is called the little o notation and the
+
+00:48:53.510 --> 00:48:58.130
+other is called the little omega notation. They are the non tight analogues of big
+
+00:48:58.130 --> 00:49:07.470
+o and sorry they are the non tight analogues of big o and big omega and it is best to understand
+
+00:49:07.470 --> 00:49:13.890
+this through the analogy with real numbers. So when I say that f of n is big o of g of
+
+00:49:13.890 --> 00:49:19.650
+n, I am really saying that the function f is in some sense less than or equal to g.
+
+00:49:22.700 --> 00:49:28.020
+That is in fact what we used in the definition. f of n is less than c times g of n. So f
+
+00:49:28.020 --> 00:49:33.760
+the analogy with real numbers is when a number is less than or equal to another number. Omega
+
+00:49:33.760 --> 00:49:39.760
+is for greater than or equal to theta is equal to of course these are functions while these
+
+00:49:39.760 --> 00:49:45.260
+are real numbers. So if these are real numbers you can talk of equality but you cannot talk
+
+00:49:45.260 --> 00:49:50.420
+of equality of functions unless they are exactly equal. So this is the corresponding notion
+
+00:49:50.940 --> 00:50:01.100
+for that. Little o now corresponds to strictly less and little omega corresponds to strictly
+
+00:50:01.100 --> 00:50:05.640
+more. So we are not going to be using these. In fact we will be spending most of our time
+
+00:50:05.640 --> 00:50:10.000
+with just big o. So that is the part you should be very clear with.
+
+00:50:10.540 --> 00:50:12.920
+What do we specifically mean that it is strictly?
+
+00:50:13.800 --> 00:50:21.080
+For that I will just maybe look at the slide. So the formal definition for little
+
+00:50:21.080 --> 00:50:29.100
+o is that for every constant c there should exist some n0 such that f of n is less than
+
+00:50:29.100 --> 00:50:37.020
+c times g of n for n more than n0. How is it different from big o? There it said there
+
+00:50:37.020 --> 00:50:42.440
+exists a c and an n0 such that this is true. Here we want to say for every c there should
+
+00:50:42.440 --> 00:50:54.550
+exist an n0 for which this is true. So this is just one slide that I put up to
+
+00:50:54.550 --> 00:50:59.610
+show what the difference between these functions is like. So suppose I have algorithms whose running
+
+00:50:59.610 --> 00:51:06.710
+times are like 400 n, 20 n, log n, 2 n square, n to the 4, n to the n and here I list out
+
+00:51:06.710 --> 00:51:12.470
+what is the largest problem size you can solve in one second, one minute and one hour.
+
+00:51:13.730 --> 00:51:19.910
+So the largest problem size you can solve is roughly 2500. Say this is using some
+
+00:51:19.910 --> 00:51:26.750
+fail, some constant. So it is let us say 2500. If you had this as your running time let us
+
+00:51:26.750 --> 00:51:34.570
+say this is what the problem size would be like. Why do you see that this is larger than
+
+00:51:34.570 --> 00:51:40.330
+this? Although this is a worse running time than this in big o because of the constants.
+
+00:51:41.590 --> 00:51:46.390
+So you see the difference happening here. If it is 2 n square then it is already only
+
+00:51:46.390 --> 00:51:49.990
+a problem of size 7 or 7 that you can solve. If it is 2 to the n you can only solve the
+
+00:51:49.990 --> 00:51:56.750
+problem of size 19 and see how the behavior is as the time increases. An hour is 3600 seconds
+
+00:51:57.170 --> 00:52:02.910
+and so you see a huge increase in the size of the problem you can solve if it were a
+
+00:52:02.910 --> 00:52:08.650
+linear time algorithm. Still a large increase when it is an n log n algorithm not so large
+
+00:52:08.650 --> 00:52:13.890
+an increase when it is an n square algorithm and almost no increase when it is a 2 to the
+
+00:52:13.890 --> 00:52:17.930
+n algorithm. If you have an algorithm which is running time of something like 2 to the n
+
+00:52:18.670 --> 00:52:25.570
+you cannot solve a problem of more than size 100. Cannot solve means it will take millions
+
+00:52:25.570 --> 00:52:32.510
+of years for you to do that. So that is the behavior that bothers us that is the behavior
+
+00:52:32.510 --> 00:52:39.530
+we are interested in in this course. That is why asymptotic analysis is what we will
+
+00:52:39.530 --> 00:52:48.690
+be considering most often. So any questions till this point? With that we are going to stop
+
+00:52:48.690 --> 00:52:56.490
+this lecture. Today we have looked at asymptotic analysis and some initial notation and terminology
+
+00:52:57.190 --> 00:52:58.630
+that we will be following with this course.
+

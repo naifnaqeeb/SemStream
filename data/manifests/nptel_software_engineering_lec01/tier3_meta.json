@@ -1,0 +1,147 @@
+{
+  "lecture_id": "nptel_software_engineering_lec01",
+  "model": "llama3.1:8b",
+  "window_seconds": 60.0,
+  "summaries": [
+    {
+      "start": 0.0,
+      "end": 60.0,
+      "text": "The instructor, Rajip Mal, is introducing himself as the course instructor for Software Engineering. He has completed his education at the Indian Institute of Science, Bangalore."
+    },
+    {
+      "start": 60.0,
+      "end": 120.0,
+      "text": "Rajip Mal graduated from the Indian Institute of Science, Bangalore, and has since worked with Motorola India and IIT Kharagpur, currently as a professor in the CAC department. The course will begin with the basic definition of Software Engineering."
+    },
+    {
+      "start": 120.0,
+      "end": 180.0,
+      "text": "Rajiv Mal is introducing the concept of an engineering approach to develop software, highlighting its distinction from traditional methods. He uses a building construction analogy to illustrate the engineering approach, explaining that a novice might build a simple wall, but an engineer would consider more factors, such as the building's overall design and structure."
+    },
+    {
+      "start": 180.0,
+      "end": 240.0,
+      "text": "A small project can be built with basic intuition, but a complex project requires more thought and consideration. The same applies to software development, where simple programs can be written without a structured approach, but larger projects require more planning and engineering."
+    },
+    {
+      "start": 240.0,
+      "end": 300.0,
+      "text": "Developing a small software program can be done with basic intuition, but a large project like a 100,000-line program requires a more structured approach. The engineering approach to software development allows for the use of techniques and tools to develop large software projects."
+    },
+    {
+      "start": 300.0,
+      "end": 360.0,
+      "text": "Software engineering involves developing software using techniques and tools, drawing on past experience and methodologies. The IEEE defines software engineering as a systematic, disciplined, and quantifiable approach to software development."
+    },
+    {
+      "start": 360.0,
+      "end": 420.0,
+      "text": "The IEEE definition elaborates on software engineering as an engineering approach to develop software, applying a systematic, disciplined, and quantifiable method. Software engineering is derived from the experience of programmers over the last several years and is essential for software developers to learn."
+    },
+    {
+      "start": 420.0,
+      "end": 480.0,
+      "text": "The software crisis refers to a situation where software fails to meet user requirements, is often delivered late or with defects, and is increasingly expensive compared to hardware. The symptoms of this crisis include difficulty in making changes to the software and a long time taken to debug problems."
+    },
+    {
+      "start": 480.0,
+      "end": 540.0,
+      "text": "Debugging problems in software takes a long time and sometimes bugs cannot be corrected. Software is often delivered late and is difficult to enhance or add new features."
+    },
+    {
+      "start": 540.0,
+      "end": 600.0,
+      "text": "The ratio of hardware to software costs has changed over the years, with hardware costs dropping significantly while software costs have increased, making software the major expense. A laptop costs 45000 rupees, which is a fraction of the cost of the software."
+    },
+    {
+      "start": 600.0,
+      "end": 660.0,
+      "text": "The cost of a single software is many times the cost of the hardware, with a specific example of a floating license costing 6 lakh rupees compared to a laptop costing 45,000 rupees. Companies are now spending significantly more on software than on hardware, with the software costs increasing while hardware costs have decreased."
+    },
+    {
+      "start": 660.0,
+      "end": 720.0,
+      "text": "The lecturer is questioning why hardware is often used alongside software, when the latter can be expensive, and suggests that there must be reasons why software is necessary. The lecturer will examine the reasons why software is indispensable and why its use is increasing compared to hardware."
+    },
+    {
+      "start": 720.0,
+      "end": 780.0,
+      "text": "Developing software is easier, faster and more adaptable than hardware, allowing for quick changes and updates. Hardware development, in contrast, is a lengthy process that can take years, from initial requirements to fabrication."
+    },
+    {
+      "start": 780.0,
+      "end": 840.0,
+      "text": "Hardware development is a lengthy process that involves multiple changes and testing stages, taking several years to complete. In contrast, making small changes to software can be done quickly, often in just a few days, and occupies no space or power."
+    },
+    {
+      "start": 840.0,
+      "end": 900.0,
+      "text": "Developing Microsoft Word in hardware would result in enormous size, high cost, and massive power consumption. Software is preferred for applications because it resides on a hard disk and can be executed feature by feature, but it's becoming increasingly complex."
+    },
+    {
+      "start": 900.0,
+      "end": 960.0,
+      "text": "We're trying to understand the fundamental principles of software development to make it easier to change and modify as it becomes more complex. The main reason for this is that making changes to complex software requires a deep understanding of how it works and can be a time-consuming and effort-intensive process."
+    },
+    {
+      "start": 960.0,
+      "end": 1020.0,
+      "text": "Every change to the software, no matter how small, alters its underlying design and degrades its structure, making it harder for others to understand and modify. As changes continue to be made, the software becomes increasingly complex and difficult to work with."
+    },
+    {
+      "start": 1020.0,
+      "end": 1080.0,
+      "text": "Only a quarter of software projects are successful, with 28% making it to completion, while the rest are cancelled, delayed, or experience cost overruns. Half of projects are either delayed or experience cost overruns."
+    },
+    {
+      "start": 1080.0,
+      "end": 1140.0,
+      "text": "The demand for software is increasing rapidly due to simpler hardware, while software complexity is growing. Software projects are struggling due to poor project management and manual efforts, despite the increasing problem sizes."
+    },
+    {
+      "start": 1140.0,
+      "end": 1200.0,
+      "text": "Programmers are struggling with manual efforts due to inadequate training in software engineering techniques, which often aren't taught in college. A growing skill shortage is emerging as a result of this lack of education in software engineering principles."
+    },
+    {
+      "start": 1200.0,
+      "end": 1260.0,
+      "text": "The skill shortage in software engineering is not improving rapidly, with productivity and development pace failing to keep up with increasing problem sizes. The lecturer is now exploring the debate over whether software development is an art or an engineering discipline."
+    },
+    {
+      "start": 1260.0,
+      "end": 1320.0,
+      "text": "The lecturer is exploring how technology develops in specific domains by comparing initial attempts to replicate someone else's idea with subsequent improvements. The development of paper making is being used as an example to illustrate how an initial perception of it as an art is later replaced by a more engineering-like understanding."
+    },
+    {
+      "start": 1320.0,
+      "end": 1380.0,
+      "text": "Initially, people perceive paper making as an art, where they just know how to make it without explaining the process. As the craft form develops, techniques become identifiable and are only shared with apprentices, becoming a hidden secret."
+    },
+    {
+      "start": 1380.0,
+      "end": 1440.0,
+      "text": "Craftsmen share techniques with a select few, rather than many, and this is a transitional step towards an engineering approach. This approach involves investigating and documenting techniques, giving them a scientific basis, and making them open to study by anyone."
+    },
+    {
+      "start": 1440.0,
+      "end": 1500.0,
+      "text": "The pattern of transitioning from a craft-based approach to a scientific one is also seen in programming, where good programmers initially didn't know how they wrote good programs, but their techniques were eventually identified and documented. This led to the systematic investigation and scientific basis of programming techniques, making them open to study and publication."
+    },
+    {
+      "start": 1500.0,
+      "end": 1560.0,
+      "text": "Systematic investigations of programming techniques led to the publication of these methods in books, making them available for others to read. The focus now shifts to software engineering, where past experience is organised and a theoretical basis is developed, with a focus on quantifiable principles."
+    },
+    {
+      "start": 1560.0,
+      "end": 1620.0,
+      "text": "Theoretical bases and quantifiable techniques have been established for some methods, but not all, with those lacking quantitative techniques being based on experience rather than hard data. A pragmatic approach to cost effectiveness is taken in software design, considering trade-offs between complexity, cost, and other factors."
+    },
+    {
+      "start": 1620.0,
+      "end": 1677.58,
+      "text": "Software engineering is an engineering approach to develop software, developed from past experience of many programmers innovating new ways of writing good programs. The focus of this discussion is on systematically organizing these techniques to enable others to become good programmers."
+    }
+  ]
+}

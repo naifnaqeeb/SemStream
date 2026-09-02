@@ -1,0 +1,2342 @@
+WEBVTT
+
+00:00:00.370 --> 00:00:02.970
+The following content is provided under a Creative
+
+00:00:02.970 --> 00:00:03.770
+Commons license.
+
+00:00:04.410 --> 00:00:06.650
+Your support will help MIT OpenCourseWare
+
+00:00:06.650 --> 00:00:10.010
+continue to offer high quality educational resources for free.
+
+00:00:10.670 --> 00:00:13.230
+To make a donation or to view additional materials
+
+00:00:13.230 --> 00:00:17.170
+from hundreds of MIT courses, visit MIT OpenCourseWare
+
+00:00:17.170 --> 00:00:19.710
+at ocw.mit.edu.
+
+00:00:29.330 --> 00:00:31.650
+So today, we're going to move on
+
+00:00:31.650 --> 00:00:34.470
+to a fairly different world than the world
+
+00:00:34.470 --> 00:00:35.330
+we've been living in.
+
+00:00:35.910 --> 00:00:38.590
+And this will be a world we'll be living in for quite
+
+00:00:38.590 --> 00:00:39.290
+a few lectures.
+
+00:00:40.530 --> 00:00:43.970
+But before I do that, I want to get back to just finish up
+
+00:00:43.970 --> 00:00:45.870
+something that Professor Grimmsen started.
+
+00:00:46.990 --> 00:00:49.470
+You may recall he talked about family trees.
+
+00:00:50.430 --> 00:00:53.350
+And raised the question, was it actually possible to
+
+00:00:53.350 --> 00:00:56.310
+represent all ancestral relationships as a tree?
+
+00:00:57.330 --> 00:00:59.910
+Well, as a counter example, I'm sure some of you are
+
+00:00:59.910 --> 00:01:01.170
+familiar with Oedipus Rex.
+
+00:01:03.330 --> 00:01:05.950
+For those of you who are not, I'm happy to give you a
+
+00:01:05.950 --> 00:01:07.710
+plot summary at the end of the lecture.
+
+00:01:07.970 --> 00:01:09.950
+It's a rather bizarre plot.
+
+00:01:10.810 --> 00:01:13.670
+But it was captured in a wonderful song by Tom Lair.
+
+00:01:15.510 --> 00:01:18.530
+The short story is Oedipus ended up marrying his
+
+00:01:18.530 --> 00:01:20.310
+mother and having four children.
+
+00:01:22.310 --> 00:01:25.210
+And Tom Lair, if you've never heard of Tom Lair, you're
+
+00:01:25.210 --> 00:01:28.510
+missing one of the world's funniest songwriters.
+
+00:01:29.450 --> 00:01:32.070
+And he had a wonderful song called Oedipus Rex.
+
+00:01:32.290 --> 00:01:35.770
+And I recommend this YouTube as a way to go and listen
+
+00:01:35.770 --> 00:01:36.150
+to it.
+
+00:01:39.470 --> 00:01:43.690
+You can gather from the quote what the story is about.
+
+00:01:44.690 --> 00:01:46.430
+I also recommend the play, by the way.
+
+00:01:46.970 --> 00:01:50.610
+It's really kind of appalling what goes on, but it's
+
+00:01:50.610 --> 00:01:50.950
+beautiful.
+
+00:01:52.370 --> 00:01:54.010
+All right, back to the main topic.
+
+00:01:55.170 --> 00:01:56.890
+Here's the relevant reading.
+
+00:01:59.130 --> 00:02:04.410
+A small bit from later in the book and then chapter 14.
+
+00:02:05.030 --> 00:02:07.690
+You may notice that we're not actually going through the book
+
+00:02:07.690 --> 00:02:08.150
+in order.
+
+00:02:08.830 --> 00:02:11.610
+And the reason we're not doing that is because we're trying
+
+00:02:11.610 --> 00:02:13.970
+to get you information you need in time to do problem
+
+00:02:13.970 --> 00:02:14.310
+sets.
+
+00:02:16.850 --> 00:02:17.210
+All right.
+
+00:02:18.470 --> 00:02:22.630
+So the topic of today is really uncertainty.
+
+00:02:23.570 --> 00:02:28.670
+And the fact that the world is really annoyingly hard to
+
+00:02:28.670 --> 00:02:37.210
+understand, this is a signpost related to 6.0002, but we
+
+00:02:37.210 --> 00:02:39.030
+won't go into too much detail about it.
+
+00:02:40.710 --> 00:02:45.050
+We'd rather things were certain, but in fact, they
+
+00:02:45.050 --> 00:02:46.030
+usually are not.
+
+00:02:47.190 --> 00:02:51.930
+And this is a place where 6.0002 diverges from the
+
+00:02:51.930 --> 00:02:55.250
+typical introductory computer science course, which
+
+00:02:55.250 --> 00:02:57.250
+focuses on things that are functional.
+
+00:02:58.130 --> 00:03:01.350
+Given an input, you always get the same output.
+
+00:03:02.010 --> 00:03:02.710
+It's predictable.
+
+00:03:03.790 --> 00:03:06.870
+And we like to do that because that's easier to teach.
+
+00:03:07.490 --> 00:03:11.590
+But in fact, for reasons we'll be talking about, it's not
+
+00:03:11.590 --> 00:03:15.470
+nearly as useful if you're trying to actually write
+
+00:03:15.470 --> 00:03:18.930
+computations that help you understand the world, you
+
+00:03:18.930 --> 00:03:20.950
+have to face uncertainty head on.
+
+00:03:24.530 --> 00:03:28.490
+An analogy is for many years people believed in Newtonian
+
+00:03:28.490 --> 00:03:29.170
+mechanics.
+
+00:03:30.970 --> 00:03:33.730
+I guess they still do in 801 maybe.
+
+00:03:34.330 --> 00:03:39.050
+That every effect is a cause, and Apple falls from the
+
+00:03:39.050 --> 00:03:41.390
+tree because of gravity, and you know where it's going to
+
+00:03:41.390 --> 00:03:44.190
+land, and the world can be understood causally.
+
+00:03:44.950 --> 00:03:48.110
+And people believe this really for quite a long time.
+
+00:03:49.510 --> 00:03:55.010
+Most of history, until the early part of the 20th
+
+00:03:55.010 --> 00:04:00.390
+century, when the so-called Copenhagen doctrine was put
+
+00:04:00.390 --> 00:04:06.870
+forth, the doctrine there from Bohr and Heisenberg, two
+
+00:04:06.870 --> 00:04:10.490
+very famous physicists, was one of what they called
+
+00:04:10.490 --> 00:04:12.330
+causal nondeterminism.
+
+00:04:13.730 --> 00:04:17.270
+And their assertion was that the world, at its very
+
+00:04:17.270 --> 00:04:22.630
+most fundamental level, behaves in a way that you
+
+00:04:22.630 --> 00:04:23.410
+cannot predict.
+
+00:04:24.470 --> 00:04:28.550
+It's OK to make a statement that x is highly likely to
+
+00:04:28.550 --> 00:04:30.230
+occur, almost certain to occur.
+
+00:04:30.910 --> 00:04:35.330
+But for no case can you make a statement x will occur.
+
+00:04:36.190 --> 00:04:38.010
+Nothing has a probability of one.
+
+00:04:40.010 --> 00:04:43.810
+This was hard for us to imagine today when we all know
+
+00:04:43.810 --> 00:04:47.790
+quantum mechanics, but at the turn of the century this was
+
+00:04:47.790 --> 00:04:49.510
+a shocking statement.
+
+00:04:50.410 --> 00:04:53.870
+And two other very well-known physicists, Albert Einstein
+
+00:04:53.870 --> 00:04:56.890
+and Schrodinger, basically said, no, this is wrong.
+
+00:04:57.470 --> 00:04:59.750
+Bohr, Heisenberg, you guys are idiots.
+
+00:05:00.050 --> 00:05:00.810
+It's just not true.
+
+00:05:01.450 --> 00:05:02.670
+They probably didn't call them idiots.
+
+00:05:03.570 --> 00:05:06.550
+And this is most exemplified by Einstein's famous quote
+
+00:05:06.550 --> 00:05:10.770
+that God does not play dice, which is indicative of the
+
+00:05:10.770 --> 00:05:14.110
+fact that this was actually a discussion that permeated not
+
+00:05:14.110 --> 00:05:17.930
+just the world of physics, but society in general.
+
+00:05:18.110 --> 00:05:21.750
+People really turned it into literally a religious issue,
+
+00:05:21.970 --> 00:05:22.690
+as did Einstein.
+
+00:05:24.770 --> 00:05:27.190
+Well, so now we should ask the question, does it
+
+00:05:27.190 --> 00:05:27.890
+really matter?
+
+00:05:28.690 --> 00:05:31.010
+And to illustrate that, I need two coins.
+
+00:05:31.210 --> 00:05:32.950
+I forgot to bring any coins with me.
+
+00:05:33.950 --> 00:05:35.670
+Anyone got a coin they can lend me?
+
+00:05:37.470 --> 00:05:38.130
+All right.
+
+00:05:39.570 --> 00:05:42.210
+Now, this is where I see how much the students trust me.
+
+00:05:42.310 --> 00:05:43.110
+Do I get a penny?
+
+00:05:43.850 --> 00:05:45.310
+Do I get a silver dollar?
+
+00:05:46.010 --> 00:05:47.230
+All right, so what have we got here?
+
+00:05:48.890 --> 00:05:52.450
+All right, this is someone who's entrusting me with two
+
+00:05:52.450 --> 00:05:54.430
+quarters, not so bad.
+
+00:05:57.050 --> 00:05:59.170
+So we'll take these two quarters, and we'll shake
+
+00:05:59.170 --> 00:06:01.570
+them up, and we'll put them down on the table.
+
+00:06:03.910 --> 00:06:05.430
+And now we'll ask a question.
+
+00:06:05.430 --> 00:06:11.330
+Do we have two heads, two tails, or one head and one tail?
+
+00:06:13.090 --> 00:06:15.130
+So who thinks we have two heads?
+
+00:06:16.970 --> 00:06:18.290
+Who thinks we have two tails?
+
+00:06:19.930 --> 00:06:21.510
+Who thinks we have one of each?
+
+00:06:22.810 --> 00:06:25.950
+All right, well, clearly everyone except a few people,
+
+00:06:26.050 --> 00:06:28.590
+for example, the Indians fan, who clearly believe in the
+
+00:06:28.590 --> 00:06:34.890
+counterfactual, made the most probabilistic decision.
+
+00:06:37.030 --> 00:06:39.370
+But in fact, there's no nondeterminism here.
+
+00:06:40.430 --> 00:06:41.850
+I know the answer, right?
+
+00:06:42.950 --> 00:06:48.010
+And so in some sense, it doesn't matter whether it's
+
+00:06:48.010 --> 00:06:50.690
+deterministic, because in fact, it's not causally
+
+00:06:51.390 --> 00:06:51.910
+nondeterministic.
+
+00:06:52.010 --> 00:06:53.230
+The answer is quite clear.
+
+00:06:54.750 --> 00:06:56.530
+But you don't know the answer.
+
+00:06:57.950 --> 00:07:01.950
+And so whether or not the world is inherently
+
+00:07:01.950 --> 00:07:05.670
+unpredictable, the fact that we never have complete
+
+00:07:05.670 --> 00:07:10.190
+knowledge of the world suggests that we minus well
+
+00:07:10.190 --> 00:07:12.450
+treat it as inherently unpredictable.
+
+00:07:14.950 --> 00:07:18.130
+And so this is called predictive nondeterminism.
+
+00:07:18.950 --> 00:07:21.830
+And this really is what's going to underline pretty much
+
+00:07:21.830 --> 00:07:23.550
+everything else we're going to be doing here.
+
+00:07:25.110 --> 00:07:31.370
+All right, no comments about that?
+
+00:07:31.570 --> 00:07:34.990
+All right, I wouldn't do that to you.
+
+00:07:36.970 --> 00:07:37.470
+Thank you.
+
+00:07:39.170 --> 00:07:42.050
+I know you were wishing to get an interest on the money,
+
+00:07:42.070 --> 00:07:43.010
+but you don't get any.
+
+00:07:49.290 --> 00:07:49.990
+All right.
+
+00:07:51.690 --> 00:07:52.370
+What was that?
+
+00:07:54.330 --> 00:07:55.070
+All right.
+
+00:07:55.770 --> 00:07:59.050
+So when we think about nondeterminism in
+
+00:07:59.050 --> 00:08:02.430
+computation, we use the words stochastic process.
+
+00:08:03.530 --> 00:08:07.490
+And that's any process that's ongoing in which the
+
+00:08:07.490 --> 00:08:12.490
+next state depends upon the previous states in some
+
+00:08:12.490 --> 00:08:13.310
+random element.
+
+00:08:14.490 --> 00:08:18.470
+So typically, up till now, when we've written code, what
+
+00:08:18.470 --> 00:08:22.050
+one line of code did depended only on what the previous
+
+00:08:22.050 --> 00:08:23.150
+lines of code did.
+
+00:08:23.230 --> 00:08:24.350
+There was no randomness.
+
+00:08:25.650 --> 00:08:27.490
+Here we're going to have randomness.
+
+00:08:28.170 --> 00:08:30.230
+And we can see the difference if we look at these
+
+00:08:30.230 --> 00:08:32.570
+two specifications of rolling a die.
+
+00:08:34.250 --> 00:08:38.730
+The first one returns an int between 1 and 6 is what
+
+00:08:38.730 --> 00:08:40.390
+I'll call underdetermined.
+
+00:08:41.430 --> 00:08:45.050
+By that, I mean you can't tell what it's going to return.
+
+00:08:45.750 --> 00:08:48.210
+Maybe it will return a different number each time you
+
+00:08:48.210 --> 00:08:51.090
+call it, but it's not required to.
+
+00:08:51.590 --> 00:08:54.210
+Maybe it will return 3 every time you call it.
+
+00:08:54.990 --> 00:08:57.730
+The second specification requires randomness.
+
+00:08:58.570 --> 00:09:01.790
+It says it returns a randomly chosen int, so it
+
+00:09:01.790 --> 00:09:04.230
+requires a stochastic implementation.
+
+00:09:06.150 --> 00:09:08.430
+All right, let's look at how we implement a
+
+00:09:08.430 --> 00:09:09.730
+random process in Python.
+
+00:09:10.910 --> 00:09:13.770
+We start by importing the library random.
+
+00:09:15.670 --> 00:09:18.010
+This is not to say you can import any random
+
+00:09:18.010 --> 00:09:19.010
+library you want.
+
+00:09:19.570 --> 00:09:22.170
+It's to say you import the library called random.
+
+00:09:22.470 --> 00:09:23.670
+Let me get my pen out of here.
+
+00:09:27.180 --> 00:09:28.520
+And we'll use that a lot.
+
+00:09:29.120 --> 00:09:32.120
+And then we're going to use the function in random
+
+00:09:32.120 --> 00:09:33.740
+called random.choice.
+
+00:09:34.560 --> 00:09:38.160
+It takes as an argument a sequence, in this case a
+
+00:09:38.160 --> 00:09:42.580
+list, and randomly chooses one member of the list.
+
+00:09:43.660 --> 00:09:45.760
+And it chooses it uniformly.
+
+00:09:48.850 --> 00:09:50.570
+It's a uniform distribution.
+
+00:09:52.820 --> 00:09:57.040
+And what that means is that it's equally probable that it
+
+00:09:57.040 --> 00:10:00.120
+will choose any number in that list each time you call it.
+
+00:10:01.400 --> 00:10:03.980
+We'll later look at distributions that are
+
+00:10:03.980 --> 00:10:06.780
+not uniform, not equally probable, where
+
+00:10:06.780 --> 00:10:07.520
+things are weighted.
+
+00:10:08.240 --> 00:10:09.440
+But here it's quite simple.
+
+00:10:09.640 --> 00:10:10.400
+It's just uniform.
+
+00:10:10.400 --> 00:10:16.260
+And then we can test it using test roll.
+
+00:10:16.840 --> 00:10:21.760
+Take some number of n and rolls the die that many times
+
+00:10:21.760 --> 00:10:24.840
+and creates a string telling us what we got.
+
+00:10:29.700 --> 00:10:34.300
+So let's consider running this on, say, test roll of five.
+
+00:10:35.900 --> 00:10:39.660
+And we'll ask the question, if we run it, how probable is
+
+00:10:39.660 --> 00:10:44.000
+it that it's going to return a string of five ones?
+
+00:10:49.810 --> 00:10:50.930
+How do we do that?
+
+00:10:50.930 --> 00:10:54.950
+Now I know how many people here are either in 6041 or have
+
+00:10:54.950 --> 00:10:55.910
+taken 6041?
+
+00:10:56.610 --> 00:10:57.150
+Raise your hand.
+
+00:10:58.830 --> 00:10:59.590
+Oh, good.
+
+00:10:59.950 --> 00:11:01.910
+So very few of you know probability.
+
+00:11:02.670 --> 00:11:03.250
+That helps.
+
+00:11:05.890 --> 00:11:08.350
+All right, so how do we think about that question?
+
+00:11:09.370 --> 00:11:13.390
+Well, probability, to me at least, is all about
+
+00:11:13.390 --> 00:11:16.910
+counting, especially discrete probability, which is what
+
+00:11:16.910 --> 00:11:17.770
+we're looking at here.
+
+00:11:18.890 --> 00:11:23.250
+What you do is you start by counting the number of
+
+00:11:23.250 --> 00:11:30.360
+events that have the property of interest and the number of
+
+00:11:30.360 --> 00:11:32.760
+possible events and divide one by the other.
+
+00:11:35.370 --> 00:11:41.650
+So if we think about rolling a die five times, we can
+
+00:11:41.650 --> 00:11:44.810
+enumerate all of the possible outcomes of five rolls.
+
+00:11:47.190 --> 00:11:49.950
+So if we look at that, what are the outcomes?
+
+00:11:50.830 --> 00:11:52.750
+Well, I could get five ones.
+
+00:11:53.730 --> 00:11:57.550
+I could get five ones, four ones and a two, or four ones
+
+00:11:57.550 --> 00:12:00.090
+and a three, skip a few.
+
+00:12:00.610 --> 00:12:04.230
+The next one would be three ones, a two and a one, and a
+
+00:12:04.230 --> 00:12:06.630
+two and a two, and finally, at the end, all sixes.
+
+00:12:09.830 --> 00:12:13.710
+So remember we looked before at when we were looking at
+
+00:12:13.710 --> 00:12:17.650
+optimization problems about binary numbers, and we said we
+
+00:12:17.650 --> 00:12:20.830
+could look at all the possible choices of items in the
+
+00:12:20.830 --> 00:12:23.730
+knapsack by vector of zeros and ones.
+
+00:12:24.310 --> 00:12:27.170
+We said how many possible choices are there?
+
+00:12:27.330 --> 00:12:30.350
+Well, it depended on how many binary numbers you could get
+
+00:12:30.350 --> 00:12:31.910
+in that number of digits.
+
+00:12:32.810 --> 00:12:35.670
+Well, here we're doing the same thing, but instead of
+
+00:12:35.670 --> 00:12:37.710
+base two, it's base six.
+
+00:12:40.470 --> 00:12:45.250
+And so the number of possible outcomes of five rolls is
+
+00:12:45.250 --> 00:12:45.850
+quite high.
+
+00:12:48.610 --> 00:12:50.350
+How many of those are five ones?
+
+00:12:50.610 --> 00:12:51.850
+Only one of them, right?
+
+00:12:53.990 --> 00:12:58.230
+So in order to get the probability of five ones, I
+
+00:12:58.230 --> 00:13:00.170
+divide one by six to the fifth.
+
+00:13:03.550 --> 00:13:04.770
+Does that make sense to everybody?
+
+00:13:06.170 --> 00:13:09.850
+So in fact, we see it's highly unlikely.
+
+00:13:10.850 --> 00:13:13.130
+Probability of five runs is quite small.
+
+00:13:15.400 --> 00:13:17.800
+Now, suppose we were to ask about the probability of
+
+00:13:17.800 --> 00:13:18.540
+something else.
+
+00:13:19.500 --> 00:13:27.660
+Instead of five ones, say five, three, four, two, one, it
+
+00:13:27.660 --> 00:13:31.500
+kind of looks more likely than that than five ones in a row.
+
+00:13:31.580 --> 00:13:32.640
+But of course it isn't, right?
+
+00:13:33.560 --> 00:13:36.200
+Any specific combination is equally probable.
+
+00:13:37.420 --> 00:13:38.460
+And there are a lot of them.
+
+00:13:42.080 --> 00:13:44.860
+So all the probability we're going to think about, we
+
+00:13:44.860 --> 00:13:47.580
+could think about this way as simply a matter of
+
+00:13:47.580 --> 00:13:51.100
+counting, the number of possible events, the number of
+
+00:13:51.100 --> 00:13:53.280
+events that have the property of interest, in this case
+
+00:13:53.280 --> 00:13:56.540
+being all ones, and then simple division.
+
+00:13:59.300 --> 00:14:03.140
+Given that framework, there are three basic facts about
+
+00:14:03.140 --> 00:14:06.180
+probability we're going to be using a lot of.
+
+00:14:07.260 --> 00:14:13.620
+So one, probabilities always range from zero to one.
+
+00:14:15.820 --> 00:14:16.680
+How do we know that?
+
+00:14:17.300 --> 00:14:18.680
+Well, we've got a fraction, right?
+
+00:14:19.880 --> 00:14:23.640
+And the denominator is all possible events.
+
+00:14:24.920 --> 00:14:28.340
+The numerator is the subset of that that's of interest.
+
+00:14:30.300 --> 00:14:35.940
+So it has to range from zero to the denominator, and that
+
+00:14:35.940 --> 00:14:38.700
+tells us that the fraction has to range from zero to one.
+
+00:14:40.120 --> 00:14:43.280
+So one says it's always going to happen zero, never.
+
+00:14:46.750 --> 00:14:50.490
+So if the probability of event occurring is p, what's
+
+00:14:50.490 --> 00:14:52.470
+the probability of it not occurring?
+
+00:14:54.030 --> 00:14:55.850
+This follows from the first bullet.
+
+00:14:56.950 --> 00:15:01.830
+It's simply going to be one minus p.
+
+00:15:03.820 --> 00:15:08.520
+This is a trick that we'll find we use a lot because it's
+
+00:15:08.520 --> 00:15:11.140
+often the case when you want to compute the probability of
+
+00:15:11.140 --> 00:15:11.980
+something happening.
+
+00:15:12.640 --> 00:15:15.480
+It's easier to compute the probability if it's not
+
+00:15:15.480 --> 00:15:17.760
+happening and subtract it from one.
+
+00:15:18.460 --> 00:15:21.420
+And we'll see an example of that later today.
+
+00:15:24.420 --> 00:15:26.200
+Now here's the biggie.
+
+00:15:27.400 --> 00:15:32.080
+When events are independent of each other, the probability
+
+00:15:32.080 --> 00:15:36.340
+of all of the events occurring is equal to the
+
+00:15:36.340 --> 00:15:40.200
+product of the probabilities of each of the events occurring.
+
+00:15:44.180 --> 00:15:52.360
+So if the probability of A is 0.5 and the probability of
+
+00:15:52.360 --> 00:16:00.940
+B is 0.4, the probability of A and B is what?
+
+00:16:05.870 --> 00:16:07.490
+0.5 times 0.4.
+
+00:16:07.490 --> 00:16:08.830
+You guys can figure that out.
+
+00:16:10.370 --> 00:16:11.430
+I think it's 0.2.
+
+00:16:14.100 --> 00:16:16.740
+So you'd expect that, right, that it should be much smaller
+
+00:16:16.740 --> 00:16:18.320
+than either of the first two probabilities.
+
+00:16:19.920 --> 00:16:23.180
+This is the most common rule at something we use all the
+
+00:16:23.180 --> 00:16:24.860
+time in probabilities, the so-called
+
+00:16:24.860 --> 00:16:25.900
+multiplicative law.
+
+00:16:28.180 --> 00:16:34.190
+We have to be careful about it, however, in that it
+
+00:16:34.190 --> 00:16:38.030
+only holds if the events are actually independent.
+
+00:16:40.130 --> 00:16:45.250
+Two events are independent if the outcome of one has no
+
+00:16:45.250 --> 00:16:46.950
+influence in the outcome of the other.
+
+00:16:49.570 --> 00:16:53.670
+So when we roll the die, we assume that the first roll,
+
+00:16:53.810 --> 00:16:56.830
+the outcome was independent of the second roll was
+
+00:16:56.830 --> 00:16:59.550
+independent of the first roll, independent of the fourth roll.
+
+00:17:00.450 --> 00:17:03.310
+When we looked at the two coins, we assumed that heads
+
+00:17:03.310 --> 00:17:05.970
+and tails of each coin was independent
+
+00:17:05.970 --> 00:17:06.950
+of the other coin.
+
+00:17:08.250 --> 00:17:10.610
+I didn't, for example, look at one coin and make sure
+
+00:17:10.610 --> 00:17:11.690
+that the other one was different.
+
+00:17:15.500 --> 00:17:20.260
+The danger here is that people often compute probabilities
+
+00:17:20.260 --> 00:17:23.400
+assuming independence when you don't actually
+
+00:17:23.400 --> 00:17:24.620
+have independence.
+
+00:17:25.940 --> 00:17:27.220
+So let's look at an example.
+
+00:17:29.180 --> 00:17:33.700
+For those of you familiar with American football, the
+
+00:17:33.700 --> 00:17:36.080
+New England Patriots and the Denver Broncos are two
+
+00:17:36.080 --> 00:17:37.120
+prominent teams.
+
+00:17:38.080 --> 00:17:41.500
+And let's look at computing the probability of whether
+
+00:17:41.500 --> 00:17:43.440
+one of them will lose on a given Sunday.
+
+00:17:45.660 --> 00:17:48.560
+So the Patriots have a winning percentage of 7 of 8.
+
+00:17:48.760 --> 00:17:51.560
+They've won seven of their eight games so far, and the
+
+00:17:51.560 --> 00:17:52.660
+Broncos six of eight.
+
+00:17:54.100 --> 00:17:57.820
+The probability of both winning next Sunday, assuming
+
+00:17:57.820 --> 00:18:01.240
+that this is indicative of how good they are, we can get
+
+00:18:01.240 --> 00:18:02.480
+with the multiplicative rule.
+
+00:18:03.340 --> 00:18:07.060
+So it's 7 over 8 times 6 over 8 or 42 over 64.
+
+00:18:08.280 --> 00:18:10.660
+We could simplify that fraction, I suppose.
+
+00:18:11.460 --> 00:18:12.880
+All right, does that make sense?
+
+00:18:13.780 --> 00:18:17.800
+So this is probably a pretty good estimate of both of them
+
+00:18:17.800 --> 00:18:18.860
+winning next Sunday.
+
+00:18:20.420 --> 00:18:24.740
+So the probability of at least one of them losing is 1
+
+00:18:24.740 --> 00:18:25.440
+minus that.
+
+00:18:27.430 --> 00:18:31.430
+So here's an example of why we often use the 1 minus rule.
+
+00:18:32.610 --> 00:18:36.910
+Because we could compute the probability of both of them
+
+00:18:37.590 --> 00:18:39.590
+winning by simply multiplying.
+
+00:18:40.550 --> 00:18:42.690
+And we subtract that from 1.
+
+00:18:43.830 --> 00:18:47.170
+However, what about Sunday, December 18th?
+
+00:18:47.170 --> 00:18:47.870
+What's the probability?
+
+00:18:50.300 --> 00:18:54.380
+Well, as it happens, that day the Patriots are playing
+
+00:18:54.380 --> 00:18:55.020
+the Broncos.
+
+00:18:58.240 --> 00:19:00.780
+So now suddenly the outcomes are not independent.
+
+00:19:02.100 --> 00:19:06.900
+The probability of one of them losing is influenced by the
+
+00:19:06.900 --> 00:19:08.160
+probability of the other winning.
+
+00:19:09.340 --> 00:19:09.940
+Right?
+
+00:19:10.300 --> 00:19:13.700
+So you would expect the probability of one of them
+
+00:19:13.700 --> 00:19:18.420
+losing is much closer to 1 than 22 over 64, which is
+
+00:19:18.420 --> 00:19:19.000
+about a third.
+
+00:19:22.840 --> 00:19:26.740
+So in this case it's easy, but as we'll see as we get
+
+00:19:26.740 --> 00:19:30.640
+through the term, there are lots of cases where you have
+
+00:19:30.640 --> 00:19:33.840
+to work pretty hard to understand whether or not two
+
+00:19:33.840 --> 00:19:35.380
+events really are independent.
+
+00:19:35.380 --> 00:19:39.260
+And if you get it wrong, you get a totally bogus answer.
+
+00:19:39.880 --> 00:19:43.000
+A third versus one is a pretty big difference.
+
+00:19:45.360 --> 00:19:48.420
+By the way, as it happens, the probability of the
+
+00:19:48.420 --> 00:19:49.940
+Broncos losing is about 1.
+
+00:19:53.040 --> 00:19:58.270
+All right, let's go look at some code.
+
+00:20:00.550 --> 00:20:03.710
+And we'll go back to our dice, because it's much easier
+
+00:20:03.710 --> 00:20:06.450
+to simulate dice games than it is to simulate
+
+00:20:07.250 --> 00:20:08.270
+football games.
+
+00:20:11.710 --> 00:20:15.150
+So here it is, and we're going to talk a lot about
+
+00:20:15.150 --> 00:20:15.810
+simulations.
+
+00:20:16.950 --> 00:20:19.090
+So here rather than rolling the die, I've
+
+00:20:19.090 --> 00:20:20.410
+written a program to do it.
+
+00:20:23.610 --> 00:20:26.630
+We've already seen the code for rolling a die.
+
+00:20:27.570 --> 00:20:32.370
+And so to run the simulation, typically what we're
+
+00:20:32.370 --> 00:20:33.950
+doing here is I'm giving you the goal.
+
+00:20:35.330 --> 00:20:37.330
+For example, are we going to get five ones?
+
+00:20:37.990 --> 00:20:45.110
+The number of trials, each trial in this case will be, say,
+
+00:20:45.210 --> 00:20:46.130
+of length five.
+
+00:20:46.870 --> 00:20:51.910
+So I'm going to roll the same die 5 times, say, 1,000
+
+00:20:51.910 --> 00:20:52.730
+different times.
+
+00:20:53.670 --> 00:20:56.170
+And then just some text as to what I'm going to print.
+
+00:20:57.630 --> 00:21:01.910
+Almost all the simulations we look at are going to start
+
+00:21:01.910 --> 00:21:03.910
+with lines that look a lot like that.
+
+00:21:05.250 --> 00:21:09.050
+We're going to initialize some variable, and then we're
+
+00:21:09.050 --> 00:21:11.690
+going to run some number of trials.
+
+00:21:16.020 --> 00:21:20.760
+So in this case, we're going to get from the length of the
+
+00:21:20.760 --> 00:21:23.940
+goal, so if the goal is five ones, then we're going to
+
+00:21:23.940 --> 00:21:25.220
+roll the die five times.
+
+00:21:25.460 --> 00:21:27.760
+If it's 10 runs, we'll roll the die 10 times.
+
+00:21:29.500 --> 00:21:35.480
+So this is essentially one trial, one attempt, right?
+
+00:21:38.360 --> 00:21:40.160
+And then we'll check the result.
+
+00:21:40.940 --> 00:21:45.760
+And if it has the property we want, in this case, it's
+
+00:21:45.760 --> 00:21:49.260
+equal to the goal, then we're going to increment the total,
+
+00:21:49.740 --> 00:21:52.480
+which we initialized up here, by one.
+
+00:21:53.960 --> 00:21:56.500
+So we'll keep track, which is just the counting.
+
+00:21:57.080 --> 00:22:00.280
+The number of trials that actually meet the goal.
+
+00:22:01.380 --> 00:22:05.320
+And then when we're done, what we're going to do is
+
+00:22:05.320 --> 00:22:09.560
+divide the number that met the goal by the number of trials.
+
+00:22:10.800 --> 00:22:14.380
+Exactly the counting argument we just looked at, and then
+
+00:22:14.380 --> 00:22:15.380
+we'll print the result.
+
+00:22:19.590 --> 00:22:22.890
+Almost every simulation we look at is going to have this
+
+00:22:22.890 --> 00:22:23.350
+structure.
+
+00:22:24.250 --> 00:22:27.790
+But be an outer loop, which is the number of trials, and
+
+00:22:27.790 --> 00:22:30.630
+then inside, maybe we'll have a loop, or maybe it won't,
+
+00:22:30.690 --> 00:22:31.750
+will be a single trial.
+
+00:22:32.450 --> 00:22:34.770
+We'll sum up the results, and then we'll divide by the
+
+00:22:34.770 --> 00:22:35.490
+number of trials.
+
+00:22:36.530 --> 00:22:37.390
+All right, let's run it.
+
+00:22:42.110 --> 00:22:42.830
+All right.
+
+00:22:46.220 --> 00:22:48.820
+So a couple of things are going to go on here.
+
+00:22:49.480 --> 00:22:58.860
+If you look at the code, as we've looked at it before,
+
+00:22:59.480 --> 00:23:02.600
+what you're seeing is I'm computing the estimated
+
+00:23:02.600 --> 00:23:06.180
+probability by the simulation, and I'm comparing it to the
+
+00:23:06.180 --> 00:23:09.460
+actual probability, which we've already seen how to compute.
+
+00:23:12.010 --> 00:23:14.130
+So if you look at it, there are a couple of things to
+
+00:23:14.130 --> 00:23:14.550
+look at.
+
+00:23:17.130 --> 00:23:20.230
+The estimated probability is pretty close to the actual
+
+00:23:20.230 --> 00:23:22.830
+probability, but not the same.
+
+00:23:24.790 --> 00:23:26.270
+Let's go back to the PowerPoint.
+
+00:23:31.700 --> 00:23:32.580
+Here are the results.
+
+00:23:34.700 --> 00:23:38.320
+And there are at least two question ways by this result.
+
+00:23:38.440 --> 00:23:41.360
+First of all, how did I know that this is what would get
+
+00:23:41.360 --> 00:23:41.740
+printed?
+
+00:23:42.960 --> 00:23:44.200
+Remember, this is random.
+
+00:23:45.480 --> 00:23:48.460
+How did I know that the estimate, well, there's
+
+00:23:48.460 --> 00:23:53.200
+nothing random of the actual probability, but how did I
+
+00:23:53.200 --> 00:23:55.920
+know that the estimated probability would be zero?
+
+00:23:56.660 --> 00:23:58.220
+And why did it print it twice?
+
+00:23:58.400 --> 00:24:00.440
+Because I messed up the PowerPoint, anyway.
+
+00:24:01.380 --> 00:24:02.980
+So how do I know what would get printed?
+
+00:24:05.220 --> 00:24:06.840
+Well, a confession.
+
+00:24:11.300 --> 00:24:14.240
+Random.choice is not actually random.
+
+00:24:14.840 --> 00:24:17.920
+In fact, nothing we can do in a computer is
+
+00:24:17.920 --> 00:24:18.960
+actually random.
+
+00:24:18.960 --> 00:24:24.160
+You can prove that it's impossible to build a computer
+
+00:24:24.160 --> 00:24:26.820
+that actually generates truly random numbers.
+
+00:24:28.620 --> 00:24:32.680
+What they do instead is generate numbers that are
+
+00:24:32.680 --> 00:24:33.840
+called pseudorandom.
+
+00:24:41.920 --> 00:24:42.940
+How do they do that?
+
+00:24:44.300 --> 00:24:48.560
+They have an algorithm that, given one number, generates
+
+00:24:48.560 --> 00:24:50.240
+the next number in a sequence.
+
+00:24:52.100 --> 00:24:56.480
+And they start that algorithm with a seed.
+
+00:24:59.580 --> 00:25:04.160
+Now, typically, they get that seed by reading the clock of
+
+00:25:04.160 --> 00:25:04.720
+the computer.
+
+00:25:05.680 --> 00:25:09.280
+So most computers have a clock that, say, keeps track of the
+
+00:25:09.280 --> 00:25:12.940
+number of microseconds since January 1, 1978.
+
+00:25:14.360 --> 00:25:15.480
+I don't know if that's still true.
+
+00:25:15.560 --> 00:25:16.760
+That's what UNIX used to do.
+
+00:25:18.300 --> 00:25:22.480
+So the notion is, you start your program, there's no
+
+00:25:22.480 --> 00:25:25.380
+way of knowing how many microseconds have elapsed.
+
+00:25:26.040 --> 00:25:29.380
+And so you're getting a random number to start the process.
+
+00:25:31.740 --> 00:25:34.100
+Since you don't know where it starts, you don't know what
+
+00:25:34.100 --> 00:25:35.780
+the second number is, you don't know what the third
+
+00:25:35.780 --> 00:25:37.600
+number is, you don't know what the fourth number is.
+
+00:25:38.480 --> 00:25:42.680
+And so it's predictably nondeterministic, because
+
+00:25:42.680 --> 00:25:44.740
+you don't know what the seed is going to be.
+
+00:25:46.440 --> 00:25:50.220
+Now, you can imagine that this makes programs really
+
+00:25:50.220 --> 00:25:51.020
+hard to debug.
+
+00:25:52.120 --> 00:25:54.720
+Every time you run it, something different could happen.
+
+00:25:55.520 --> 00:25:58.440
+Now, we'll see often you want them to be unpredictable.
+
+00:25:58.980 --> 00:26:01.040
+But for now, we want them to be predictable.
+
+00:26:01.340 --> 00:26:03.040
+Makes it easier to prepare a PowerPoint.
+
+00:26:04.660 --> 00:26:13.510
+So what you have, if we go is a command, you can call
+
+00:26:13.510 --> 00:26:19.850
+random.seed and give it a value and say, I don't want
+
+00:26:19.850 --> 00:26:21.630
+you to just choose some random seed.
+
+00:26:21.710 --> 00:26:23.430
+I want you to use zero as the seed.
+
+00:26:24.490 --> 00:26:27.370
+For the same seed, you always get the same sequence
+
+00:26:27.370 --> 00:26:28.570
+of random values.
+
+00:26:29.870 --> 00:26:32.850
+And so what I've done is I've set the seed to be, I think,
+
+00:26:32.970 --> 00:26:33.890
+zero in this case.
+
+00:26:34.530 --> 00:26:36.590
+Not because there's anything magic about zero.
+
+00:26:36.750 --> 00:26:37.710
+It's just sort of habit.
+
+00:26:38.430 --> 00:26:39.770
+But it made it predictable.
+
+00:26:41.250 --> 00:26:44.030
+As you write programs with randomness in, and when
+
+00:26:44.030 --> 00:26:46.610
+you're debugging it, you will almost surely want to start
+
+00:26:47.050 --> 00:26:49.410
+by setting random.seed to a value.
+
+00:26:49.530 --> 00:26:50.630
+So you get the same answer.
+
+00:26:51.350 --> 00:26:53.730
+But make sure you debug it with more than one value
+
+00:26:53.730 --> 00:26:56.870
+of this, so you didn't just get lucky with your seed.
+
+00:26:56.870 --> 00:26:57.590
+All right.
+
+00:26:58.070 --> 00:27:00.570
+So that's how I knew what would get printed.
+
+00:27:01.350 --> 00:27:06.330
+The next question is, why did the simulation
+
+00:27:06.330 --> 00:27:07.430
+give me the wrong answer?
+
+00:27:09.490 --> 00:27:13.630
+The actual probability is 3 zeros and 1, 2, 8, 6.
+
+00:27:14.310 --> 00:27:16.430
+But it estimated the probability of zero.
+
+00:27:18.970 --> 00:27:19.910
+Why is it wrong?
+
+00:27:23.660 --> 00:27:25.840
+Well, let's think about this.
+
+00:27:26.940 --> 00:27:28.480
+I ran 1,000 trials.
+
+00:27:29.880 --> 00:27:32.220
+What does it mean to say the probability is zero?
+
+00:27:32.220 --> 00:27:36.060
+It means it tried it 1,000 times and didn't ever
+
+00:27:36.060 --> 00:27:37.880
+get a sequence of 5 ones.
+
+00:27:38.960 --> 00:27:42.020
+So the numerator of the division at the bottom was zero.
+
+00:27:44.400 --> 00:27:45.620
+Hence, the answer is zero.
+
+00:27:46.000 --> 00:27:46.880
+Is this surprising?
+
+00:27:47.740 --> 00:27:48.280
+Well, no.
+
+00:27:49.280 --> 00:27:54.520
+Because if that's the actual probability of getting 5 ones,
+
+00:27:55.080 --> 00:27:58.420
+it's not very shocking that in 1,000 trials it never
+
+00:27:58.420 --> 00:27:58.860
+happened.
+
+00:28:01.630 --> 00:28:03.590
+Now, it's not a surprising result.
+
+00:28:05.310 --> 00:28:08.350
+And so we have to be careful when we run these things
+
+00:28:08.350 --> 00:28:11.690
+to understand the difference between what's, in this case,
+
+00:28:11.810 --> 00:28:15.730
+an actual probability and what statisticians call
+
+00:28:15.730 --> 00:28:17.170
+a sample probability.
+
+00:28:25.360 --> 00:28:28.080
+So what we got with the sample was zero.
+
+00:28:28.880 --> 00:28:30.720
+So what's the obvious thing to do?
+
+00:28:32.520 --> 00:28:34.840
+If you're doing a simulation of an event
+
+00:28:35.420 --> 00:28:38.960
+and the event is pretty rare, you
+
+00:28:38.960 --> 00:28:42.320
+want to try it on a very large number of trials.
+
+00:28:43.280 --> 00:28:44.920
+So let's go back to our code.
+
+00:28:51.080 --> 00:28:55.680
+And we'll change it to, instead of 1,000, a million.
+
+00:28:58.470 --> 00:29:00.670
+You can see up here, by the way, where I set their seed.
+
+00:29:01.850 --> 00:29:02.750
+Now let's run it.
+
+00:29:17.620 --> 00:29:18.480
+We did a lot better.
+
+00:29:19.460 --> 00:29:21.560
+If we look at here, our estimated probability,
+
+00:29:22.180 --> 00:29:26.980
+it's 3,0128, still not quite the actual probability,
+
+00:29:27.760 --> 00:29:28.580
+but darn close.
+
+00:29:30.000 --> 00:29:31.620
+And maybe if I'd done 10 million, it
+
+00:29:31.620 --> 00:29:32.580
+would have been even closer.
+
+00:29:35.570 --> 00:29:38.710
+So if you're writing a simulation to compute
+
+00:29:38.710 --> 00:29:42.950
+the probability of an event and the event is moderately rare,
+
+00:29:43.610 --> 00:29:46.550
+then you better run a lot of trials
+
+00:29:47.150 --> 00:29:49.910
+before you believe your estimated probability.
+
+00:29:51.330 --> 00:29:55.370
+In a week or so, we'll actually look at that more
+
+00:29:55.370 --> 00:29:57.350
+mathematically and say, what is a lot?
+
+00:29:57.750 --> 00:29:58.850
+How do we know what is enough?
+
+00:30:10.570 --> 00:30:10.950
+All right.
+
+00:30:11.750 --> 00:30:12.990
+What are the morals here?
+
+00:30:13.470 --> 00:30:16.510
+Moral one, I've just told you, takes a lot of trials
+
+00:30:16.510 --> 00:30:19.630
+to get a good estimate of the frequency of a rare event.
+
+00:30:21.310 --> 00:30:25.630
+Moral two, we should always, if we're getting an
+
+00:30:25.630 --> 00:30:29.850
+estimated probability, know that and probably say that
+
+00:30:29.850 --> 00:30:32.150
+and not confuse it with the actual probability.
+
+00:30:33.450 --> 00:30:37.850
+The third moral here is it was kind of stupid to do a simulation
+
+00:30:38.630 --> 00:30:41.730
+since it was a very simple closed form answer
+
+00:30:42.150 --> 00:30:44.910
+that we could compute that would really tell us
+
+00:30:45.270 --> 00:30:47.250
+what the actual probability is.
+
+00:30:47.610 --> 00:30:49.170
+Why even bother with the simulation?
+
+00:30:51.350 --> 00:30:54.970
+Well, we're going to see why now because simulations can
+
+00:30:54.970 --> 00:30:55.810
+be very useful.
+
+00:30:56.970 --> 00:30:58.310
+Let's look at another problem.
+
+00:31:00.070 --> 00:31:01.910
+This is the famous birthday problem.
+
+00:31:02.070 --> 00:31:02.970
+Some of you have seen it.
+
+00:31:03.610 --> 00:31:06.090
+What's the probability of at least two people in a group
+
+00:31:06.090 --> 00:31:07.190
+having the same birthday?
+
+00:31:08.550 --> 00:31:12.010
+There's a URL at the bottom that's pointing to a Google form.
+
+00:31:12.730 --> 00:31:15.790
+I'd like, please, all of you have a computing device
+
+00:31:15.790 --> 00:31:18.070
+to go to it and fill out your birthday.
+
+00:31:20.150 --> 00:31:22.490
+It's anonymous, so we won't know how old you are.
+
+00:31:22.590 --> 00:31:22.950
+Don't worry.
+
+00:31:23.070 --> 00:31:24.010
+Actually, it's only the date.
+
+00:31:24.010 --> 00:31:25.150
+It's not the year.
+
+00:31:26.270 --> 00:31:26.730
+All right.
+
+00:31:28.710 --> 00:31:33.930
+So suppose there were 367 people in the group, roughly the
+
+00:31:33.930 --> 00:31:38.310
+number of people who took the 60001600 midterm.
+
+00:31:39.750 --> 00:31:43.550
+If there are 367 people, what's the probability of at
+
+00:31:43.550 --> 00:31:44.990
+least two of them sharing a birthday?
+
+00:31:49.410 --> 00:31:52.550
+One, by something called the pigeonhole principle.
+
+00:31:53.690 --> 00:31:56.330
+You've got some number of holes, and if you have
+
+00:31:56.330 --> 00:31:59.210
+more pigeons than holes, two pigeons have to share a hole.
+
+00:32:00.910 --> 00:32:02.670
+What about smaller numbers?
+
+00:32:03.910 --> 00:32:08.050
+Well, if we make a simplifying assumption that each birth
+
+00:32:08.050 --> 00:32:12.210
+date is equally likely, then there's actually a nice
+
+00:32:12.210 --> 00:32:13.970
+closed form solution for it.
+
+00:32:17.660 --> 00:32:22.380
+Again, this is a question where it's easier to compute
+
+00:32:22.380 --> 00:32:24.840
+the opposite of what you're trying to do when subtract
+
+00:32:24.840 --> 00:32:25.600
+it from 1.
+
+00:32:25.600 --> 00:32:31.700
+And so this fraction is giving the probability of two
+
+00:32:31.700 --> 00:32:33.420
+people not sharing a birthday.
+
+00:32:34.960 --> 00:32:38.720
+The proof that this is right is a little bit elaborate, but
+
+00:32:39.600 --> 00:32:41.100
+you can trust me, it's accurate.
+
+00:32:42.220 --> 00:32:44.920
+But it's a formula, and it's not that complicated a
+
+00:32:44.920 --> 00:32:49.620
+formula, though numbers like 366 factorial are big.
+
+00:32:51.400 --> 00:32:51.800
+All right.
+
+00:32:55.140 --> 00:32:57.300
+So let's approximate a solution.
+
+00:32:57.300 --> 00:33:00.800
+We'll write a simulation and see if we get the same answer
+
+00:33:00.800 --> 00:33:02.240
+that that formula gave us.
+
+00:33:03.700 --> 00:33:05.040
+So here's the code for that.
+
+00:33:07.450 --> 00:33:11.730
+Two arguments, the number of people in the group and the
+
+00:33:11.730 --> 00:33:15.750
+number that we asking do they have the same birthday.
+
+00:33:17.370 --> 00:33:20.630
+So since I'm assuming for now that every birthday is
+
+00:33:20.630 --> 00:33:23.420
+equally likely, the possible dates range from
+
+00:33:23.420 --> 00:33:28.520
+1 to 366 because some years have a February 29th.
+
+00:33:31.070 --> 00:33:35.730
+I'll keep track of the number of people born in each date by
+
+00:33:35.730 --> 00:33:37.070
+starting with none.
+
+00:33:38.310 --> 00:33:41.930
+And then for p in the range of number of people, I'll make a
+
+00:33:41.930 --> 00:33:46.110
+random choice of the possible dates and increment that
+
+00:33:46.110 --> 00:33:47.650
+element of the list by 1.
+
+00:33:49.920 --> 00:33:52.100
+And then at the end we can say look at the maximum
+
+00:33:52.100 --> 00:33:55.660
+number of birthdays and see if it's greater than or
+
+00:33:55.660 --> 00:33:57.220
+equal to the number of same.
+
+00:33:59.410 --> 00:34:01.210
+So that tells us that.
+
+00:34:04.390 --> 00:34:07.250
+And then we can actually look at the birthday problem, the
+
+00:34:07.250 --> 00:34:09.970
+number of people, the number of same, and as usual the number
+
+00:34:09.970 --> 00:34:10.510
+of trials.
+
+00:34:13.750 --> 00:34:16.890
+So number of hits is 0 for t in range number of trials.
+
+00:34:17.710 --> 00:34:21.990
+If same date is true, then we'll increment the number of
+
+00:34:21.990 --> 00:34:26.390
+hints by 1 and then as usual divide by the number of trials.
+
+00:34:27.910 --> 00:34:34.490
+And we'll try it for people in 10, 20, 40, and 100 people.
+
+00:34:36.990 --> 00:34:41.710
+And then just we'll print the estimated probability and the
+
+00:34:41.710 --> 00:34:47.470
+actual probability computed using that formula I showed
+
+00:34:47.470 --> 00:34:47.730
+you.
+
+00:34:48.210 --> 00:34:51.390
+I've not shown you, but I've imported a library called
+
+00:34:51.390 --> 00:34:55.170
+math because it is a factorial implementation that's
+
+00:34:55.170 --> 00:34:58.270
+way faster than the recursive one that we've seen before.
+
+00:34:59.570 --> 00:35:24.790
+All right, let's run it and we'll see what we get.
+
+00:35:24.970 --> 00:35:28.450
+So for 10 the estimated probability is 0.11.
+
+00:35:29.730 --> 00:35:34.790
+So as you can see the estimates are really pretty good.
+
+00:35:36.530 --> 00:35:39.530
+Once again we have this business that for 100 we're
+
+00:35:39.530 --> 00:35:42.450
+estimating 1 when the real answer is 0.
+
+00:35:42.710 --> 00:35:44.170
+Many, many, many nines.
+
+00:35:44.960 --> 00:35:48.670
+But again, this is sample probability, just means in the
+
+00:35:48.670 --> 00:35:54.430
+number of trials we did, every one for 100 people there was a
+
+00:35:54.430 --> 00:35:54.970
+shared birthday.
+
+00:35:55.770 --> 00:36:00.230
+This is a number that usually surprises people as to why with
+
+00:36:00.230 --> 00:36:02.330
+100 people the probability is so high.
+
+00:36:03.630 --> 00:36:06.510
+But we could work out the formula and see it.
+
+00:36:06.890 --> 00:36:09.310
+And as you can see the estimates are pretty
+
+00:36:09.310 --> 00:36:10.750
+good from my simulation.
+
+00:36:10.750 --> 00:36:22.240
+All right, now we're going to see why we did a simulation in
+
+00:36:22.240 --> 00:36:22.860
+the first place.
+
+00:36:23.500 --> 00:36:27.460
+Suppose we want the probability of three people
+
+00:36:27.460 --> 00:36:29.120
+sharing a birthday instead of two.
+
+00:36:33.790 --> 00:36:36.750
+It's pretty easy to see how we change the simulation.
+
+00:36:37.090 --> 00:36:38.230
+I even made it a parameter.
+
+00:36:38.910 --> 00:36:41.310
+I just changed the number two to a number three.
+
+00:36:42.050 --> 00:36:45.010
+The math, on the other hand, is ugly.
+
+00:36:47.770 --> 00:36:50.670
+Why is the math so much uglier for three than for two?
+
+00:36:51.610 --> 00:36:55.450
+Because for two, the complementary problem, the
+
+00:36:55.450 --> 00:36:59.470
+number we're subtracting from one, is simply the question of
+
+00:36:59.470 --> 00:37:01.190
+are all birthdays different?
+
+00:37:03.530 --> 00:37:06.110
+So did two people share a birthday?
+
+00:37:06.390 --> 00:37:09.550
+Is one minus or does everybody have a different birthday?
+
+00:37:10.990 --> 00:37:15.030
+On the other hand, for three people, the complementary
+
+00:37:15.030 --> 00:37:18.870
+problem is a complicated disjunct, a bunch of ores.
+
+00:37:19.510 --> 00:37:23.810
+Either all birthdays are distinct, or two people share a
+
+00:37:23.810 --> 00:37:27.990
+birthday and the rest are distinct, or there are two
+
+00:37:27.990 --> 00:37:30.170
+groups of two people sharing a birthday and
+
+00:37:30.170 --> 00:37:31.170
+everything is distinct.
+
+00:37:31.710 --> 00:37:34.750
+So you can see here there's a lot of possibilities.
+
+00:37:35.970 --> 00:37:39.810
+And so it's one minus now a very complicated formula.
+
+00:37:40.530 --> 00:37:42.990
+And in fact, if you try and look how to do this, most
+
+00:37:42.990 --> 00:37:46.310
+people will tell you don't bother, here's kind of a
+
+00:37:46.310 --> 00:37:47.170
+good approximation.
+
+00:37:47.970 --> 00:37:50.130
+But the math gets very hairy.
+
+00:37:52.910 --> 00:37:56.010
+In contrast, changing the simulation is dead easy.
+
+00:37:56.870 --> 00:37:57.710
+We can do that.
+
+00:38:04.050 --> 00:38:13.690
+So if we come over here for the code, all I have to do is
+
+00:38:13.690 --> 00:38:15.070
+change this 2 to a 3.
+
+00:38:24.790 --> 00:38:27.610
+And I'm going to leave in this code, which is the
+
+00:38:27.610 --> 00:38:32.330
+wrong code, computing the actual probability now for two
+
+00:38:32.330 --> 00:38:33.910
+people sharing rather than 3.
+
+00:38:34.290 --> 00:38:36.490
+Because I want to make it easy for you to see the
+
+00:38:36.490 --> 00:38:39.510
+difference between what happens when we look at 3
+
+00:38:39.510 --> 00:38:41.110
+shared rather than 2 shared.
+
+00:38:53.070 --> 00:38:54.370
+And I get invalid syntax.
+
+00:38:55.730 --> 00:38:56.550
+That's not good.
+
+00:38:58.670 --> 00:39:00.610
+That's what happens when I type in real time.
+
+00:39:07.830 --> 00:39:09.490
+Why do I have invalid syntax?
+
+00:39:11.750 --> 00:39:12.010
+Pardon?
+
+00:39:13.910 --> 00:39:14.990
+One person at Anna.
+
+00:39:18.140 --> 00:39:21.360
+Oh, that's not a good line.
+
+00:39:32.580 --> 00:39:40.300
+So now we see that if we get, say, to n equals 100, for 2
+
+00:39:40.300 --> 00:39:41.660
+you'll remember it was 0.99.
+
+00:39:42.340 --> 00:39:44.220
+But for 3 it's only 0.63.
+
+00:39:45.860 --> 00:39:49.960
+So we see going from 2 sharing to 3 sharing gets us a
+
+00:39:49.960 --> 00:39:51.260
+radically different answer.
+
+00:39:52.160 --> 00:39:52.920
+Not surprisingly.
+
+00:39:54.540 --> 00:39:57.280
+But we also, and the real thing I wanted you to see is
+
+00:39:57.280 --> 00:39:59.620
+how easy it was to answer this question to the
+
+00:39:59.620 --> 00:40:00.260
+simulation.
+
+00:40:01.000 --> 00:40:06.240
+And that's a primary reason we use simulations to get
+
+00:40:06.240 --> 00:40:10.360
+probabilistic questions rather than sitting down in the
+
+00:40:10.360 --> 00:40:12.400
+pencil and paper and doing fancy probability
+
+00:40:12.400 --> 00:40:13.220
+calculations.
+
+00:40:14.060 --> 00:40:16.980
+Because it's often way easier to do a simulation.
+
+00:40:19.180 --> 00:40:22.120
+We can see that in spades if we look at the next question.
+
+00:40:26.470 --> 00:40:28.830
+Let's think about this assumption that all birthdays
+
+00:40:28.830 --> 00:40:29.870
+are equally likely.
+
+00:40:31.150 --> 00:40:34.770
+Well, as you can see, this is a chart of how common
+
+00:40:34.770 --> 00:40:37.170
+birth dates are in the US, a heat map.
+
+00:40:38.790 --> 00:40:45.460
+And you'll see, for example, that February 29th is quite an
+
+00:40:45.460 --> 00:40:46.400
+uncommon birthday.
+
+00:40:47.620 --> 00:40:49.700
+So we should probably treat that differently.
+
+00:40:51.840 --> 00:40:54.620
+Somewhat surprisingly, you'll see that July 4th is a
+
+00:40:54.620 --> 00:40:56.140
+very uncommon birthday as well.
+
+00:40:57.180 --> 00:40:59.700
+It's easy to understand why February 29th.
+
+00:41:00.320 --> 00:41:02.720
+The only thing I can figure out for July 4th is
+
+00:41:02.720 --> 00:41:05.080
+obstetricians don't like working on holidays.
+
+00:41:05.080 --> 00:41:09.260
+And so they induce labor sometime around the second or
+
+00:41:09.260 --> 00:41:11.980
+so to the third, so they don't have to come to work on the
+
+00:41:11.980 --> 00:41:12.700
+fourth to the fifth.
+
+00:41:14.280 --> 00:41:16.820
+Sounds a horrible thought, but I can't think of any other
+
+00:41:16.820 --> 00:41:18.320
+explanation for this anomaly.
+
+00:41:20.260 --> 00:41:22.780
+Probably if you look at it, see Christmas Day is not so
+
+00:41:22.780 --> 00:41:23.340
+common either.
+
+00:41:25.260 --> 00:41:28.020
+So now the question, which we can answer, since you've
+
+00:41:28.020 --> 00:41:31.380
+all filled out this form, is how exceptional are MIT
+
+00:41:31.380 --> 00:41:31.920
+students?
+
+00:41:32.560 --> 00:41:35.060
+We like to think that you're different in every respect.
+
+00:41:35.700 --> 00:41:39.040
+So are your birthdays distributed differently than
+
+00:41:39.040 --> 00:41:39.680
+other dates?
+
+00:41:40.700 --> 00:41:41.740
+Have we got that data?
+
+00:41:42.720 --> 00:41:44.760
+All right, so now we'll go look at that.
+
+00:41:48.930 --> 00:41:50.670
+We should have a heat map for you guys.
+
+00:41:53.440 --> 00:41:54.240
+This one.
+
+00:42:04.490 --> 00:42:04.710
+Yeah.
+
+00:42:05.590 --> 00:42:07.550
+All right, so here it is.
+
+00:42:08.610 --> 00:42:14.540
+And we can see that they don't seem to be banded quite
+
+00:42:14.540 --> 00:42:18.620
+as much in the summer months, probably says more about
+
+00:42:18.620 --> 00:42:20.260
+your parents than it does about you.
+
+00:42:22.640 --> 00:42:27.520
+But you can see that indeed we do have, wow, we have a
+
+00:42:27.520 --> 00:42:29.980
+day where there are five birthdays that look like,
+
+00:42:30.080 --> 00:42:30.380
+or no.
+
+00:42:32.870 --> 00:42:33.350
+Wow.
+
+00:42:36.570 --> 00:42:38.130
+You want to raise your hand if you're born on
+
+00:42:38.130 --> 00:42:39.450
+February 12th?
+
+00:42:42.680 --> 00:42:48.670
+All right, so you are exceptional that you lie
+
+00:42:48.670 --> 00:42:49.830
+about when you're born.
+
+00:42:52.050 --> 00:42:57.100
+But if you hadn't lied, I think we would have still
+
+00:42:57.100 --> 00:42:58.620
+seen the probabilities would hold.
+
+00:42:59.380 --> 00:43:00.700
+How many people were there, do we know?
+
+00:43:08.540 --> 00:43:11.160
+146 people, 112 unique birthdays.
+
+00:43:12.120 --> 00:43:15.980
+So indeed, the probability does work.
+
+00:43:16.880 --> 00:43:28.220
+OK, so we know you're exceptional in a funny way.
+
+00:43:28.920 --> 00:43:32.960
+Well, you can imagine how hard it would be to adjust
+
+00:43:32.960 --> 00:43:37.180
+the analytic model to account for a weird
+
+00:43:37.180 --> 00:43:38.600
+distribution of birth dates.
+
+00:43:40.180 --> 00:43:42.920
+But again, adjusting the simulation model is easy.
+
+00:43:44.680 --> 00:43:47.740
+I could have gone back to that heat map I showed you of
+
+00:43:47.740 --> 00:43:51.900
+birthdays in the US and gotten a separate probability for
+
+00:43:51.900 --> 00:43:53.800
+each day, but I was too lazy.
+
+00:43:54.980 --> 00:44:00.700
+And instead what I observed was that we had this a few
+
+00:44:00.700 --> 00:44:03.500
+days, like February 29th, highly unlikely.
+
+00:44:05.000 --> 00:44:10.100
+And this band in the middle of people who were conceived in
+
+00:44:10.100 --> 00:44:11.520
+the late fall and early winter.
+
+00:44:13.500 --> 00:44:18.580
+So what I did is I duplicated some dates.
+
+00:44:19.860 --> 00:44:24.980
+So the 58th day of the year, February 29th, occurs only
+
+00:44:24.980 --> 00:44:25.440
+once.
+
+00:44:28.640 --> 00:44:31.380
+The dates before that, I said let's pretend they occur
+
+00:44:31.380 --> 00:44:32.080
+four times.
+
+00:44:32.540 --> 00:44:35.220
+What only matters here is not how often they occur, but the
+
+00:44:35.220 --> 00:44:36.160
+relative frequency.
+
+00:44:40.570 --> 00:44:46.570
+And then the dates after that occur four times, except for
+
+00:44:46.570 --> 00:44:50.170
+the dates in that band, which is going to have occur yet
+
+00:44:50.170 --> 00:44:50.870
+more often.
+
+00:44:52.130 --> 00:44:55.990
+So now, and don't worry about the exact details here, but
+
+00:44:55.990 --> 00:44:58.930
+what I'm doing is simply adjusting the simulation to
+
+00:44:58.930 --> 00:45:03.770
+change the probability of each date getting chosen by same
+
+00:45:03.770 --> 00:45:04.090
+date.
+
+00:45:07.110 --> 00:45:08.970
+And then I can run the simulation model.
+
+00:45:09.150 --> 00:45:14.030
+And again, with a very small change to code, I've modeled
+
+00:45:14.030 --> 00:45:17.230
+something that's mathematically enormously complex.
+
+00:45:18.230 --> 00:45:20.090
+I have no idea to actually do this
+
+00:45:20.090 --> 00:45:22.370
+probability mathematically.
+
+00:45:23.530 --> 00:45:26.110
+But the code is, as you can see, quite straightforward.
+
+00:45:33.700 --> 00:45:35.320
+So let's go to that here.
+
+00:45:38.860 --> 00:45:45.630
+So what I'm going to do is comment this one out and
+
+00:45:45.630 --> 00:46:02.890
+uncomment this more complicated set of dates and see
+
+00:46:02.890 --> 00:46:03.370
+what we get.
+
+00:46:13.560 --> 00:46:16.100
+And again, it changes quite dramatically.
+
+00:46:16.380 --> 00:46:18.740
+You might remember before it was around, I think, 0.6
+
+00:46:18.740 --> 00:46:21.760
+something for 100, and now it's 0.75.
+
+00:46:23.300 --> 00:46:25.760
+So getting away from the notion that birthdays are
+
+00:46:25.760 --> 00:46:28.820
+uniformly distributed to saying some birthdays are more
+
+00:46:28.820 --> 00:46:31.300
+common than others, again, dramatically
+
+00:46:31.300 --> 00:46:32.380
+changes the answer.
+
+00:46:34.060 --> 00:46:36.240
+And we can easily look at that.
+
+00:46:43.040 --> 00:46:47.740
+So that gets us to the big topic of simulation models.
+
+00:46:49.220 --> 00:46:53.180
+It's a program that describes a computation that provides
+
+00:46:53.180 --> 00:46:56.900
+information about the possible behaviors of a system.
+
+00:46:57.700 --> 00:47:00.340
+I say possible behaviors because I'm particularly
+
+00:47:00.340 --> 00:47:02.900
+interested in stochastic systems.
+
+00:47:05.550 --> 00:47:10.430
+They're descriptive, not prescriptive, in the sense that
+
+00:47:10.430 --> 00:47:12.830
+they describe the possible outcomes.
+
+00:47:13.650 --> 00:47:16.850
+They don't tell you how to achieve a possible outcomes.
+
+00:47:18.250 --> 00:47:21.870
+This is different from what we looked at earlier in the
+
+00:47:21.870 --> 00:47:24.050
+course, where we looked at optimization models.
+
+00:47:25.630 --> 00:47:29.490
+So an optimization model is prescriptive.
+
+00:47:30.230 --> 00:47:34.390
+It tells you how to achieve an effect, how to get the
+
+00:47:34.390 --> 00:47:38.790
+most value out of your knapsack, how to find the
+
+00:47:38.790 --> 00:47:40.810
+shortest path from A to B in a graph.
+
+00:47:41.850 --> 00:47:45.570
+In contrast, a simulation model says, if I do this,
+
+00:47:46.190 --> 00:47:47.150
+here's what happens.
+
+00:47:47.990 --> 00:47:50.450
+It doesn't tell you how to make something happen.
+
+00:47:52.130 --> 00:47:54.510
+So it's very different, and it's why we need both.
+
+00:47:55.270 --> 00:47:57.550
+Why we need optimization models and
+
+00:47:57.550 --> 00:47:58.910
+we need simulation models.
+
+00:48:00.430 --> 00:48:03.790
+We have to remember that a simulation model is only in
+
+00:48:03.790 --> 00:48:05.330
+approximation to reality.
+
+00:48:06.590 --> 00:48:09.510
+I put in an approximation to the distribution of birth
+
+00:48:09.510 --> 00:48:11.370
+dates, but it wasn't quite right.
+
+00:48:12.690 --> 00:48:15.410
+And as the very famous statistician George
+
+00:48:15.410 --> 00:48:19.570
+Bach said, all models are wrong, but some
+
+00:48:19.570 --> 00:48:20.730
+are actually very useful.
+
+00:48:22.150 --> 00:48:25.850
+In the next lecture, we'll look at a useful class of
+
+00:48:25.850 --> 00:48:26.210
+models.
+
+00:48:27.450 --> 00:48:29.270
+When do we use simulations?
+
+00:48:30.250 --> 00:48:33.010
+Typically, as we've just shown, to model systems
+
+00:48:33.010 --> 00:48:36.510
+that are mathematically intractable, like the birthday
+
+00:48:36.510 --> 00:48:41.750
+problem we just looked at, in other situations to extract
+
+00:48:41.750 --> 00:48:44.430
+intermediate results, something that happens along
+
+00:48:44.430 --> 00:48:45.530
+the way to the answer.
+
+00:48:47.070 --> 00:48:50.890
+And as I hope you've seen, that simulations are used
+
+00:48:50.890 --> 00:48:54.570
+because we can play what if games by
+
+00:48:54.570 --> 00:48:56.130
+successively refining it.
+
+00:48:56.970 --> 00:49:00.330
+We started with a simple simulation that assumed that
+
+00:49:00.330 --> 00:49:02.850
+we only asked the question of, did two people share a
+
+00:49:02.850 --> 00:49:03.150
+birthday?
+
+00:49:04.010 --> 00:49:07.670
+We showed how we could change it to ask to three people
+
+00:49:07.670 --> 00:49:08.410
+share a birthday.
+
+00:49:09.530 --> 00:49:13.410
+We then saw that we could change it to assume a
+
+00:49:13.410 --> 00:49:17.330
+different distribution of birth dates in the group.
+
+00:49:18.430 --> 00:49:20.670
+And so we can start with something simple and we
+
+00:49:20.670 --> 00:49:25.070
+get it ever more complex to answer questions what if.
+
+00:49:29.340 --> 00:49:32.160
+We're going to start in the next lecture by
+
+00:49:32.160 --> 00:49:35.640
+producing a simulation of a random walk.
+
+00:49:36.620 --> 00:49:39.500
+And with that, I'll stop and see you guys soon.
+

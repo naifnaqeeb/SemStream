@@ -1,0 +1,70 @@
+{
+  "lecture_id": "nptel_python_dsa_mukund_lec01",
+  "duration_seconds": 1648.061,
+  "content_threshold": 27.0,
+  "min_scene_len": "20s",
+  "max_slide_seconds": 180.0,
+  "audio_file": "tier1_audio.m4a",
+  "slides": [
+    {
+      "index": 0,
+      "start": 0.0,
+      "end": 164.806,
+      "image": "slide_000.jpg"
+    },
+    {
+      "index": 1,
+      "start": 164.806,
+      "end": 329.612,
+      "image": "slide_001.jpg"
+    },
+    {
+      "index": 2,
+      "start": 329.612,
+      "end": 494.418,
+      "image": "slide_002.jpg"
+    },
+    {
+      "index": 3,
+      "start": 494.418,
+      "end": 659.224,
+      "image": "slide_003.jpg"
+    },
+    {
+      "index": 4,
+      "start": 659.224,
+      "end": 824.03,
+      "image": "slide_004.jpg"
+    },
+    {
+      "index": 5,
+      "start": 824.03,
+      "end": 988.837,
+      "image": "slide_005.jpg"
+    },
+    {
+      "index": 6,
+      "start": 988.837,
+      "end": 1153.643,
+      "image": "slide_006.jpg"
+    },
+    {
+      "index": 7,
+      "start": 1153.643,
+      "end": 1318.449,
+      "image": "slide_007.jpg"
+    },
+    {
+      "index": 8,
+      "start": 1318.449,
+      "end": 1483.255,
+      "image": "slide_008.jpg"
+    },
+    {
+      "index": 9,
+      "start": 1483.255,
+      "end": 1648.061,
+      "image": "slide_009.jpg"
+    }
+  ]
+}

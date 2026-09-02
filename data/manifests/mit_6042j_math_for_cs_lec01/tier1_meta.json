@@ -1,0 +1,286 @@
+{
+  "lecture_id": "mit_6042j_math_for_cs_lec01",
+  "duration_seconds": 2649.021,
+  "content_threshold": 27.0,
+  "min_scene_len": "20s",
+  "max_slide_seconds": 180.0,
+  "audio_file": "tier1_audio.m4a",
+  "slides": [
+    {
+      "index": 0,
+      "start": 0.0,
+      "end": 35.869,
+      "image": "slide_000.jpg"
+    },
+    {
+      "index": 1,
+      "start": 35.869,
+      "end": 101.134,
+      "image": "slide_001.jpg"
+    },
+    {
+      "index": 2,
+      "start": 101.134,
+      "end": 133.1,
+      "image": "slide_002.jpg"
+    },
+    {
+      "index": 3,
+      "start": 133.1,
+      "end": 198.732,
+      "image": "slide_003.jpg"
+    },
+    {
+      "index": 4,
+      "start": 198.732,
+      "end": 245.245,
+      "image": "slide_004.jpg"
+    },
+    {
+      "index": 5,
+      "start": 245.245,
+      "end": 301.501,
+      "image": "slide_005.jpg"
+    },
+    {
+      "index": 6,
+      "start": 301.501,
+      "end": 335.302,
+      "image": "slide_006.jpg"
+    },
+    {
+      "index": 7,
+      "start": 335.302,
+      "end": 388.555,
+      "image": "slide_007.jpg"
+    },
+    {
+      "index": 8,
+      "start": 388.555,
+      "end": 445.378,
+      "image": "slide_008.jpg"
+    },
+    {
+      "index": 9,
+      "start": 445.378,
+      "end": 479.446,
+      "image": "slide_009.jpg"
+    },
+    {
+      "index": 10,
+      "start": 479.446,
+      "end": 503.169,
+      "image": "slide_010.jpg"
+    },
+    {
+      "index": 11,
+      "start": 503.169,
+      "end": 590.657,
+      "image": "slide_011.jpg"
+    },
+    {
+      "index": 12,
+      "start": 590.657,
+      "end": 620.787,
+      "image": "slide_012.jpg"
+    },
+    {
+      "index": 13,
+      "start": 620.787,
+      "end": 715.515,
+      "image": "slide_013.jpg"
+    },
+    {
+      "index": 14,
+      "start": 715.515,
+      "end": 746.679,
+      "image": "slide_014.jpg"
+    },
+    {
+      "index": 15,
+      "start": 746.679,
+      "end": 883.649,
+      "image": "slide_015.jpg"
+    },
+    {
+      "index": 16,
+      "start": 883.649,
+      "end": 909.609,
+      "image": "slide_016.jpg"
+    },
+    {
+      "index": 17,
+      "start": 909.609,
+      "end": 972.505,
+      "image": "slide_017.jpg"
+    },
+    {
+      "index": 18,
+      "start": 972.505,
+      "end": 1016.716,
+      "image": "slide_018.jpg"
+    },
+    {
+      "index": 19,
+      "start": 1016.716,
+      "end": 1039.105,
+      "image": "slide_019.jpg"
+    },
+    {
+      "index": 20,
+      "start": 1039.105,
+      "end": 1063.262,
+      "image": "slide_020.jpg"
+    },
+    {
+      "index": 21,
+      "start": 1063.262,
+      "end": 1162.528,
+      "image": "slide_021.jpg"
+    },
+    {
+      "index": 22,
+      "start": 1162.528,
+      "end": 1184.15,
+      "image": "slide_022.jpg"
+    },
+    {
+      "index": 23,
+      "start": 1184.15,
+      "end": 1220.686,
+      "image": "slide_023.jpg"
+    },
+    {
+      "index": 24,
+      "start": 1220.686,
+      "end": 1259.658,
+      "image": "slide_024.jpg"
+    },
+    {
+      "index": 25,
+      "start": 1259.658,
+      "end": 1407.339,
+      "image": "slide_025.jpg"
+    },
+    {
+      "index": 26,
+      "start": 1407.339,
+      "end": 1436.535,
+      "image": "slide_026.jpg"
+    },
+    {
+      "index": 27,
+      "start": 1436.535,
+      "end": 1518.784,
+      "image": "slide_027.jpg"
+    },
+    {
+      "index": 28,
+      "start": 1518.784,
+      "end": 1546.278,
+      "image": "slide_028.jpg"
+    },
+    {
+      "index": 29,
+      "start": 1546.278,
+      "end": 1676.975,
+      "image": "slide_029.jpg"
+    },
+    {
+      "index": 30,
+      "start": 1676.975,
+      "end": 1769.434,
+      "image": "slide_030.jpg"
+    },
+    {
+      "index": 31,
+      "start": 1769.434,
+      "end": 1861.893,
+      "image": "slide_031.jpg"
+    },
+    {
+      "index": 32,
+      "start": 1861.893,
+      "end": 1941.64,
+      "image": "slide_032.jpg"
+    },
+    {
+      "index": 33,
+      "start": 1941.64,
+      "end": 1972.404,
+      "image": "slide_033.jpg"
+    },
+    {
+      "index": 34,
+      "start": 1972.404,
+      "end": 2110.608,
+      "image": "slide_034.jpg"
+    },
+    {
+      "index": 35,
+      "start": 2110.608,
+      "end": 2136.635,
+      "image": "slide_035.jpg"
+    },
+    {
+      "index": 36,
+      "start": 2136.635,
+      "end": 2185.684,
+      "image": "slide_036.jpg"
+    },
+    {
+      "index": 37,
+      "start": 2185.684,
+      "end": 2213.078,
+      "image": "slide_037.jpg"
+    },
+    {
+      "index": 38,
+      "start": 2213.078,
+      "end": 2255.086,
+      "image": "slide_038.jpg"
+    },
+    {
+      "index": 39,
+      "start": 2255.086,
+      "end": 2275.974,
+      "image": "slide_039.jpg"
+    },
+    {
+      "index": 40,
+      "start": 2275.974,
+      "end": 2310.441,
+      "image": "slide_040.jpg"
+    },
+    {
+      "index": 41,
+      "start": 2310.441,
+      "end": 2391.923,
+      "image": "slide_041.jpg"
+    },
+    {
+      "index": 42,
+      "start": 2391.923,
+      "end": 2414.178,
+      "image": "slide_042.jpg"
+    },
+    {
+      "index": 43,
+      "start": 2414.178,
+      "end": 2457.722,
+      "image": "slide_043.jpg"
+    },
+    {
+      "index": 44,
+      "start": 2457.722,
+      "end": 2540.037,
+      "image": "slide_044.jpg"
+    },
+    {
+      "index": 45,
+      "start": 2540.037,
+      "end": 2648.98,
+      "image": "slide_045.jpg"
+    }
+  ]
+}

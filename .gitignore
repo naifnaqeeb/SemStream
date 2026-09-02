@@ -1,0 +1,17 @@
+corpus/*.mp4
+corpus/*.webm
+corpus/*.mkv
+data/manifests/**/tier0/
+data/manifests/**/slides/
+data/manifests/**/*.m4a
+data/manifests/**/*.aac
+data/manifests/**/*.mp4
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+.vscode/
+.claude/
+*.gguf
