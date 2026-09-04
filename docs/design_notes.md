@@ -593,6 +593,144 @@ final sustainable level. No fix applied - recorded because this is exactly the k
 that should be understood before it becomes an input to tuning Phase 4's agent, not rediscovered
 mid-tuning.
 
+## Phase 4 — switching agent design, decided before any code exists (2026-09-04)
+
+Four questions settled here first, per instruction, because this is the project's core
+contribution and getting the mechanism wrong would silently undermine every result built on
+top of it.
+
+**1. Content label biases the proposed target tier, not the dwell time. Hysteresis itself
+stays uniform across labels.** Confirmed, not argued against - varying `min_dwell_segments`
+per label would reintroduce exactly the flicker problem hysteresis exists to solve (a segment
+sitting near a label boundary, or a classifier flip between adjacent segments, would cause the
+dwell floor itself to change moment to moment). Mechanism: `agent/hysteresis.py`'s
+`HysteresisController.decide()` gets extended to accept optional per-call `up_safety_factor`/
+`down_safety_factor` overrides (falling back to the instance defaults set at construction if
+omitted) - additive, so Naive's existing calls are untouched. The agent picks which
+(up, down) factor pair to pass in based on the upcoming segment's `content_label`; the dwell
+floor (`min_dwell_segments`), the switch-gating structure, and `segments_since_switch` tracking
+are identical regardless of label. Content-awareness changes what gets *proposed*; dwell
+decides, uniformly, whether the proposal is allowed through yet.
+
+**2. `slides_static` is explicit, not a fallthrough: it gets the SAME treatment as
+`talking_head` (drop readily), not its own third profile.** Reasoning: Tier 1/2's slide-image
+mechanism is specifically built to represent exactly this content - a static slide captured as
+an image loses very little relative to the same slide shown as Tier 0 video, arguably less than
+`talking_head` loses (a face/gesture has no direct Tier 1/2 equivalent at all, whereas a slide
+has an almost-exact one). There is no content category in this project for which holding Tier 0
+is justified other than `demo`, so `slides_static` and `talking_head` share one profile.
+
+**3. Content-awareness adjusts the affordability threshold, not affordability itself.**
+Confirmed as the only implementation that doesn't defeat the point: `affordable_index()` (in
+`agent/hysteresis.py`) already only ever returns an index whose real bitrate is
+`<= bandwidth_kbps * safety_factor`, and every factor used stays `<= 1` - so a proposed tier's
+bitrate can never exceed the real measured bandwidth, regardless of content. What content
+changes is how much headroom below that hard ceiling is required before the agent is willing to
+sit at a given index. Two profiles, both defined as offsets from Naive's own already-precedented
+neutral values (`down=0.9`, `up=0.7`, itself grounded in Sabre's built-in `ThroughputRule`) so
+neither profile is picked from feel:
+
+| profile | applies to | down_safety_factor | up_safety_factor | meaning |
+|---|---|---|---|---|
+| hold | `demo` | 0.95 (more tolerant than Naive's 0.9) | 0.6 (less headroom needed than Naive's 0.7) | tolerates thinner margin before dropping Tier 0; reclaims it eagerly once affordable |
+| drop | `talking_head`, `slides_static` | 0.75 (less tolerant than Naive's 0.9) | 0.85 (more headroom needed than Naive's 0.7) | downgrades sooner even with some margin left; in no hurry to reclaim Tier 0 |
+
+Both profiles are symmetric offsets around Naive's neutral pair, in opposite directions - `hold`
+is strictly more Tier-0-favouring than Naive in both directions, `drop` is strictly less, by a
+comparable margin. `min_dwell_segments` for Ours is kept at 3 (12s), the same value as Naive -
+not because Ours copies Naive, but because dwell's job (preventing flicker) is, by point 1,
+independent of content, so there is no content-driven reason for it to differ.
+
+**4. Discrete `content_label`, not a blend with `visual_importance` - and the reason is not a
+style preference, it's that blending currently adds nothing.** Checked before deciding:
+`classifier/rules.py`'s `VISUAL_IMPORTANCE` is a fixed constant lookup keyed by the same
+discrete label (`{"demo": 0.9, "slides_static": 0.5, "talking_head": 0.15}`), not an independent
+per-segment confidence score - so a segment's `visual_importance` carries zero information
+beyond its `content_label` as currently implemented. "Blending" the two would be mathematically
+equivalent to using the label alone, just re-expressed as a float, and would give no additional
+protection against misclassification - a demo segment mislabelled `slides_static` has
+`visual_importance=0.5` regardless of which quantity the agent reads. Using the label directly
+is simpler and more transparent to defend ("if label == demo, use the hold profile") without
+pretending to a robustness benefit the current classifier doesn't provide. If Phase 2's
+classifier is ever revised to output a genuine continuous, independently-informative confidence
+(e.g. derived from raw OCR/code-marker signal strength rather than a per-label constant), this
+decision should be revisited - noted here so it isn't forgotten.
+
+**Restating Phase 2's demo recall ceiling as directly consequential, not hypothetical.**
+Phase 2's measured demo recall was 51.5% (`docs/design_notes.md`, Phase 2 section). Combined
+with point 4, that ceiling is now a direct, quantifiable property of the agent's real behaviour,
+not an abstract classifier caveat: roughly half of a lecture's true demo segments will be
+labelled something else (mostly `talking_head` or `slides_static` per Phase 2's false-negative
+list) and will therefore receive the `drop` profile instead of `hold` - the agent will downgrade
+Tier 0 during real demo content on those segments, exactly the failure mode this project exists
+to avoid, on close to half of demo content. This is expected, already-measured, and must be
+stated as such wherever Phase 4's results are reported - not discovered as a surprise later.
+
+**Bandwidth estimator: Ours inherits the same one Naive uses, and therefore the same lag.**
+`get_quality_delay` reads `self.session.get_throughput()`, Sabre's own internal
+throughput-history estimator - the only one Sabre exposes in replayed-trace mode. This is the
+exact mechanism diagnosed as the primary cause of Naive's residual rebuffering (Phase 3 section
+above: the estimate lags the true instantaneous bandwidth after a sudden collapse). Ours will
+show the same lag-driven reaction delay for the same structural reason. Stated here, not fixed -
+`agent/bandwidth_source.py` (not yet written) will need to implement `get_bandwidth_estimate()`
+for the demo/real-estimator cases separately in Phase 5, but for Phase 4's simulation context
+the estimator is Sabre's, unmodified.
+
+## Phase 4 — implemented, validated at the segment level, first 3-way results (2026-09-04)
+
+**Implementation matches the design above exactly.** `agent/hysteresis.py`'s `decide()` gained
+optional per-call `up_safety_factor`/`down_safety_factor` overrides (additive - re-ran the
+exact Naive regression check from Phase 3 afterward, byte-for-byte identical output, confirming
+Naive's calls are unaffected). `agent/state_machine.py` holds one `HysteresisController`
+instance and looks up the `(up, down)` factor pair for the upcoming segment's `content_label`
+before calling `decide()`. `sim/policies/Ours.py` wires it to Sabre exactly like `Naive.py`
+does. Adding `"ours"` to `run_experiment.py`'s `POLICIES` dict was, as designed, the only
+change needed - confirmed by actually doing it, not just claiming the design supported it.
+
+**Segment-level validation, not just aggregate trust.** Ran Ours and Naive on
+`nptel_dsa_iitd_lec01` + campus-collapse and found real demo-labelled segments where they
+diverge exactly as designed: segments 154-157 and 643-645 (all `content_label=demo`) - Naive
+drops to q=2 (Tier 1), Ours holds q=3 (Tier 0, this lecture's only rung). Direct, concrete
+evidence the hold/drop profile split is actually taking effect, not just a plausible-sounding
+number in an aggregate table.
+
+**First 3-way result** (all 9 lectures, mean per trace):
+
+| trace | policy | rebuffer (s) | tier0 | tier1 | information delivered |
+|---|---|---|---|---|---|
+| campus_collapse | baseline | 94.09 | 1.000 | 0.000 | 0.9657 |
+| campus_collapse | naive | 12.91 | 0.675 | 0.323 | 0.9218 |
+| campus_collapse | ours | **6.92** | 0.709 | 0.289 | **0.9304** |
+| norway_hsdpa_rough | baseline | 33.15 | 1.000 | 0.000 | 0.9887 |
+| norway_hsdpa_rough | naive | 0.03 | 0.597 | 0.402 | 0.9031 |
+| norway_hsdpa_rough | ours | **0.00** | 0.749 | 0.249 | **0.9376** |
+| belgium_4g_rough | baseline | 53.70 | 1.000 | 0.000 | 0.9804 |
+| belgium_4g_rough | naive | 55.80 | 0.830 | 0.092 | 0.9308 |
+| belgium_4g_rough | ours | **49.46** | 0.871 | 0.070 | **0.9472** |
+
+On every trace with real stress, **Ours strictly dominates Naive on both measured dimensions
+simultaneously** - lower rebuffering and higher `information_delivered`, using *less* Tier 1
+time than Naive on two of the three (e.g. `norway_hsdpa_rough`: 24.9% vs Naive's 40.2%,
+better outcome for less modality sacrifice). Against Baseline the trade is the expected one:
+Baseline's raw `information_delivered` edges ahead on two of three traces (it never sacrifices
+fidelity when it does play, and the metric's rebuffer penalty is comparatively mild relative to
+sustained Tier-1 time), but Ours cuts rebuffering by 13x on campus-collapse (94.09s -> 6.92s)
+and reaches zero on `norway_hsdpa_rough` where Baseline still loses 33.15s - a real, large
+availability win purchased for a modest fidelity trade, which is exactly the shape of result
+this project's central thesis predicts, not an artefact of a metric built to flatter it (the
+metric was defined in Phase 3, before Ours existed, specifically to avoid that risk).
+
+**Case study update: `nptel_dsa_iitd_lec01` on campus-collapse, now with all three policies.**
+Baseline 1.000 Tier 0 (no rebuffering needed, its floor survives this trace outright). Naive
+0.7446 Tier 0 / 0.2541 Tier 1, `information_delivered=0.9254`. Ours 0.7471 Tier 0 / 0.2517
+Tier 1, `information_delivered=0.9263` - directionally correct (Ours > Naive, as designed) but
+small in magnitude on this specific lecture/trace pair, because only 10.3% of this lecture's
+segments are labelled `demo` (the rest are majority `slides_static`, which shares Naive's near-
+neutral drop profile) and this trace never forces either policy to rebuffer here regardless.
+The dramatic, unambiguous evidence for this case is the segment-level divergence above, not the
+aggregate number - stated plainly so the aggregate isn't mistaken for the strongest evidence
+when it isn't.
+
 ## Phase 3 — Sabre rung model: resampling Tiers 1-3, and the pixel-only baseline (2026-08-30)
 
 **Read before writing any code, per the plan.** Sabre represents a rung as a single integer

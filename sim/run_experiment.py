@@ -38,6 +38,7 @@ TRACES = {
 POLICIES = {
     "baseline": {"movie": "baseline.json", "abr": None, "builtin_abr": "bola"},
     "naive": {"movie": "naive.json", "abr": "policies/Naive.py", "builtin_abr": None},
+    "ours": {"movie": "ours.json", "abr": "policies/Ours.py", "builtin_abr": None},
 }
 
 SEGMENT_LOG_RE = re.compile(r"^\[\d+-\d+\]\s+(\d+): q=(\d+)")

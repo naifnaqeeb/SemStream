@@ -14,9 +14,14 @@ class HysteresisController:
         self.current_index = None
         self.segments_since_switch = 0
 
-    def decide(self, bitrates_kbps, bandwidth_kbps):
-        down_candidate = affordable_index(bitrates_kbps, bandwidth_kbps, self.down_safety_factor)
-        up_candidate = affordable_index(bitrates_kbps, bandwidth_kbps, self.up_safety_factor)
+    def decide(self, bitrates_kbps, bandwidth_kbps, up_safety_factor=None, down_safety_factor=None):
+        # Per-call overrides let a caller bias which target tier gets proposed
+        # (e.g. content-aware affordability margins) without touching the dwell
+        # floor or the switch-gating logic below, which stay uniform regardless.
+        up_factor = self.up_safety_factor if up_safety_factor is None else up_safety_factor
+        down_factor = self.down_safety_factor if down_safety_factor is None else down_safety_factor
+        down_candidate = affordable_index(bitrates_kbps, bandwidth_kbps, down_factor)
+        up_candidate = affordable_index(bitrates_kbps, bandwidth_kbps, up_factor)
 
         if self.current_index is None:
             self.current_index = down_candidate
