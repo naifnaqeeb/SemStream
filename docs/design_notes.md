@@ -731,6 +731,20 @@ The dramatic, unambiguous evidence for this case is the segment-level divergence
 aggregate number - stated plainly so the aggregate isn't mistaken for the strongest evidence
 when it isn't.
 
+**Bandwidth interface compliance, caught before calling Phase 4 done.** `sim/policies/Ours.py`
+initially called `self.session.get_throughput()` directly - functionally correct but a direct
+violation of `CLAUDE.md`'s own Bandwidth interface rule ("The switching agent must only ever
+call this interface - never read a trace file or a slider value directly"), and Phase 4's task
+list explicitly calls for `agent/bandwidth_source.py` implementing `get_bandwidth_estimate()`
+behind one shared interface across all three real implementations (replayed trace, UI slider,
+real estimator). Added `agent/bandwidth_source.py` (`SabreBandwidthSource` wraps Sabre's
+session for the simulation context used now; `UIBandwidthSource` ready for Phase 4.5;
+`RealBandwidthSource` explicitly `NotImplementedError`, a Phase 5 concern per the plan, not
+built yet) and routed `Ours.py` through it instead. Re-ran the exact same regression check
+(`nptel_software_engineering_lec01`, ours.json, campus-collapse) before and after - byte-for-
+byte identical output, confirming this was a real interface-compliance fix, not a behaviour
+change.
+
 ## Phase 3 — Sabre rung model: resampling Tiers 1-3, and the pixel-only baseline (2026-08-30)
 
 **Read before writing any code, per the plan.** Sabre represents a rung as a single integer
