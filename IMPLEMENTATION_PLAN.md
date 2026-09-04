@@ -14,8 +14,8 @@ complete result still exists. Do not begin Phase 5 before Phase 3's check is sat
 - [x] Phase 0 — Corpus collection
 - [x] Phase 1 — Semantic tier generation
 - [x] Phase 2 — Content classifier
-- [ ] Phase 3 — Simulation harness
-- [ ] Phase 4 — Switching agent
+- [x] Phase 3 — Simulation harness
+- [x] Phase 4 — Switching agent
 - [ ] Phase 4.5 — Course demo
 - [ ] Phase 5 — Real DASH prototype (optional; confirm before starting)
 - [ ] Phase 6 — Evaluation
