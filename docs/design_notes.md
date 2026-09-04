@@ -219,6 +219,307 @@ thresholds (`OCR_HIGH=0.05`, `CODE_MARKER_MIN=2`, `AMBIGUOUS_FRAME_DIFF=0.02`) a
 against this specific 9-video corpus's feature distributions, not against ground truth labels,
 and should be revisited if the corpus grows or changes composition.
 
+**Face detection model provenance (2026-08-30).** `classifier/models/face_detection_yunet_2023mar.onnx`
+is the standard OpenCV Zoo YuNet model, fetched from
+`https://github.com/opencv/opencv_zoo/raw/main/models/face_detection_yunet/face_detection_yunet_2023mar.onnx`.
+Licensed MIT (per `https://github.com/opencv/opencv_zoo/blob/main/models/face_detection_yunet/LICENSE`),
+permissive, redistribution allowed - no restriction on keeping it committed in this repo.
+
+**Demo recall/precision, measured properly (2026-08-30), superseding the earlier "~25%
+recall / near-zero false positives" claim.** That earlier figure was not a measured recall at
+all - it was `code_marker_count>=2` hit-rate against every segment of one video, i.e. treating
+the whole video as ground-truth "demo," which conflates "a lecture that contains demo content"
+with "a segment that is demo content." Flagged when asked to justify it, and replaced with an
+actual measurement:
+
+Method: densely sampled (15-25s intervals) the demo-containing windows of the three lectures
+with real code content (`nptel_python_dsa_mukund_lec01`, `mit_6_0001_intro_python_lec02`,
+`mit_6_0002_comp_thinking_lec04`), identified from a coarser first pass. 79 segments judged by
+eye against a fixed rule (demo = a real multi-line code block or an actual terminal/IDE screen
+is the frame's primary content; not-demo = prose bullets, an English-language description of an
+algorithm, talking-head, or an abstract placeholder template like `<variable>`/`<condition>`
+with no concrete syntax) - deliberately including both classes, not just segments the
+classifier already called demo, so recall isn't measured against its own answer. Each
+timestamp's exact segment index was then looked up against the real `manifest.json` label.
+
+Result: **33 true demo segments in the sample, 17 caught -> 51.5% recall. 20 classifier-demo
+calls in the sample, 17 correct -> 85.0% precision.** Both figures are measured on a sample
+deliberately concentrated on demo-relevant windows, not a random/representative slice of the
+corpus - that was the brief, and it means these numbers describe classifier behaviour where
+demo content actually is, not overall corpus-wide accuracy.
+
+This corrects the earlier claim in both directions: recall is higher than the "~25%"
+impression suggested, but "near-zero false positives" was also an overstatement - that was
+only true for the two pure prose-slide lectures with zero code content anywhere in them. On
+lectures that do contain real code, there is a genuine ~15% false-positive rate (3/20 in this
+sample), concentrated at demo/talking-head boundary transitions - e.g. a professor momentarily
+at a laptop with code partly visible on a background screen, or a slide sandwiched between two
+code slides that still contains algorithmic pseudocode. Full false-positive/false-negative list
+retained in this session's working notes; the pattern is boundary ambiguity, not a systematic
+directional bias.
+
+**Consequence for Phase 3, written down now rather than left as an implicit assumption.** The
+switching agent's demo-preservation behaviour in simulation is bounded by the classifier's
+actual demo recall (51.5% measured above), not by true demo content. Concretely: Phase 3's
+results will show the agent correctly holding Tier 0 for roughly half of a lecture's genuine
+demo segments - the half the classifier actually labelled `demo` - and treating the other half
+as whatever the classifier mislabelled them as (mostly `talking_head` or `slides_static` per
+the false-negative list above), meaning the agent will drop tier on that content the same way
+it would for genuinely non-demo content. This is not a Phase 3 bug if it shows up in the
+results; it is the expected, already-measured consequence of Phase 2's classifier ceiling, and
+must be stated as such in any eventual write-up rather than presented as if the agent were
+reacting to ground-truth content labels.
+
+## Phase 3 — trace sourcing: FCC dropped, Norway HSDPA + Belgium 4G/LTE used instead (2026-08-30)
+
+`IMPLEMENTATION_PLAN.md` originally called for FCC broadband + Norway HSDPA + a custom trace.
+FCC broadband was dropped after a real, documented sourcing problem, not skipped for
+convenience: FCC's official host (`data.fcc.gov/.../data-raw-2016-jun.tar.gz`) now redirects
+to a generic search page - the 2016 MBA raw release isn't there any more. Every third-party
+"FCC" mirror checked (`confiwent/Real-world-bandwidth-traces`, both its `fcc_ori/` and
+`fcc_and_hsdpa/` folders) turned out, on actual file-content inspection rather than folder-name
+trust, to contain the same Oslo bus HSDPA log files mislabeled as FCC. Pensieve's and
+park-project's own loaders both point to long-dead Dropbox links for their pre-processed FCC
+set. archive.org has a genuine Wayback snapshot of the original raw FCC tar.gz, but it is the
+*raw* per-household release, not pre-processed into throughput time series - substantial
+parsing work with unknown scope, disproportionate to take on speculatively. Rather than
+mislabel data (the exact mistake found in the third-party mirrors) or fabricate a
+"broadband-shaped" synthetic trace and call it FCC, this was raised as a real blocker and the
+user chose: keep two genuine, verified datasets and drop the FCC label rather than mislabel.
+
+**Norway HSDPA** (kept, as originally planned): `confiwent/Real-world-bandwidth-traces`,
+`cooked_3gp/norway_*` files. Verified genuine by reading actual file content (not just trusting
+the repo) - throughput values sit in the expected HSDPA range, filenames and categories (bus,
+car, ferry, metro, train, tram) match the authentic Riiser et al. "Commute path bandwidth
+traces from 3G networks" dataset structure. 12 files fetched across all 6 categories, 2 each.
+
+**Belgium 4G/LTE** (replaces FCC as the second real dataset): Ghent University
+(`users.ugent.be/~jvdrhoof/dataset-4g/logs/logs_all.zip`), the same "bonus" dataset Pensieve's
+own `traces/README.md` documents alongside FCC and Norway - live host, confirmed 200 OK,
+392KB. 40 real log files (bicycle/bus/car/etc mobility logs), each row genuine
+`[unix_ts_ms, elapsed_ms, latitude, longitude, bytes_received, duration_ms]` - real GPS-tagged
+mobile throughput measurements, not a derivative or a re-labelling of something else.
+
+**Trace format conversion, both real datasets.** Sabre's `network.json` wants
+`{duration_ms, bandwidth_kbps, latency_ms}` entries. Norway's `[timestamp_sec, throughput_mbps]`
+samples convert to one entry per consecutive pair: `duration_ms` = real gap between samples,
+`bandwidth_kbps` = the earlier sample's throughput held constant across that gap (standard
+practice for piecewise-constant throughput traces). Belgium's rows already carry a real
+`duration_ms` directly; `bandwidth_kbps` is computed from the row's own real `bytes_received`
+and `duration_ms` (`bytes*8/duration_ms`), not estimated. Neither trace format carries a
+latency column, so a fixed representative value is used per set and stated as an assumption,
+not measured data: 150ms for Norway (typical HSDPA/3G RTT), 60ms for Belgium (typical LTE RTT).
+
+**Custom "campus WiFi collapse" trace, as required by the plan.** Deliberately synthetic and
+never presented as measured data - unlike the two real sets above, this one is *supposed* to
+be constructed. 61 entries, 4000ms steps (aligned to the project's own 4s segment grid, not a
+Sabre requirement, just tidy), fixed RNG seed 20260830 for reproducibility. Five phases: stable
+good WiFi (~8000kbps, 20ms latency, 15 steps) -> congestion ramp-up (bandwidth falling
+8000->300kbps while latency climbs 20->250ms *ahead of* the bandwidth drop, matching real
+congestion behaviour where buffers fill and RTT rises before throughput visibly collapses, 8
+steps) -> collapsed/overloaded AP (~300kbps, ~275ms latency, noisy, 15 steps) -> recovery ramp
+(300->7500kbps, latency back down to 25ms, 15 steps) -> stable again (8 steps). Models a
+lecture-hall AP overloaded when a class lets out and floods it with devices, then clearing.
+Verified functional, not just schema-valid: ran through Sabre's built-in BOLA against the
+Tier-0-only baseline movie and produced a nonzero "total reaction time" (285.39, vs 0.0 for
+both real traces run against the same movie in the same session) - confirms the trace actually
+forces adaptive bitrate switching, not just a well-formed but inert file.
+
+## Phase 3 — Naive policy: hysteresis, thresholds, buffer-blindness (2026-08-30)
+
+**Why Naive needs hysteresis at all.** Caught before writing any code: pure per-segment
+threshold-switching with zero hysteresis would oscillate on any trace with realistic jitter,
+making Naive look artificially worse than Ours for reasons that have nothing to do with
+content-awareness - that would demonstrate hysteresis helps, not that content-awareness helps,
+which isn't the comparison Phase 3 exists to isolate. Naive gets the same class of
+hysteresis/dwell mechanism Ours will get in Phase 4.
+
+**Shared module, not a duplicate.** Written as `agent/hysteresis.py` now, ahead of Phase 4
+formally starting, rather than as a standalone copy inside the Naive policy file. This is a
+narrow, generic, self-contained utility (margins + dwell time only) - not `state_machine.py` or
+`bandwidth_source.py`, so it doesn't chain Phase 4's actual work into Phase 3. Reusing one file
+avoids the exact two-independent-readings-that-can-diverge risk already flagged once this
+session for Sabre's manifest loader; the alternative (a deliberately identical standalone copy
+now) would have created two files to keep in sync by hand. Phase 4's Ours policy will construct
+its own `HysteresisController` instance with its own constants - the class takes
+`min_dwell_segments`/`up_safety_factor`/`down_safety_factor` as constructor arguments, so Naive
+and Ours share the mechanism but not the numbers, per instruction.
+
+**Mechanism.** Two safety factors, not one, giving real asymmetry: `down_safety_factor` (0.9)
+sets the level Naive drops to when the current index becomes unaffordable even under a lenient
+read of throughput; `up_safety_factor` (0.7, stricter - needs throughput >= bitrate/0.7 ~= 1.43x
+before upgrading, versus just >= bitrate/0.9 ~= 1.11x to avoid dropping) sets how much headroom
+is required before climbing back up. Asymmetric margins (harder to go up than to come down) are
+standard anti-flicker practice - the point is to stop a policy from immediately re-climbing
+right after a legitimate downgrade on the next segment's noisy estimate. On top of the margins,
+a hard `min_dwell_segments` (3 segments = 12s) blocks ANY switch, up or down, until that many
+segments have passed since the last one - the margins alone reduce flicker probability, the
+dwell floor removes it structurally.
+
+**Numbers grounded in precedent, not feel - answering "did you tune the baseline to lose"
+before it's asked.** `down_safety_factor = 0.9` is not invented: it is Sabre's own built-in
+`ThroughputRule.safety_factor`, read directly from `sim/src/sabre.py` (used identically there
+for exactly the same purpose - safety margin when deciding if current throughput can sustain a
+rung). `up_safety_factor = 0.7` is the one genuinely chosen constant, set to give real
+asymmetry against the 0.9 down factor rather than picked independently. `min_dwell_segments = 3`
+(12s) is short enough that the campus-collapse trace's ~32s ramp phases (8 x 4s steps) still
+produce visible multi-step adaptation rather than one instant jump, long enough to filter
+single-segment jitter - chosen by looking at that trace's own timing, not a round number picked
+by feel. **Bandwidth thresholds are not a separate invented lookup table at all**: Naive walks
+the real per-lecture `bitrates_kbps` ladder that `tier_rung.py` already computed from real
+measured tier/rung bitrates for whichever lecture is running - so the "threshold" between, say,
+Tier 1 and Tier 0's lowest rung genuinely is that lecture's own real Tier 1 bitrate and real
+Tier 0 lowest-rung bitrate, self-calibrating per lecture rather than one universal number that
+might not fit every lecture's actual encode. Naive's own constants live in `sim/policies/Naive.py`,
+independent of whatever Ours ends up using in Phase 4.
+
+**Buffer-blind, deliberately, not by default.** Naive reads `self.session.get_throughput()`
+only - it never calls `get_buffer_level()`. Three reasons, not one: (1) `CLAUDE.md`'s own
+definition of this baseline is explicit - "content-blind modality switching on **bandwidth
+thresholds only**"; buffer-awareness isn't part of what's being represented. (2) Buffer-based
+reasoning is what the pixel-only Baseline (built-in Sabre BOLA) already represents - giving
+Naive buffer-awareness too would blur the one dimension each baseline is supposed to isolate.
+(3) Real commercial fallback behaviour (a video call degrading to audio-only under a bad
+connection) is legitimately modelled as reacting to measured network conditions, not local
+buffer occupancy - that's what "represents commercial fallbacks" in `CLAUDE.md` is pointing at.
+
+**Verified functional, not just "it ran".** `sim/policies/Naive.py` against
+`movies/nptel_software_engineering_lec01/naive.json` and the campus-collapse trace: holds the
+top index (q=5) through the whole stable-bandwidth phase, steps down 5->3->2 with the dwell
+floor visibly respected (no single-segment reversals) through the collapse, holds the floor for
+the full low-bandwidth trough, steps back up 2->3->4->5 on recovery - checked across the full
+421-segment run (the trace loops, ~7 collapse/recovery cycles fit in one lecture's length), zero
+single-segment oscillation anywhere. 1 rebuffer event total (3.09s, 0.18% ratio) - present
+because the trace genuinely does collapse hard, not because the policy flails.
+
+## Phase 3 — Sabre rung model: resampling Tiers 1-3, and the pixel-only baseline (2026-08-30)
+
+**Read before writing any code, per the plan.** Sabre represents a rung as a single integer
+index into a flat `bitrates_kbps` list; `segment_sizes_bits[segment_index][quality_index]`
+gives the real bytes for that segment at that quality. Its buffer model
+(`get_buffer_level()`) assumes every quality index at a given segment index covers the *same*
+slice of playback time - that's what makes "download this segment at this quality" a
+well-formed question. Confirmed by running the unmodified example (`example/movie.json` +
+`example/network.json`, default BOLA): 0 rebuffering, 199 chunks played, output sane.
+
+**Why naive concatenation was wrong (caught before writing `tier_rung.py`, not after).** Tier
+0's rungs satisfy Sabre's same-time-slice assumption (each is the same 4s segment at different
+fidelity). Tiers 1-3 don't: a slide can hold for 40s+, a Tier 3 summary window is 60s. Simply
+appending each tier's own native segment list as extra quality indices would let a single
+segment index mean a wildly different amount of real playback time depending which quality was
+selected - breaking the buffer model at the root, not just producing a slightly-off number.
+
+**Fix: resample Tiers 1-3 onto Tier 0's 4.0s grid** (the same grid as `segments_4s`, already
+exactly aligned by Phase 1 design). For segment index `i`, each tier's byte cost is "how many
+*new* bytes are needed to get through this 4s slice" - near-zero mid-slide/mid-summary, a real
+spike exactly where new content arrives. Every number is a real measured file size, not an
+average or an estimate:
+
+- Tier 1 (audio + slides): `bytes[i] = audio_share[i] + slide_spike[i]`.
+  `audio_share[i] = audio_total_bytes * (seg_i.end - seg_i.start) / duration_seconds` (audio is
+  continuous, so its cost is proportional to real elapsed time) - `audio_total_bytes` read from
+  the real `.m4a` file's own size, NOT derived from `manifest.json`'s `tiers.1.bitrate_kbps`,
+  since that figure is audio+slides already blended together and can't be split back apart.
+  `slide_spike[i]` = real byte size of `slide_NNN.jpg` for any slide whose `start` falls inside
+  `[seg_i.start, seg_i.end)`, else 0.
+- Tier 2 (slides + captions, no audio): `bytes[i] = caption_bytes[i] + slide_spike[i]`.
+  `caption_bytes[i]` = summed real serialised byte size of whichever VTT cues have their `start`
+  inside `[seg_i.start, seg_i.end)` - computed from real cue text/timestamps, not a per-second
+  average of the whole `.vtt` file. `slide_spike[i]` shares the same slide list as Tier 1.
+- Tier 3 (summaries only): `bytes[i]` = real UTF-8 byte length of the summary text for segments
+  where a new 60s window begins, 0 elsewhere.
+
+Nominal `bitrates_kbps` per tier (used by Sabre's built-in ABR algorithms for utility
+calculations, e.g. BOLA's log-utility - confirmed from Sabre's source that this is separate
+from and doesn't have to equal the real per-segment download size) stays the existing real
+measured `tiers.N.bitrate_kbps` already in each lecture's `manifest.json`.
+
+**Pixel-only baseline: restriction lives in `tier_rung.py`, not in policy code or
+`run_experiment.py`.** Checked Sabre's actual loading path (`sabre.py` `main()`):
+`manifest = load_json(args.movie)` then `SessionInfo.manifest = manifest` runs once per
+process, from one file path, before any ABR policy object exists. There is no per-call
+mechanism for a policy to see a restricted view of a shared manifest at runtime - whatever
+manifest a process loaded IS the global truth for that run. That means "the baseline policy's
+code just never selects a Tier 1-3 index" is an unenforced convention: a bug, or a lazy reuse
+of a built-in Sabre ABR (Bola, ThroughputRule) as the pixel-only baseline, would silently have
+Tier 1-3 available to it with nothing to catch it, quietly invalidating the whole point of the
+comparison. `tier_rung.py` will therefore build two manifest JSON files per lecture - a full
+one (all tiers, for Naive and Ours) and a Tier-0-only one (for Baseline) - and
+`run_experiment.py` points each policy's Sabre invocation at the correct file. The baseline
+becomes structurally incapable of touching Tier 1-3, because those bytes don't exist in the
+file it loaded, not because its code happens to behave.
+
+**Known conservative approximation: `slide_spike[i]` only charges a slide's bytes at its
+natural start segment.** If the agent is in Tier 0 while a slide starts, then switches into
+Tier 1/2 mid-slide, that slide has already "aired" at segment `i` with `slide_spike[i]`
+charged there regardless of which tier was active - so the segment where the agent actually
+switches in gets charged zero for a slide image it does, in reality, still need to fetch on
+first arrival at Tier 1/2. This understates the real cost of switching exactly at the moments
+switching matters most (a fresh tier-1/2 view mid-slide still needs that slide's image). Not
+fixable with a static per-segment table alone, since the true cost depends on simulation
+history (which segment a given policy run actually switched on) - out of scope for
+`tier_rung.py`, which only has access to the manifest, not a policy's trajectory. Left as a
+known approximation for Phase 3. It affects Baseline, Naive, and Ours identically (none of the
+three get "switch-in credit" from this table), so the three-way comparison stays fair even
+though all three policies' absolute numbers are slightly optimistic in the same direction.
+Flagged as a candidate fix for Phase 4: the agent already holds state across per-segment calls,
+and which slide is active at segment `i` is itself a static, precomputable fact (independent of
+simulation history) even though *whether the agent just switched into a tier* is not - so the
+agent can look up the active slide's real byte size from the manifest and add a one-time
+corrective delay on its own switch-in segments, without needing any change to `tier_rung.py`'s
+output.
+
+**Naive manifest must not carry `content_label`, or "content-blind" isn't actually blind.**
+Same structural-enforcement logic as the Baseline split: a Naive policy that is merely asked
+nicely not to read `content_label` is one careless implementation away from quietly not being
+content-blind. `tier_rung.py` will therefore produce three manifest views per lecture, not two:
+a Tier-0-only view (Baseline), a full-tiers view with no `content_label` field anywhere in the
+JSON (Naive), and a full-tiers view that does include per-segment `content_label` (Ours/Phase
+4). Naive and Ours share identical bitrate/tier/segment-size data - the only difference is
+whether the `content_label` key exists in the file at all - so the split costs no duplicated
+resampling logic, only a second, smaller JSON write per lecture.
+
+**`sabre.py` modified: `ManifestInfo` now carries `tiers` and `content_labels`.** Without this,
+Sabre's own manifest loader silently dropped `tier_rung.py`'s extra JSON fields on load (its
+`ManifestInfo` namedtuple only kept `segment_time`/`bitrates`/`utilities`/`segments`), which
+would have left the Naive policy with no way to know which quality index belongs to which tier.
+Considered having each policy class load `movie.json` a second time on its own instead, but
+rejected that: two independent readings of the same file are two things that can quietly
+diverge later, and `CLAUDE.md`'s shared-schema rule is explicit that phases must not develop
+divergent readings of the same data. Fixed at the one canonical load path instead.
+
+Exact diff, in `sim/src/sabre.py`:
+```python
+# before
+ManifestInfo = namedtuple('ManifestInfo', 'segment_time bitrates utilities segments')
+...
+manifest = ManifestInfo(segment_time = manifest['segment_duration_ms'],
+                        bitrates     = bitrates,
+                        utilities    = utilities,
+                        segments     = manifest['segment_sizes_bits'])
+
+# after
+ManifestInfo = namedtuple('ManifestInfo', 'segment_time bitrates utilities segments tiers content_labels')
+...
+manifest = ManifestInfo(segment_time   = manifest['segment_duration_ms'],
+                        bitrates        = bitrates,
+                        utilities       = utilities,
+                        segments        = manifest['segment_sizes_bits'],
+                        tiers           = manifest.get('tiers'),
+                        content_labels  = manifest.get('content_labels'))
+```
+Both new fields use `dict.get()`, defaulting to `None` when a `movie.json` doesn't define them
+- purely additive, no existing field touched. Verified genuinely additive, not just by reading
+the diff: re-ran the exact Baseline smoke test from before the change
+(`movies/nptel_software_engineering_lec01/baseline.json` through unmodified built-in BOLA) and
+it came back byte-for-byte identical on every output line (698.905814 time-average bitrate,
+1684.347126 play time, 421.086782 chunks, 0 rebuffering, 400.000000 bitrate change,
+-449.267132 estimate). Also re-ran Sabre's own unmodified `example/movie.json` (no `tiers`/
+`content_labels` keys at all) against `example/network.json` - identical to the very first
+task-1 run (leq estimate count 110, estimate -234.281143, rampup 3.252272, reaction time
+61.261360). A standard Sabre manifest still loads exactly as it did before this repo touched
+Sabre at all.
+
 **Word-timestamp cold-start artefact.** `faster-whisper` (model `small`, `word_timestamps=True`)
 places a large spurious gap after the very first transcribed word of a lecture (observed: word 1
 ends at 0.84s, word 2 starts at 17.38s, though both are spoken back-to-back) — a known model

@@ -1,0 +1,3792 @@
+[
+  {
+    "duration_ms": 431,
+    "bandwidth_kbps": 31869,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 46723,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 28085,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 56852,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 52318,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 46225,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 42550,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 28298,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 37907,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 55196,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 35055,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 27644,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 24604,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 23165,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 8000,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 9555,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 15184,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 1885,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 42391,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 32934,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 30545,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 33175,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 27008,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 29332,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 23841,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 22442,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 17069,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 11898,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 16618,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 12063,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 20517,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 14871,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 2979,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 11,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 2338,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 6283,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 11409,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 9976,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 9414,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 12419,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 9343,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 5754,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 948,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 11054,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 1747,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 33065,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 34797,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 37842,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 47145,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 35936,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 26259,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 23265,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 20697,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 21548,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 14608,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 16542,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 16771,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 14856,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 14305,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 18910,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 20220,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 19506,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 16906,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 17048,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 15421,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 13726,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 15050,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 13062,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 13910,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 14298,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 43,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 27215,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 19402,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 17179,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 17248,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 19670,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 20139,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 23041,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 20590,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 22335,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 22917,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 26923,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 30468,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 32170,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 28163,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 57770,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 46097,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 32801,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 34963,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 60080,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 64143,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 57801,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 46582,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 43153,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 47415,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 51265,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 51721,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 43221,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 38055,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 50807,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 49056,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 38856,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 24475,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 13404,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 31883,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 23602,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 14247,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 13317,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 10321,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 5943,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 2162,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 0,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 14724,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 6399,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 5672,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 7459,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 14705,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 12636,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 10649,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 9125,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 10709,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 12576,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 6589,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 2176,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 0,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 7301,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 5222,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 11978,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 7236,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 7700,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 8077,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 3904,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 4619,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 20643,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 14076,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 8640,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 15535,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 13065,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 12423,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 11410,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 9727,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 12930,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 11323,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 9954,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 11474,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 11463,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 12272,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 8317,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 6790,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 19163,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 9781,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 14041,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 13873,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 10719,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 10622,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 0,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 22052,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 13936,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 5430,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 0,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 13516,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 17995,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 5397,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 0,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 21832,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 9651,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 10989,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 8651,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 9565,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 10234,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 10590,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 11557,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 11812,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 11071,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 9632,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 9188,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 10590,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 10309,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 11151,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 10212,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 8668,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 2319,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 0,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 647,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 0,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 29303,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 7945,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 7595,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 8325,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 9613,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 12544,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 16433,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 8903,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 23455,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 20974,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 18225,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 12343,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 17604,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 26287,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 28101,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 29421,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 26874,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 30997,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 19768,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 15799,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 24685,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 28342,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 31768,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 35021,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 38098,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 38809,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 36776,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 30831,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 27659,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 24774,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 30537,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 25098,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 35598,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 29670,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 38937,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 49512,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 35539,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 39842,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 35903,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 36923,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 42252,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 45824,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 36540,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 29081,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 48383,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 62432,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 33213,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 30931,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 25137,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 29487,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 27991,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 25437,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 23289,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 21563,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 25573,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 26350,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 22323,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 24012,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 20150,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 20715,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 20200,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 8543,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1009,
+    "bandwidth_kbps": 7845,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 990,
+    "bandwidth_kbps": 26490,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 27825,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 22906,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 20079,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 16764,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 21023,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 11232,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 30338,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 16295,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 18265,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 20106,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 20802,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 18896,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 24310,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 17582,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 23543,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 16456,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 13260,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 12812,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 13478,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 18216,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 14409,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 17455,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 20894,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 18794,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 19453,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 23516,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 21162,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 23541,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 20259,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 18344,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1009,
+    "bandwidth_kbps": 21151,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 991,
+    "bandwidth_kbps": 1906,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 27115,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 30530,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 19422,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 20381,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 20425,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 16036,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1007,
+    "bandwidth_kbps": 16685,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 994,
+    "bandwidth_kbps": 15649,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1008,
+    "bandwidth_kbps": 12846,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 998,
+    "bandwidth_kbps": 11760,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 11970,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 994,
+    "bandwidth_kbps": 9522,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 15278,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 10256,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 4044,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 3167,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 19328,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 10730,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 10795,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 12371,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 7473,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 1799,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 529,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 0,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 12697,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 21639,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 15717,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 13375,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 10061,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 8258,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 2243,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 0,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 23337,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1002,
+    "bandwidth_kbps": 9396,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1008,
+    "bandwidth_kbps": 10891,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1004,
+    "bandwidth_kbps": 9098,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 993,
+    "bandwidth_kbps": 0,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 993,
+    "bandwidth_kbps": 10480,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 2696,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 13771,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 1250,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 14159,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 7945,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 2771,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 0,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 5769,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 10428,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1022,
+    "bandwidth_kbps": 5033,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 997,
+    "bandwidth_kbps": 768,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 981,
+    "bandwidth_kbps": 10542,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 3494,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 5888,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1010,
+    "bandwidth_kbps": 5509,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 990,
+    "bandwidth_kbps": 8764,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 19489,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 7076,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 8174,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 12811,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 13203,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 10045,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 8940,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 10676,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 9265,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 8690,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 6864,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 6605,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 2316,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 0,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 22179,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1005,
+    "bandwidth_kbps": 8179,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 996,
+    "bandwidth_kbps": 3855,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1008,
+    "bandwidth_kbps": 5274,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 313,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 997,
+    "bandwidth_kbps": 11693,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 994,
+    "bandwidth_kbps": 1258,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1002,
+    "bandwidth_kbps": 13276,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 9731,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 998,
+    "bandwidth_kbps": 11530,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1005,
+    "bandwidth_kbps": 12619,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1027,
+    "bandwidth_kbps": 10333,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1011,
+    "bandwidth_kbps": 11584,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1006,
+    "bandwidth_kbps": 9568,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1004,
+    "bandwidth_kbps": 7126,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1003,
+    "bandwidth_kbps": 4924,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 997,
+    "bandwidth_kbps": 4359,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 12626,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1021,
+    "bandwidth_kbps": 14005,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1005,
+    "bandwidth_kbps": 13880,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 15163,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 990,
+    "bandwidth_kbps": 23007,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1019,
+    "bandwidth_kbps": 29952,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1003,
+    "bandwidth_kbps": 28495,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1013,
+    "bandwidth_kbps": 19924,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1053,
+    "bandwidth_kbps": 23477,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 24010,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1002,
+    "bandwidth_kbps": 34305,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1002,
+    "bandwidth_kbps": 11283,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1007,
+    "bandwidth_kbps": 28957,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 28469,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1005,
+    "bandwidth_kbps": 21240,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1002,
+    "bandwidth_kbps": 28187,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 990,
+    "bandwidth_kbps": 27516,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 17372,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 995,
+    "bandwidth_kbps": 18113,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 998,
+    "bandwidth_kbps": 36331,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1032,
+    "bandwidth_kbps": 33512,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1003,
+    "bandwidth_kbps": 22654,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 994,
+    "bandwidth_kbps": 24189,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1057,
+    "bandwidth_kbps": 25449,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1007,
+    "bandwidth_kbps": 25391,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 994,
+    "bandwidth_kbps": 24698,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 25416,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1025,
+    "bandwidth_kbps": 26440,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1029,
+    "bandwidth_kbps": 24675,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 23682,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1003,
+    "bandwidth_kbps": 30418,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 998,
+    "bandwidth_kbps": 33234,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1007,
+    "bandwidth_kbps": 31635,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1015,
+    "bandwidth_kbps": 31027,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 994,
+    "bandwidth_kbps": 16252,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1009,
+    "bandwidth_kbps": 30931,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1008,
+    "bandwidth_kbps": 34759,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1002,
+    "bandwidth_kbps": 29117,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1008,
+    "bandwidth_kbps": 32948,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1004,
+    "bandwidth_kbps": 33457,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 29865,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1011,
+    "bandwidth_kbps": 31238,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1006,
+    "bandwidth_kbps": 30671,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 997,
+    "bandwidth_kbps": 28292,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 995,
+    "bandwidth_kbps": 26836,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1004,
+    "bandwidth_kbps": 28353,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1010,
+    "bandwidth_kbps": 27550,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1004,
+    "bandwidth_kbps": 23952,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1006,
+    "bandwidth_kbps": 17971,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1008,
+    "bandwidth_kbps": 18872,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1006,
+    "bandwidth_kbps": 15854,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1003,
+    "bandwidth_kbps": 17375,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1004,
+    "bandwidth_kbps": 20999,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 995,
+    "bandwidth_kbps": 20083,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 987,
+    "bandwidth_kbps": 23272,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1004,
+    "bandwidth_kbps": 21813,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1003,
+    "bandwidth_kbps": 21964,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1010,
+    "bandwidth_kbps": 17583,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1015,
+    "bandwidth_kbps": 17198,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1009,
+    "bandwidth_kbps": 20809,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1013,
+    "bandwidth_kbps": 13441,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1002,
+    "bandwidth_kbps": 26927,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1007,
+    "bandwidth_kbps": 35663,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1038,
+    "bandwidth_kbps": 25949,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1002,
+    "bandwidth_kbps": 27743,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1012,
+    "bandwidth_kbps": 25180,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1015,
+    "bandwidth_kbps": 20325,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1004,
+    "bandwidth_kbps": 21394,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1024,
+    "bandwidth_kbps": 23384,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 21404,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1007,
+    "bandwidth_kbps": 19608,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1007,
+    "bandwidth_kbps": 22714,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 994,
+    "bandwidth_kbps": 19013,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1006,
+    "bandwidth_kbps": 4250,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1008,
+    "bandwidth_kbps": 21022,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1010,
+    "bandwidth_kbps": 26082,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1010,
+    "bandwidth_kbps": 15421,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1002,
+    "bandwidth_kbps": 19905,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1015,
+    "bandwidth_kbps": 21828,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 998,
+    "bandwidth_kbps": 20752,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1015,
+    "bandwidth_kbps": 22317,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1021,
+    "bandwidth_kbps": 24767,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 23629,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1014,
+    "bandwidth_kbps": 24833,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1004,
+    "bandwidth_kbps": 23040,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1030,
+    "bandwidth_kbps": 22956,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1015,
+    "bandwidth_kbps": 23703,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 23193,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1016,
+    "bandwidth_kbps": 25067,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1012,
+    "bandwidth_kbps": 25972,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1017,
+    "bandwidth_kbps": 26069,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1005,
+    "bandwidth_kbps": 27159,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1032,
+    "bandwidth_kbps": 26234,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1026,
+    "bandwidth_kbps": 26755,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1009,
+    "bandwidth_kbps": 26930,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1004,
+    "bandwidth_kbps": 26883,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1009,
+    "bandwidth_kbps": 27259,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1018,
+    "bandwidth_kbps": 26314,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1048,
+    "bandwidth_kbps": 24387,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1020,
+    "bandwidth_kbps": 24801,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1011,
+    "bandwidth_kbps": 29304,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1035,
+    "bandwidth_kbps": 33370,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1014,
+    "bandwidth_kbps": 26694,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1002,
+    "bandwidth_kbps": 27480,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1010,
+    "bandwidth_kbps": 26960,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1003,
+    "bandwidth_kbps": 27562,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1017,
+    "bandwidth_kbps": 29187,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 991,
+    "bandwidth_kbps": 26381,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 991,
+    "bandwidth_kbps": 27740,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 997,
+    "bandwidth_kbps": 26431,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1002,
+    "bandwidth_kbps": 25850,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1028,
+    "bandwidth_kbps": 29536,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1007,
+    "bandwidth_kbps": 26665,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 29892,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1008,
+    "bandwidth_kbps": 29955,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1019,
+    "bandwidth_kbps": 32680,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1005,
+    "bandwidth_kbps": 32768,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1003,
+    "bandwidth_kbps": 32833,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1011,
+    "bandwidth_kbps": 34550,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1004,
+    "bandwidth_kbps": 33807,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 995,
+    "bandwidth_kbps": 33696,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1009,
+    "bandwidth_kbps": 33747,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 30668,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 36623,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1004,
+    "bandwidth_kbps": 15512,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1005,
+    "bandwidth_kbps": 42914,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1010,
+    "bandwidth_kbps": 28597,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 28614,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1005,
+    "bandwidth_kbps": 42594,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1021,
+    "bandwidth_kbps": 28890,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1012,
+    "bandwidth_kbps": 28100,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1010,
+    "bandwidth_kbps": 28530,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1008,
+    "bandwidth_kbps": 27544,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 22252,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1012,
+    "bandwidth_kbps": 33512,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1005,
+    "bandwidth_kbps": 38450,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1005,
+    "bandwidth_kbps": 33815,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1010,
+    "bandwidth_kbps": 33569,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1014,
+    "bandwidth_kbps": 33789,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 33712,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1010,
+    "bandwidth_kbps": 33660,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1005,
+    "bandwidth_kbps": 33715,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1050,
+    "bandwidth_kbps": 30621,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1005,
+    "bandwidth_kbps": 28371,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1003,
+    "bandwidth_kbps": 25026,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1041,
+    "bandwidth_kbps": 25588,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1012,
+    "bandwidth_kbps": 26002,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1006,
+    "bandwidth_kbps": 28947,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1010,
+    "bandwidth_kbps": 28710,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1008,
+    "bandwidth_kbps": 26521,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1004,
+    "bandwidth_kbps": 25955,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1015,
+    "bandwidth_kbps": 23035,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1013,
+    "bandwidth_kbps": 21895,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 23147,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1011,
+    "bandwidth_kbps": 20645,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1033,
+    "bandwidth_kbps": 19215,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1015,
+    "bandwidth_kbps": 19162,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1007,
+    "bandwidth_kbps": 14188,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1044,
+    "bandwidth_kbps": 15000,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1009,
+    "bandwidth_kbps": 5412,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1026,
+    "bandwidth_kbps": 21079,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1009,
+    "bandwidth_kbps": 4569,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 998,
+    "bandwidth_kbps": 20552,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1019,
+    "bandwidth_kbps": 10890,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1007,
+    "bandwidth_kbps": 6511,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1005,
+    "bandwidth_kbps": 0,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1008,
+    "bandwidth_kbps": 11383,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1013,
+    "bandwidth_kbps": 25721,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1009,
+    "bandwidth_kbps": 22657,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1025,
+    "bandwidth_kbps": 21226,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1002,
+    "bandwidth_kbps": 20982,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 994,
+    "bandwidth_kbps": 20146,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1036,
+    "bandwidth_kbps": 23321,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1016,
+    "bandwidth_kbps": 21873,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1005,
+    "bandwidth_kbps": 23624,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1018,
+    "bandwidth_kbps": 22229,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1018,
+    "bandwidth_kbps": 24276,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1019,
+    "bandwidth_kbps": 23862,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1024,
+    "bandwidth_kbps": 29910,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1014,
+    "bandwidth_kbps": 34350,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1013,
+    "bandwidth_kbps": 27508,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1012,
+    "bandwidth_kbps": 28691,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1015,
+    "bandwidth_kbps": 27135,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1007,
+    "bandwidth_kbps": 30394,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1013,
+    "bandwidth_kbps": 21488,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 29704,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1007,
+    "bandwidth_kbps": 28645,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1022,
+    "bandwidth_kbps": 27944,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1008,
+    "bandwidth_kbps": 27294,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1012,
+    "bandwidth_kbps": 25178,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1006,
+    "bandwidth_kbps": 16737,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1003,
+    "bandwidth_kbps": 18993,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 997,
+    "bandwidth_kbps": 26676,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 13572,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1019,
+    "bandwidth_kbps": 4598,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1008,
+    "bandwidth_kbps": 118,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1015,
+    "bandwidth_kbps": 22728,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1006,
+    "bandwidth_kbps": 17647,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1024,
+    "bandwidth_kbps": 40731,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1034,
+    "bandwidth_kbps": 34028,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1012,
+    "bandwidth_kbps": 39573,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1009,
+    "bandwidth_kbps": 42781,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1023,
+    "bandwidth_kbps": 33873,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1093,
+    "bandwidth_kbps": 45689,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1017,
+    "bandwidth_kbps": 53840,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1003,
+    "bandwidth_kbps": 43025,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1007,
+    "bandwidth_kbps": 28342,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1005,
+    "bandwidth_kbps": 22227,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1013,
+    "bandwidth_kbps": 20738,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1014,
+    "bandwidth_kbps": 17346,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1017,
+    "bandwidth_kbps": 13956,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1006,
+    "bandwidth_kbps": 17930,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1012,
+    "bandwidth_kbps": 20984,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1013,
+    "bandwidth_kbps": 20589,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1026,
+    "bandwidth_kbps": 23323,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1003,
+    "bandwidth_kbps": 21862,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1005,
+    "bandwidth_kbps": 26537,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1006,
+    "bandwidth_kbps": 28392,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1018,
+    "bandwidth_kbps": 25027,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1020,
+    "bandwidth_kbps": 22736,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1017,
+    "bandwidth_kbps": 23233,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1019,
+    "bandwidth_kbps": 17959,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1007,
+    "bandwidth_kbps": 7896,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1012,
+    "bandwidth_kbps": 19396,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1016,
+    "bandwidth_kbps": 29512,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1018,
+    "bandwidth_kbps": 26060,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1004,
+    "bandwidth_kbps": 18313,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 997,
+    "bandwidth_kbps": 26264,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1006,
+    "bandwidth_kbps": 22447,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1011,
+    "bandwidth_kbps": 25493,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1014,
+    "bandwidth_kbps": 29651,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1008,
+    "bandwidth_kbps": 21119,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1015,
+    "bandwidth_kbps": 27408,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1203,
+    "bandwidth_kbps": 19721,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1019,
+    "bandwidth_kbps": 24887,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1016,
+    "bandwidth_kbps": 22880,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1012,
+    "bandwidth_kbps": 20706,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1016,
+    "bandwidth_kbps": 27421,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1035,
+    "bandwidth_kbps": 23428,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1019,
+    "bandwidth_kbps": 21102,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1015,
+    "bandwidth_kbps": 19815,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1024,
+    "bandwidth_kbps": 17829,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1010,
+    "bandwidth_kbps": 14233,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1002,
+    "bandwidth_kbps": 20427,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 989,
+    "bandwidth_kbps": 10064,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 11301,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1007,
+    "bandwidth_kbps": 11459,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1004,
+    "bandwidth_kbps": 10720,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 995,
+    "bandwidth_kbps": 0,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 22297,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1000,
+    "bandwidth_kbps": 3251,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 999,
+    "bandwidth_kbps": 22378,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 995,
+    "bandwidth_kbps": 10448,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1009,
+    "bandwidth_kbps": 9657,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1013,
+    "bandwidth_kbps": 3028,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 994,
+    "bandwidth_kbps": 9086,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 996,
+    "bandwidth_kbps": 10595,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 992,
+    "bandwidth_kbps": 13676,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1017,
+    "bandwidth_kbps": 8631,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1008,
+    "bandwidth_kbps": 9329,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 996,
+    "bandwidth_kbps": 8045,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 994,
+    "bandwidth_kbps": 5978,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 12384,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 998,
+    "bandwidth_kbps": 15144,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1024,
+    "bandwidth_kbps": 11953,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1014,
+    "bandwidth_kbps": 9508,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1013,
+    "bandwidth_kbps": 12775,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1016,
+    "bandwidth_kbps": 14435,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 998,
+    "bandwidth_kbps": 14717,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1018,
+    "bandwidth_kbps": 10622,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1011,
+    "bandwidth_kbps": 11470,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1010,
+    "bandwidth_kbps": 16667,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1030,
+    "bandwidth_kbps": 11119,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1012,
+    "bandwidth_kbps": 4635,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1012,
+    "bandwidth_kbps": 10789,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1011,
+    "bandwidth_kbps": 17473,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1022,
+    "bandwidth_kbps": 13606,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1019,
+    "bandwidth_kbps": 9821,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1034,
+    "bandwidth_kbps": 8917,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1011,
+    "bandwidth_kbps": 9184,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1011,
+    "bandwidth_kbps": 8064,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1011,
+    "bandwidth_kbps": 6848,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1015,
+    "bandwidth_kbps": 3570,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1014,
+    "bandwidth_kbps": 0,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1007,
+    "bandwidth_kbps": 450,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1008,
+    "bandwidth_kbps": 0,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1027,
+    "bandwidth_kbps": 16759,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1010,
+    "bandwidth_kbps": 5969,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1010,
+    "bandwidth_kbps": 5840,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1007,
+    "bandwidth_kbps": 11255,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1010,
+    "bandwidth_kbps": 14179,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1041,
+    "bandwidth_kbps": 11825,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1022,
+    "bandwidth_kbps": 10683,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1026,
+    "bandwidth_kbps": 13754,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1007,
+    "bandwidth_kbps": 12534,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1015,
+    "bandwidth_kbps": 12333,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1038,
+    "bandwidth_kbps": 13415,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1005,
+    "bandwidth_kbps": 16541,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1014,
+    "bandwidth_kbps": 14138,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1046,
+    "bandwidth_kbps": 21563,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1026,
+    "bandwidth_kbps": 22802,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1049,
+    "bandwidth_kbps": 25558,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1014,
+    "bandwidth_kbps": 20239,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1017,
+    "bandwidth_kbps": 6107,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1015,
+    "bandwidth_kbps": 26048,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1025,
+    "bandwidth_kbps": 4799,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1013,
+    "bandwidth_kbps": 34408,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1023,
+    "bandwidth_kbps": 22442,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1008,
+    "bandwidth_kbps": 20706,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1016,
+    "bandwidth_kbps": 20461,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1018,
+    "bandwidth_kbps": 20608,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1019,
+    "bandwidth_kbps": 21803,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1022,
+    "bandwidth_kbps": 24588,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1023,
+    "bandwidth_kbps": 19104,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1042,
+    "bandwidth_kbps": 17952,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1026,
+    "bandwidth_kbps": 18230,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1064,
+    "bandwidth_kbps": 15487,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1006,
+    "bandwidth_kbps": 31290,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1032,
+    "bandwidth_kbps": 21032,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1005,
+    "bandwidth_kbps": 22560,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 996,
+    "bandwidth_kbps": 18904,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1003,
+    "bandwidth_kbps": 20837,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1020,
+    "bandwidth_kbps": 15448,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1011,
+    "bandwidth_kbps": 18511,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1015,
+    "bandwidth_kbps": 12298,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1018,
+    "bandwidth_kbps": 11303,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1025,
+    "bandwidth_kbps": 14287,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1019,
+    "bandwidth_kbps": 16075,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1002,
+    "bandwidth_kbps": 20213,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1037,
+    "bandwidth_kbps": 19119,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1018,
+    "bandwidth_kbps": 19391,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1008,
+    "bandwidth_kbps": 18734,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1011,
+    "bandwidth_kbps": 19220,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1009,
+    "bandwidth_kbps": 17758,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1028,
+    "bandwidth_kbps": 17335,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1019,
+    "bandwidth_kbps": 19098,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1003,
+    "bandwidth_kbps": 17477,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1032,
+    "bandwidth_kbps": 18052,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1011,
+    "bandwidth_kbps": 15339,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1011,
+    "bandwidth_kbps": 19723,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1011,
+    "bandwidth_kbps": 19755,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1015,
+    "bandwidth_kbps": 21138,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1030,
+    "bandwidth_kbps": 5121,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1018,
+    "bandwidth_kbps": 17173,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1016,
+    "bandwidth_kbps": 33416,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1014,
+    "bandwidth_kbps": 18888,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1021,
+    "bandwidth_kbps": 19265,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1015,
+    "bandwidth_kbps": 17764,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1016,
+    "bandwidth_kbps": 16611,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1020,
+    "bandwidth_kbps": 15649,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1012,
+    "bandwidth_kbps": 15961,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1018,
+    "bandwidth_kbps": 15964,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1020,
+    "bandwidth_kbps": 0,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1062,
+    "bandwidth_kbps": 33609,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1009,
+    "bandwidth_kbps": 7815,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1002,
+    "bandwidth_kbps": 7814,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1029,
+    "bandwidth_kbps": 21830,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1040,
+    "bandwidth_kbps": 20502,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1015,
+    "bandwidth_kbps": 11239,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1013,
+    "bandwidth_kbps": 12776,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1023,
+    "bandwidth_kbps": 13640,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1005,
+    "bandwidth_kbps": 19822,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1013,
+    "bandwidth_kbps": 23396,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1023,
+    "bandwidth_kbps": 25690,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1025,
+    "bandwidth_kbps": 25768,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1066,
+    "bandwidth_kbps": 25404,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1019,
+    "bandwidth_kbps": 27326,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1012,
+    "bandwidth_kbps": 25591,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1048,
+    "bandwidth_kbps": 22190,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1031,
+    "bandwidth_kbps": 20413,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1039,
+    "bandwidth_kbps": 21033,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1018,
+    "bandwidth_kbps": 15890,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1020,
+    "bandwidth_kbps": 8740,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1012,
+    "bandwidth_kbps": 3392,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1014,
+    "bandwidth_kbps": 48,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1016,
+    "bandwidth_kbps": 12275,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1013,
+    "bandwidth_kbps": 18012,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1018,
+    "bandwidth_kbps": 6748,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1017,
+    "bandwidth_kbps": 1898,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1010,
+    "bandwidth_kbps": 117,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1032,
+    "bandwidth_kbps": 10147,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1007,
+    "bandwidth_kbps": 5836,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1020,
+    "bandwidth_kbps": 15573,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1020,
+    "bandwidth_kbps": 10367,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1019,
+    "bandwidth_kbps": 11192,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1016,
+    "bandwidth_kbps": 12694,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1030,
+    "bandwidth_kbps": 12999,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1001,
+    "bandwidth_kbps": 14231,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1008,
+    "bandwidth_kbps": 23242,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 998,
+    "bandwidth_kbps": 21963,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1037,
+    "bandwidth_kbps": 22994,
+    "latency_ms": 60
+  },
+  {
+    "duration_ms": 1025,
+    "bandwidth_kbps": 20425,
+    "latency_ms": 60
+  }
+]
