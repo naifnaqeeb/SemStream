@@ -392,6 +392,207 @@ the full low-bandwidth trough, steps back up 2->3->4->5 on recovery - checked ac
 single-segment oscillation anywhere. 1 rebuffer event total (3.09s, 0.18% ratio) - present
 because the trace genuinely does collapse hard, not because the policy flails.
 
+## Phase 3 — "information delivered" defined before computing anything (2026-08-30)
+
+Defined here, before `run_experiment.py` computes a single number from it, per instruction not
+to let a metric get invented implicitly inside a script.
+
+**The problem it has to solve.** Rebuffering time and tier-time distribution are both real,
+directly measurable quantities - no modelling needed. "Information delivered" isn't directly
+measurable in the same way, because the same tier delivers wildly different amounts of real
+information depending on what's actually happening on screen: Tier 1 during a talking-head
+segment loses almost nothing (the lecturer's face isn't the content, per `CLAUDE.md`'s own
+stated thesis); Tier 1 during a demo segment loses most of what matters (a static slide cannot
+show a live terminal executing). A flat "fraction of time at Tier 0" number can't distinguish
+these two cases, and would not actually demonstrate this project's central claim.
+
+**Definition.** Reuses `visual_importance` (real, Phase 2 output, in `manifest.json`'s
+`segments_4s`) as the weight between two channels - visual and audio/text - rather than
+inventing new per-segment data:
+
+```
+information_score(tier, visual_importance) =
+    visual_importance * visual_availability(tier) + (1 - visual_importance) * audio_availability(tier)
+```
+
+`visual_availability(tier)` / `audio_availability(tier)` per tier:
+
+| Tier | visual_availability | audio_availability |
+|---|---|---|
+| 0 (full video) | 1.0 | 1.0 |
+| 1 (slide + audio) | 0.4 (`SLIDE_RETENTION`) | 1.0 |
+| 2 (slide + captions) | 0.4 (`SLIDE_RETENTION`) | 0.85 (`CAPTION_RETENTION`) |
+| 3 (summary only) | 0.0 | 0.3 (`SUMMARY_RETENTION`) |
+
+Three constants, each a stated modelling assumption, not a measurement, with reasoning:
+- `SLIDE_RETENTION = 0.4`: a static slide preserves legible on-screen text/diagrams but loses
+  all motion, gesture, and live demonstration detail - meaningfully above zero (a slide clearly
+  conveys something) but well below full (it cannot show a live code execution).
+- `CAPTION_RETENTION = 0.85`: WebVTT captions are a near-complete transcription of speech (the
+  same real Whisper transcript, Phase 1) - retains most of what audio conveys, docked below 1.0
+  for lost prosody/emphasis/pacing and possible transcription error.
+- `SUMMARY_RETENTION = 0.3`: a 60s rolling summary is a genuinely lossy compression of the
+  underlying speech - Phase 2's own spot-check found summaries accurate but necessarily
+  condensed to 1-2 sentences per minute of real content, so it retains gist, not detail. Set
+  clearly below the caption factor because summarisation is fundamentally lossier than
+  transcription.
+
+Sanity checks the formula has to pass, and does: Tier 0 always scores 1.0 regardless of content
+(nothing is lost, `visual_availability=audio_availability=1`). A demo segment
+(`visual_importance=0.9`) at Tier 1 scores `0.9*0.4 + 0.1*1.0 = 0.46` - loses over half its
+value, correctly reflecting that a demo reduced to a static slide has lost what made it a demo.
+A talking-head segment (`visual_importance=0.15`) at Tier 1 scores `0.15*0.4 + 0.85*1.0 = 0.91`
+- retains most of its value, correctly reflecting the project's own stated reason for dropping
+Tier 0 eagerly during talking-head content.
+
+**Run-level aggregation.** `information_delivered` for one policy run = time-weighted average
+of `information_score` across played segments, using each segment's real duration from
+`segments_4s`, divided by (played time + rebuffer time) rather than played time alone - a
+policy that rebuffers a lot delivers less real information per unit of the viewer's actual
+wall-clock time, even if what does get played is high quality, and the metric should reflect
+that rather than only scoring what successfully played.
+
+**Ground truth used for scoring is always the real manifest, regardless of which policy ran.**
+`content_label`/`visual_importance` are deliberately absent from `naive.json` so the Naive
+policy cannot use them to decide - but `run_experiment.py` always scores every run's outcome
+against the real `data/manifests/<id>/manifest.json`, not against whatever restricted movie.json
+the policy itself loaded. Restricting what a policy can see is a fairness concern for the
+*decision*; restricting what the *evaluator* can see would make it impossible to measure
+anything and isn't the same concern.
+
+## Phase 3 — run_experiment.py: two crashes fixed, first real results (2026-08-30)
+
+**Two bugs found running the full 9-lecture x 3-trace x 2-policy batch, both fixed, both
+documented rather than worked around silently.**
+
+1. Sabre's default ABR (`bolae`/BolaEnh) raises `ZeroDivisionError` in its own `__init__` on
+   the two 240p-capped lectures (`dsa_iitd`, `computer_networks`), which only have a single
+   Tier 0 rung - BolaEnh's gap-parameter setup assumes 2+ quality levels. Plain `bola` handles
+   a single rung fine and is literally what `CLAUDE.md` specifies ("standard BOLA-style
+   logic") - `run_experiment.py` now pins Baseline to `--abr bola` explicitly rather than
+   relying on Sabre's default.
+2. `dsa_iitd`'s very first Tier 3 summary window (0-60s) is genuinely empty text - real
+   silence/no transcribed speech in that window, not a Phase 1 bug - producing a literal
+   0-byte segment. Sabre's own segment-timing code divides by the download duration, which
+   rounds to exactly 0 for a 0-byte transfer, crashing the whole run. Fixed with a 1-byte
+   floor on every segment size in `tier_rung.py`'s `build_movie` - justified as numerical
+   stability, not a claimed measurement: a literal zero-byte network transfer was never
+   physically realistic in the first place (there's always some minimal framing overhead),
+   so flooring at 1 byte doesn't invent data, it just avoids asserting a value (exact
+   mathematical zero) that couldn't be true of a real delivery anyway.
+
+**First real comparative result** (`data/results/phase3_results.csv`, all 9 lectures, mean
+across lectures per trace x policy):
+
+| trace | policy | rebuffer (s) | rebuffer ratio | tier0 | tier1 | information delivered |
+|---|---|---|---|---|---|---|
+| campus_collapse | baseline | 94.09 | 0.0342 | 1.000 | 0.000 | 0.9657 |
+| campus_collapse | naive | 12.91 | 0.0051 | 0.675 | 0.323 | 0.9218 |
+| belgium_4g | baseline | 0.00 | 0 | 1.000 | 0.000 | 1.0000 |
+| belgium_4g | naive | 0.00 | 0 | 0.998 | 0.000 | 0.9987 |
+| norway_hsdpa | baseline | 0.00 | 0 | 1.000 | 0.000 | 1.0000 |
+| norway_hsdpa | naive | 0.00 | 0 | 0.998 | 0.000 | 0.9987 |
+
+Norway HSDPA and Belgium 4G both sit comfortably above every lecture's Tier 0 bitrate range for
+this corpus - neither trace stresses either policy, both show ~0 rebuffering and ~full Tier 0
+occupancy.
+
+**Correction, not a footnote: that finding was about the two files sampled, not a property of
+either dataset.** Checked before accepting it as final, per instruction not to let "these
+traces never stress the system" stand as an untested assumption: computed min/p10/median
+bandwidth and time-below-500kbps/300kbps across all 12 fetched Norway files and all 40 fetched
+Belgium files, not just the two used above. `norway_bus_1` (median 3599kbps, 1.8s below
+500kbps in 155s) and `report_bus_0001` (median 26843kbps, 0.0s below 500kbps in 607s) turned
+out to be among the calmest files in each set - not representative. Real rough files exist in
+both: `norway_tram_11` (median 818kbps, 86.3s below 500kbps) and `report_train_0003` (median
+20270kbps but bursty - p10 938kbps, 54.0s below 500kbps). Added both as `norway_hsdpa_rough`
+and `belgium_4g_rough` and re-ran the full batch (90 rows now, `data/results/phase3_results.csv`):
+
+| trace | policy | rebuffer (s) | tier0 | tier1 | information delivered |
+|---|---|---|---|---|---|
+| norway_hsdpa_rough | baseline | 33.15 | 1.000 | 0.000 | 0.9887 |
+| norway_hsdpa_rough | naive | 0.03 | 0.597 | 0.402 | 0.9031 |
+| belgium_4g_rough | baseline | 53.70 | 1.000 | 0.000 | 0.9804 |
+| belgium_4g_rough | naive | 55.80 | 0.830 | 0.092 | 0.9308 |
+
+`norway_hsdpa_rough` reproduces the campus-collapse story on a real dataset: Naive drops
+rebuffering from 33.15s to essentially zero by spending 40.2% of playback at Tier 1. This is
+the real-world signal the paper needed beyond the synthetic trace.
+
+`belgium_4g_rough` does NOT reproduce it, and that's recorded honestly rather than dropped:
+Naive rebuffers marginally *more* than Baseline here (55.80s vs 53.70s) despite dropping to
+Tier 1 9.2% of the time. Not investigated to a confirmed mechanism - flagged as a real,
+observed result with a plausible but unconfirmed explanation: `report_train_0003`'s low-
+bandwidth periods are bursty dips within an otherwise high-bandwidth trace (median 20270kbps,
+p10 938kbps) rather than a sustained collapse, and a threshold-plus-dwell policy reacting to
+brief spikes may pay a quality cost without the corresponding stall-avoidance benefit a
+sustained collapse provides. Left as an honest limitation/caveat for the eventual report rather
+than smoothed over - a naive bandwidth-only policy is not a strict improvement over pixel-only
+in every real condition, only in sustained-collapse conditions, and this dataset is the evidence
+for that qualification.
+
+Stated plainly: for this corpus's bitrate range, the campus-collapse synthetic trace and
+`norway_hsdpa_rough` both carry real comparative signal; `belgium_4g_rough` carries a real
+counter-example worth keeping, not discarding; the two originally-sampled files were simply too
+calm to be informative and are kept in the table for completeness, not because they demonstrate
+anything about tier-switching on their own.
+
+On campus-collapse, the story is real and clear, not a coincidence of one lecture: Baseline,
+unable to leave Tier 0, rebuffers on every one of the 9 lectures (7-288s, worst on the two full
+1080p lectures whose Tier 0 floor is a much higher bitrate to sustain through the trough than
+the corpus's lower-resolution lectures). Naive, able to fall back to Tier 1, cuts rebuffering by
+roughly 5-25x depending on lecture, spending ~25-46% of playback at Tier 1 to do it.
+`information_delivered` tells a genuinely mixed, not uniform, story - Baseline scores higher on
+7 of 9 lectures (its rebuffering costs less integrated information than Naive's sustained
+Tier-1 time, given the current retention weights), but Naive wins outright on
+`mit_6_0002_comp_thinking_lec04` (0.9250 vs 0.9122), and on `nptel_dsa_iitd_lec01` - where
+Baseline never actually rebuffers at all on this trace (its Tier 0 floor is the corpus's lowest,
+300kbps, and survives the trough) - Naive still drops to Tier 1 for 25% of playback for zero
+rebuffering benefit, purely because it cannot tell that the drop wasn't necessary. That last
+case is the clearest evidence in this dataset of exactly the weakness Phase 4's content-aware
+policy exists to fix - not a flaw in the harness, the expected shape of a genuinely
+content-blind policy's behaviour.
+
+**Named case study: `nptel_dsa_iitd_lec01` on campus-collapse.** Baseline: 0.00s rebuffering,
+1.000 Tier 0 the entire run - its Tier 0 floor (300kbps, the corpus's lowest, since this
+lecture is 240p-capped) survives the trough outright. Naive: also 0.00s rebuffering, but drops
+to Tier 1 for 0.323 of playback (`tier1_frac=0.323` in `data/results/phase3_results.csv`)
+anyway, purely because its bandwidth estimate crossed its threshold - not because anything
+required it to. Zero rebuffering benefit purchased for a real, measured cost:
+`information_delivered` 1.0000 (Baseline) vs 0.9254 (Naive) on this exact lecture/trace pair.
+This is the single clearest number in the whole dataset for why Phase 4's content-aware policy
+exists: a policy that cannot tell "the drop wasn't necessary" pays the modality cost anyway.
+Going straight into the eventual report as-is; recorded here so it doesn't have to be
+re-derived from the raw CSV later.
+
+**Worst-case Baseline rebuffering: which lectures, and does it match expectation.**
+287.80s on `mit_6_0002_comp_thinking_lec04`, 229.38s on `mit_6_0001_intro_python_lec02` - the
+two next-worst are `nptel_python_dsa_mukund_lec01` (89.70s) and
+`nptel_theory_of_computation_lec01` (81.14s). The top two are, as expected, the corpus's only
+two full 1080p sources: their Tier 0 floor is a much higher bitrate to sustain through the
+collapse trough (500kbps, the lowest rung of a 1080p/720p/360p ladder) than every other
+lecture's floor (300kbps for the 240p-capped pair, and generally lower rungs elsewhere) - a
+higher-quality source has more to lose when it cannot leave Tier 0. Matches expectation exactly,
+stated plainly rather than left to be inferred from the CSV.
+
+**Why Naive still rebuffers 12.91s on average, despite having an escape valve - checked
+against the actual verbose log, not guessed.** Traced one run in detail
+(`nptel_software_engineering_lec01`, naive + campus-collapse): segments 27-28 took 7252ms and
+6356ms to download respectively - each nearly double the 4000ms segment budget, meaning the
+network had already collapsed - while the policy was still requesting q=5 (the top index) for
+both. It only switches down at segment 29. Current index had been unchanged for far longer than
+`min_dwell_segments` (3) by that point, so the dwell floor was not what blocked the reaction -
+`self.session.get_throughput()` itself (Sabre's own smoothed bandwidth estimate) simply hadn't
+caught up to the true instantaneous crash yet. **Primary cause: throughput-estimation lag, a
+structural property of estimating from past downloads, not a Naive-specific defect.** The
+`min_dwell_segments` floor is a secondary, smaller compounding factor - once the estimate does
+finally flag a lower level, dwell can still add up to ~12s more before the switch fires, and the
+observed step sequence (5->3, then a separate later 3->2) shows each intermediate level paying
+its own dwell cost through a continuously-worsening ramp rather than one clean jump to the
+final sustainable level. No fix applied - recorded because this is exactly the kind of thing
+that should be understood before it becomes an input to tuning Phase 4's agent, not rediscovered
+mid-tuning.
+
 ## Phase 3 — Sabre rung model: resampling Tiers 1-3, and the pixel-only baseline (2026-08-30)
 
 **Read before writing any code, per the plan.** Sabre represents a rung as a single integer

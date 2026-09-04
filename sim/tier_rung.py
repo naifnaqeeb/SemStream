@@ -103,9 +103,15 @@ def compute_tier3(manifest, n_segments):
 def build_movie(rungs, n_segments, content_labels=None):
     bitrates_kbps = [r["bitrate_kbps"] for r in rungs]
     tiers = [r["tier"] for r in rungs]
+    # A literal 0-byte segment (observed: a genuinely empty Tier 3 summary window,
+    # no transcribed speech in that window) breaks Sabre's own download-time math
+    # (division by zero when transfer time rounds to 0). A true zero-byte network
+    # transfer isn't physically realistic anyway - there's always some minimal
+    # framing overhead - so this is a numerical-stability floor, not a claimed
+    # measurement of what that overhead actually is.
     segment_sizes_bits = []
     for i in range(n_segments):
-        segment_sizes_bits.append([r["sizes_bytes"][i] * 8 for r in rungs])
+        segment_sizes_bits.append([max(1, r["sizes_bytes"][i]) * 8 for r in rungs])
     movie = {
         "segment_duration_ms": int(SEGMENT_DURATION * 1000),
         "bitrates_kbps": bitrates_kbps,
