@@ -1,0 +1,636 @@
+{
+  "lecture_id": "mit_6_0002_comp_thinking_lec04",
+  "source_window": {
+    "start_segment": 303,
+    "n_segments": 75,
+    "start_seconds": 1212.0,
+    "end_seconds": 1512.0
+  },
+  "segment_duration": 4.0,
+  "bitrates_kbps": [
+    0.04,
+    13.35,
+    79.55,
+    500,
+    900,
+    1500
+  ],
+  "tiers": [
+    3,
+    2,
+    1,
+    0,
+    0,
+    0
+  ],
+  "tier0_rung": "720p",
+  "segments": [
+    {
+      "index": 0,
+      "start": 0.0,
+      "end": 4.0,
+      "content_label": "demo",
+      "visual_importance": 0.9
+    },
+    {
+      "index": 1,
+      "start": 4.0,
+      "end": 8.0,
+      "content_label": "demo",
+      "visual_importance": 0.9
+    },
+    {
+      "index": 2,
+      "start": 8.0,
+      "end": 12.0,
+      "content_label": "demo",
+      "visual_importance": 0.9
+    },
+    {
+      "index": 3,
+      "start": 12.0,
+      "end": 16.0,
+      "content_label": "demo",
+      "visual_importance": 0.9
+    },
+    {
+      "index": 4,
+      "start": 16.0,
+      "end": 20.0,
+      "content_label": "demo",
+      "visual_importance": 0.9
+    },
+    {
+      "index": 5,
+      "start": 20.0,
+      "end": 24.0,
+      "content_label": "demo",
+      "visual_importance": 0.9
+    },
+    {
+      "index": 6,
+      "start": 24.0,
+      "end": 28.0,
+      "content_label": "demo",
+      "visual_importance": 0.9
+    },
+    {
+      "index": 7,
+      "start": 28.0,
+      "end": 32.0,
+      "content_label": "demo",
+      "visual_importance": 0.9
+    },
+    {
+      "index": 8,
+      "start": 32.0,
+      "end": 36.0,
+      "content_label": "demo",
+      "visual_importance": 0.9
+    },
+    {
+      "index": 9,
+      "start": 36.0,
+      "end": 40.0,
+      "content_label": "demo",
+      "visual_importance": 0.9
+    },
+    {
+      "index": 10,
+      "start": 40.0,
+      "end": 44.0,
+      "content_label": "demo",
+      "visual_importance": 0.9
+    },
+    {
+      "index": 11,
+      "start": 44.0,
+      "end": 48.0,
+      "content_label": "demo",
+      "visual_importance": 0.9
+    },
+    {
+      "index": 12,
+      "start": 48.0,
+      "end": 52.0,
+      "content_label": "demo",
+      "visual_importance": 0.9
+    },
+    {
+      "index": 13,
+      "start": 52.0,
+      "end": 56.0,
+      "content_label": "demo",
+      "visual_importance": 0.9
+    },
+    {
+      "index": 14,
+      "start": 56.0,
+      "end": 60.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 15,
+      "start": 60.0,
+      "end": 64.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 16,
+      "start": 64.0,
+      "end": 68.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 17,
+      "start": 68.0,
+      "end": 72.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 18,
+      "start": 72.0,
+      "end": 76.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 19,
+      "start": 76.0,
+      "end": 80.0,
+      "content_label": "demo",
+      "visual_importance": 0.9
+    },
+    {
+      "index": 20,
+      "start": 80.0,
+      "end": 84.0,
+      "content_label": "demo",
+      "visual_importance": 0.9
+    },
+    {
+      "index": 21,
+      "start": 84.0,
+      "end": 88.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 22,
+      "start": 88.0,
+      "end": 92.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 23,
+      "start": 92.0,
+      "end": 96.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 24,
+      "start": 96.0,
+      "end": 100.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 25,
+      "start": 100.0,
+      "end": 104.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 26,
+      "start": 104.0,
+      "end": 108.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 27,
+      "start": 108.0,
+      "end": 112.0,
+      "content_label": "demo",
+      "visual_importance": 0.9
+    },
+    {
+      "index": 28,
+      "start": 112.0,
+      "end": 116.0,
+      "content_label": "demo",
+      "visual_importance": 0.9
+    },
+    {
+      "index": 29,
+      "start": 116.0,
+      "end": 120.0,
+      "content_label": "demo",
+      "visual_importance": 0.9
+    },
+    {
+      "index": 30,
+      "start": 120.0,
+      "end": 124.0,
+      "content_label": "demo",
+      "visual_importance": 0.9
+    },
+    {
+      "index": 31,
+      "start": 124.0,
+      "end": 128.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 32,
+      "start": 128.0,
+      "end": 132.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 33,
+      "start": 132.0,
+      "end": 136.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 34,
+      "start": 136.0,
+      "end": 140.0,
+      "content_label": "slides_static",
+      "visual_importance": 0.5
+    },
+    {
+      "index": 35,
+      "start": 140.0,
+      "end": 144.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 36,
+      "start": 144.0,
+      "end": 148.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 37,
+      "start": 148.0,
+      "end": 152.0,
+      "content_label": "slides_static",
+      "visual_importance": 0.5
+    },
+    {
+      "index": 38,
+      "start": 152.0,
+      "end": 156.0,
+      "content_label": "slides_static",
+      "visual_importance": 0.5
+    },
+    {
+      "index": 39,
+      "start": 156.0,
+      "end": 160.0,
+      "content_label": "slides_static",
+      "visual_importance": 0.5
+    },
+    {
+      "index": 40,
+      "start": 160.0,
+      "end": 164.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 41,
+      "start": 164.0,
+      "end": 168.0,
+      "content_label": "slides_static",
+      "visual_importance": 0.5
+    },
+    {
+      "index": 42,
+      "start": 168.0,
+      "end": 172.0,
+      "content_label": "slides_static",
+      "visual_importance": 0.5
+    },
+    {
+      "index": 43,
+      "start": 172.0,
+      "end": 176.0,
+      "content_label": "slides_static",
+      "visual_importance": 0.5
+    },
+    {
+      "index": 44,
+      "start": 176.0,
+      "end": 180.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 45,
+      "start": 180.0,
+      "end": 184.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 46,
+      "start": 184.0,
+      "end": 188.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 47,
+      "start": 188.0,
+      "end": 192.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 48,
+      "start": 192.0,
+      "end": 196.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 49,
+      "start": 196.0,
+      "end": 200.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 50,
+      "start": 200.0,
+      "end": 204.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 51,
+      "start": 204.0,
+      "end": 208.0,
+      "content_label": "slides_static",
+      "visual_importance": 0.5
+    },
+    {
+      "index": 52,
+      "start": 208.0,
+      "end": 212.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 53,
+      "start": 212.0,
+      "end": 216.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 54,
+      "start": 216.0,
+      "end": 220.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 55,
+      "start": 220.0,
+      "end": 224.0,
+      "content_label": "slides_static",
+      "visual_importance": 0.5
+    },
+    {
+      "index": 56,
+      "start": 224.0,
+      "end": 228.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 57,
+      "start": 228.0,
+      "end": 232.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 58,
+      "start": 232.0,
+      "end": 236.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 59,
+      "start": 236.0,
+      "end": 240.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 60,
+      "start": 240.0,
+      "end": 244.0,
+      "content_label": "slides_static",
+      "visual_importance": 0.5
+    },
+    {
+      "index": 61,
+      "start": 244.0,
+      "end": 248.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 62,
+      "start": 248.0,
+      "end": 252.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 63,
+      "start": 252.0,
+      "end": 256.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 64,
+      "start": 256.0,
+      "end": 260.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 65,
+      "start": 260.0,
+      "end": 264.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 66,
+      "start": 264.0,
+      "end": 268.0,
+      "content_label": "slides_static",
+      "visual_importance": 0.5
+    },
+    {
+      "index": 67,
+      "start": 268.0,
+      "end": 272.0,
+      "content_label": "slides_static",
+      "visual_importance": 0.5
+    },
+    {
+      "index": 68,
+      "start": 272.0,
+      "end": 276.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 69,
+      "start": 276.0,
+      "end": 280.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    },
+    {
+      "index": 70,
+      "start": 280.0,
+      "end": 284.0,
+      "content_label": "slides_static",
+      "visual_importance": 0.5
+    },
+    {
+      "index": 71,
+      "start": 284.0,
+      "end": 288.0,
+      "content_label": "slides_static",
+      "visual_importance": 0.5
+    },
+    {
+      "index": 72,
+      "start": 288.0,
+      "end": 292.0,
+      "content_label": "slides_static",
+      "visual_importance": 0.5
+    },
+    {
+      "index": 73,
+      "start": 292.0,
+      "end": 296.0,
+      "content_label": "slides_static",
+      "visual_importance": 0.5
+    },
+    {
+      "index": 74,
+      "start": 296.0,
+      "end": 300.0,
+      "content_label": "talking_head",
+      "visual_importance": 0.15
+    }
+  ],
+  "slides": [
+    {
+      "start": 0.0,
+      "end": 2.48,
+      "image": "assets/slides/slide_018.jpg"
+    },
+    {
+      "start": 2.48,
+      "end": 55.967,
+      "image": "assets/slides/slide_019.jpg"
+    },
+    {
+      "start": 55.967,
+      "end": 78.523,
+      "image": "assets/slides/slide_020.jpg"
+    },
+    {
+      "start": 78.523,
+      "end": 124.802,
+      "image": "assets/slides/slide_021.jpg"
+    },
+    {
+      "start": 124.802,
+      "end": 147.091,
+      "image": "assets/slides/slide_022.jpg"
+    },
+    {
+      "start": 147.091,
+      "end": 178.623,
+      "image": "assets/slides/slide_023.jpg"
+    },
+    {
+      "start": 178.623,
+      "end": 201.178,
+      "image": "assets/slides/slide_024.jpg"
+    },
+    {
+      "start": 201.178,
+      "end": 293.204,
+      "image": "assets/slides/slide_025.jpg"
+    },
+    {
+      "start": 293.204,
+      "end": 300.0,
+      "image": "assets/slides/slide_026.jpg"
+    }
+  ],
+  "summaries": [
+    {
+      "start": 0.0,
+      "end": 48.0,
+      "text": "The lecturer is switching to a simulation of dice games for easier calculation, using a written program to roll the die. The simulation will involve setting goals, such as getting five ones, and running multiple trials, for example rolling the same die 5 times 1,000 times."
+    },
+    {
+      "start": 48.0,
+      "end": 108.0,
+      "text": "The simulation will initialize variables and run a set number of trials based on the goal, such as rolling the die five times if the goal is five ones. The simulation will then check each trial's result, incrementing a total count if it meets the goal."
+    },
+    {
+      "start": 108.0,
+      "end": 168.0,
+      "text": "The simulation will calculate the proportion of trials that meet the goal by dividing the number of successful trials by the total number of trials. This is done by summing up the results of each trial and then dividing by the number of trials."
+    },
+    {
+      "start": 168.0,
+      "end": 228.0,
+      "text": "The simulation is comparing its estimated probability to the actual probability, showing they're not identical. The estimated probability is being printed twice due to a mistake with the PowerPoint."
+    },
+    {
+      "start": 228.0,
+      "end": 288.0,
+      "text": "The lecturer explains that the simulated random numbers are actually pseudorandom, generated by an algorithm using a seed value. The seed is often obtained by reading the computer's clock."
+    },
+    {
+      "start": 288.0,
+      "end": 300.0,
+      "text": "Computers typically use the clock to generate the seed value, which can be unpredictable. This unpredictability can cause issues with debugging, as different results may occur each time the program is run."
+    }
+  ],
+  "captions_file": "assets/tier2_captions.vtt",
+  "tier0_video": "assets/tier0.mp4",
+  "tier1_audio": "assets/tier1_audio.m4a"
+}

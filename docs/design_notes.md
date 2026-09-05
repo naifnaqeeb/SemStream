@@ -593,6 +593,59 @@ final sustainable level. No fix applied - recorded because this is exactly the k
 that should be understood before it becomes an input to tuning Phase 4's agent, not rediscovered
 mid-tuning.
 
+## Phase 4.5 — course demo (2026-09-05)
+
+**"Reused, not reimplemented" vs a static browser page - the decision.** The plan requires the
+demo feed the slider through the real `get_bandwidth_estimate()` into the real
+`state_machine.py`, but that logic is Python and the deliverable is a static page. Three options
+were put to the user: Pyodide (runs the actual `.py` in-browser via WebAssembly - literally
+satisfies the wording, costs ~10MB CDN load and needs internet unless vendored), a JS port with
+an automated Python-vs-JS equivalence test, or a bare JS port. Chosen: **JS port plus
+equivalence test** - keeps the demo dependency-free, instant, and offline-capable, while
+mechanically defending against the drift that the "not reimplemented" rule exists to prevent.
+
+`demo/equivalence_test.py` runs `agent/state_machine.py` and `demo/agent.js` over identical
+input sequences and fails on any disagreement: sustained collapse-and-recovery per label, label
+flipping every segment against volatile bandwidth, bandwidths sitting exactly on each
+safety-factor boundary (`bitrate / factor` for all six factors x six rungs), degenerate one- and
+two-rung ladders, `None`/unknown labels, and five 400-step random walks. **34 cases, 3730
+decisions, all matching.** This runs as a normal test, so a future edit to either implementation
+that breaks parity fails loudly rather than silently making the demo a lie.
+
+**Assets.** 5-minute window (segments 303-377) of `mit_6_0002_comp_thinking_lec04`, picked by
+scanning every 75-segment window in the corpus for the best three-label mix - 39 `talking_head`,
+20 `demo`, 16 `slides_static`, so the content-label HUD actually shows variety and the hold
+profile is exercised. `demo/build_assets.py` cuts one Tier 0 rung (720p) and windows the audio,
+slides, captions and summaries to match, remapping all timestamps to window-relative.
+
+**Verified in a real browser, not just by unit logic.** Drove the page under Playwright/Chromium
+(local HTTP server, since `file://` blocks the manifest fetch): all four views present, zero
+console errors, and dragging the slider produced the real tier path
+`Tier 0 -> Tier 1 -> Tier 2 -> Tier 3 -> Tier 0` with the HUD tracking bandwidth, quality index,
+rung bitrate, live content label and a draining buffer. Screenshots confirm each tier renders
+its actual content: Tier 0 the video, Tier 1 the real extracted slide, Tier 2 that slide plus a
+time-synced caption, Tier 3 the real rolling summary text. Worth stating precisely: the downward
+path visits all four tiers, but the upward path jumps (Tier 3 -> Tier 0 directly at 700kbps)
+because `up_candidate` resolves straight to the highest affordable index once dwell permits -
+correct agent behaviour, not a demo bug, but not a symmetric walk.
+
+**Bug found only in the browser: CRLF broke caption parsing.** The Tier 2 caption bar came back
+empty. Cause: `build_assets.py` wrote the windowed `.vtt` with Windows `\r\n` line endings, and
+`demo.js` split cue blocks on `/\n\n+/` - so all 78 cues collapsed into a single malformed cue
+spanning 0-3.15s and captions were blank for the rest of playback. Invisible to the simulation
+because Python's text-mode reads translate newlines universally, so `tier_rung.py`'s VTT parsing
+was never affected - this was purely a JS-side failure that only a real browser run would catch.
+Fixed both ends: `demo.js` normalises CRLF before splitting (robust to any VTT it's handed), and
+`build_assets.py` writes with `newline="\n"`.
+
+**Licensing shaped the lecture choice.** The demo bundles a real 5-minute video excerpt, which
+is redistributable media, not the "numbers and tables" that the Phase 0 licensing note allows to
+go public. `mit_6_0002_comp_thinking_lec04` is MIT OpenCourseWare, CC BY-NC-SA 4.0 - so the
+excerpt can be committed and shared with attribution for non-commercial use, which is now
+displayed on the demo page itself as the licence requires. An NPTEL lecture could not have been
+used this way (all rights reserved, stays local). The demo-lecture choice is therefore a licence
+decision as much as a content one.
+
 ## Phase 4 — switching agent design, decided before any code exists (2026-09-04)
 
 Four questions settled here first, per instruction, because this is the project's core
@@ -730,6 +783,41 @@ neutral drop profile) and this trace never forces either policy to rebuffer here
 The dramatic, unambiguous evidence for this case is the segment-level divergence above, not the
 aggregate number - stated plainly so the aggregate isn't mistaken for the strongest evidence
 when it isn't.
+
+**Three follow-up checks run after the headline table, before starting Phase 4.5.**
+
+*Is `belgium_4g_rough` the exception where Ours doesn't beat Naive?* No. Per-lecture, Ours
+dominates Naive (better or equal on rebuffering AND information delivered) on 7 of 9 lectures
+on that trace; the other 2 (`mit_6042j`, `theory_of_computation`) are mixed - Ours rebuffers
+notably less (54.27s vs 66.08s, 76.50s vs 91.25s) for a marginally lower information score
+(-0.004, -0.004). Naive does not dominate Ours on a single lecture on any trace.
+
+*Tier-1-or-below occupancy, the concrete cost against Baseline.* Mean across the three
+stressed traces: Baseline 0.0% of playback below Tier 0 with 60.31s rebuffering; Naive 29.9%
+below Tier 0 with 22.91s; Ours 22.4% below Tier 0 with 18.79s. So Ours buys a 69% rebuffering
+reduction versus Baseline for 22.4% of playback at reduced modality - and reaches that with
+*less* modality sacrifice than Naive needs (22.4% vs 29.9%) while also stalling less.
+
+*Do stalls land on demo segments?* **Not zero - and demo is over-represented.** Scanned all 27
+Ours runs on stressed traces for segments where the buffer actually depleted mid-download
+(`bl=A->0->` with `A>0`; validated the detector against a known single-rebuffer run first, and
+against Sabre's own event count). 58 rebuffer events total: 36 `talking_head`, 17
+`slides_static`, 5 `demo`. Against the corpus base rate (46.7% / 48.2% / 5.0% of segments),
+that is 1.33x / 0.61x / **1.72x** representation. Demo segments carry the *highest* stall risk
+per segment of any label under Ours.
+
+This is the direct, measured cost of the hold profile and should be stated wherever the "holds
+Tier 0 through demonstrations" claim is made: holding Tier 0 on a thinner safety margin during
+demo content does exactly what it is designed to do, and the price is that when a stall does
+happen it is disproportionately likely to happen during a demonstration. Whether that trade is
+right is a judgement about which failure is worse for a student - a few seconds of freeze while
+the demo's visuals are preserved, versus the demo dropping to a static slide - not something
+the numbers settle on their own. Worth noting the trade is not paid out of a bigger stall
+budget: Ours' total rebuffering is still lower than Naive's (18.79s vs 22.91s mean), so the
+hold profile's localised cost is more than offset by the drop profile's savings elsewhere.
+Three of the five demo stalls fall on `nptel_python_dsa_mukund_lec01`, the most demo-dense
+lecture in the corpus (24.5% demo segments). `norway_hsdpa_rough` produced zero rebuffer
+events under Ours across all nine lectures.
 
 **Bandwidth interface compliance, caught before calling Phase 4 done.** `sim/policies/Ours.py`
 initially called `self.session.get_throughput()` directly - functionally correct but a direct

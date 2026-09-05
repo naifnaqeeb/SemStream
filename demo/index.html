@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SemStream — content-aware tier switching demo</title>
+<style>
+  :root {
+    --bg: #14161a; --panel: #1d2026; --line: #2c313a;
+    --ink: #e8eaed; --dim: #98a0ad;
+    --t0: #4ade80; --t1: #60a5fa; --t2: #fbbf24; --t3: #f87171;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 14px/1.5 system-ui, -apple-system, Segoe UI, sans-serif;
+  }
+  header { padding: 16px 20px; border-bottom: 1px solid var(--line); }
+  header h1 { margin: 0 0 3px; font-size: 16px; font-weight: 600; }
+  header p { margin: 0; color: var(--dim); font-size: 12.5px; }
+  .wrap { display: grid; grid-template-columns: minmax(0,1fr) 320px; gap: 18px; padding: 18px 20px; }
+  @media (max-width: 900px) { .wrap { grid-template-columns: 1fr; } }
+
+  .stage {
+    position: relative; background: #000; border: 1px solid var(--line);
+    border-radius: 8px; overflow: hidden; aspect-ratio: 16/9;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .stage video, .stage img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .view { display: none; width: 100%; height: 100%; }
+  .view.active { display: block; }
+  .view.captionview, .view.summaryview {
+    display: none; padding: 24px; overflow-y: auto;
+  }
+  .view.captionview.active, .view.summaryview.active { display: block; }
+  .slidewrap { position: relative; width: 100%; height: 100%; }
+  .capbar {
+    position: absolute; left: 0; right: 0; bottom: 0; padding: 10px 14px;
+    background: rgba(0,0,0,.72); font-size: 15px; min-height: 44px;
+  }
+  .summaryview { background: #0d0f12; }
+  .summaryview .stamp { color: var(--dim); font-size: 12px; letter-spacing: .04em; }
+  .summaryview .txt { font-size: 16px; line-height: 1.6; margin-top: 8px; max-width: 60ch; }
+  .stall {
+    position: absolute; inset: 0; display: none; align-items: center; justify-content: center;
+    background: rgba(0,0,0,.68); font-size: 15px; letter-spacing: .06em; color: #fca5a5;
+  }
+  .stall.on { display: flex; }
+
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
+  .panel + .panel { margin-top: 14px; }
+  .panel h2 {
+    margin: 0 0 10px; font-size: 11px; letter-spacing: .09em; text-transform: uppercase; color: var(--dim);
+  }
+  .row { display: flex; justify-content: space-between; align-items: baseline; padding: 5px 0; }
+  .row .k { color: var(--dim); font-size: 12.5px; }
+  .row .v { font-variant-numeric: tabular-nums; font-weight: 600; }
+  input[type=range] { width: 100%; margin: 6px 0 2px; }
+  .bwval { font-size: 22px; font-weight: 650; font-variant-numeric: tabular-nums; }
+  .hint { color: var(--dim); font-size: 11.5px; margin-top: 4px; }
+
+  .ladder { display: flex; flex-direction: column; gap: 5px; }
+  .tierrow {
+    display: flex; align-items: center; gap: 9px; padding: 7px 9px;
+    border: 1px solid var(--line); border-radius: 6px; opacity: .42; font-size: 12.5px;
+  }
+  .tierrow.on { opacity: 1; border-color: currentColor; background: rgba(255,255,255,.04); }
+  .tierrow .dot { width: 9px; height: 9px; border-radius: 50%; background: currentColor; flex: none; }
+  .tierrow .nm { font-weight: 600; }
+  .tierrow .ds { color: var(--dim); margin-left: auto; font-size: 11.5px; }
+  .t0 { color: var(--t0); } .t1 { color: var(--t1); }
+  .t2 { color: var(--t2); } .t3 { color: var(--t3); }
+
+  .label { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11.5px; font-weight: 600; }
+  .label.demo { background: rgba(248,113,113,.16); color: #fca5a5; }
+  .label.talking_head { background: rgba(96,165,250,.16); color: #93c5fd; }
+  .label.slides_static { background: rgba(251,191,36,.16); color: #fcd34d; }
+
+  .buf { height: 7px; background: #0d0f12; border-radius: 4px; overflow: hidden; margin-top: 5px; }
+  .buf > i { display: block; height: 100%; background: var(--t0); width: 0; }
+  button {
+    background: #2a2f38; color: var(--ink); border: 1px solid var(--line);
+    border-radius: 6px; padding: 7px 13px; font: inherit; cursor: pointer;
+  }
+  button:hover { background: #333945; }
+</style>
+</head>
+<body>
+<header>
+  <h1>SemStream — content-aware tier switching</h1>
+  <p>Drag the bandwidth slider. Tier decisions come from the real switching agent
+     (<code>agent/state_machine.py</code>, ported to JS and verified decision-for-decision equivalent), not a script.</p>
+</header>
+
+<div class="wrap">
+  <div>
+    <div class="stage">
+      <div class="view videoview" id="view0">
+        <video id="video" playsinline preload="auto"></video>
+      </div>
+      <div class="view" id="view1">
+        <div class="slidewrap"><img id="slide1" alt="lecture slide"></div>
+      </div>
+      <div class="view" id="view2">
+        <div class="slidewrap">
+          <img id="slide2" alt="lecture slide">
+          <div class="capbar" id="capbar"></div>
+        </div>
+      </div>
+      <div class="view summaryview" id="view3">
+        <div class="stamp" id="sumstamp"></div>
+        <div class="txt" id="sumtext"></div>
+      </div>
+      <div class="stall" id="stall">REBUFFERING</div>
+    </div>
+    <div style="margin-top:12px; display:flex; gap:10px; align-items:center;">
+      <button id="playpause">Play</button>
+      <span class="hint" id="clock">0:00 / 0:00</span>
+      <span class="hint" id="assetnote"></span>
+    </div>
+    <p class="hint" style="margin-top:12px; max-width:75ch;">
+      Source excerpt: <em>MIT 6.0002 Introduction to Computational Thinking and Data Science,
+      Fall 2016</em>, Prof. John Guttag, MIT OpenCourseWare — licensed
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color:var(--dim)">CC BY-NC-SA 4.0</a>.
+      Slides, captions and summaries shown at Tiers 1–3 are generated from that source by this
+      project's Phase 1 pipeline. Non-commercial academic use.
+    </p>
+  </div>
+
+  <div>
+    <div class="panel">
+      <h2>Available bandwidth</h2>
+      <div class="bwval"><span id="bwnum">1500</span> <span style="font-size:13px;color:var(--dim)">kbps</span></div>
+      <input type="range" id="bw" min="0" max="2200" step="10" value="1500">
+      <div class="hint">Drag down to starve the connection, back up to recover.</div>
+    </div>
+
+    <div class="panel">
+      <h2>Agent state</h2>
+      <div class="row"><span class="k">Selected tier</span><span class="v" id="tierv">—</span></div>
+      <div class="row"><span class="k">Quality index</span><span class="v" id="qv">—</span></div>
+      <div class="row"><span class="k">Rung bitrate</span><span class="v" id="brv">—</span></div>
+      <div class="row"><span class="k">Segment label</span><span class="v" id="lblv">—</span></div>
+      <div class="row"><span class="k">Buffer</span><span class="v" id="bufv">—</span></div>
+      <div class="buf"><i id="bufbar"></i></div>
+    </div>
+
+    <div class="panel">
+      <h2>Tier ladder</h2>
+      <div class="ladder">
+        <div class="tierrow t0" id="row0"><span class="dot"></span><span class="nm">Tier 0</span><span class="ds">video + audio</span></div>
+        <div class="tierrow t1" id="row1"><span class="dot"></span><span class="nm">Tier 1</span><span class="ds">slides + audio</span></div>
+        <div class="tierrow t2" id="row2"><span class="dot"></span><span class="nm">Tier 2</span><span class="ds">slides + captions</span></div>
+        <div class="tierrow t3" id="row3"><span class="dot"></span><span class="nm">Tier 3</span><span class="ds">text summary</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="agent.js"></script>
+<script src="demo.js"></script>
+</body>
+</html>
