@@ -11,14 +11,26 @@ complete result still exists. Do not begin Phase 5 before Phase 3's check is sat
 
 ## Progress checklist
 
+Current canonical progress summary: `docs/interim_findings.md`. Read that first for what has
+been built and measured; `docs/design_notes.md` holds the per-decision reasoning behind it.
+
 - [x] Phase 0 — Corpus collection
 - [x] Phase 1 — Semantic tier generation
 - [x] Phase 2 — Content classifier
 - [x] Phase 3 — Simulation harness
 - [x] Phase 4 — Switching agent
 - [x] Phase 4.5 — Course demo
-- [ ] Phase 5 — Real DASH prototype (optional; confirm before starting)
-- [ ] Phase 6 — Evaluation
+- [ ] Phase 5 — Real DASH prototype — **declined for now, not abandoned.** Course requirement is
+      already satisfied by Phases 0–4.5. Do not start unless explicitly requested.
+- [ ] Phase 6 — Evaluation — **split:**
+  - [x] System metrics — substantially delivered by Phase 3's results table
+        (`data/results/phase3_results.csv`, 135 runs; written up in `docs/interim_findings.md`).
+  - [ ] Optional ablation: rules-based vs VLM classifier — **identified, explicitly not built.**
+        Would quantify how much of the agent's headroom is lost to the 51.5% demo-recall ceiling
+        rather than to the policy itself. Reasoning in `docs/interim_findings.md` §10.
+  - [ ] Comprehension study — **not started, held.** Awaiting confirmation of Review 2 / Review 3
+        dates before any tooling is built; participant recruitment and informal instructor
+        clearance have a longer lead time than any phase so far.
 - [ ] Phase 7 — Paper
 
 ---

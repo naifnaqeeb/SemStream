@@ -175,7 +175,8 @@ semstream/
     traces/
     results/
   docs/
-    design_notes.md
+    interim_findings.md      # canonical progress summary — read this first for current state
+    design_notes.md          # per-decision reasoning behind it
   CLAUDE.md                  # this file
   IMPLEMENTATION_PLAN.md     # phase-by-phase build plan and progress
 ```
