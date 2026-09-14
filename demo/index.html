@@ -2,97 +2,206 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>SemStream — content-aware tier switching demo</title>
+<title>SemStream — content-aware tier switching</title>
 <style>
   :root {
     --bg: #14161a; --panel: #1d2026; --line: #2c313a;
     --ink: #e8eaed; --dim: #98a0ad;
     --t0: #4ade80; --t1: #60a5fa; --t2: #fbbf24; --t3: #f87171;
+
+    /* Presentation scale is the default. Sized in vh so it adapts to whatever
+       the projector actually runs at, rather than assuming 1080p: at 1080p the
+       three critical readouts clear roughly 13-15 m (cap height >= viewing
+       distance / 200, assuming a 2.5 m wide projected image), and they stay
+       above 9 m even on a 768p projector. */
+    --fs-hero-key: clamp(14px, 2.4vh, 28px);
+    --fs-hero-tier: clamp(36px, 7.2vh, 84px);
+    --fs-hero-bw: clamp(34px, 6.8vh, 80px);
+    --fs-hero-label: clamp(30px, 6.2vh, 72px);
+    --fs-unit: clamp(16px, 3vh, 34px);
+    --fs-detail: clamp(15px, 2.6vh, 30px);
+    --fs-key: clamp(12px, 2vh, 23px);
+    --fs-heading: clamp(12px, 1.9vh, 22px);
+    --fs-ladder-nm: clamp(13px, 2.2vh, 24px);
+    --fs-ladder-ds: clamp(11px, 1.8vh, 20px);
+    --fs-caption: clamp(18px, 3.4vh, 38px);
+    --fs-summary: clamp(18px, 3.4vh, 38px);
+    --fs-clock: clamp(12px, 1.9vh, 22px);
+    --fs-title: clamp(16px, 2.4vh, 28px);
+    --fs-sub: 20px;
+    --fs-btn: clamp(14px, 2.2vh, 26px);
+    --pad-panel: clamp(8px, 1.6vh, 18px);
+    --stage-max: 62vh;
   }
+  body.laptop {
+    --fs-hero-key: 11px;
+    --fs-hero-tier: 14px;
+    --fs-hero-bw: 22px;
+    --fs-hero-label: 11.5px;
+    --fs-unit: 13px;
+    --fs-detail: 14px;
+    --fs-key: 12.5px;
+    --fs-heading: 11px;
+    --fs-ladder-nm: 12.5px;
+    --fs-ladder-ds: 11.5px;
+    --fs-caption: 15px;
+    --fs-summary: 16px;
+    --fs-clock: 11.5px;
+    --fs-title: 16px;
+    --fs-sub: 12.5px;
+    --fs-btn: 14px;
+    --pad-panel: 14px;
+    --stage-max: none;
+  }
+
   * { box-sizing: border-box; }
   body {
     margin: 0; background: var(--bg); color: var(--ink);
     font: 14px/1.5 system-ui, -apple-system, Segoe UI, sans-serif;
   }
-  header { padding: 16px 20px; border-bottom: 1px solid var(--line); }
-  header h1 { margin: 0 0 3px; font-size: 16px; font-weight: 600; }
-  header p { margin: 0; color: var(--dim); font-size: 12.5px; }
-  .wrap { display: grid; grid-template-columns: minmax(0,1fr) 320px; gap: 18px; padding: 18px 20px; }
-  @media (max-width: 900px) { .wrap { grid-template-columns: 1fr; } }
+  /* Presentation mode must fit the projector exactly: a panel will not scroll
+     the page, so anything below the fold is effectively not shown. */
+  body:not(.laptop) { height: 100vh; overflow: hidden; display: flex; flex-direction: column; }
+  header {
+    padding: 14px 20px; border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; gap: 16px;
+  }
+  header .txt { min-width: 0; }
+  header h1 { margin: 0 0 3px; font-size: var(--fs-title); font-weight: 600; }
+  header p { margin: 0; color: var(--dim); font-size: var(--fs-sub); }
+  body:not(.laptop) header p { display: none; }
+  #modetoggle { margin-left: auto; flex: none; }
+
+  .wrap { padding: 16px 20px; display: grid; gap: 16px; }
+  body.laptop .wrap { grid-template-columns: minmax(0,1fr) 320px; align-items: start; }
+  @media (max-width: 900px) { body.laptop .wrap { grid-template-columns: 1fr; } }
+
+  body:not(.laptop) .wrap {
+    flex: 1; min-height: 0; grid-template-rows: minmax(34vh,1fr) auto;
+    gap: 10px; padding: 10px 20px 12px;
+  }
+  body:not(.laptop) .row { padding: 3px 0; }
+  body:not(.laptop) .panel h2 { margin-bottom: 6px; }
+  body:not(.laptop) .tierrow { padding: clamp(3px,0.7vh,8px) 12px; }
+  body:not(.laptop) .ladder { gap: clamp(3px,0.6vh,6px); }
+  body:not(.laptop) .stagecol { min-height: 0; display: flex; flex-direction: column; }
+  body:not(.laptop) .hudcol { display: flex; flex-direction: column; gap: 12px; }
 
   .stage {
     position: relative; background: #000; border: 1px solid var(--line);
     border-radius: 8px; overflow: hidden; aspect-ratio: 16/9;
+    max-height: var(--stage-max); margin: 0 auto; width: 100%;
     display: flex; align-items: center; justify-content: center;
+  }
+  body:not(.laptop) .stage {
+    height: 100%; width: auto; max-width: 100%; max-height: none; flex: 1; min-height: 0;
   }
   .stage video, .stage img { width: 100%; height: 100%; object-fit: contain; display: block; }
   .view { display: none; width: 100%; height: 100%; }
   .view.active { display: block; }
-  .view.captionview, .view.summaryview {
-    display: none; padding: 24px; overflow-y: auto;
-  }
+  .view.captionview, .view.summaryview { display: none; padding: 24px; overflow-y: auto; }
   .view.captionview.active, .view.summaryview.active { display: block; }
   .slidewrap { position: relative; width: 100%; height: 100%; }
   .capbar {
-    position: absolute; left: 0; right: 0; bottom: 0; padding: 10px 14px;
-    background: rgba(0,0,0,.72); font-size: 15px; min-height: 44px;
+    position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 18px;
+    background: rgba(0,0,0,.78); font-size: var(--fs-caption); line-height: 1.35;
   }
   .summaryview { background: #0d0f12; }
-  .summaryview .stamp { color: var(--dim); font-size: 12px; letter-spacing: .04em; }
-  .summaryview .txt { font-size: 16px; line-height: 1.6; margin-top: 8px; max-width: 60ch; }
+  .summaryview .stamp { color: var(--dim); font-size: var(--fs-clock); letter-spacing: .04em; }
+  .summaryview .txt { font-size: var(--fs-summary); line-height: 1.5; margin-top: 10px; max-width: 46ch; }
   .stall {
     position: absolute; inset: 0; display: none; align-items: center; justify-content: center;
-    background: rgba(0,0,0,.68); font-size: 15px; letter-spacing: .06em; color: #fca5a5;
+    background: rgba(0,0,0,.68); font-size: var(--fs-hero-tier); font-weight: 700;
+    letter-spacing: .06em; color: #fca5a5;
   }
   .stall.on { display: flex; }
 
-  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
-  .panel + .panel { margin-top: 14px; }
-  .panel h2 {
-    margin: 0 0 10px; font-size: 11px; letter-spacing: .09em; text-transform: uppercase; color: var(--dim);
+  .controls { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+  .hint { color: var(--dim); font-size: var(--fs-clock); }
+  button {
+    background: #2a2f38; color: var(--ink); border: 1px solid var(--line);
+    border-radius: 6px; padding: 8px 16px; font: inherit; font-size: var(--fs-btn); cursor: pointer;
   }
-  .row { display: flex; justify-content: space-between; align-items: baseline; padding: 5px 0; }
-  .row .k { color: var(--dim); font-size: 12.5px; }
-  .row .v { font-variant-numeric: tabular-nums; font-weight: 600; }
-  input[type=range] { width: 100%; margin: 6px 0 2px; }
-  .bwval { font-size: 22px; font-weight: 650; font-variant-numeric: tabular-nums; }
-  .hint { color: var(--dim); font-size: 11.5px; margin-top: 4px; }
+  button:hover { background: #333945; }
 
-  .ladder { display: flex; flex-direction: column; gap: 5px; }
-  .tierrow {
-    display: flex; align-items: center; gap: 9px; padding: 7px 9px;
-    border: 1px solid var(--line); border-radius: 6px; opacity: .42; font-size: 12.5px;
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: var(--pad-panel); }
+  .panel h2 {
+    margin: 0 0 10px; font-size: var(--fs-heading); letter-spacing: .09em;
+    text-transform: uppercase; color: var(--dim);
   }
-  .tierrow.on { opacity: 1; border-color: currentColor; background: rgba(255,255,255,.04); }
-  .tierrow .dot { width: 9px; height: 9px; border-radius: 50%; background: currentColor; flex: none; }
-  .tierrow .nm { font-weight: 600; }
-  .tierrow .ds { color: var(--dim); margin-left: auto; font-size: 11.5px; }
+
+  /* Hero strip: the three readouts a panel must be able to read from the back. */
+  .hero { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  body.laptop .hero { grid-template-columns: 1fr; gap: 0; }
+  .hero .cell { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: var(--pad-panel); }
+  body.laptop .hero .cell { border: 0; padding: 5px 0; background: none; display: flex; justify-content: space-between; align-items: baseline; }
+  .hero .k {
+    font-size: var(--fs-hero-key); letter-spacing: .09em; text-transform: uppercase;
+    color: var(--dim); margin-bottom: 6px;
+  }
+  body.laptop .hero .k { margin-bottom: 0; text-transform: none; letter-spacing: 0; }
+  .hero .v { font-variant-numeric: tabular-nums; font-weight: 700; line-height: 1.05; }
+  #tierv { font-size: var(--fs-hero-tier); }
+  .bwline { display: flex; align-items: baseline; gap: 10px; }
+  #bwnum { font-size: var(--fs-hero-bw); font-weight: 700; font-variant-numeric: tabular-nums; }
+  .bwunit { font-size: var(--fs-unit); color: var(--dim); }
+
+  /* Colour-coded content label: reads as a colour change before it reads as text. */
+  .label {
+    display: inline-block; padding: 6px 18px; border-radius: 999px;
+    font-size: var(--fs-hero-label); font-weight: 700; line-height: 1.15;
+    border: 3px solid transparent;
+  }
+  body.laptop .label { padding: 2px 8px; border-width: 1px; }
+  .label.demo { background: #f87171; color: #2a0b0b; border-color: #fecaca; }
+  .label.talking_head { background: #60a5fa; color: #06203f; border-color: #bfdbfe; }
+  .label.slides_static { background: #fbbf24; color: #3a2503; border-color: #fde68a; }
+
+  .lower { display: grid; gap: 16px; grid-template-columns: 1.1fr 1fr 1fr; align-items: start; }
+  body.laptop .lower { grid-template-columns: 1fr; gap: 0; margin-top: 14px; }
+  body.laptop .lower .panel + .panel { margin-top: 14px; }
+
+  input[type=range] { width: 100%; margin: 8px 0 4px; height: 28px; }
+  body.laptop input[type=range] { height: auto; margin: 6px 0 2px; }
+
+  .row { display: flex; justify-content: space-between; align-items: baseline; padding: 6px 0; }
+  .row .k { color: var(--dim); font-size: var(--fs-key); }
+  .row .v { font-variant-numeric: tabular-nums; font-weight: 600; font-size: var(--fs-detail); }
+
+  .ladder { display: flex; flex-direction: column; gap: 6px; }
+  .tierrow {
+    display: flex; align-items: center; gap: 12px; padding: 9px 12px;
+    border: 2px solid var(--line); border-radius: 6px; opacity: .40; font-size: var(--fs-ladder-nm);
+  }
+  body.laptop .tierrow { border-width: 1px; padding: 7px 9px; gap: 9px; }
+  .tierrow.on { opacity: 1; border-color: currentColor; background: rgba(255,255,255,.06); }
+  .tierrow .dot { width: 14px; height: 14px; border-radius: 50%; background: currentColor; flex: none; }
+  body.laptop .tierrow .dot { width: 9px; height: 9px; }
+  .tierrow .nm { font-weight: 700; }
+  .tierrow .ds { color: var(--dim); margin-left: auto; font-size: var(--fs-ladder-ds); }
   .t0 { color: var(--t0); } .t1 { color: var(--t1); }
   .t2 { color: var(--t2); } .t3 { color: var(--t3); }
 
-  .label { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11.5px; font-weight: 600; }
-  .label.demo { background: rgba(248,113,113,.16); color: #fca5a5; }
-  .label.talking_head { background: rgba(96,165,250,.16); color: #93c5fd; }
-  .label.slides_static { background: rgba(251,191,36,.16); color: #fcd34d; }
-
-  .buf { height: 7px; background: #0d0f12; border-radius: 4px; overflow: hidden; margin-top: 5px; }
+  .buf { height: 14px; background: #0d0f12; border-radius: 4px; overflow: hidden; margin-top: 8px; }
+  body.laptop .buf { height: 7px; margin-top: 5px; }
   .buf > i { display: block; height: 100%; background: var(--t0); width: 0; }
-  button {
-    background: #2a2f38; color: var(--ink); border: 1px solid var(--line);
-    border-radius: 6px; padding: 7px 13px; font: inherit; cursor: pointer;
-  }
-  button:hover { background: #333945; }
+
+  .attrib { color: var(--dim); font-size: var(--fs-clock); max-width: 90ch; margin: 10px 0 0; }
+  body:not(.laptop) .attrib { display: none; }
 </style>
 </head>
 <body>
 <header>
-  <h1>SemStream — content-aware tier switching</h1>
-  <p>Drag the bandwidth slider. Tier decisions come from the real switching agent
-     (<code>agent/state_machine.py</code>, ported to JS and verified decision-for-decision equivalent), not a script.</p>
+  <div class="txt">
+    <h1>SemStream — content-aware tier switching</h1>
+    <p>Drag the bandwidth slider. Tier decisions come from the real switching agent
+       (<code>agent/state_machine.py</code>, ported to JS and verified decision-for-decision equivalent), not a script.</p>
+  </div>
+  <button id="modetoggle" title="Switch between presentation and laptop scale">Laptop scale</button>
 </header>
 
 <div class="wrap">
-  <div>
+  <div class="stagecol">
     <div class="stage">
       <div class="view videoview" id="view0">
         <video id="video" playsinline preload="auto"></video>
@@ -112,12 +221,7 @@
       </div>
       <div class="stall" id="stall">REBUFFERING</div>
     </div>
-    <div style="margin-top:12px; display:flex; gap:10px; align-items:center;">
-      <button id="playpause">Play</button>
-      <span class="hint" id="clock">0:00 / 0:00</span>
-      <span class="hint" id="assetnote"></span>
-    </div>
-    <p class="hint" style="margin-top:12px; max-width:75ch;">
+    <p class="attrib">
       Source excerpt: <em>MIT 6.0002 Introduction to Computational Thinking and Data Science,
       Fall 2016</em>, Prof. John Guttag, MIT OpenCourseWare — licensed
       <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color:var(--dim)">CC BY-NC-SA 4.0</a>.
@@ -126,31 +230,49 @@
     </p>
   </div>
 
-  <div>
-    <div class="panel">
-      <h2>Available bandwidth</h2>
-      <div class="bwval"><span id="bwnum">1500</span> <span style="font-size:13px;color:var(--dim)">kbps</span></div>
-      <input type="range" id="bw" min="0" max="2200" step="10" value="1500">
-      <div class="hint">Drag down to starve the connection, back up to recover.</div>
+  <div class="hudcol">
+    <div class="hero">
+      <div class="cell">
+        <div class="k">Bandwidth</div>
+        <div class="bwline"><span id="bwnum">1500</span><span class="bwunit">kbps</span></div>
+      </div>
+      <div class="cell">
+        <div class="k">Selected tier</div>
+        <div class="v" id="tierv">—</div>
+      </div>
+      <div class="cell">
+        <div class="k">Segment content</div>
+        <div class="v" id="lblv">—</div>
+      </div>
     </div>
 
-    <div class="panel">
-      <h2>Agent state</h2>
-      <div class="row"><span class="k">Selected tier</span><span class="v" id="tierv">—</span></div>
-      <div class="row"><span class="k">Quality index</span><span class="v" id="qv">—</span></div>
-      <div class="row"><span class="k">Rung bitrate</span><span class="v" id="brv">—</span></div>
-      <div class="row"><span class="k">Segment label</span><span class="v" id="lblv">—</span></div>
-      <div class="row"><span class="k">Buffer</span><span class="v" id="bufv">—</span></div>
-      <div class="buf"><i id="bufbar"></i></div>
-    </div>
+    <div class="lower">
+      <div class="panel">
+        <h2>Available bandwidth</h2>
+        <input type="range" id="bw" min="0" max="2200" step="10" value="1500">
+        <div class="controls" style="margin-top:8px">
+          <button id="playpause">Play</button>
+          <span class="hint" id="clock">0:00 / 0:00</span>
+        </div>
+        <div class="hint" id="assetnote" style="margin-top:8px"></div>
+      </div>
 
-    <div class="panel">
-      <h2>Tier ladder</h2>
-      <div class="ladder">
-        <div class="tierrow t0" id="row0"><span class="dot"></span><span class="nm">Tier 0</span><span class="ds">video + audio</span></div>
-        <div class="tierrow t1" id="row1"><span class="dot"></span><span class="nm">Tier 1</span><span class="ds">slides + audio</span></div>
-        <div class="tierrow t2" id="row2"><span class="dot"></span><span class="nm">Tier 2</span><span class="ds">slides + captions</span></div>
-        <div class="tierrow t3" id="row3"><span class="dot"></span><span class="nm">Tier 3</span><span class="ds">text summary</span></div>
+      <div class="panel">
+        <h2>Agent state</h2>
+        <div class="row"><span class="k">Quality index</span><span class="v" id="qv">—</span></div>
+        <div class="row"><span class="k">Rung bitrate</span><span class="v" id="brv">—</span></div>
+        <div class="row"><span class="k">Buffer</span><span class="v" id="bufv">—</span></div>
+        <div class="buf"><i id="bufbar"></i></div>
+      </div>
+
+      <div class="panel">
+        <h2>Tier ladder</h2>
+        <div class="ladder">
+          <div class="tierrow t0" id="row0"><span class="dot"></span><span class="nm">Tier 0</span><span class="ds">video + audio</span></div>
+          <div class="tierrow t1" id="row1"><span class="dot"></span><span class="nm">Tier 1</span><span class="ds">slides + audio</span></div>
+          <div class="tierrow t2" id="row2"><span class="dot"></span><span class="nm">Tier 2</span><span class="ds">slides + captions</span></div>
+          <div class="tierrow t3" id="row3"><span class="dot"></span><span class="nm">Tier 3</span><span class="ds">text summary</span></div>
+        </div>
       </div>
     </div>
   </div>

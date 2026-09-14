@@ -186,6 +186,14 @@ function init() {
     el("playpause").textContent = state.playing ? "Pause" : "Play";
   });
 
+  // Presentation scale is the default on every load, deliberately not persisted:
+  // the failure mode worth avoiding is walking into a review with a laptop-scale
+  // HUD because that was the last mode used at a desk.
+  el("modetoggle").addEventListener("click", () => {
+    const laptop = document.body.classList.toggle("laptop");
+    el("modetoggle").textContent = laptop ? "Presentation scale" : "Laptop scale";
+  });
+
   requestAnimationFrame(frame);
 }
 

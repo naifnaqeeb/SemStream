@@ -18,6 +18,23 @@ than fetched as JSON.
 Verified by copying `demo/` to a clean directory outside the project and opening it directly:
 no console errors, all four tiers reachable, video and slides load, captions track playback.
 
+## Presentation vs laptop scale
+
+The page opens in **presentation scale** every time, deliberately not remembered between
+loads: the failure worth avoiding is walking into a review with a laptop-scale HUD because
+that was the last mode used at a desk. The button top-right switches to laptop scale for
+close-up work.
+
+Presentation scale puts the three readouts a panel must be able to read across a full-width
+strip under the video, sized in `vh` so they adapt to whatever the projector actually runs at
+rather than assuming 1080p. On a 2.5 m wide projected image they stay legible to roughly
+12-14 m, at both 1080p and 768p. It also constrains the whole page to exactly one viewport
+height, since nobody scrolls a projected page.
+
+The content label is colour-coded as well as enlarged, so a change registers as a colour
+before it has to be read: **demo = red**, **talking_head = blue**, **slides_static = amber**.
+That readout matters most, since it is what makes this content-aware rather than bandwidth-only.
+
 ## What to look for
 
 Dragging the slider down walks the agent through all four tiers and back up:
