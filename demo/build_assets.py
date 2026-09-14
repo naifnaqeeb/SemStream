@@ -8,8 +8,13 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DEMO_DIR = Path(__file__).resolve().parent
 ASSETS_DIR = DEMO_DIR / "assets"
 
-LECTURE_ID = "mit_6_0002_comp_thinking_lec04"
-START_SEGMENT = 303
+# mit_6_0001 is the only MIT OCW lecture in the corpus with substantial genuine
+# slide content (43% slides_static + 8% demo); the other two are talking-head
+# dominant, and the NPTEL lectures that are slide-rich are all rights reserved
+# and cannot be shipped. Window 479 scored best for the combination of genuine
+# slides (8 of 10) and a three-way label mix (28 demo / 30 talking / 17 slides).
+LECTURE_ID = "mit_6_0001_intro_python_lec02"
+START_SEGMENT = 479
 N_SEGMENTS = 75
 SEGMENT_DURATION = 4.0
 TIER0_RUNG = "720p"
@@ -65,6 +70,20 @@ def main():
         str(ASSETS_DIR / "tier1_audio.m4a"),
     ], check=True, capture_output=True, text=True)
 
+    # Phase 1's slide detector fires on lecturer/camera motion as well as real
+    # slide changes, so on a talking-head passage the "slide" it extracted is a
+    # frozen photo of the lecturer. Tag each one using Phase 2's label for the
+    # segment the frame was taken from; the page holds the last genuine slide
+    # through talking-head stretches rather than showing the lecturer frame.
+    all_segments = manifest["segments_4s"]
+
+    def is_genuine_slide(slide):
+        midpoint = (max(slide["start"], window_start) + min(slide["end"], window_end)) / 2
+        index = int(midpoint // SEGMENT_DURATION)
+        if index < 0 or index >= len(all_segments):
+            return False
+        return all_segments[index]["content_label"] in ("slides_static", "demo")
+
     slides = []
     for slide in manifest["tiers"]["1"]["slides"]:
         if slide["end"] <= window_start or slide["start"] >= window_end:
@@ -72,6 +91,7 @@ def main():
         src = lecture_dir / "tier1" / "slides" / slide["image"]
         shutil.copy(src, ASSETS_DIR / "slides" / slide["image"])
         slides.append({
+            "genuine": is_genuine_slide(slide),
             "start": max(0.0, round(slide["start"] - window_start, 3)),
             "end": round(min(slide["end"], window_end) - window_start, 3),
             "image": f"assets/slides/{slide['image']}",

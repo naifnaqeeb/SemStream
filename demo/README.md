@@ -42,12 +42,27 @@ Dragging the slider down walks the agent through all four tiers and back up:
 | Tier | Shown | Rung bitrate (this lecture) |
 |---|---|---|
 | 0 | full video + audio | 500 / 900 / 1500 kbps |
-| 1 | slide image + audio | 79.55 kbps |
-| 2 | slide image + captions | 13.35 kbps |
+| 1 | slide image + audio | 87.19 kbps |
+| 2 | slide image + captions | 21.56 kbps |
 | 3 | rolling text summary | 0.04 kbps |
 
+On talking-head stretches Tiers 1 and 2 hold the **last genuine slide** rather than switching to
+a frozen frame of the lecturer. Phase 1's detector fires on lecturer motion as well as real
+slide changes, so some extracted "slides" are just photos of the lecturer; `build_assets.py`
+tags each one using Phase 2's content label and the page skips back to the last real slide.
+
 The HUD shows the current bandwidth, the agent's selected tier and quality index, the rung
-bitrate, the upcoming segment's content label, and a simulated buffer.
+bitrate, and the upcoming segment's content label.
+
+There is deliberately no buffer readout: the agent is buffer-blind (bandwidth plus content
+label only), so showing a buffer figure would imply an input the switching decision does not
+consult. See `docs/design_notes.md` for why, including how that diverges from the Phase 4 plan
+spec.
+
+Playback has its own play/pause and scrub bar. These are custom rather than the browser's
+native video controls, because `state.time` is the master clock that the media follows: native
+controls would fight it, and would render too small to use at presentation scale. Seeking does
+**not** reset the agent, so it carries its tier and dwell state across the jump.
 
 Switching is not instantaneous by design: the agent enforces a 3-segment (12s) minimum dwell
 before any switch, so the tier changes a beat after the slider moves. That lag is the real
@@ -79,14 +94,17 @@ Bandwidth reaches the agent only through `UIBandwidthSource.getBandwidthEstimate
 python demo/build_assets.py
 ```
 
-It cuts a 5-minute window (segments 303–377 of `mit_6_0002_comp_thinking_lec04`, chosen because
-all three content labels are well represented there: 39 talking_head, 20 demo, 16 slides_static),
-re-encodes one Tier 0 rung, and windows the audio, slides, captions and summaries to match.
+It cuts a 5-minute window (segments 479–553 of `mit_6_0001_intro_python_lec02`), re-encodes one
+Tier 0 rung, and windows the audio, slides, captions and summaries to match. That lecture is the
+only MIT OCW one in the corpus with substantial genuine slide content, and the window was picked
+by scanning for the best mix of real slides and label variety: 8 of 10 slides genuine, 28 demo /
+30 talking_head / 17 slides_static.
 
 ## Licensing
 
-The bundled excerpt is from *MIT 6.0002 Introduction to Computational Thinking and Data Science,
-Fall 2016* (Prof. John Guttag, MIT OpenCourseWare), licensed CC BY-NC-SA 4.0 — redistributable
+The bundled excerpt is from *MIT 6.0001 Introduction to Computer Science and Programming in
+Python, Fall 2016* (MIT OpenCourseWare), licensed CC BY-NC-SA 4.0 — redistributable
 with attribution for non-commercial use, which is why this lecture was chosen for the demo
 rather than one of the corpus's NPTEL lectures (those are all-rights-reserved and stay local;
-see `docs/design_notes.md`).
+see `docs/design_notes.md`). Only 3 of the 9 corpus lectures are redistributable, which is also
+why the demo ships a single lecture rather than a switcher.

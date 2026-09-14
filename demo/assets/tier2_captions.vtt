@@ -1,235 +1,271 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:03.150
-So here it is, and we're going to talk a lot about
+00:00:00.000 --> 00:00:00.060
+you need to take care of.
 
-00:00:03.150 --> 00:00:03.810
-simulations.
+00:00:00.280 --> 00:00:02.200
+The first is this first line here
 
-00:00:04.950 --> 00:00:07.090
-So here rather than rolling the die, I've
+00:00:02.200 --> 00:00:08.050
+which is sort of an initialization of this loop counter
 
-00:00:07.090 --> 00:00:08.410
-written a program to do it.
+00:00:10.610 --> 00:00:12.410
+and the second is this line here
 
-00:00:11.610 --> 00:00:14.630
-We've already seen the code for rolling a die.
+00:00:13.130 --> 00:00:15.890
+which is incrementing your loop counter.
 
-00:00:15.570 --> 00:00:20.370
-And so to run the simulation, typically what we're
+00:00:19.380 --> 00:00:21.680
+The reason why the second one's important
 
-00:00:20.370 --> 00:00:21.950
-doing here is I'm giving you the goal.
+00:00:21.680 --> 00:00:24.160
+is because let's look at our condition here.
 
-00:00:23.330 --> 00:00:25.330
-For example, are we going to get five ones?
+00:00:24.700 --> 00:00:26.180
+So while n is less than five.
 
-00:00:25.990 --> 00:00:33.110
-The number of trials, each trial in this case will be, say,
+00:00:27.740 --> 00:00:29.740
+If you didn't have this line here
 
-00:00:33.210 --> 00:00:34.130
-of length five.
+00:00:30.540 --> 00:00:32.160
+you would never increment n.
 
-00:00:34.870 --> 00:00:39.910
-So I'm going to roll the same die 5 times, say, 1,000
+00:00:32.760 --> 00:00:34.960
+So every time through the loop you'd just keep
 
-00:00:39.910 --> 00:00:40.730
-different times.
+00:00:34.960 --> 00:00:38.100
+printing zeros okay and you'd have an infinite loop.
 
-00:00:41.670 --> 00:00:44.170
-And then just some text as to what I'm going to print.
+00:00:38.820 --> 00:00:41.680
+I do want to show though what if you do have
 
-00:00:45.630 --> 00:00:49.910
-Almost all the simulations we look at are going to start
+00:00:41.680 --> 00:00:43.500
+an infinite loop it's not the end of the world.
 
-00:00:49.910 --> 00:00:51.910
-with lines that look a lot like that.
+00:00:44.320 --> 00:00:56.080
+So I can say something like so while true print zero.
 
-00:00:53.250 --> 00:00:57.050
-We're going to initialize some variable, and then we're
+00:00:56.620 --> 00:00:58.860
+So this is going to give me an infinite loop
 
-00:00:57.050 --> 00:00:59.690
-going to run some number of trials.
+00:00:58.860 --> 00:01:11.030
+in my program and whoop, okay.
 
-00:01:04.020 --> 00:01:08.760
-So in this case, we're going to get from the length of the
+00:01:12.150 --> 00:01:14.910
+So notice it's just printing the letter p
 
-00:01:08.760 --> 00:01:11.940
-goal, so if the goal is five ones, then we're going to
+00:01:14.910 --> 00:01:17.670
+over and over again and if I let it go any longer
 
-00:01:11.940 --> 00:01:13.220
-roll the die five times.
+00:01:17.670 --> 00:01:18.650
+it's gonna slow down the computer.
 
-00:01:13.460 --> 00:01:15.760
-If it's 10 runs, we'll roll the die 10 times.
+00:01:18.990 --> 00:01:21.450
+So I'm gonna hit control C or command C maybe
 
-00:01:17.500 --> 00:01:23.480
-So this is essentially one trial, one attempt, right?
+00:01:22.390 --> 00:01:26.150
+and it's going to stop the program from printing okay.
 
-00:01:26.360 --> 00:01:28.160
-And then we'll check the result.
+00:01:26.510 --> 00:01:28.590
+So just in case you ever enter infinite loops
 
-00:01:28.940 --> 00:01:33.760
-And if it has the property we want, in this case, it's
+00:01:28.590 --> 00:01:30.950
+in your programs just go to the console
 
-00:01:33.760 --> 00:01:37.260
-equal to the goal, then we're going to increment the total,
+00:01:30.950 --> 00:01:33.490
+and hit control C and that's going to stop it
 
-00:01:37.740 --> 00:01:40.480
-which we initialized up here, by one.
+00:01:33.490 --> 00:01:36.610
+from sort of slowing down the computer.
 
-00:01:41.960 --> 00:01:44.500
-So we'll keep track, which is just the counting.
+00:01:38.470 --> 00:01:40.330
+Okay so going back to this example
 
-00:01:45.080 --> 00:01:48.280
-The number of trials that actually meet the goal.
+00:01:40.330 --> 00:01:41.890
+I was saying that if you're using
 
-00:01:49.380 --> 00:01:53.320
-And then when we're done, what we're going to do is
+00:01:42.370 --> 00:01:45.450
+counters or variables in order to sort of count up
 
-00:01:53.320 --> 00:01:57.560
-divide the number that met the goal by the number of trials.
+00:01:45.450 --> 00:01:47.250
+inside the while loop you have to take care
 
-00:01:58.800 --> 00:02:02.380
-Exactly the counting argument we just looked at, and then
+00:01:47.250 --> 00:01:49.850
+to initialize a counter variable first
 
-00:02:02.380 --> 00:02:03.380
-we'll print the result.
+00:01:50.550 --> 00:01:52.450
+and then to increment it.
 
-00:02:07.590 --> 00:02:10.890
-Almost every simulation we look at is going to have this
+00:01:52.550 --> 00:01:53.970
+Otherwise you'll enter an infinite loop.
 
-00:02:10.890 --> 00:02:11.350
-structure.
+00:01:54.990 --> 00:01:56.450
+That feels a little bit tedious
 
-00:02:12.250 --> 00:02:15.790
-But be an outer loop, which is the number of trials, and
+00:01:57.310 --> 00:02:01.570
+and so there's a shortcut for doing that exact same thing.
 
-00:02:15.790 --> 00:02:18.630
-then inside, maybe we'll have a loop, or maybe it won't,
+00:02:01.690 --> 00:02:04.130
+So these four lines you can rewrite those
 
-00:02:18.690 --> 00:02:19.750
-will be a single trial.
+00:02:04.130 --> 00:02:05.790
+into these two lines right here
 
-00:02:20.450 --> 00:02:22.770
-We'll sum up the results, and then we'll divide by the
+00:02:06.310 --> 00:02:08.990
+using this new type of loop called a for loop.
 
-00:02:22.770 --> 00:02:23.490
-number of trials.
+00:02:11.120 --> 00:02:14.100
+So the for loop says for some loop variable
 
-00:02:24.530 --> 00:02:25.390
-All right, let's run it.
+00:02:14.100 --> 00:02:17.040
+in this case I named it n you can name it whatever you want.
 
-00:02:30.110 --> 00:02:30.830
-All right.
+00:02:17.720 --> 00:02:19.440
+In range five we're going to come back
 
-00:02:34.220 --> 00:02:36.820
-So a couple of things are going to go on here.
+00:02:19.440 --> 00:02:22.260
+to what range means in a little bit print n.
 
-00:02:37.480 --> 00:02:46.860
-If you look at the code, as we've looked at it before,
+00:02:25.680 --> 00:02:28.180
+So every time through the loop you're going to print out
 
-00:02:47.480 --> 00:02:50.600
-what you're seeing is I'm computing the estimated
+00:02:28.180 --> 00:02:29.480
+what the value of n is.
 
-00:02:50.600 --> 00:02:54.180
-probability by the simulation, and I'm comparing it to the
+00:02:30.600 --> 00:02:34.980
+Range five actually creates internally
 
-00:02:54.180 --> 00:02:57.460
-actual probability, which we've already seen how to compute.
+00:02:34.980 --> 00:02:37.720
+a sequence of numbers starting from zero
 
-00:03:00.010 --> 00:03:02.130
-So if you look at it, there are a couple of things to
+00:02:37.720 --> 00:02:40.220
+and going to that number five minus one.
 
-00:03:02.130 --> 00:03:02.550
-look at.
+00:02:40.740 --> 00:02:44.060
+So the sequence is going to be zero, one, two, three and four.
 
-00:03:05.130 --> 00:03:08.230
-The estimated probability is pretty close to the actual
+00:02:45.580 --> 00:02:47.860
+The first time through the loop you're going to say
 
-00:03:08.230 --> 00:03:10.830
-probability, but not the same.
+00:02:47.860 --> 00:02:50.920
+n is equal to zero or internally this is what happens
 
-00:03:12.790 --> 00:03:14.270
-Let's go back to the PowerPoint.
+00:02:50.920 --> 00:02:53.560
+n gets the value zero you're going to print n.
 
-00:03:19.700 --> 00:03:20.580
-Here are the results.
+00:02:54.740 --> 00:02:57.440
+Then you're going to go back to the top
 
-00:03:22.700 --> 00:03:26.320
-And there are at least two question ways by this result.
+00:02:57.440 --> 00:02:59.920
+n gets the value one then you're going to go
 
-00:03:26.440 --> 00:03:29.360
-First of all, how did I know that this is what would get
+00:02:59.920 --> 00:03:02.920
+execute whatever's inside so you're going to print one.
 
-00:03:29.360 --> 00:03:29.740
-printed?
+00:03:04.360 --> 00:03:05.620
+Then you're going to increment that
 
-00:03:30.960 --> 00:03:32.200
-Remember, this is random.
+00:03:05.620 --> 00:03:07.040
+to the next value in the sequence
 
-00:03:33.480 --> 00:03:36.460
-How did I know that the estimate, well, there's
+00:03:07.040 --> 00:03:09.260
+you're going to print out two and so on.
 
-00:03:36.460 --> 00:03:41.200
-nothing random of the actual probability, but how did I
+00:03:11.480 --> 00:03:15.840
+So this is the general look of a for loop.
 
-00:03:41.200 --> 00:03:43.920
-know that the estimated probability would be zero?
+00:03:16.040 --> 00:03:19.800
+So we have for some loop variable again
 
-00:03:44.660 --> 00:03:46.220
-And why did it print it twice?
+00:03:19.800 --> 00:03:23.840
+can be named whatever you want in range some number
 
-00:03:46.400 --> 00:03:48.440
-Because I messed up the PowerPoint, anyway.
+00:03:25.020 --> 00:03:28.760
+do a bunch of stuff and again
 
-00:03:49.380 --> 00:03:50.980
-So how do I know what would get printed?
+00:03:28.760 --> 00:03:30.720
+these are part of this for loop code block
 
-00:03:53.220 --> 00:03:54.840
-Well, a confession.
+00:03:30.720 --> 00:03:32.980
+so you should indent them to tell Python
 
-00:03:59.300 --> 00:04:02.240
-Random.choice is not actually random.
+00:03:32.980 --> 00:03:34.580
+that these are the things that you should do.
 
-00:04:02.840 --> 00:04:05.920
-In fact, nothing we can do in a computer is
+00:03:36.160 --> 00:03:38.220
+So when you're using range some number
 
-00:04:05.920 --> 00:04:06.960
-actually random.
+00:03:38.220 --> 00:03:42.840
+you start out with variable getting the value zero.
 
-00:04:06.960 --> 00:04:12.160
-You can prove that it's impossible to build a computer
+00:03:45.780 --> 00:03:48.120
+With variable having value zero
 
-00:04:12.160 --> 00:04:14.820
-that actually generates truly random numbers.
+00:03:48.120 --> 00:03:50.060
+you're going to execute all of these expressions.
 
-00:04:16.620 --> 00:04:20.680
-What they do instead is generate numbers that are
+00:03:51.580 --> 00:03:54.280
+After all the expressions in the code block are done
 
-00:04:20.680 --> 00:04:21.840
-called pseudorandom.
+00:03:54.280 --> 00:03:58.460
+you're going to go on to the next value so one.
 
-00:04:29.920 --> 00:04:30.940
-How do they do that?
+00:03:59.480 --> 00:04:01.620
+You're going to execute all these expressions
 
-00:04:32.300 --> 00:04:36.560
-They have an algorithm that, given one number, generates
+00:04:01.620 --> 00:04:06.460
+with variable being value one and then so on and so on
 
-00:04:36.560 --> 00:04:38.240
-the next number in a sequence.
+00:04:06.460 --> 00:04:09.260
+until you go to sum num minus one.
 
-00:04:40.100 --> 00:04:44.480
-And they start that algorithm with a seed.
+00:04:15.180 --> 00:04:18.680
+So using range in that way is a little bit constraining
 
-00:04:47.580 --> 00:04:52.160
-Now, typically, they get that seed by reading the clock of
+00:04:19.400 --> 00:04:21.980
+because you're always going to get values starting from zero
 
-00:04:52.160 --> 00:04:52.720
-the computer.
+00:04:21.980 --> 00:04:24.640
+and ending at sum num minus one.
 
-00:04:53.680 --> 00:04:57.280
-So most computers have a clock that, say, keeps track of the
+00:04:25.240 --> 00:04:27.160
+Whatever's in the parentheses in range.
 
-00:04:57.280 --> 00:05:00.000
-number of microseconds since January 1, 1978.
+00:04:27.980 --> 00:04:29.380
+Sometimes you might want to write programs
+
+00:04:29.380 --> 00:04:31.200
+that maybe start at a custom value.
+
+00:04:31.480 --> 00:04:33.100
+Don't start at zero maybe they start at five
+
+00:04:33.680 --> 00:04:35.020
+maybe it started minus ten.
+
+00:04:36.360 --> 00:04:38.020
+And sometimes you might want to write programs
+
+00:04:38.020 --> 00:04:40.300
+that don't go with don't increment
+
+00:04:40.300 --> 00:04:43.000
+the numbers by one but maybe skip every other number
+
+00:04:43.000 --> 00:04:45.420
+or go every two numbers every three numbers and so on.
+
+00:04:45.940 --> 00:04:49.680
+So you can customize range to your needs.
+
+00:04:51.020 --> 00:04:53.440
+The one thing you do need to give it is the stop.
+
+00:04:54.040 --> 00:04:56.120
+So if you give it only one value in the parentheses
+
+00:04:56.120 --> 00:04:57.800
+that stands for stop.
+
+00:04:58.700 --> 00:05:00.000
+And by default start is going to have the value zero

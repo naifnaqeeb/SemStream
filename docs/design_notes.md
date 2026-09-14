@@ -593,6 +593,95 @@ final sustainable level. No fix applied - recorded because this is exactly the k
 that should be understood before it becomes an input to tuning Phase 4's agent, not rediscovered
 mid-tuning.
 
+## Phase 4.5 — demo review-readiness pass (2026-09-15)
+
+Four issues raised after looking at the demo as a reviewer would. Each was investigated before
+any change was proposed, and the lecture-switcher was deliberately not built.
+
+**The agent is buffer-blind, and that diverges from the plan. Recorded here because it was
+undocumented until now.** `IMPLEMENTATION_PLAN.md`'s Phase 4 spec lists the agent's inputs as
+"`get_bandwidth_estimate()`, **current buffer level**, current tier, content label of the
+upcoming segment". The implemented agent ignores buffer entirely:
+`ContentAwareStateMachine.next_quality(bitrates_kbps, bandwidth_kbps, content_label)` takes no
+buffer argument, and neither does the JS port. Current tier is held internally by the
+hysteresis controller rather than passed in, so of the four listed inputs only two are
+explicit and one is internal state.
+
+This is a deliberate simplification, not an oversight discovered late: the contribution being
+tested is whether consulting *content* beats consulting *bandwidth alone*, and adding buffer as
+a third input would have introduced a second uncontrolled variable into the Naive-versus-Ours
+comparison, making it impossible to attribute a difference to content-awareness. The Baseline
+policy (built-in BOLA) is the buffer-driven arm of the comparison, so buffer-based reasoning is
+represented in the results, just not inside the content-aware agent. Adding buffer-awareness
+later is a real option, but it would change Phase 3's numbers and belongs with the Phase 6
+ablations rather than being retrofitted quietly.
+
+**Consequence for the demo: the buffer readout was removed.** The HUD previously showed a
+"Buffer 25.0 s" figure driven by a toy model in `demo.js`
+(`buffer += dt * (bandwidth / rung_bitrate - 1)`, clamped to 25s) with no relationship to
+Sabre's real buffer model. Measured over a 60-sample slider sweep it read exactly "25.0 s" in
+61% of samples, never once triggered its own stall overlay, and bottomed out at 15.4s only when
+bandwidth was driven to zero, because the agent immediately downswitches to a tier whose
+bitrate is trivially affordable. Worse than uninformative, it implied buffer was an input to a
+decision that does not consult it. Removed, along with the stall overlay it drove.
+
+**Slide display now holds the last genuine slide through talking-head passages.** The demo was
+showing a different frozen frame every 20-25s on a talking-head stretch, which looked like a
+bug. It was not: `slideAt()` faithfully followed the Phase 1 slide boundaries. The real problem
+was upstream and is the already-documented detector limitation, but its effect on the demo was
+worse than previously characterised. Inspecting all nine extracted "slides" for the old window
+showed **seven were frozen photos of the lecturer**, not slides; only two were genuine screen
+content. The ~22s holds sat right on Phase 1's `min_scene_len = 20s` floor, ie. the detector
+firing on lecturer motion and being rate-limited.
+
+Fix, demo-only: `build_assets.py` now tags each slide `genuine` using Phase 2's `content_label`
+for the segment the frame came from (`slides_static` or `demo` means a real slide), and
+`slideAt()` walks back to the last genuine slide rather than showing a lecturer frame. This is
+also the semantically correct Tier 1/2 behaviour: a slide deck does not stop existing because
+the camera cut to the lecturer, and holding it costs no extra bytes, consistent with the Phase 3
+resampling model where mid-slide segments cost approximately zero.
+
+**Deliberately NOT done: changing Phase 1 slide selection.** Picking better representative
+frames would change slide image byte sizes, which feed Tier 1/2 bitrates, which feed the
+resampled per-segment sizes, which would change `data/results/phase3_results.csv` and
+invalidate every number in `interim_findings.md`. Flagged rather than done.
+
+**Demo source lecture changed to `mit_6_0001_intro_python_lec02`, window 479-553.** Licensing
+caps the choice to the three MIT OCW lectures; of those, `mit_6_0001` is the only one with
+substantial genuine slide content (43% `slides_static` + 8% `demo`, versus 18%+7% for the
+previous `mit_6_0002` and 18%+0% for the chalk-based `mit_6042j`). The window was chosen by
+scanning every 75-segment window for the best combination of genuine slides and label variety:
+8 of 10 slides genuine, 28 `demo` / 30 `talking_head` / 17 `slides_static`. The talking-head
+share is deliberate, so the hold-last-genuine-slide behaviour is actually visible.
+
+One residual inaccuracy worth stating: `slide_044` is a lecturer frame tagged `genuine`,
+because Phase 2 labelled its source segment `slides_static`. It is a 1.1s sliver at the very
+start of the window and is immediately superseded. It is a direct, visible instance of the
+classifier's known imperfection propagating into a downstream consumer.
+
+**Video controls added (custom, not native).** The `<video>` element had no controls, which was
+a consequence of the architecture rather than a decision: `state.time` is the master clock,
+advanced by `requestAnimationFrame`, and `applyTier()` forces `video.currentTime` to follow it.
+Native controls would have fought that every frame - a native seek would be snapped back, a
+native pause would leave the clock running. Native controls would also render at browser-default
+size, invisible at presentation scale.
+
+Custom play/pause and a scrub bar now write to `state.time`, preserving it as the single source
+of truth so nothing needs inverting. Scrubbing suspends clock advance so the thumb does not
+fight the playhead, and `seekTo()` then re-seeks video and audio explicitly via `resyncMedia`,
+rather than relying on the 0.35s drift tolerance which a large scrub would blow straight past.
+**The agent is deliberately not reset on seek**: it carries its tier and dwell state across the
+jump, which is what a real player that seeked would do. A consequence worth knowing when
+narrating: the dwell counter spans the time discontinuity, so a seek can be followed by a
+switch that is "owed" from before the jump.
+
+**Lecture switcher declined.** Only 3 of 9 corpus lectures are redistributable (MIT OCW
+CC BY-NC-SA); the slide-rich NPTEL lectures are all rights reserved and cannot be bundled. Of
+the three MIT lectures only one is good demo material, so a switcher would have added roughly
+115MB of committed video to offer two weaker alternatives. It would also have risked
+reintroducing the CORS-on-`file://` failure if per-lecture manifests were fetched lazily, and
+that failure mode passes under Live Preview on `127.0.0.1` and fails only in the review room.
+
 ## Phase 4.5 — course demo (2026-09-05)
 
 **"Reused, not reimplemented" vs a static browser page - the decision.** The plan requires the

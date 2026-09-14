@@ -3,8 +3,10 @@
 // decides a tier. Bandwidth reaches the agent only through UIBandwidthSource's
 // getBandwidthEstimate(), matching CLAUDE.md's bandwidth-interface rule.
 
-const BUFFER_CAPACITY_S = 25;
-const REBUFFER_RESUME_S = 2;
+// Media whose currentTime is further than this from the master clock is
+// re-seeked. Large scrubs exceed it immediately, which is what forces the
+// explicit re-sync rather than leaving media stalled while the clock runs on.
+const SYNC_TOLERANCE_S = 0.35;
 
 const el = (id) => document.getElementById(id);
 
@@ -17,8 +19,7 @@ const state = {
   quality: null,
   tier: null,
   segment: -1,
-  buffer: BUFFER_CAPACITY_S,
-  stalled: false,
+  seeking: false,
   lastFrame: null,
 };
 
@@ -33,12 +34,23 @@ function segmentAt(t) {
   return Math.max(0, Math.min(i, state.manifest.segments.length - 1));
 }
 
+// Phase 1's detector also fires on lecturer motion, so some extracted "slides"
+// are frozen photos of the lecturer rather than slides. During those stretches
+// the honest Tier 1/2 view is the last real slide, which is still the current
+// slide as far as the lecture is concerned, and costs no extra bytes. Falls
+// back to the raw slide only if no genuine one has appeared yet.
 function slideAt(t) {
   const slides = state.manifest.slides;
+  let current = null;
   for (let i = slides.length - 1; i >= 0; i--) {
-    if (t >= slides[i].start) return slides[i];
+    if (t >= slides[i].start) { current = slides[i]; break; }
   }
-  return slides[0];
+  if (current === null) return slides[0];
+  if (current.genuine) return current;
+  for (let i = slides.indexOf(current); i >= 0; i--) {
+    if (slides[i].genuine) return slides[i];
+  }
+  return current;
 }
 
 function summaryAt(t) {
@@ -58,17 +70,32 @@ function captionAt(t) {
 }
 
 
-// Simulated buffer: drains at 1x while playing, fills at (bandwidth / rung bitrate)x.
-// Purely for the HUD and the stall indicator - the plan allows a simulated buffer here.
-function updateBuffer(dt) {
-  const bitrate = state.manifest.bitrates_kbps[state.quality];
-  const bw = state.bandwidth.getBandwidthEstimate();
-  const fillRate = bitrate > 0 ? bw / bitrate : 100;
-  state.buffer += dt * (fillRate - 1);
-  state.buffer = Math.max(0, Math.min(BUFFER_CAPACITY_S, state.buffer));
+function totalDuration() {
+  return state.manifest.segments.length * state.manifest.segment_duration;
+}
 
-  if (!state.stalled && state.buffer <= 0) state.stalled = true;
-  else if (state.stalled && state.buffer >= REBUFFER_RESUME_S) state.stalled = false;
+// Single source of truth for playback position. Both the scrub bar and normal
+// playback write here, then media follows - never the other way round, so a
+// seek cannot end up fighting the clock.
+function seekTo(t) {
+  state.time = Math.max(0, Math.min(t, totalDuration()));
+  resyncMedia(true);
+  const seg = segmentAt(state.time);
+  state.segment = seg;
+  decideForSegment(seg);
+}
+
+// force=true is used after a scrub, where currentTime may be far from the clock
+// and the element needs an explicit seek rather than drift correction.
+function resyncMedia(force) {
+  const video = el("video");
+  const audio = state.audio;
+  for (const m of [video, audio]) {
+    if (!m) continue;
+    if (force || Math.abs(m.currentTime - state.time) > SYNC_TOLERANCE_S) {
+      try { m.currentTime = state.time; } catch (e) { /* not seekable yet */ }
+    }
+  }
 }
 
 function applyTier(tier, t) {
@@ -80,16 +107,16 @@ function applyTier(tier, t) {
   const audio = state.audio;
 
   if (tier === 0) {
-    if (Math.abs(video.currentTime - t) > 0.35) video.currentTime = t;
+    if (Math.abs(video.currentTime - t) > SYNC_TOLERANCE_S) video.currentTime = t;
     video.muted = false;
-    if (state.playing && !state.stalled) video.play().catch(() => {});
+    if (state.playing) video.play().catch(() => {});
     else video.pause();
     audio.pause();
   } else if (tier === 1) {
     video.pause();
     el("slide1").src = slideAt(t).image;
-    if (Math.abs(audio.currentTime - t) > 0.35) audio.currentTime = t;
-    if (state.playing && !state.stalled) audio.play().catch(() => {});
+    if (Math.abs(audio.currentTime - t) > SYNC_TOLERANCE_S) audio.currentTime = t;
+    if (state.playing) audio.play().catch(() => {});
     else audio.pause();
   } else {
     video.pause();
@@ -114,10 +141,8 @@ function renderHud() {
   el("brv").textContent = state.quality === null ? "—"
     : m.bitrates_kbps[state.quality] + " kbps";
   el("lblv").innerHTML = `<span class="label ${seg.content_label}">${seg.content_label}</span>`;
-  el("bufv").textContent = state.buffer.toFixed(1) + " s";
-  el("bufbar").style.width = (100 * state.buffer / BUFFER_CAPACITY_S) + "%";
-  el("stall").classList.toggle("on", state.stalled);
-  el("clock").textContent = `${fmt(state.time)} / ${fmt(m.segments.length * m.segment_duration)}`;
+  el("clock").textContent = `${fmt(state.time)} / ${fmt(totalDuration())}`;
+  if (!state.seeking) el("seek").value = String(state.time);
 }
 
 // One agent decision per segment boundary, using the upcoming segment's label -
@@ -137,9 +162,9 @@ function frame(ts) {
   state.lastFrame = ts;
   if (!state.manifest) return;
 
-  const total = state.manifest.segments.length * state.manifest.segment_duration;
+  const total = totalDuration();
 
-  if (state.playing && !state.stalled) {
+  if (state.playing && !state.seeking) {
     state.time += dt;
     if (state.time >= total) {
       state.time = total;
@@ -147,7 +172,6 @@ function frame(ts) {
       el("playpause").textContent = "Play";
     }
   }
-  if (state.playing) updateBuffer(dt);
 
   const seg = segmentAt(state.time);
   if (seg !== state.segment) {
@@ -176,6 +200,25 @@ function init() {
 
   state.segment = 0;
   decideForSegment(0);
+
+  const seek = el("seek");
+  seek.max = String(totalDuration());
+  // Scrubbing pauses clock advance so the thumb does not fight the playhead,
+  // then seekTo() re-seeks both media elements explicitly on release. The agent
+  // is deliberately NOT reset: it carries its tier and dwell state across the
+  // jump, which is the realistic behaviour for a player that seeked.
+  seek.addEventListener("input", (e) => {
+    state.seeking = true;
+    state.time = parseFloat(e.target.value);
+    renderHud();
+  });
+  const endSeek = (e) => {
+    if (!state.seeking) return;
+    state.seeking = false;
+    seekTo(parseFloat(e.target.value));
+  };
+  seek.addEventListener("change", endSeek);
+  seek.addEventListener("pointerup", endSeek);
 
   el("bw").addEventListener("input", (e) => {
     state.bandwidth.setBandwidthKbps(parseFloat(e.target.value));

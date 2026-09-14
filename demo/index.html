@@ -109,12 +109,6 @@
   .summaryview { background: #0d0f12; }
   .summaryview .stamp { color: var(--dim); font-size: var(--fs-clock); letter-spacing: .04em; }
   .summaryview .txt { font-size: var(--fs-summary); line-height: 1.5; margin-top: 10px; max-width: 46ch; }
-  .stall {
-    position: absolute; inset: 0; display: none; align-items: center; justify-content: center;
-    background: rgba(0,0,0,.68); font-size: var(--fs-hero-tier); font-weight: 700;
-    letter-spacing: .06em; color: #fca5a5;
-  }
-  .stall.on { display: flex; }
 
   .controls { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
   .hint { color: var(--dim); font-size: var(--fs-clock); }
@@ -162,6 +156,7 @@
   body.laptop .lower .panel + .panel { margin-top: 14px; }
 
   input[type=range] { width: 100%; margin: 8px 0 4px; height: 28px; }
+  .seekbar { accent-color: var(--t0); }
   body.laptop input[type=range] { height: auto; margin: 6px 0 2px; }
 
   .row { display: flex; justify-content: space-between; align-items: baseline; padding: 6px 0; }
@@ -182,9 +177,6 @@
   .t0 { color: var(--t0); } .t1 { color: var(--t1); }
   .t2 { color: var(--t2); } .t3 { color: var(--t3); }
 
-  .buf { height: 14px; background: #0d0f12; border-radius: 4px; overflow: hidden; margin-top: 8px; }
-  body.laptop .buf { height: 7px; margin-top: 5px; }
-  .buf > i { display: block; height: 100%; background: var(--t0); width: 0; }
 
   .attrib { color: var(--dim); font-size: var(--fs-clock); max-width: 90ch; margin: 10px 0 0; }
   body:not(.laptop) .attrib { display: none; }
@@ -219,11 +211,10 @@
         <div class="stamp" id="sumstamp"></div>
         <div class="txt" id="sumtext"></div>
       </div>
-      <div class="stall" id="stall">REBUFFERING</div>
     </div>
     <p class="attrib">
-      Source excerpt: <em>MIT 6.0002 Introduction to Computational Thinking and Data Science,
-      Fall 2016</em>, Prof. John Guttag, MIT OpenCourseWare — licensed
+      Source excerpt: <em>MIT 6.0001 Introduction to Computer Science and Programming in Python,
+      Fall 2016</em>, Dr. Ana Bell, MIT OpenCourseWare — licensed
       <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color:var(--dim)">CC BY-NC-SA 4.0</a>.
       Slides, captions and summaries shown at Tiers 1–3 are generated from that source by this
       project's Phase 1 pipeline. Non-commercial academic use.
@@ -248,8 +239,8 @@
 
     <div class="lower">
       <div class="panel">
-        <h2>Available bandwidth</h2>
-        <input type="range" id="bw" min="0" max="2200" step="10" value="1500">
+        <h2>Playback</h2>
+        <input type="range" id="seek" class="seekbar" min="0" max="300" step="0.1" value="0">
         <div class="controls" style="margin-top:8px">
           <button id="playpause">Play</button>
           <span class="hint" id="clock">0:00 / 0:00</span>
@@ -258,11 +249,10 @@
       </div>
 
       <div class="panel">
-        <h2>Agent state</h2>
-        <div class="row"><span class="k">Quality index</span><span class="v" id="qv">—</span></div>
+        <h2>Available bandwidth</h2>
+        <input type="range" id="bw" min="0" max="2200" step="10" value="1500">
+        <div class="row" style="margin-top:4px"><span class="k">Quality index</span><span class="v" id="qv">—</span></div>
         <div class="row"><span class="k">Rung bitrate</span><span class="v" id="brv">—</span></div>
-        <div class="row"><span class="k">Buffer</span><span class="v" id="bufv">—</span></div>
-        <div class="buf"><i id="bufbar"></i></div>
       </div>
 
       <div class="panel">
