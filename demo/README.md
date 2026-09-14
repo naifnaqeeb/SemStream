@@ -5,15 +5,18 @@ real Phase 4 agent, not a scripted animation.
 
 ## Running it
 
-The page fetches `demo_manifest.json`, so it needs to be served over HTTP (`file://` blocks
-the fetch):
+Double-click `index.html`. No server, no install, no build step. Press **Play**, then drag the
+bandwidth slider.
 
-```
-cd demo
-python -m http.server 8000
-```
+Everything the page needs is loaded via plain `<script>`/`<video>`/`<img>` tags and relative
+paths, so it works opened straight from disk over `file://`, including from a USB stick or a
+copied folder. There are no `fetch()` calls: `fetch()` is blocked on `file://` by CORS, which
+would leave a double-clicked page dead with no visible cause. The manifest and caption cues are
+therefore emitted as `demo_manifest.js` (a `window.DEMO_MANIFEST = {...}` assignment) rather
+than fetched as JSON.
 
-Then open `http://localhost:8000/index.html`. Press **Play**, then drag the bandwidth slider.
+Verified by copying `demo/` to a clean directory outside the project and opening it directly:
+no console errors, all four tiers reachable, video and slides load, captions track playback.
 
 ## What to look for
 

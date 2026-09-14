@@ -57,21 +57,6 @@ function captionAt(t) {
   return "";
 }
 
-async function loadCaptions(url) {
-  // Normalise CRLF first: VTT written on Windows arrives with \r\n, which would
-  // otherwise defeat the blank-line block split and collapse every cue into one.
-  const text = (await (await fetch(url)).text()).replace(/\r\n/g, "\n");
-  const re = /(\d+):(\d+):([\d.]+)\s*-->\s*(\d+):(\d+):([\d.]+)/;
-  cues = [];
-  for (const block of text.split(/\n\n+/)) {
-    const m = block.match(re);
-    if (!m) continue;
-    const start = +m[1] * 3600 + +m[2] * 60 + parseFloat(m[3]);
-    const end = +m[4] * 3600 + +m[5] * 60 + parseFloat(m[6]);
-    const body = block.split("\n").filter((l) => !re.test(l) && l.trim() !== "WEBVTT").join(" ").trim();
-    cues.push({ start, end, text: body });
-  }
-}
 
 // Simulated buffer: drains at 1x while playing, fills at (bandwidth / rung bitrate)x.
 // Purely for the HUD and the stall indicator - the plan allows a simulated buffer here.
@@ -173,9 +158,13 @@ function frame(ts) {
   renderHud();
 }
 
-async function init() {
-  state.manifest = await (await fetch("demo_manifest.json")).json();
-  await loadCaptions(state.manifest.captions_file);
+function init() {
+  // Manifest and caption cues arrive as a plain <script> (demo_manifest.js) rather
+  // than fetch(), so the page works when opened directly from disk. fetch() is
+  // blocked on file:// by CORS, which would leave a review-room double-click with
+  // a dead page and no obvious cause.
+  state.manifest = window.DEMO_MANIFEST;
+  cues = state.manifest.captions;
 
   el("video").src = state.manifest.tier0_video;
   state.audio = new Audio(state.manifest.tier1_audio);

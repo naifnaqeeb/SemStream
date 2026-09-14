@@ -1,4 +1,4 @@
-{
+window.DEMO_MANIFEST = {
   "lecture_id": "mit_6_0002_comp_thinking_lec04",
   "source_window": {
     "start_segment": 303,
@@ -1025,4 +1025,4 @@
   ],
   "tier0_video": "assets/tier0.mp4",
   "tier1_audio": "assets/tier1_audio.m4a"
-}
+};

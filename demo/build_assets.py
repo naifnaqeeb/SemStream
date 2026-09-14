@@ -79,10 +79,15 @@ def main():
 
     cues = [c for c in parse_vtt(lecture_dir / "tier2" / manifest["tiers"]["2"]["captions_file"])
             if c["end"] > window_start and c["start"] < window_end]
+    windowed_cues = [{
+        "start": round(max(0.0, c["start"] - window_start), 3),
+        "end": round(min(c["end"], window_end) - window_start, 3),
+        "text": c["text"],
+    } for c in cues]
+
     vtt_lines = ["WEBVTT", ""]
-    for c in cues:
-        vtt_lines.append(f"{vtt_time(max(0.0, c['start'] - window_start))} --> "
-                         f"{vtt_time(min(c['end'], window_end) - window_start)}")
+    for c in windowed_cues:
+        vtt_lines.append(f"{vtt_time(c['start'])} --> {vtt_time(c['end'])}")
         vtt_lines.append(c["text"])
         vtt_lines.append("")
     (ASSETS_DIR / "tier2_captions.vtt").write_text(
@@ -121,10 +126,18 @@ def main():
         "slides": slides,
         "summaries": summaries,
         "captions_file": "assets/tier2_captions.vtt",
+        "captions": windowed_cues,
         "tier0_video": "assets/tier0.mp4",
         "tier1_audio": "assets/tier1_audio.m4a",
     }
     (DEMO_DIR / "demo_manifest.json").write_text(json.dumps(demo_manifest, indent=2), encoding="utf-8")
+
+    # The page loads this rather than fetching the .json: fetch() is blocked on
+    # file://, so a double-clicked index.html would otherwise dead-end. Generated
+    # from the same dict, so the two cannot drift.
+    (DEMO_DIR / "demo_manifest.js").write_text(
+        "window.DEMO_MANIFEST = " + json.dumps(demo_manifest, indent=2) + ";\n",
+        encoding="utf-8", newline="\n")
 
     print(f"window: segments {START_SEGMENT}-{START_SEGMENT + N_SEGMENTS - 1} "
           f"({window_start:.0f}-{window_end:.0f}s)", flush=True)
